@@ -1,0 +1,60 @@
+" was given by linux distro
+runtime! debian.vim
+ 
+" enable colors for syntax
+syntax on
+ 
+" Display cursorline
+set cursorline
+ 
+" Color of the Cursorline
+hi CursorLine guibg=grey9
+ 
+" Color of the tabline
+ hi TabLine term=underline cterm=bold ctermfg=green ctermbg=black
+
+" THEMES!!!
+if has("gui_gtk2") && has("gui_running")
+colorscheme dante
+endif 
+
+" Set encoding to utf-8
+if has("multi_byte")
+    set encoding=utf-8
+    setglobal fileencoding=utf-8
+    set fileencodings=ucs-bom,utf-8,latin1
+endif
+
+" Always hide the statusline
+set laststatus=2
+
+" needs http://www.vim.org/scripts/script.php?script_id=2258 to work
+function! CurDir()
+   let curdir = substitute(getcwd(), '/home/msi/', "~/", "g")
+   return curdir
+endfunction
+
+"Format the statusline
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c\ %{GitBranchInfoString()}
+set showcmd
+
+" For searching
+set ignorecase
+set incsearch
+set hlsearch
+ 
+" Commands reagarding vimrc
+" When .vimrc is edited, automatically reload it
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" Search ToDos
+function! TODO()
+        :vimgrep /@todo\|FIXME/ **/*
+        :cwindow
+endfunction
+
+" defines tab and shift width
+set tabstop=4
+set shiftwidth=4
+
+

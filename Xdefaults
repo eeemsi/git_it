@@ -1,0 +1,156 @@
+Xft.dpi:                 96
+Xft.antialias:           true
+Xft.hinting:             full
+Xft.hintstyle:           hintslight
+Xft.rgba:                rgb
+
+c64*font:                xft:Adore64:autohint=false:antialias=false:size=7
+c64*background:          #3a319c
+c64*foreground:          #7b71d6
+
+urxvt.termName:          rxvt-unicode
+urxvt.scrollBar:         false
+urxvt.imLocale:          en_US.UTF-8
+urxvt.loginShell:        true
+urxvt.saveLines:         512
+urxvt.geometry:          100x30
+urxvt.boldMode:          false
+urxvt.inheritPixmap:     false
+urxvt.xftAntialias:      false
+urxvt.jumpScroll:        true
+urxvt.tintColor:         grey
+urxvt.internalBorder:    0
+urxvt.cursorBlink:       false
+urxvt.cursorColor:       #ff9900
+urxvt.cursorColor2:      #000000
+
+urxvt.perl-ext:           default,matcher
+urxvt.urlLauncher:        sensible-browser
+urxvt.keysym.C-Delete:    perl:matcher
+urxvt.underlineURLs:      true
+
+urxvt.foreground:        light grey
+urxvt.colorBD:           #ffffff
+urxvt.colorIT:           #bbbbbb
+urxvt.colorUL:           #999999
+urxvt.underlineColor:    #999999
+urxvt.borderless:        true
+
+URxvt*urgentOnBell: true
+
+Urxvt*shading: 70
+URxvt*fading: 70
+URxvt*transparent: True
+
+*background: #222222
+*foreground: #686868
+
+!black
+*color0:     #262729
+*color8:     #554444
+
+!red
+*color1: #cc0000
+*color9: #990000
+
+!green
+*color2:    #A6E22E
+*color10:   #BEED5F
+
+!yellow
+*color3:    #FD971F
+*color11:   #E6DB74
+
+!blue
+*color4: #204a87
+*color12: #3465a4
+
+!magenta
+*color5: #ce5c00
+*color13: #f57900
+
+!cyan
+*color6: #89b6e2
+*color14: #46a4ff
+
+!white
+*color7:        #cccccc
+*color15:       #ffffff
+
+
+xclock*hourColor:     rgb:0/0/0
+xclock*minuteColor:   rgb:8/8/8
+xclock*secondColor:   rgb:b/b/b
+xclock*majorColor:    rgb:0/0/0
+xclock*minorColor:    rgb:6/6/6
+
+! -- XCALC -- !
+ xcalc*geometry: 200x275
+ xcalc.ti.bevel.background: #111111
+ xcalc.ti.bevel.screen.background: #000000
+ xcalc.ti.bevel.screen.DEG.background: #000000
+ xcalc.ti.bevel.screen.DEG.foreground: LightSeaGreen
+ xcalc.ti.bevel.screen.GRAD.background: #000000
+ xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+ xcalc.ti.bevel.screen.RAD.background: #000000
+ xcalc.ti.bevel.screen.RAD.foreground: LightSeaGreen
+ xcalc.ti.bevel.screen.INV.background: #000000
+ xcalc.ti.bevel.screen.INV.foreground: Red
+ xcalc.ti.bevel.screen.LCD.background: #000000
+ xcalc.ti.bevel.screen.LCD.foreground: LightSeaGreen
+ xcalc.ti.bevel.screen.LCD.shadowWidth: 0
+ xcalc.ti.bevel.screen.M.background: #000000
+ xcalc.ti.bevel.screen.M.foreground: LightSeaGreen
+ xcalc.ti.bevel.screen.P.background: #000000
+ xcalc.ti.bevel.screen.P.foreground: Yellow
+ xcalc.ti.Command.foreground: White
+ xcalc.ti.Command.background: #777777
+ xcalc.ti.button5.background: Orange3
+ xcalc.ti.button19.background: #611161
+ xcalc.ti.button18.background: #611161
+ xcalc.ti.button20.background: #611111
+ xcalc.ti.button25.background: #722222
+ xcalc.ti.button30.background: #833333
+ xcalc.ti.button35.background: #944444
+ xcalc.ti.button40.background: #a55555
+ xcalc.ti.button22.background: #222262
+ xcalc.ti.button23.background: #222262
+ xcalc.ti.button24.background: #222272
+ xcalc.ti.button27.background: #333373
+ xcalc.ti.button28.background: #333373
+ xcalc.ti.button29.background: #333373
+ xcalc.ti.button32.background: #444484
+ xcalc.ti.button33.background: #444484
+ xcalc.ti.button34.background: #444484
+ xcalc.ti.button37.background: #555595
+ xcalc.ti.button38.background: #555595
+ xcalc.ti.button39.background: #555595
+ XCalc*Cursor:                 hand2
+ XCalc*ShapeStyle:             rectangle
+
+xmessage*form.okay.shapeStyle:          rectangle
+xmessage*form.okay.background:          IndianRed
+xmessage*form.okay.foreground:          rgb:e/b/b
+xmessage*message*background:            ivory3
+xmessage*background:                    gray85
+xmessage*foreground:                    gray15
+xmessage*Scrollbar.width:               1
+xmessage*Scrollbar.borderWidth:         0
+xmessage*Text.?.cursorColor:            rgb:d/5/5
+xmessage*Text.borderColor:              gray65
+xmessage*Text*background:               gray95
+xmessage*Command.highlightThickness:    1
+xmessage*Command.internalWidth:         5
+xmessage*Command.internalHeight:        3
+xmessage*Command.borderColor:           gray40
+xmessage*Command.shapeStyle:            Rectangle
+xmessage*Command.background:            gray80
+xmessage*font:                          -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
+
+! -- XPDF -- !
+xpdf*enableFreetype:      yes
+xpdf*antialias:           yes
+xpdf*foreground:          white
+xpdf*background:          black
+xpdf*urlCommand:          /usr/bin/firefox %s
+xpdf*viKeys:              on
