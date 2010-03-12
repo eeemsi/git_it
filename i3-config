@@ -25,10 +25,10 @@ bind Mod1+41 f
 bind Mod1+39 s
 
 # two window titles in one line
-stack-limit cols 2
+new_container stack-limit cols 2
 
 # Not more than 5 rows in this stacking container
-stack-limit rows 5
+new_container stack-limit rows 5
 
 # Tabbed (Mod1+w)
 bind Mod1+28 T
