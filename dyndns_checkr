@@ -6,7 +6,7 @@ if [ $cip == $lip ];
 then                                                                                                                   
 echo "good"                                                                                                            
 else                                                                                                                   
-URL="http://username:passwd@members.dyndns.org/nic/update?hostname=bl4.dyndns.org&myip=$cip&wildcard=NOCHG
+URL="http://username:passwd@members.dyndns.org/nic/update?hostname=bl4.dyndns.org&myip=$cip&wildcard=NOCHG"
 curl $URL > /dev/null                                                                                                  
 fi                                                                                                                     
 exit 0

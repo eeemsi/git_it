@@ -146,3 +146,6 @@ bind Mod1+Shift+26 exit
 bind Mod1+Shift+27 restart
 
 ipc-socket /tmp/i3-ipc.sock
+
+assign "xv/MPlayer" ~
+assign "Navigator/Iceweasel" 2
