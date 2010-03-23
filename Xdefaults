@@ -51,7 +51,7 @@ URxvt*transparent: True
 
 !red
 *color1: #E41B17
-*color9: #ff0000
+*color9: #FF3300
 
 !green
 *color2:    #A6E22E
