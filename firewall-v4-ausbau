@@ -37,17 +37,17 @@ iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 iptables -A INPUT -f -j log-drop
  
 #check for "bad" tcpflags 
-iptables -A TCP_FLAGS -p tcp --tcp-flags ACK,FIN FIN -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ACK,PSH PSH -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ACK,URG URG -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags FIN,RST FIN,RST -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags SYN,FIN SYN,FIN -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags SYN,RST SYN,RST -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ALL ALL -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ALL NONE -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ALL FIN,PSH,URG -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ALL SYN,FIN,PSH,URG -j DROP
-iptables -A TCP_FLAGS -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
+iptables -A INPUT -p tcp --tcp-flags ACK,FIN FIN -j DROP
+iptables -A INPUT -p tcp --tcp-flags ACK,PSH PSH -j DROP
+iptables -A INPUT -p tcp --tcp-flags ACK,URG URG -j DROP
+iptables -A INPUT -p tcp --tcp-flags FIN,RST FIN,RST -j DROP
+iptables -A INPUT -p tcp --tcp-flags SYN,FIN SYN,FIN -j DROP
+iptables -A INPUT -p tcp --tcp-flags SYN,RST SYN,RST -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL FIN,PSH,URG -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL SYN,FIN,PSH,URG -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
 
 #Drop everything from iana
 iptables  -A INPUT -s 0.0.0.0/7 -j DROP
