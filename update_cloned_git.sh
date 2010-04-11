@@ -1,10 +1,9 @@
-#!/bin/sh
-GITHOME="/home/msi/cloned_git"
+#!/bin/bash
+ARRAY=`cd /home/msi/cloned_git/ && ls`
+echo "$ARRAY"
 
-for REPO in "${ARRAY[@]}"; do
- if [ -d $GITHOME/$REPO ]; then
-  cd $GITHOME/$REPO && git pull
- echo "updated $REPO"
- fi 
+for i in $ARRAY; do
+	if [ -d $i]; then
+	cd $i && git pull && sleep 500
+	fi
 done
-
