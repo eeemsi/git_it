@@ -4,6 +4,6 @@ echo "$ARRAY"
 
 for i in $ARRAY; do
 	if [ -d $i]; then
-	cd $i && git pull && sleep 500
+	cd $i && git pull
 	fi
 done
