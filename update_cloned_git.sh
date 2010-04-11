@@ -1,9 +1,9 @@
 #!/bin/bash
-ARRAY=`cd /home/msi/cloned_git/ && ls`
+ARRAY=`ls /home/msi/cloned_git/`
 echo "$ARRAY"
 
 for i in $ARRAY; do
-	if [ -d $i]; then
-	cd $i && git pull
+	if [ -d "/home/msi/cloned_git/$i"]; then
+	cd /home/msi/cloned_git/$i && git pull;
 	fi
 done
