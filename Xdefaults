@@ -38,8 +38,8 @@ urxvt.borderless:        true
 
 URxvt*urgentOnBell: true
 
-Urxvt*shading: 70
-URxvt*fading: 70
+Urxvt*shading: 30
+URxvt*fading: 30
 URxvt*transparent: True
 
 *background: #222222
