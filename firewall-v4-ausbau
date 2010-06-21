@@ -28,7 +28,7 @@ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
  
 #allow ssh via eth0
 iptables -A INPUT -p tcp --dport 22 -i eth0 -j ACCEPT
-iptables -A INPUT -p tcp --dport 22 -i wlan0 -j log-drop
+iptables -A INPUT -p tcp --dport 22 -i wlan0 -j DROP
  
 #Force SYN packets check
 iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
