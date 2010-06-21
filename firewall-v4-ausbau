@@ -7,11 +7,6 @@ iptables -P INPUT DROP
 iptables -P FORWARD DROP
  
 iptables -N SERVICES
-iptables -N log-drop
-
-#log and throw away
-iptables -A log-drop -j LOG -m limit --limit 6/minute
-iptables -A log-drop -j DROP
  
 #drop spoofed packets
 iptables -A INPUT ! --in-interface lo --source 127.0.0.0/8 -j DROP
