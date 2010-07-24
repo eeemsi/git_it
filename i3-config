@@ -28,12 +28,6 @@ bind Mod1+41 f
 # Stacking (Mod1+h)
 bind Mod1+39 s
 
-# two window titles in one line
-new_container stack-limit cols 2
-
-# Not more than 5 rows in this stacking container
-new_container stack-limit rows 5
-
 # Tabbed (Mod1+w)
 bind Mod1+28 T
 
@@ -155,6 +149,3 @@ bind Mod1+Shift+26 exit
 bind Mod1+Shift+27 restart
 
 ipc-socket /tmp/i3-ipc.sock
-
-assign "xv/MPlayer" ~
-assign "Navigator/Iceweasel" 2
