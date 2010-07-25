@@ -13,7 +13,7 @@ exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-no
 # Tell i3 about your preferred terminal. You can refer to this as $terminal
 # later. It is recommended to set this option to allow i3 to open a terminal
 # containing the introduction on first start.
-terminal /usr/bin/rxvt-unicode
+terminal /usr/bin/urxvtc
 
 # ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -116,7 +116,7 @@ bind Mod1+Shift+18 m9
 bind Mod1+Shift+19 m10
 
 # Mod1+Enter starts a new terminal
-bind Mod1+36 exec /usr/bin/rxvt-unicode -sh 20 +sb -fg white
+bind Mod1+36 exec /usr/bin/urxvtc +sb -fg white
 
 # Mod1+Shift+q kills the current client
 bind Mod1+Shift+24 kill
