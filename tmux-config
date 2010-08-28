@@ -8,7 +8,6 @@
 # Note this is only a selection of key bindings and they are in addition to the
 # normal tmux key bindings. This is intended as an example not as to be used
 # as-is.
-new
 ### Unbind existing tmux key bindings (except 0-9).
 
 # set utf8 settings
@@ -98,19 +97,13 @@ bind - split-window
 unbind |
 bind | split-window -h
 
-# :kB: focus up
-unbind Tab
-bind Tab down-pane
-unbind BTab
-bind BTab up-pane
-
 # " windowlist -b
 unbind '"'
 bind '"' choose-window
 
-set -g status-bg green
-set -g status-fg black
+set -g status-bg black
+set -g status-fg green
 
 set status-interval 1
 set -g status-right-length 100 
-set -g status-right "load: #(cat /proc/loadavg | cut -d' ' -f 1,2) @ #(uname -n) --> #(uname -r) | #(acpi -b | awk '{print $4}' | cut -f1 -d ',') #[bg=yellow] #(date '+%a %d/%m %H:%M')"
+set -g status-right "#[fg=white]mem:#[fg=green]#(free -m | grep cache: | awk '{ print $3 }')mb #[fg=white]load:#[fg=green]#(cat /proc/loadavg | cut -d' ' -f 1,2)#[fg=white] | #[fg=red]#(uname -n) --> #(uname -r) #[fg=white]| #[fg=yellow]#(date '+%a %d/%m %H:%M')"
