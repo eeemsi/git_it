@@ -1,19 +1,16 @@
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
 
+#workspace_bar no
 # all new windows are opened using 1 pixel border
 new_window bp
 
-## home
-exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 890 -x 2040 &
-
-## eeepc
-##exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 600 -x 100
+exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 585 -x 125 -w 900
 
 # Tell i3 about your preferred terminal. You can refer to this as $terminal
 # later. It is recommended to set this option to allow i3 to open a terminal
 # containing the introduction on first start.
-terminal /usr/bin/urxvtc
+terminal /usr/bin/rxvt-unicode
 
 # ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -27,6 +24,12 @@ bind Mod1+41 f
 
 # Stacking (Mod1+h)
 bind Mod1+39 s
+
+# two window titles in one line
+#new_container stack-limit cols 2
+
+# Not more than 5 rows in this stacking container
+#new_container stack-limit rows 5
 
 # Tabbed (Mod1+w)
 bind Mod1+28 T
@@ -116,7 +119,7 @@ bind Mod1+Shift+18 m9
 bind Mod1+Shift+19 m10
 
 # Mod1+Enter starts a new terminal
-bind Mod1+36 exec /usr/bin/urxvtc +sb -fg white
+bind Mod1+36 exec /usr/bin/urxvtc -sh 20 +sb -fg white
 
 # Mod1+Shift+q kills the current client
 bind Mod1+Shift+24 kill
@@ -125,20 +128,19 @@ bind Mod1+Shift+24 kill
 # for now, we don’t have an own launcher
 
 # blue 
-#bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#4c7899' -sf '#ffffff'
-
-# orange
-bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#ff6622' -sf '#222222'
+#bind Mod1+33 exec /usr/bin/dmenu_run -b -nb black -nf '#888888' -sb '#4c7899' -sf '#ffffff'
 
 # red
 #bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#900000' -sf '#ffffff'
+
+# orange
+bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
 
 #Colors border background text
 #client.focused #2f343a #900000 #ffffff
 client.focused #ff6622 #ff6622 #ffffff
 #client.focused_inactive #900000 #555555 #ffffff
 #client.urgent #4c7899 #285577 #ffffff
-#bar.focused #900000 #222222 #ff0000
 bar.focused #ff6622 #222222 #ffffff
 #bar.urgent #4c7899 #285577 #ffffff
 

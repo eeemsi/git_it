@@ -6,8 +6,6 @@ iptables -P OUTPUT ACCEPT
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
  
-iptables -N SERVICES
- 
 #drop spoofed packets
 iptables -A INPUT ! --in-interface lo --source 127.0.0.0/8 -j DROP
  
@@ -21,15 +19,11 @@ iptables -A INPUT -j SERVICES
 #allow responses
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
  
-#allow ssh via eth0
-iptables -A INPUT -p tcp --dport 22 -i eth0 -j ACCEPT
-iptables -A INPUT -p tcp --dport 22 -i wlan0 -j DROP
- 
 #Force SYN packets check
 iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
  
 #Force Fragments packets check
-iptables -A INPUT -f -j log-drop
+iptables -A INPUT -f -j DROP
  
 #check for "bad" tcpflags 
 iptables -A INPUT -p tcp --tcp-flags ACK,FIN FIN -j DROP
@@ -43,4 +37,5 @@ iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
 iptables -A INPUT -p tcp --tcp-flags ALL FIN,PSH,URG -j DROP
 iptables -A INPUT -p tcp --tcp-flags ALL SYN,FIN,PSH,URG -j DROP
 iptables -A INPUT -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
+
 
