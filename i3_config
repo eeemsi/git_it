@@ -127,22 +127,17 @@ bind Mod1+Shift+24 kill
 # Mod1+v starts dmenu and launches the selected application
 # for now, we don’t have an own launcher
 
-# blue 
-#bind Mod1+33 exec /usr/bin/dmenu_run -b -nb black -nf '#888888' -sb '#4c7899' -sf '#ffffff'
-
-# red
-#bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#900000' -sf '#ffffff'
+# red (from atsutane)
+#client.focused #2f343a #900000 #ffffff
+#client.focused_inactive #900000 #555555 #ffffff
+#client.urgent #4c7899 #285577 #ffffff
+#bar.focused #2f343a #9E9E9E #000000
+#bar.urgent #4c7899 #285577 #ffffff
 
 # orange
 bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
-
-#Colors border background text
-#client.focused #2f343a #900000 #ffffff
 client.focused #ff6622 #ff6622 #ffffff
-#client.focused_inactive #900000 #555555 #ffffff
-#client.urgent #4c7899 #285577 #ffffff
 bar.focused #ff6622 #222222 #ffffff
-#bar.urgent #4c7899 #285577 #ffffff
 
 # Mod1+Shift+e exits i3
 bind Mod1+Shift+26 exit

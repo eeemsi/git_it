@@ -1,5 +1,0 @@
-# Write your default config options here!
-vo="xv"
-double=yes
-mixer=hw:0
-ao=alsa
