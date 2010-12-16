@@ -51,19 +51,23 @@ URxvt*transparent: True
 
 !red
 *color1: #E41B17
-*color9: #FF3300
+!*color9: #FF3300
 
 !green
-*color2:    #A6E22E
-*color10:   #BEED5F
+!*color2:  	#A6E22E
+!*color10: 	#c8e7a8
+*color2:   	#93d44f
+*color10: 	#BEED5F
 
 !yellow
 *color3:    #FD971F
 *color11:   #E6DB74
 
 !blue
-*color4: #204a87
-*color12: #3465a4
+!*color4: #204a87
+!*color12: #3465a4
+*color4:      #204a87
+*color12:     #3465a4
 
 !magenta
 *color5: #ce5c00
@@ -154,3 +158,4 @@ xpdf*foreground:          white
 xpdf*background:          black
 xpdf*urlCommand:          /usr/bin/firefox %s
 xpdf*viKeys:              on
+
