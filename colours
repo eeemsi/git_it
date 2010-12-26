@@ -9,7 +9,7 @@
 #
 #   found this on: http://bbs.archlinux.org/viewtopic.php?id=51818
 
-T='gYw'   # The test text
+T='TEST'   # The test text
 
 echo -e "\n                 40m     41m     42m     43m\
      44m     45m     46m     47m";
