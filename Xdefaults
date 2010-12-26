@@ -51,7 +51,7 @@ URxvt*transparent: True
 
 !red
 *color1: #E41B17
-!*color9: #FF3300
+*color9: #FF3300
 
 !green
 !*color2:  	#A6E22E
@@ -64,8 +64,6 @@ URxvt*transparent: True
 *color11:   #E6DB74
 
 !blue
-!*color4: #204a87
-!*color12: #3465a4
 *color4:      #204a87
 *color12:     #3465a4
 
@@ -132,24 +130,24 @@ xclock*minorColor:    rgb:6/6/6
  XCalc*Cursor:                 hand2
  XCalc*ShapeStyle:             rectangle
 
-xmessage*form.okay.shapeStyle:          rectangle
-xmessage*form.okay.background:          IndianRed
-xmessage*form.okay.foreground:          rgb:e/b/b
-xmessage*message*background:            ivory3
-xmessage*background:                    gray85
-xmessage*foreground:                    gray15
-xmessage*Scrollbar.width:               1
-xmessage*Scrollbar.borderWidth:         0
-xmessage*Text.?.cursorColor:            rgb:d/5/5
-xmessage*Text.borderColor:              gray65
-xmessage*Text*background:               gray95
-xmessage*Command.highlightThickness:    1
-xmessage*Command.internalWidth:         5
-xmessage*Command.internalHeight:        3
-xmessage*Command.borderColor:           gray40
-xmessage*Command.shapeStyle:            Rectangle
-xmessage*Command.background:            gray80
-xmessage*font:                          -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
+!xmessage*form.okay.shapeStyle:          rectangle
+!xmessage*form.okay.background:          IndianRed
+!xmessage*form.okay.foreground:          rgb:e/b/b
+!xmessage*message*background:            ivory3
+!xmessage*background:                    gray85
+!xmessage*foreground:                    gray15
+!xmessage*Scrollbar.width:               1
+!xmessage*Scrollbar.borderWidth:         0
+!xmessage*Text.?.cursorColor:            rgb:d/5/5
+!xmessage*Text.borderColor:              gray65
+!xmessage*Text*background:               gray95
+!xmessage*Command.highlightThickness:    1
+!xmessage*Command.internalWidth:         5
+!xmessage*Command.internalHeight:        3
+!xmessage*Command.borderColor:           gray40
+!xmessage*Command.shapeStyle:            Rectangle
+!xmessage*Command.background:            gray80
+!xmessage*font:                          -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
 
 ! -- XPDF -- !
 xpdf*enableFreetype:      yes
