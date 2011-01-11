@@ -43,7 +43,7 @@ URxvt*fading: 30
 URxvt*transparent: True
 
 *background: #222222
-*foreground: #686868
+*foreground: #ffffff
 
 !black
 *color0:     #262729
@@ -74,11 +74,6 @@ URxvt*transparent: True
 !cyan
 *color6: #89b6e2
 *color14: #46a4ff
-
-!white
-*color7:        #cccccc
-*color15:       #ffffff
-
 
 xclock*hourColor:     rgb:0/0/0
 xclock*minuteColor:   rgb:8/8/8

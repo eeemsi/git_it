@@ -1,19 +1,16 @@
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-
-#workspace_bar no
+exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 587 -x 150 -w 900 
 # all new windows are opened using 1 pixel border
 new_window bp
 
-exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 585 -x 125 -w 900
-
-# Tell i3 about your preferred terminal. You can refer to this as $terminal
-# later. It is recommended to set this option to allow i3 to open a terminal
-# containing the introduction on first start.
-terminal /usr/bin/rxvt-unicode
+# orange
+bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
+client.focused #ff6622 #ff6622 #ffffff
+bar.focused #ff6622 #222222 #ffffff
 
 # ISO 10646 = Unicode
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font -misc-fixed-medium-r-normal--10-70-100-100-c-60-iso8859-1
 
 # Use Mouse+Mod1 to drag floating windows to their wanted position
@@ -23,16 +20,10 @@ floating_modifier Mod1
 bind Mod1+41 f
 
 # Stacking (Mod1+h)
-bind Mod1+39 s
-
-# two window titles in one line
-#new_container stack-limit cols 2
-
-# Not more than 5 rows in this stacking container
-#new_container stack-limit rows 5
+bind Mod1+43 s
 
 # Tabbed (Mod1+w)
-bind Mod1+28 T
+bind Mod1+25 T
 
 # Default (Mod1+e)
 bind Mod1+26 d
@@ -61,10 +52,10 @@ bind Mod3+45 wcj
 bind Mod3+46 wck
 bind Mod3+47 wcl
 # (alternatively, you can use the cursor keys:)
-bindsym Mod3+Left h
-bindsym Mod3+Down j
-bindsym Mod3+Up k
-bindsym Mod3+Right l
+bindsym Mod3+Left wch
+bindsym Mod3+Down wcj
+bindsym Mod3+Up wck
+bindsym Mod3+Right wcl
 
 # Snap (Mod1+Control+j/k/l/;)
 bind Mod1+Control+44 sh
@@ -72,10 +63,10 @@ bind Mod1+Control+45 sj
 bind Mod1+Control+46 sk
 bind Mod1+Control+47 sl
 # (alternatively, you can use the cursor keys:)
-bindsym Mod1+Control+Left h
-bindsym Mod1+Control+Down j
-bindsym Mod1+Control+Up k
-bindsym Mod1+Control+Right l
+bindsym Mod1+Control+Left sh
+bindsym Mod1+Control+Down sj
+bindsym Mod1+Control+Up sk
+bindsym Mod1+Control+Right sl
 
 # Move (Mod1+Shift+j/k/l/;)
 bind Mod1+Shift+44 mh
@@ -83,10 +74,10 @@ bind Mod1+Shift+45 mj
 bind Mod1+Shift+46 mk
 bind Mod1+Shift+47 ml
 # (alternatively, you can use the cursor keys:)
-bindsym Mod1+Shift+Left h
-bindsym Mod1+Shift+Down j
-bindsym Mod1+Shift+Up k
-bindsym Mod1+Shift+Right l
+bindsym Mod1+Shift+Left mh
+bindsym Mod1+Shift+Down mj
+bindsym Mod1+Shift+Up mk
+bindsym Mod1+Shift+Right ml
 
 # Move Container (Mod3+Shift+j/k/l/;)
 bind Mod3+Shift+44 wcmh
@@ -119,25 +110,14 @@ bind Mod1+Shift+18 m9
 bind Mod1+Shift+19 m10
 
 # Mod1+Enter starts a new terminal
-bind Mod1+36 exec /usr/bin/urxvtc -sh 20 +sb -fg white
+bind Mod1+36 exec /usr/bin/x-terminal-emulator
 
 # Mod1+Shift+q kills the current client
 bind Mod1+Shift+24 kill
 
 # Mod1+v starts dmenu and launches the selected application
-# for now, we don’t have an own launcher
-
-# red (from atsutane)
-#client.focused #2f343a #900000 #ffffff
-#client.focused_inactive #900000 #555555 #ffffff
-#client.urgent #4c7899 #285577 #ffffff
-#bar.focused #2f343a #9E9E9E #000000
-#bar.urgent #4c7899 #285577 #ffffff
-
-# orange
-bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
-client.focused #ff6622 #ff6622 #ffffff
-bar.focused #ff6622 #222222 #ffffff
+# for now, we don’t have a launcher of our own.
+bind Mod1+33 exec /usr/bin/dmenu_run
 
 # Mod1+Shift+e exits i3
 bind Mod1+Shift+26 exit
@@ -145,4 +125,7 @@ bind Mod1+Shift+26 exit
 # Mod1+Shift+r restarts i3 inplace
 bind Mod1+Shift+27 restart
 
-ipc-socket /tmp/i3-ipc.sock
+# The IPC interface allows programs like an external workspace bar
+# (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.
+ipc-socket ~/.i3/ipc.sock
+
