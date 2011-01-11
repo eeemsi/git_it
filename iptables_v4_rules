@@ -1,20 +1,23 @@
 #flash old rules
 iptables -F
+iptables -X
+iptables -t mangle -F
+iptables -t mangle -X
 
 #policies
 iptables -P OUTPUT ACCEPT
 iptables -P INPUT DROP
-iptables -P FORWARD DROP
+iptables -P FORWARD ACCEPT
  
 #drop spoofed packets
 iptables -A INPUT ! --in-interface lo --source 127.0.0.0/8 -j DROP
  
 #limit ping requests 
 iptables -A INPUT -p icmp -m icmp -m limit --limit 1/second -j ACCEPT
+iptables -A INPUT -p 41 -j ACCEPT
  
 #allowed inputs
 iptables -A INPUT --in-interface lo -j ACCEPT
-iptables -A INPUT -j SERVICES
  
 #allow responses
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
@@ -37,5 +40,4 @@ iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
 iptables -A INPUT -p tcp --tcp-flags ALL FIN,PSH,URG -j DROP
 iptables -A INPUT -p tcp --tcp-flags ALL SYN,FIN,PSH,URG -j DROP
 iptables -A INPUT -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
-
 
