@@ -1,8 +1,17 @@
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 587 -x 150 -w 900 
+# all new windows are opened using 1 pixel border
+new_window bp
+
+# orange
+bind Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
+client.focused #ff6622 #ff6622 #ffffff
+bar.focused #ff6622 #222222 #ffffff
 
 # ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font -misc-fixed-medium-r-normal--10-70-100-100-c-60-iso8859-1
 
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -101,14 +110,14 @@ bind Mod1+Shift+18 m9
 bind Mod1+Shift+19 m10
 
 # Mod1+Enter starts a new terminal
-bind Mod1+36 exec /usr/bin/urxvt
+bind Mod1+36 exec /usr/bin/urxvtc -sh 20 +sb -fg white
 
 # Mod1+Shift+q kills the current client
 bind Mod1+Shift+24 kill
 
 # Mod1+v starts dmenu and launches the selected application
 # for now, we don’t have a launcher of our own.
-bind Mod1+55 exec /usr/bin/dmenu_run
+bind Mod1+33 exec /usr/bin/dmenu_run
 
 # Mod1+Shift+e exits i3
 bind Mod1+Shift+26 exit
@@ -120,7 +129,3 @@ bind Mod1+Shift+27 restart
 # (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.
 ipc-socket ~/.i3/ipc.sock
 
-#############################################################
-# DELETE THE FOLLOWING LINES TO DISABLE THE WELCOME MESSAGE #
-#############################################################
-exec xmessage -file /etc/i3/welcome
