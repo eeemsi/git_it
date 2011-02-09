@@ -1,6 +1,7 @@
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 587 -x 150 -w 900 
+#exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 888 -x 600 -w 910 
+exec i3status | dzen2 -bg black -fg '#888888' -ta r -fn "-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1" -y 1012 -x 490 -w 910
 # all new windows are opened using 1 pixel border
 new_window bp
 
@@ -20,10 +21,10 @@ floating_modifier Mod1
 bind Mod1+41 f
 
 # Stacking (Mod1+h)
-bind Mod1+43 s
+bind Mod1+39 s
 
 # Tabbed (Mod1+w)
-bind Mod1+25 T
+bind Mod1+28 T
 
 # Default (Mod1+e)
 bind Mod1+26 d
@@ -110,7 +111,8 @@ bind Mod1+Shift+18 m9
 bind Mod1+Shift+19 m10
 
 # Mod1+Enter starts a new terminal
-bind Mod1+36 exec /usr/bin/urxvtc -sh 20 +sb -fg white
+bind Mod1+36 exec /usr/bin/urxvtc 
+#-sh 20 +sb -fg white -bg black
 
 # Mod1+Shift+q kills the current client
 bind Mod1+Shift+24 kill
