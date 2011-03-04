@@ -2,19 +2,20 @@
 # chromium nightly builds getter for unix-based systems
 #
 # please note that this version downloads the 32bit version by default - for 64bit use:
-# LATEST=`curl -s http://build.chromium.org/buildbot/snapshots/chromium-rel-linux-64/LATEST`
+# LATEST=`curl -s http://build.chromium.org/f/chromium/snapshots/chromium-rel-linux-64/chromium-rel-linux/LATEST`
 #
 # by eeemsi
 
-LATEST=`curl -s http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST`
+LATEST=`curl -s http://build.chromium.org/f/chromium/snapshots/chromium-rel-linux/LATEST`
+
 
 if [ ! -f .chromium_version ]; then 
 	echo "downloading chromium the first time" && 
 			touch .chromium_version && 
-			curl -C - -O http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/$LATEST/chrome-linux.zip && 
+			curl -C - -O  http://build.chromium.org/f/chromium/snapshots/chromium-rel-linux/$LATEST/chrome-linux.zip && 
 			echo $LATEST > .chromium_version && 
 			unzip -q chrome-linux.zip && 
-			echo -n "cleaning up" rm -f chrome-linux.zip && 
+			echo -n "cleaning up" && rm -f chrome-linux.zip && 
 	echo "done - have fun!"
 fi
  
@@ -22,7 +23,7 @@ echo -n "Comparing Versions... "
 
 if [ $(cat .chromium_version) != $LATEST ]; then
 	echo "updating..." && 
-		curl -C - -O http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/$LATEST/chrome-linux.zip && 
+		curl -C - -O  http://build.chromium.org/f/chromium/snapshots/chromium-rel-linux/$LATEST/chrome-linux.zip && 
 		echo $LATEST > .chromium_version && 
 		rm -rf chrome-linux && 
 		unzip -q chrome-linux.zip && 
