@@ -2,7 +2,7 @@
 # chromium nightly builds getter for unix-based systems
 #
 # please note that this version downloads the 32bit version by default - for 64bit use:
-# LATEST=`curl -s http://build.chromium.org/f/chromium/snapshots/chromium-rel-linux-64/chromium-rel-linux/LATEST`
+# LATEST=`curl -s http://build.chromium.org/f/chromium/snapshots/chromium-rel-linux-64/LATEST`
 #
 # by eeemsi
 
