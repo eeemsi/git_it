@@ -5,15 +5,15 @@ SAVEHIST=4000
 # Do not save duplicate entries
 setopt HIST_IGNORE_DUPS
 
-# unbelievable but it sets the editor
+# Unbelievable but it sets the editor
 export EDITOR='vim'
 
-# set completion and its color
+# Set completion and its color
 setopt nohup
 setopt COMPLETE_IN_WORD
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-# starts selection via menu when more then 5 elements appear
+# Starts selection via menu when more then 5 elements appear
 zstyle ':completion:*' menu select=5
 
 # Set defaults for Xless-login (no xsession loaded)
@@ -25,7 +25,7 @@ setopt no_BEEP
 # Don't display an error if there are no matches, I know what I am doing
 setopt no_NOMATCH
 
-# We want to be able to use some keys
+# We need to catch some strange behaviour from input keys  
 if [[ "$TERM" != emacs ]] ; then
     [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
     [[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line
@@ -48,12 +48,21 @@ if [[ "$TERM" != emacs ]] ; then
     [[ "$terminfo[kend]"  == $'\eO'* ]] && bindkey -M viins "${terminfo[kend]/O/[}"  end-of-line
     [[ "$terminfo[khome]" == $'\eO'* ]] && bindkey -M emacs "${terminfo[khome]/O/[}" beginning-of-line
     [[ "$terminfo[kend]"  == $'\eO'* ]] && bindkey -M emacs "${terminfo[kend]/O/[}"  end-of-line
-fi 
+fi
+
+# But we use emacs style for input keys by default
+bindkey -e
+bindkey '\e[1~' beginning-of-line       # home
+bindkey '\e[4~' end-of-line             # end
+bindkey '\e[A'  up-line-or-search       # cursor up
+bindkey '\e[B'  down-line-or-search     # cursor down
+bindkey '\e[7~' beginning-of-line       # home
+bindkey '\e[8~' end-of-line             # end
 
 # Skip .o-files when completing for vi
 fignore=(.o)
 
-# do we have GNU ls with color-support?
+# Do we have GNU ls with color-support?
 if ls --help 2>/dev/null | grep -- --color= >/dev/null && [[ "$TERM" != dumb ]] ; then
     alias ls='ls -b -CF --color=auto'                                                
     alias la='ls -la --color=auto'
