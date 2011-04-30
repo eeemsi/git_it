@@ -5,16 +5,25 @@ SAVEHIST=4000
 # Do not save duplicate entries
 setopt HIST_IGNORE_DUPS
 
-# Unbelievable but it sets the editor
+# Unbelievable but it sets the editor and other stuff
 export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export VTYSH_PAGER='cat'
+
+# long date format in ls(1)
+export TIME_STYLE=long-iso
 
 # Set completion and its color
 setopt nohup
 setopt COMPLETE_IN_WORD
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-# Starts selection via menu when more then 5 elements appear
+# Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=5
+
+# match uppercase from lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Set defaults for Xless-login (no xsession loaded)
 export DISPLAY=${DISPLAY:-:0}
@@ -88,6 +97,15 @@ alias less='less -R'
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
+# support colors in less
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 # Change the colors for ls
 eval $(dircolors -b)
 
@@ -125,10 +143,10 @@ zle-line-init () { echo -n "$bellchar" }
 zle -N zle-line-init
 
 # Export language
-#export LANG=en_US.utf8
+export LANG=en_US.utf8
 export LC_CTYPE=de_DE.UTF-8
 export LC_COLLATE=de_DE.UTF-8
-export LC_TIME=en_DK.UTF-8
+export LC_TIME=en_US.UTF-8
 export LC_NUMERIC=de_DE.UTF-8
 export LC_MONETARY=de_DE.UTF-8
 export LC_MESSAGES=C
