@@ -24,14 +24,6 @@ bindkey '\e[8~' end-of-line
 # Skip .o-files when completing for vi
 fignore=(.o)
 
-function gi() {
-    gitdir=$(git rev-parse --show-cdup)
-    if [ -d ${gitdir}.git ]
-    then
-        echo $1 >> ${gitdir}.gitignore
-    fi
-}
-
 # do we have GNU ls with color-support?
 if ls --help 2>/dev/null | grep -- --color= >/dev/null && [[ "$TERM" != dumb ]] ; then
     alias ls='ls -b -CF --color=auto'                                                
@@ -81,12 +73,12 @@ function psof
 
 # Define prompt
 fg_green=$'%{\e[1;32m%}'
-fg_white=$'%{\e[1;37m%}'
-fg_yellow=$'%{\e[1;33m%}'
+fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
-PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m ${fg_green}%~${fg_no_colour}$ "
-
+PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m ${fg_white}%~${fg_no_colour} $ "
+# use this line on machines where you have to be careful 
+#PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m %(!.${fg_red}.${fg_green})%~${fg_no_colour} $ "
 # Have a bell-character put out, everytime a command finishes. This will set the urgent-hint,
 # if the terminal is configured accordingly
 bellchar=''
