@@ -1,12 +1,12 @@
-# Save 2000 lines of history
-HISTSIZE=2000
+# Save 4000 lines of history
+HISTSIZE=4000
 HISTFILE=~/.zsh_history
-SAVEHIST=2000
+SAVEHIST=4000
 # Do not save duplicate entries
 setopt HIST_IGNORE_DUPS
 
-export PATH="$PATH:/home/msi/bin"
 export EDITOR='vim'
+setopt COMPLETE_IN_WORD
 
 # Set defaults for Xless-login (no xsession loaded)
 export DISPLAY=${DISPLAY:-:0}
@@ -20,6 +20,8 @@ setopt no_NOMATCH
 # We want to be able to use the home- and end-keys
 bindkey '\e[7~' beginning-of-line
 bindkey '\e[8~' end-of-line
+bindkey '\e[A'  up-line-or-search       # cursor up
+bindkey '\e[B'  down-line-or-search     # cursor down
 
 # Skip .o-files when completing for vi
 fignore=(.o)
@@ -40,7 +42,6 @@ else
 fi
 
 # Nicer output of grep
-alias grep='grep -i --color=auto'
 alias grep='grep --color=always --line-number --initial-tab'
 alias egrep='egrep --color=always --line-number --initial-tab'
 
@@ -79,6 +80,7 @@ fg_no_colour=$'%{\e[0m%}'
 PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m ${fg_white}%~${fg_no_colour} $ "
 # use this line on machines where you have to be careful 
 #PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m %(!.${fg_red}.${fg_green})%~${fg_no_colour} $ "
+
 # Have a bell-character put out, everytime a command finishes. This will set the urgent-hint,
 # if the terminal is configured accordingly
 bellchar=''
@@ -87,7 +89,7 @@ zle-line-init () { echo -n "$bellchar" }
 zle -N zle-line-init
 
 # Export language
-export LANG=en_US.utf8
+#export LANG=en_US.utf8
 export LC_CTYPE=de_DE.UTF-8
 export LC_COLLATE=de_DE.UTF-8
 export LC_TIME=en_DK.UTF-8
