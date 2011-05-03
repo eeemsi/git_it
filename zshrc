@@ -18,9 +18,10 @@ export TIME_STYLE=long-iso
 setopt nohup
 setopt COMPLETE_IN_WORD
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+export COLORTERM="yes"
 
 # Starts selection via menu when >selected elements appear
-zstyle ':completion:*' menu select=5
+zstyle ':completion:*' menu select=3
 
 # match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
