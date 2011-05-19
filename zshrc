@@ -2,6 +2,7 @@
 HISTSIZE=4000
 HISTFILE=~/.zsh_history
 SAVEHIST=4000
+
 # Do not save duplicate entries
 setopt HIST_IGNORE_DUPS
 
@@ -68,6 +69,12 @@ bindkey '\e[A'  up-line-or-search       # cursor up
 bindkey '\e[B'  down-line-or-search     # cursor down
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
+
+REPORTTIME=5       # report about cpu-/system-/user-time of command if running longer than 5 seconds
+watch=(notme root) # watch for everyone but me and root
+
+# automatically remove duplicates from these arrays
+typeset -U path cdpath fpath manpath
 
 # Skip .o-files when completing for vi
 fignore=(.o)
