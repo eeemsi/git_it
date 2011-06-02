@@ -1,0 +1,23 @@
+startup_message off
+warp on
+
+set barborder 1
+unmanage MPlayer
+unmanage xbattbar
+escape C-q
+set winfmt %t
+
+bind c exec urxvtc
+bind r resize
+bind F4 quit
+bind F5 restart
+bind quotedbl exec ratpoison -c "select `ratpoison -c "windows" | dmenu  -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222' -l 4 -i | awk '{print $1}'`"
+bind less exec ratpoison -c "echo `acpi`"
+bind greater exec ratpoison -c "echo `uptime | awk '{print $1, $8, $9, $10, $11, $12}'`"
+
+definekey top M-p exec exec $(dmenu_run -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222')
+definekey top M-h next
+definekey top M-l prev
+
+definekey top C-v split
+definekey top C-h hsplit
