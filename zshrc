@@ -3,8 +3,8 @@ HISTSIZE=4000
 HISTFILE=~/.zsh_history
 SAVEHIST=4000
 
-# Do not save duplicate entries
-setopt HIST_IGNORE_DUPS
+# history settings
+setopt append_history extended_history hist_no_store hist_reduce_blanks hist_ignore_all_dups hist_ignore_space
 
 # Unbelievable but it sets the editor and other stuff
 export EDITOR='vim'
@@ -20,6 +20,11 @@ setopt nohup
 setopt COMPLETE_IN_WORD
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export COLORTERM="yes"
+
+# correct
+setopt no_beep auto_cd complete_in_word rm_star_wait noclobber no_HUP
+eval `dircolors`
+
 
 # Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=3
@@ -93,6 +98,41 @@ else
     alias lh='ls -hAl'
     alias l='ls -lF'
 fi
+
+function set_termtitle() {
+    # escape '%' chars in $1, make nonprintables visible
+    a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -rPn -- "$a" | tr -d "\n\r")
+
+    [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
+
+    case $TERM in
+    screen)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+
+        # screen title (in ^A")
+        print -n -- "\ek"
+        print -rn -- "$a"
+        print -n -- "\e\\"
+
+        # screen location
+        print -Pn -- "\e_$2: "
+        print -rn -- "$a"
+        print -n -- "\e\\"
+    ;;
+    xterm*|*rxvt*)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+    ;;
+    esac
+}
 
 # Nicer output of grep
 alias grep='grep --color=always --line-number --initial-tab'
