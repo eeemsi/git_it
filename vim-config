@@ -3,10 +3,11 @@ runtime! debian.vim
  
 " enable colors for syntax
 syntax on
+set background=dark 
  
 " Display cursorline
 set cursorline
- 
+
 " Color of the Cursorline
 hi CursorLine guibg=grey9
  
@@ -56,5 +57,20 @@ endfunction
 " defines tab and shift width
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
 
+" handle long lines and stuff correctly
+set wrap
+set autoindent
+set ttyfast
+
+" fast paste mode toggling
+set pastetoggle=<F12>
+
+" show matching brackets
+set showmatch
+
+" security
+set modelines=0
 
