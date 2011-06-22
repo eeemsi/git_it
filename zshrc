@@ -99,6 +99,7 @@ else
     alias l='ls -lF'
 fi
 
+# set some usefull titles for windows with shell
 function set_termtitle() {
     # escape '%' chars in $1, make nonprintables visible
     a=${(V)1//\%/\%\%}
@@ -132,6 +133,14 @@ function set_termtitle() {
         print -n -- "\a"
     ;;
     esac
+}
+
+function precmd() {
+    set_termtitle "zsh" "%m"
+}
+
+function preexec() {
+    set_termtitle "$1" "%m"
 }
 
 # Nicer output of grep
