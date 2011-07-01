@@ -38,24 +38,19 @@ urxvt.borderless:        true
 
 URxvt*urgentOnBell: true
 
-Urxvt*shading: 30
-URxvt*fading: 30
-URxvt*transparent: True
 
 *background: #222222
 *foreground: #ffffff
 
 !black
-*color0:     #262729
-*color8:     #554444
+*color0:    #262729
+*color8:    #554444
 
 !red
-*color1: #E41B17
-*color9: #FF3300
+*color1:    #E41B17
+*color9:    #FF3300
 
 !green
-!*color2:  	#A6E22E
-!*color10: 	#c8e7a8
 *color2:   	#93d44f
 *color10: 	#BEED5F
 
@@ -64,16 +59,16 @@ URxvt*transparent: True
 *color11:   #E6DB74
 
 !blue
-*color4:      #204a87
-*color12:     #3465a4
+*color4:    #204a87
+*color12:   #3465a4
 
 !magenta
-*color5: #ce5c00
-*color13: #f57900
+*color5:    #ce5c00
+*color13:   #f57900
 
 !cyan
-*color6: #89b6e2
-*color14: #46a4ff
+*color6:    #89b6e2
+*color14:   #46a4ff
 
 xclock*hourColor:     rgb:0/0/0
 xclock*minuteColor:   rgb:8/8/8
@@ -125,30 +120,11 @@ xclock*minorColor:    rgb:6/6/6
  XCalc*Cursor:                 hand2
  XCalc*ShapeStyle:             rectangle
 
-!xmessage*form.okay.shapeStyle:          rectangle
-!xmessage*form.okay.background:          IndianRed
-!xmessage*form.okay.foreground:          rgb:e/b/b
-!xmessage*message*background:            ivory3
-!xmessage*background:                    gray85
-!xmessage*foreground:                    gray15
-!xmessage*Scrollbar.width:               1
-!xmessage*Scrollbar.borderWidth:         0
-!xmessage*Text.?.cursorColor:            rgb:d/5/5
-!xmessage*Text.borderColor:              gray65
-!xmessage*Text*background:               gray95
-!xmessage*Command.highlightThickness:    1
-!xmessage*Command.internalWidth:         5
-!xmessage*Command.internalHeight:        3
-!xmessage*Command.borderColor:           gray40
-!xmessage*Command.shapeStyle:            Rectangle
-!xmessage*Command.background:            gray80
-!xmessage*font:                          -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
-
 ! -- XPDF -- !
 xpdf*enableFreetype:      yes
 xpdf*antialias:           yes
 xpdf*foreground:          white
 xpdf*background:          black
-xpdf*urlCommand:          /usr/bin/firefox %s
+xpdf*urlCommand:          /usr/bin/chromium-browser --block-nonsandboxed-plugins --incognito --disable-java --safe-plugins --memory-model=low %s
 xpdf*viKeys:              on
 
