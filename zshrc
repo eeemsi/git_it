@@ -15,16 +15,8 @@ export VTYSH_PAGER='cat'
 # long date format in ls(1)
 export TIME_STYLE=long-iso
 
-# Set completion and its color
-setopt nohup
-setopt COMPLETE_IN_WORD
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-export COLORTERM="yes"
-
-# correct
-setopt auto_cd complete_in_word rm_star_wait noclobber no_HUP
-eval `dircolors`
-
+# some comfort++
+setopt auto_cd complete_in_word rm_star_wait noclobber no_HUP  
 
 # Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=3
@@ -163,9 +155,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-# Change the colors for ls
-eval $(dircolors -b)
-
 # Show all processes when completing kill/killall and enable menu mode
 zstyle ':completion:*:processes' command 'ps -ax'
 zstyle ':completion:*:processes-names' command 'ps -aeo comm='
@@ -220,9 +209,6 @@ export PATH=$PATH:/usr/sbin:/sbin
 # Initialize completion
 autoload compinit
 compinit -C
-
-# Leave processes open when closing a shell with background processes
-setopt no_HUP
 
 # Set title, if supported by terminal
 if [[ "$TERM" =~ rxvt ]]
