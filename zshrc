@@ -239,7 +239,7 @@ fg_no_colour=$'%{\e[0m%}'
 
 # Look whether connected via ssh or not
 if [ ! -z "$SSH_CONNECTION" ]; then
-  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m ${fg_white} %~${fg_no_colour} » "
+  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} » "
 else
   PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} » "
 fi;
