@@ -16,9 +16,11 @@ export VTYSH_PAGER='cat'
 export TIME_STYLE=long-iso
 
 # Don't send HUP signal to background jobs when exiting ZSH
-# Show that "did you mean message 
+# Show that "did you mean message also use colors in completion menu
 setopt no_HUP correct_all 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+eval `dircolors`
+export COLORTERM="yes"
 
 # Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=3
@@ -184,7 +186,8 @@ fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
 
 # Use the cache 
-zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion:*' cache-path /tmp/cache
 
 # Have a bell-character put out, everytime a command finishes. This will set the urgent-hint,
 # if the terminal is configured accordingly
