@@ -3,7 +3,7 @@ HISTSIZE=4000
 HISTFILE=~/.zsh_history
 SAVEHIST=4000
 
-# history settings
+# History settings
 setopt append_history extended_history hist_no_store hist_reduce_blanks hist_ignore_all_dups hist_ignore_space
 
 # Unbelievable but it sets the editor and other stuff
@@ -12,11 +12,13 @@ export VISUAL='vim'
 export PAGER='less'
 export VTYSH_PAGER='cat'
 
-# long date format in ls(1)
+# Long date format in ls(1)
 export TIME_STYLE=long-iso
 
-# some comfort++
-setopt auto_cd complete_in_word rm_star_wait noclobber no_HUP  
+# Don't send HUP signal to background jobs when exiting ZSH
+# Show that "did you mean message 
+setopt no_HUP correct_all 
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=3
@@ -67,8 +69,11 @@ bindkey '\e[B'  down-line-or-search     # cursor down
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
 
-REPORTTIME=5       # report about cpu-/system-/user-time of command if running longer than 5 seconds
-watch=(notme root) # watch for everyone but me and root
+# report about cpu-/system-/user-time of command if running longer than 5 seconds
+REPORTTIME=5    
+
+# watch for everyone but me and root
+watch=(notme root) 
 
 # automatically remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
@@ -178,7 +183,7 @@ fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
 
-# Faster! (?)
+# Use the cache 
 zstyle ':completion::complete:*' use-cache 1
 
 # Have a bell-character put out, everytime a command finishes. This will set the urgent-hint,
@@ -217,13 +222,13 @@ then
     chpwd
 fi;
 
-# Define colors for prompt
+# Define prompt colors
 fg_green=$'%{\e[1;32m%}'
 fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
 
-# Look whether connected via ssh or not
+# looks whether zsh is used through ssh connection or not
 if [ ! -z "$SSH_CONNECTION" ]; then
   PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} » "
 else
