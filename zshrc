@@ -22,7 +22,7 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export COLORTERM="yes"
 
 # correct
-setopt no_beep auto_cd complete_in_word rm_star_wait noclobber no_HUP
+setopt auto_cd complete_in_word rm_star_wait noclobber no_HUP
 eval `dircolors`
 
 
@@ -188,9 +188,9 @@ fg_green=$'%{\e[1;32m%}'
 fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
-PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m ${fg_white}%~${fg_no_colour} $ "
-# use this line on machines where you have to be careful 
-#PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m %(!.${fg_red}.${fg_green})%~${fg_no_colour} $ "
+
+# Faster! (?)
+zstyle ':completion::complete:*' use-cache 1
 
 # Have a bell-character put out, everytime a command finishes. This will set the urgent-hint,
 # if the terminal is configured accordingly
@@ -230,3 +230,17 @@ then
     chpwd () { print -Pn "\e]0;%n@%m: %~\a" }
     chpwd
 fi;
+
+# Define colors for prompt
+fg_green=$'%{\e[1;32m%}'
+fg_white=$'%{\e[0;37m%}'
+fg_red=$'%{\e[1;31m%}'
+fg_no_colour=$'%{\e[0m%}'
+
+# Look whether connected via ssh or not
+if [ ! -z "$SSH_CONNECTION" ]; then
+  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m ${fg_white} %~${fg_no_colour} » "
+else
+  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} » "
+fi;
+
