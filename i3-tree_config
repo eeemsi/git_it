@@ -2,15 +2,14 @@
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
 exec i3status | i3bar -d --color-urgent-ws-fg "#000000" --color-urgent-ws-bg "#00ff00" --color-inactive-ws-bg "#000000" --color-focus-ws-bg "#ff5511" --color-focus-ws-fg "#000000" 
 
+# use orange borders for focused window
+client.focused #ff6622 #ff6622 #ffffff
+
 # all new windows are opened using 1 pixel border
 new_window 1pixel
 
 # allways open new windows vertical instead of horizontal
 default_orientation vertical
-
-# orange
-bindcode Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
-client.focused #ff6622 #ff6622 #ffffff
 
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-70-100-100-c-60-iso8859-1
@@ -30,12 +29,9 @@ bindcode Mod1+28 layout tabbed
 # Default (Mod1+e)
 bindcode Mod1+26 layout default
 
-# Toggle tiling/floating of the current window (Mod1+Shift+Space)
-bindcode Mod1+Shift+65 floating toggle
-
 # Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating (Mod1+t)
-bindcode Mod1+28 focus mode_toggle
+# the current window is tiling / floating (Mod1+Shift+Space)
+bindcode Mod1+Shift+65 floating toggle
 
 # Focus (Mod1+j/k/l/;)
 bindcode Mod1+44 focus left
@@ -101,9 +97,9 @@ bindcode Mod1+36 exec /usr/bin/urxvtc
 # Mod1+Shift+q kills the current client
 bindcode Mod1+Shift+24 kill
 
-# Mod1+v starts dmenu and launches the selected application
+# Mod1+p starts dmenu and launches the selected application
 # for now, we don’t have a launcher of our own.
-bindcode Mod1+33 exec /usr/bin/dmenu_run
+bindcode Mod1+33 exec /usr/bin/dmenu_run -b -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222'
 
 # Mod1+Shift+e exits i3
 bindcode Mod1+Shift+26 exit
