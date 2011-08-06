@@ -15,7 +15,7 @@ export VTYSH_PAGER='cat'
 # Long date format in ls(1)
 export TIME_STYLE=long-iso
 
-# Don't send HUP signal to background jobs when exiting ZSH
+# Don't send HUP signal to background jobs when exiting zsh
 # Show that "did you mean message also use colors in completion menu
 setopt no_HUP correct_all 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -25,7 +25,7 @@ export COLORTERM="yes"
 # Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=3
 
-# match uppercase from lowercase
+# Match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Set defaults for Xless-login (no xsession loaded)
@@ -71,13 +71,13 @@ bindkey '\e[B'  down-line-or-search     # cursor down
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
 
-# report about cpu-/system-/user-time of command if running longer than 5 seconds
+# Report about cpu-/system-/user-time of command if running longer than 5 seconds
 REPORTTIME=5    
 
-# watch for everyone but me and root
+# Watch for everyone but me and root
 watch=(notme root) 
 
-# automatically remove duplicates from these arrays
+# Automatically remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
 
 # Skip .o-files when completing for vi
@@ -98,7 +98,24 @@ else
     alias l='ls -lF'
 fi
 
-# set some usefull titles for windows with shell
+# Show the git branch in prompt
+export __CURRENT_GIT_BRANCH=
+parse_git_branch() {
+    [ -f .git/HEAD ] && sed 's/ref: refs\/heads\///g' .git/HEAD
+}
+
+get_git_prompt_info() {
+    fg_dark_blue=$'%{\e[0;36m%}'
+    fg_no_colour=$'%{\e[0m%}'
+
+    if [ ! -z "$__CURRENT_GIT_BRANCH" ]
+    then
+        echo "${fg_dark_blue}$__CURRENT_GIT_BRANCH${fg_no_colour} "
+    else
+        echo ""
+    fi
+}
+
 function set_termtitle() {
     # escape '%' chars in $1, make nonprintables visible
     a=${(V)1//\%/\%\%}
@@ -125,7 +142,7 @@ function set_termtitle() {
         print -rn -- "$a"
         print -n -- "\e\\"
     ;;
-    xterm*|*rxvt*)
+    xterm*|rxvt)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
         print -rn -- "$a"
@@ -135,11 +152,16 @@ function set_termtitle() {
 }
 
 function precmd() {
+    export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
     set_termtitle "zsh" "%m"
 }
 
 function preexec() {
     set_termtitle "$1" "%m"
+}
+
+function chpwd() {
+    export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
 }
 
 # Nicer output of grep
@@ -153,7 +175,7 @@ alias less='less -R'
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
-# support colors in less
+# Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -187,7 +209,7 @@ fg_no_colour=$'%{\e[0m%}'
 
 # Use the cache 
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion:*' cache-path /tmp/cache
+zstyle ':completion:*' cache-path /tmp/zsh-cache
 
 # Have a bell-character put out, everytime a command finishes. This will set the urgent-hint,
 # if the terminal is configured accordingly
@@ -221,9 +243,9 @@ compinit -C
 # Set title, if supported by terminal
 if [[ "$TERM" =~ rxvt ]]
 then
-    chpwd () { print -Pn "\e]0;%n@%m: %~\a" }
+    chpwd () { print -Pn "\e]0;%n %~ » \a" }
     chpwd
-fi;
+fi
 
 # Define prompt colors
 fg_green=$'%{\e[1;32m%}'
@@ -231,10 +253,16 @@ fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
 
-# looks whether zsh is used through ssh connection or not
+# Enable substitution in prompt, necessary for $(get_git_prompt_info)
+setopt prompt_subst
+
+# Ssh completion using the .ssh/config
+[ -e "$HOME/.ssh/config" ] && zstyle ':completion:*:complete:ssh:*:hosts' hosts $(sed -n "s/^[ \\t]*Host\(name\|\) \(.*\)/\\2/p" $HOME/.ssh/config | uniq)
+
+# Looks whether zsh is used through ssh connection or not
 if [ ! -z "$SSH_CONNECTION" ]; then
-  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} » "
+  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
 else
-  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} » "
-fi;
+  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
+fi
 
