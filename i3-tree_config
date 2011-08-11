@@ -1,6 +1,6 @@
 # This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
 # and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-exec i3status | i3bar -d --color-urgent-ws-fg "#000000" --color-urgent-ws-bg "#00ff00" --color-inactive-ws-bg "#000000" --color-focus-ws-bg "#ff5511" --color-focus-ws-fg "#000000" 
+exec i3status | i3bar -d --color-urgent-ws-fg '#000000' --color-urgent-ws-bg '#00ff00' --color-inactive-ws-bg '#000000' --color-focus-ws-bg '#ff5511' --color-focus-ws-fg '#000000' -f '-misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1'
 
 # use orange borders for focused window
 client.focused #ff6622 #ff6622 #ffffff
@@ -11,8 +11,20 @@ new_window 1pixel
 # allways open new windows vertical instead of horizontal
 default_orientation vertical
 
+# split in horizontal orientation
+bindsym Mod1+h split h
+
+# split in vertical orientation
+bindsym Mod1+v split v
+
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-70-100-100-c-60-iso8859-1
+
+# change focus between tiling / floating windows
+bindsym Mod1+space focus mode_toggle
+
+# focus the parent container
+bindsym Mod1+a focus parent
 
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
