@@ -1,0 +1,66 @@
+Xft.dpi:                 96
+Xft.antialias:           1
+Xft.hinting:             1
+Xft.hintstyle:           hintslight
+
+URxvt.termName:          rxvt-unicode
+URxvt.scrollBar:         false
+URxvt.loginShell:        true
+URxvt.saveLines:         512
+URxvt.tintColor:         grey
+URxvt.internalBorder:    1
+URxvt.cursorBlink:       false
+URxvt.cursorColor:       #ff9900
+URxvt.cursorColor2:      #000000
+
+URxvt.perl-ext:           default,matcher
+URxvt.urlLauncher:        sensible-browser
+URxvt.keysym.C-Delete:    perl:matcher
+URxvt.underlineURLs:      true
+
+URxvt.foreground:        light grey
+URxvt.underlineColor:    #999999
+URxvt.borderless:        true
+
+URxvt*urgentOnBell: true
+
+
+*background: #222222
+*foreground: #ffffff
+
+!black
+*color0:    #262729
+*color8:    #554444
+
+!red
+*color1:    #E41B17
+*color9:    #FF3300
+
+!green
+*color2:   	#93d44f
+*color10: 	#BEED5F
+
+!yellow
+*color3:    #FD971F
+*color11:   #E6DB74
+
+!blue
+*color4:    #204a87
+*color12:   #3465a4
+
+!magenta
+*color5:    #ce5c00
+*color13:   #f57900
+
+!cyan
+*color6:    #89b6e2
+*color14:   #46a4ff
+
+! -- XPDF -- !
+xpdf*enableFreetype:      yes
+xpdf*antialias:           yes
+xpdf*foreground:          white
+xpdf*background:          black
+xpdf*urlCommand:          /usr/bin/chromium-browser --block-nonsandboxed-plugins --incognito --disable-java --safe-plugins --memory-model=low %s
+xpdf*viKeys:              on
+
