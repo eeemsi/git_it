@@ -1,32 +1,33 @@
-Xft.dpi:                 96
-Xft.antialias:           1
-Xft.hinting:             1
-Xft.hintstyle:           hintslight
+Xft.dpi:                96
+Xft.antialias:          1
+Xft.hinting:            1
+Xft.hintstyle:          hintslight
 
-URxvt.termName:          rxvt-unicode
-URxvt.scrollBar:         false
-URxvt.loginShell:        true
-URxvt.saveLines:         512
-URxvt.tintColor:         grey
-URxvt.internalBorder:    1
-URxvt.cursorBlink:       false
-URxvt.cursorColor:       #ff9900
-URxvt.cursorColor2:      #000000
+URxvt.termName:         rxvt-unicode
+URxvt.scrollBar:        false
+URxvt.loginShell:       true
+URxvt.saveLines:        512
+URxvt.tintColor:        grey
+URxvt.internalBorder:   1
+URxvt.cursorBlink:      false
+URxvt.cursorColor:      #ff9900
+URxvt.cursorColor2:     #000000
 
-URxvt.perl-ext:           default,matcher
-URxvt.urlLauncher:        sensible-browser
-URxvt.keysym.C-Delete:    perl:matcher
-URxvt.underlineURLs:      true
+URxvt.perl-ext:         default,matcher
+URxvt.urlLauncher:      sensible-browser
+URxvt.keysym.C-Delete:  perl:matcher
 
-URxvt.foreground:        light grey
-URxvt.underlineColor:    #999999
-URxvt.borderless:        true
+URxvt.underlineURLs:    true
+URxvt.colorUL:          #999999
 
-URxvt*urgentOnBell: true
+URxvt.foreground:       light grey
+URxvt.borderless:       true
+
+URxvt*urgentOnBell:     true
 
 
-*background: #222222
-*foreground: #ffffff
+*background:    #222222
+*foreground:    #ffffff
 
 !black
 *color0:    #262729
@@ -57,10 +58,10 @@ URxvt*urgentOnBell: true
 *color14:   #46a4ff
 
 ! -- XPDF -- !
-xpdf*enableFreetype:      yes
-xpdf*antialias:           yes
-xpdf*foreground:          white
-xpdf*background:          black
-xpdf*urlCommand:          /usr/bin/chromium-browser --block-nonsandboxed-plugins --incognito --disable-java --safe-plugins --memory-model=low %s
-xpdf*viKeys:              on
+xpdf*enableFreetype:    yes
+xpdf*antialias:         yes
+xpdf*foreground:        white
+xpdf*background:        black
+xpdf*urlCommand:        /usr/bin/chromium-browser --block-nonsandboxed-plugins --incognito --disable-java --safe-plugins --memory-model=low %s
+xpdf*viKeys:            on
 
