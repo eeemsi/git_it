@@ -126,7 +126,7 @@ function set_termtitle() {
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
     case $TERM in
-    screen)
+    tmux)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
         print -rn -- "$a"
@@ -142,7 +142,7 @@ function set_termtitle() {
         print -rn -- "$a"
         print -n -- "\e\\"
     ;;
-    xterm*|rxvt)
+    xterm*|*rxvt*)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
         print -rn -- "$a"
@@ -201,12 +201,6 @@ function psof
 	ps -p "$PIDS" u
 }
 
-# Define prompt
-fg_green=$'%{\e[1;32m%}'
-fg_white=$'%{\e[0;37m%}'
-fg_red=$'%{\e[1;31m%}'
-fg_no_colour=$'%{\e[0m%}'
-
 # Use the cache 
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' cache-path /tmp/zsh-cache
@@ -234,7 +228,7 @@ export LC_MEASUREMENT=de_DE.UTF-8
 export LC_IDENTIFICATION=de_DE.UTF-8
 
 # Expand path to /usr/sbin and /sbin
-export PATH=$PATH:/usr/sbin:/sbin
+export PATH=~/.bin:$PATH:/usr/sbin:/sbin
 
 # Initialize completion
 autoload compinit
@@ -256,10 +250,12 @@ fg_no_colour=$'%{\e[0m%}'
 # Enable substitution in prompt, necessary for $(get_git_prompt_info)
 setopt prompt_subst
 
-# Ssh completion using the .ssh/config
-[ -e "$HOME/.ssh/config" ] && zstyle ':completion:*:complete:ssh:*:hosts' hosts $(sed -n "s/^[ \\t]*Host\(name\|\) \(.*\)/\\2/p" $HOME/.ssh/config | uniq)
+# SSH completion using the .ssh/config
+#[ -e "$HOME/.ssh/config" ] && zstyle ':completion:*:complete:ssh:*:hosts' hosts $(sed -n "s/^[ \\t]*Host\(name\|\) \(.*\)/\\2/p" $HOME/.ssh/config | uniq)
+zstyle ':completion:*:complete:ssh:*:*' hosts $(perl -ne "print '$1 ' if /^Host (.+)$/" ~/.ssh/config)
 
-# Looks whether zsh is used through ssh connection or not
+# Should look whether an ssh session is being used or not 
+# FIXME
 if [ ! -z "$SSH_CONNECTION" ]; then
   PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
 else
