@@ -3,9 +3,8 @@ Xft.antialias:          1
 Xft.hinting:            1
 Xft.hintstyle:          hintslight
 
-URxvt.termName:         rxvt-unicode
+URxvt.termName:         xterm-color
 URxvt.scrollBar:        false
-URxvt.loginShell:       true
 URxvt.saveLines:        512
 URxvt.tintColor:        grey
 URxvt.internalBorder:   1
@@ -46,7 +45,7 @@ URxvt*urgentOnBell:     true
 *color11:   #e6dB74
 
 !blue
-*color4:    #204a87
+*color4:    #2850a0
 *color12:   #3465a4
 
 !magenta

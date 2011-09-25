@@ -3,8 +3,8 @@ runtime! debian.vim
  
 " enable colors for syntax
 syntax on
-set background=dark 
- 
+set bg=dark 
+
 " Display cursorline
 set cursorline
 
@@ -12,19 +12,13 @@ set cursorline
 hi CursorLine guibg=grey9
  
 " Color of the tabline
- hi TabLine term=underline cterm=bold ctermfg=green ctermbg=black
+hi TabLine term=underline cterm=bold ctermfg=green ctermbg=black
 
 " THEMES!!!
-if has("gui_gtk2") && has("gui_running")
-colorscheme dante
-endif 
+colorscheme elflord
 
 " Set encoding to utf-8
-if has("multi_byte")
-    set encoding=utf-8
-    setglobal fileencoding=utf-8
-    set fileencodings=ucs-bom,utf-8,latin1
-endif
+set fileencoding=utf-8 encoding=utf-8
 
 " Always hide the statusline
 set laststatus=2
@@ -38,6 +32,15 @@ endfunction
 "Format the statusline
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c\ %{GitBranchInfoString()}
 set showcmd
+
+" Enhanced mode for command-line completion
+set wildmenu
+
+" Enable listing possible completions when completing file names
+set wildmode=longest,list:longest,list:full
+
+" Set the terminals title
+set title
 
 " For searching
 set ignorecase
@@ -62,7 +65,7 @@ set expandtab
 
 " handle long lines and stuff correctly
 set wrap
-set autoindent
+set autoindent smartindent
 set ttyfast
 
 " fast paste mode toggling
@@ -74,3 +77,5 @@ set showmatch
 " security
 set modelines=0
 
+" Don’t ensure compatibility with vi at all cost
+set nocompatible

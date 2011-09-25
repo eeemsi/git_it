@@ -254,11 +254,5 @@ setopt prompt_subst
 #[ -e "$HOME/.ssh/config" ] && zstyle ':completion:*:complete:ssh:*:hosts' hosts $(sed -n "s/^[ \\t]*Host\(name\|\) \(.*\)/\\2/p" $HOME/.ssh/config | uniq)
 zstyle ':completion:*:complete:ssh:*:*' hosts $(perl -ne "print '$1 ' if /^Host (.+)$/" ~/.ssh/config)
 
-# Should look whether an ssh session is being used or not 
-# FIXME
-if [ ! -z "$SSH_CONNECTION" ]; then
-  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
-else
-  PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
-fi
-
+# Defining a simpler prompt 
+PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
