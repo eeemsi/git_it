@@ -46,7 +46,7 @@ URxvt*urgentOnBell:     true
 
 !blue
 *color4:    #2850a0
-*color12:   #3465a4
+*color12:   #0088cc
 
 !magenta
 *color5:    #ce5c00
