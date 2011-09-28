@@ -1,35 +1,32 @@
-" was given by linux distro
+" Should be given by the machine vim is installed on
 runtime! debian.vim
- 
-" enable colors for syntax
-syntax on
-set bg=dark 
 
-" Display cursorline
+" Enable colors for syntax and use dark background
+syntax on
+set bg=dark
+
+" Display the cursorline
 set cursorline
 
 " Color of the Cursorline
 hi CursorLine guibg=grey9
- 
-" Color of the tabline
-hi TabLine term=underline cterm=bold ctermfg=green ctermbg=black
 
-" THEMES!!!
+" Defines the colorscheme that should be used
 colorscheme elflord
 
 " Set encoding to utf-8
 set fileencoding=utf-8 encoding=utf-8
 
-" Always hide the statusline
+" Always show the statusline
 set laststatus=2
 
-" needs http://www.vim.org/scripts/script.php?script_id=2258 to work
+" Needs http://www.vim.org/scripts/script.php?script_id=2258 to work
 function! CurDir()
    let curdir = substitute(getcwd(), '/home/msi/', "~/", "g")
    return curdir
 endfunction
 
-"Format the statusline
+" Format the statusline
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c\ %{GitBranchInfoString()}
 set showcmd
 
@@ -39,43 +36,47 @@ set wildmenu
 " Enable listing possible completions when completing file names
 set wildmode=longest,list:longest,list:full
 
-" Set the terminals title
+" Set the titel for the terminal
 set title
 
 " For searching
 set ignorecase
 set incsearch
 set hlsearch
- 
-" Commands reagarding vimrc
-" When .vimrc is edited, automatically reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc
 
-" Search ToDos
+" Highlight todo and so on
 function! TODO()
         :vimgrep /@todo\|FIXME/ **/*
         :cwindow
 endfunction
 
-" defines tab and shift width
+" Defines tab and shift width
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" handle long lines and stuff correctly
+" Handle long lines correctly and smart
 set wrap
 set autoindent smartindent
-set ttyfast
 
-" fast paste mode toggling
+" Fast paste mode toggling
 set pastetoggle=<F12>
 
-" show matching brackets
+" Automatically remove trailing whitespace
+autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
+
+" Show matching brackets
 set showmatch
 
-" security
+" Security
 set modelines=0
 
 " Don’t ensure compatibility with vi at all cost
 set nocompatible
+
+" For fast terminal connection
+set ttyfast
+
+" When .vimrc is edited, automatically reload it
+autocmd! bufwritepost .vimrc source ~/.vimrc
