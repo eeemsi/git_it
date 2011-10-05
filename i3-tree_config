@@ -14,7 +14,7 @@ default_orientation vertical
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec urxvtc
+bindsym Mod1+Return exec urxvtc +sb -fg white -bg black
 
 # kill focused window
 bindsym Mod1+Shift+q kill
