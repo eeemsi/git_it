@@ -19,7 +19,6 @@ URxvt.keysym.C-Delete:  perl:matcher
 URxvt.underlineURLs:    true
 URxvt.colorUL:          #999999
 
-URxvt.foreground:       light grey
 URxvt.borderless:       true
 
 URxvt*urgentOnBell:     true
@@ -107,3 +106,4 @@ xcalc.ti.button38.background: #555595
 xcalc.ti.button39.background: #555595
 xcalc*Cursor:                 hand2
 xcalc*ShapeStyle:             rectangle
+
