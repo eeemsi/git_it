@@ -5,38 +5,16 @@ warp on
 set barborder 0
 set fgcolor #cfdb6c
 set bgcolor #222222
-set fwcolor #f62
+set fwcolor #ff662
 
 unmanage MPlayer
 escape C-q
 set winname title
 set winfmt %n %s %t
 
-bind a time
-bind k kill
-bind r resize
-bind R remove
-bind h exec ratpoison -c "hsplit" -c "set border 1"
-bind v exec ratpoison -c "vsplit" -c "set border 1"
-bind o exec ratpoison -c "only" -c "set border 0"
 bind F4 quit
 bind F5 restart
-bind quesetion help root
-bind c exec urxvtc
-bind quotedbl exec ratpoison -c "select `ratpoison -c "windows" | dmenu  -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222' -l 4 -i | awk '{print $1}'`"
-bind less exec ratpoison -c "echo `acpi`"
-bind greater exec ratpoison -c "echo `uptime | awk '{print $1, $8, $9, $10, $11, $12}'`"
+bind quotedbl exec ratpoison -c "select `ratpoison -c "windows" | dmenu  -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222' -l 4 | awk '{print $1}'`"
 
 definekey top M-p exec exec $(dmenu_run -nb '#000000' -nf '#888888' -sb '#f62' -sf '#222222')
-definekey top M-h next
-definekey top M-l prev
 
-definekey top M-Tab focusprev
-definekey top M-C-Left exchangeleft
-definekey top M-C-Right exchangeright
-definekey top M-C-Up exchangeup
-definekey top M-C-Down exchangedown
-definekey top M-Left resize -10 0
-definekey top M-Right resize 10 0
-definekey top M-Up resize 0 10
-definekey top M-Down resize 0 -10
