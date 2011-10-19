@@ -8,6 +8,8 @@ set bgcolor #222222
 set fwcolor #ff662
 
 unmanage MPlayer
+unmanage feh
+
 escape C-q
 set winname title
 set winfmt %n %s %t
