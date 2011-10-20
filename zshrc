@@ -21,8 +21,22 @@ HISTSIZE=4000
 HISTFILE=~/.zsh_history
 SAVEHIST=4000
 
-# History settings
-setopt hist_ignore_dups inc_append_history complete_in_word
+# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered
+setopt HIST_IGNORE_DUPS
+setopt INC_APPEND_HISTORY
+setopt COMPLETE_IN_WORD
+
+# NO BEEPING!
+setopt NO_BEEP
+
+# Don't display an error if there are no matches, I know what I am doing
+setopt NO_NOMATCH
+
+# Don't send HUP signal to background jobs when exiting zsh
+setopt NO_HUP correct_all
+
+# Enable substitution in prompt, necessary for $(get_git_prompt_info)
+setopt PROMPT_SUBST
 
 # Sets the editor and other stuff
 export EDITOR='vim'
@@ -33,20 +47,11 @@ export VTYSH_PAGER='cat'
 # Long date format in ls(1)
 export TIME_STYLE=long-iso
 
-# Don't send HUP signal to background jobs when exiting zsh
-setopt no_HUP correct_all
-
 # Starts selection via menu when >selected elements appear
 zstyle ':completion:*' menu select=3
 
 # Match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# NO BEEPING!
-setopt no_BEEP
-
-# Don't display an error if there are no matches, I know what I am doing
-setopt no_NOMATCH
 
 # But we use emacs style for input keys by default
 bindkey -e
@@ -211,9 +216,6 @@ fg_green=$'%{\e[1;32m%}'
 fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
-
-# Enable substitution in prompt, necessary for $(get_git_prompt_info)
-setopt prompt_subst
 
 # SSH completion using the .ssh/config
 #[ -e "$HOME/.ssh/config" ] && zstyle ':completion:*:complete:ssh:*:hosts' hosts $(sed -n "s/^[ \\t]*Host\(name\|\) \(.*\)/\\2/p" $HOME/.ssh/config | uniq)
