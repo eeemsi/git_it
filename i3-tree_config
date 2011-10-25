@@ -115,6 +115,6 @@ bar {
 
     colors {
         urgent_workspace  #000000 #00ff00
-        focused_workspace #000000 #ff6600
+        focused_workspace #000000 #ff6622
     }
 }
