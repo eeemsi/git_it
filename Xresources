@@ -24,36 +24,97 @@ URxvt.borderless:       true
 URxvt*urgentOnBell:     true
 
 
-*background:    #222222
-*foreground:    #ffffff
+! -- for not so bright environment -- !
+!!*background:    #222222
+!!*foreground:    #ffffff
+!!
+!!!black
+!!*color0:    #262729
+!!*color8:    #554444
+!!
+!!!red
+!!*color1:    #e41b17
+!!*color9:    #ff3300
+!!
+!!!green
+!!*color2:   	#93d44f
+!!*color10: 	#beed5f
+!!
+!!!yellow
+!!*color3:    #fd971f
+!!*color11:   #e6dB74
+!!
+!!!blue
+!!*color4:    #2850a0
+!!*color12:   #0088cc
+!!
+!!!magenta
+!!*color5:    #ce5c00
+!!*color13:   #f57900
+!!
+!!!cyan
+!!*color6:    #89b6e2
+!!*color14:   #46a4ff
 
-!black
-*color0:    #262729
-*color8:    #554444
 
-!red
-*color1:    #e41b17
-*color9:    #ff3300
 
-!green
-*color2:   	#93d44f
-*color10: 	#beed5f
+! -- for brighter environment -> based on solarized -- !
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-!yellow
-*color3:    #fd971f
-*color11:   #e6dB74
+*background:            S_base3
+*foreground:            S_base03
+*cursorColor:           S_base3
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
 
-!blue
-*color4:    #2850a0
-*color12:   #0088cc
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
 
-!magenta
-*color5:    #ce5c00
-*color13:   #f57900
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
 
-!cyan
-*color6:    #89b6e2
-*color14:   #46a4ff
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base02
+*color15:               S_base03
+
+
 
 ! -- XPDF -- !
 xpdf*enableFreetype:    yes
