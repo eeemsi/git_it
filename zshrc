@@ -18,8 +18,8 @@ export PATH=~/.bin:$PATH:/usr/sbin:/sbin
 
 # Amount of saved lines for command history
 HISTSIZE=4000
-HISTFILE=~/.zsh_history
 SAVEHIST=4000
+HISTFILE=~/.zsh_history
 
 # do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered
 setopt HIST_IGNORE_DUPS
@@ -134,22 +134,7 @@ function set_termtitle() {
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
     case $TERM in
-    tmux)
-        # plain xterm title
-        print -Pn -- "\e]2;$2: "
-        print -rn -- "$a"
-        print -n -- "\a"
 
-        # screen title (in ^A")
-        print -n -- "\ek"
-        print -rn -- "$a"
-        print -n -- "\e\\"
-
-        # screen location
-        print -Pn -- "\e_$2: "
-        print -rn -- "$a"
-        print -n -- "\e\\"
-    ;;
     xterm*|*rxvt*)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
@@ -172,22 +157,11 @@ function chpwd() {
     export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
 }
 
-# Nicer output of grep
-alias grep='grep --color=always --line-number --initial-tab'
-alias egrep='egrep --color=always --line-number --initial-tab'
-
-# URL-Escaping-magic to paste URLs
-autoload -U url-quote-magic
-zle -N self-insert url-quote-magic
-
 # Show all processes when completing kill/killall and enable menu mode
 zstyle ':completion:*:processes' command 'ps -ax'
 zstyle ':completion:*:processes-names' command 'ps -aeo comm='
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:*:killall:*' menu yes select
-
-# A nicer ps-output
-alias p='ps -A f -o user,pid,priority,ni,pcpu,pmem,args'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31' menu yes select
+zstyle ':completion:*:*:killall:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31' menu yes select
 
 # Replacement for ps uax | grep $foo
 function psof
@@ -216,10 +190,6 @@ fg_green=$'%{\e[1;32m%}'
 fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
-
-# SSH completion using the .ssh/config
-#[ -e "$HOME/.ssh/config" ] && zstyle ':completion:*:complete:ssh:*:hosts' hosts $(sed -n "s/^[ \\t]*Host\(name\|\) \(.*\)/\\2/p" $HOME/.ssh/config | uniq)
-zstyle ':completion:*:complete:ssh:*:*' hosts $(perl -ne "print '$1 ' if /^Host (.+)$/" ~/.ssh/config)
 
 # Defining a simpler prompt
 PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
