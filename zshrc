@@ -193,3 +193,6 @@ fg_no_colour=$'%{\e[0m%}'
 
 # Defining a simpler prompt
 PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
+
+# Defining a prompt with hostname - for usage via ssh
+PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
