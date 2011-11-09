@@ -4,7 +4,7 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 
 # fire up i3lock
-bindsym XF86Launch1 exec i3lock -d
+bindsym XF86Launch1 exec i3lock -d -c 859900
 
 # use 1pixel borders by default
 new_window 1pixel

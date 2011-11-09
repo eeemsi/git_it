@@ -8,9 +8,6 @@ set bg=dark
 " Display the cursorline
 set cursorline
 
-" Color of the Cursorline
-hi CursorLine guibg=grey9
-
 " Defines the colorscheme that should be used
 colorscheme elflord
 
