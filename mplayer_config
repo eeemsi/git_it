@@ -1,0 +1,19 @@
+# Write your default config options here!
+# Set alsa as default soundoutput
+ao="alsa"
+
+# Set default x11 output without border, directly in fullscreen and without joystick input
+vo="xv"
+fixed-vo="1"
+noborder="1"
+nojoystick="1"
+ontop="1"
+
+# Drop frames harder
+hardframedrop="1"
+
+# Dont display subtitles
+noautosub=1
+
+# There is no remote controle atm
+nolirc="1"

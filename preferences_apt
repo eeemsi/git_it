@@ -1,0 +1,23 @@
+# Prefers updates from testing. All other stuff that is not prefered has to have a lower number
+Package: *
+Pin: release a=testing
+Pin-Priority: 800
+
+# Good for building packages on your own ;)
+Package: i3
+Pin: release o=Debian
+Pin-Priority: -10
+
+Package: i3-wm
+Pin: release o=Debian
+Pin-Priority: -10
+
+Package: i3-wm-dbg
+Pin: release o=Debian
+Pin-Priority: -10
+
+# Prefers packages from build.i3wm.org
+Package: *
+Pin: origin "build.i3wm.org"
+Pin-Priority: 1001
+

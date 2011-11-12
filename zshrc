@@ -1,8 +1,8 @@
 # Export language
-export LANG=en_US.utf8
+export LANG=de_DE.utf8
 export LC_CTYPE=de_DE.UTF-8
 export LC_COLLATE=de_DE.UTF-8
-export LC_TIME=en_US.UTF-8
+export LC_TIME=de_DE.UTF-8
 export LC_NUMERIC=de_DE.UTF-8
 export LC_MONETARY=de_DE.UTF-8
 export LC_MESSAGES=C
@@ -195,4 +195,4 @@ fg_no_colour=$'%{\e[0m%}'
 PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
 
 # Defining a prompt with hostname - for usage via ssh
-PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
+#PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
