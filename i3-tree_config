@@ -1,4 +1,4 @@
-# setting up a varialbe for --no-startup-id and $b
+# setting up two variables for --no-startup-id and bindsym
 set $ensid  exec --no-startup-id
 set $b      bindsym
 

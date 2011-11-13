@@ -77,3 +77,6 @@ set ttyfast
 
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" Disable folding completely
+set nofen

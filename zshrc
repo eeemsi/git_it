@@ -21,10 +21,11 @@ HISTSIZE=4000
 SAVEHIST=4000
 HISTFILE=~/.zsh_history
 
-# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered
+# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered and use that history also in other zsh sessions
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 setopt COMPLETE_IN_WORD
+setopt SHARE_HISTORY
 
 # NO BEEPING!
 setopt NO_BEEP
@@ -48,7 +49,7 @@ export VTYSH_PAGER='cat'
 export TIME_STYLE=long-iso
 
 # Starts selection via menu when >selected elements appear
-zstyle ':completion:*' menu select=3
+zstyle ':completion:*' menu select=2
 
 # Match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -62,7 +63,7 @@ bindkey '\e[B'  down-line-or-search     # cursor down
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
 
-# Report about cpu-/system-/user-time of command if running longer than 5 seconds
+# Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
 REPORTTIME=5
 
 # Watch for everyone but me and root
