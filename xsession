@@ -1,3 +1,9 @@
+# Enable touchpad on eeepc
+xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
+
+# Turn off that none existing LVDS as the machine is not a laptop
+xrandr --output LVDS1 --off --output VGA1 --mode 1440x900
+
 # Disable DPMS turning off the screen
 xset -dpms
 xset s off
