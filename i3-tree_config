@@ -81,6 +81,9 @@ $b Mod1+space focus mode_toggle
 # focus the parent container
 $b Mod1+a focus parent
 
+# focus the parent container
+$b Mod1+d focus child
+
 # switch to workspace
 $b Mod1+1 workspace 1
 $b Mod1+2 workspace 2

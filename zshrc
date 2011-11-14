@@ -21,11 +21,12 @@ HISTSIZE=4000
 SAVEHIST=4000
 HISTFILE=~/.zsh_history
 
-# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered and use that history also in other zsh sessions
+# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered, use that history also in other zsh sessions and remove blanks from each added command
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 setopt COMPLETE_IN_WORD
 setopt SHARE_HISTORY
+setopt HIST_REDUCE_BLANKS
 
 # NO BEEPING!
 setopt NO_BEEP
@@ -193,7 +194,7 @@ fg_red=$'%{\e[1;31m%}'
 fg_no_colour=$'%{\e[0m%}'
 
 # Defining a simpler prompt
-PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
+PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info) %(!.#.$) "
 
 # Defining a prompt with hostname - for usage via ssh
-#PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)» "
+#PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info) %(!.#.$) "

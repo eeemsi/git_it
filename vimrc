@@ -5,8 +5,9 @@ runtime! debian.vim
 syntax on
 set bg=dark
 
-" Display the cursorline
+" Display the cursorline and disable visual bell
 set cursorline
+set novisualbell
 
 " Defines the colorscheme that should be used
 colorscheme elflord
@@ -24,6 +25,7 @@ function! CurDir()
 endfunction
 
 " Format the statusline
+" set statusline=\ %F%m%r%h\ %w\ \ \ Line:\ %l/%L
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c\ %{GitBranchInfoString()}
 set showcmd
 
