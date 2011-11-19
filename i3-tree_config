@@ -1,3 +1,6 @@
+# start application on a certain workspace
+assign [class="^Chromium$"] 2
+
 # setting up two variables for --no-startup-id and bindsym
 set $ensid  exec --no-startup-id
 set $b      bindsym
@@ -14,7 +17,7 @@ $b XF86Launch1 $ensid i3lock -d -c 859900
 new_window 1pixel
 
 # use orange borders for focused window
-client.focused #ff6622 #ff6622 #ffffff
+client.focused #ff6622 #ff6622 #000000
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-70-100-100-c-60-iso10646-1
