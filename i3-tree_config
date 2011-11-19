@@ -124,7 +124,7 @@ bar {
     font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
     colors {
-        urgent_workspace  #000000 #00ff00
+        urgent_workspace  #000000 #859900
         focused_workspace #000000 #ff6622
     }
 }
