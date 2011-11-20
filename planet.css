@@ -11,32 +11,20 @@ h1 {
 
     margin-left: -12px;
 
-    color: #93d44f;
-    background-color: #222222;
 }
 
 h2 {
     margin-left: -12px;
-    /*width: 25em;
-    border-bottom: 1px solid black;*/
     text-align: right;
 
-    color: #93d44f;
-    background-color: #222222;
 }
 
 h3 {
-/*
-    width: 1000px;
-    border: 1px solid grey;
-    border-style: dotted;
-
-    background-color: #eeeeee;*/
     background-color: #222222;
 }
 
 h3 a {
-    color: #93d44f;
+    color: white;
 }
 
 h4 {
@@ -62,16 +50,15 @@ h4 a {
 a,
 a:active {
     text-decoration: none;
-    color: #444444;
+    color: #222222;
 }
 
 a:visited {
     text-decoration: none;
-    color; #444444;
+    color; #222222;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #444444;
 }
 
