@@ -1,90 +1,77 @@
 body {
-	padding-left: 15px;
-	padding-right: 15px;
-
+    margin-top: 0px;
     font-size: 14px;
 
+    color: #222222;
 }
 
 h1 {
-	margin-top: 0px;
-	padding-top: 10px;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    text-align: right;
 
-	font-family: "Bitstream Vera Sans", sans-serif;
-	font-weight: normal;
-	letter-spacing: -2px;
-	text-transform: lowercase;
-	text-align: right;
-	/*color: #82CF29;*/
-    color: #859900;
+    margin-left: -12px;
+
+    color: #93d44f;
+    background-color: #222222;
 }
 
 h2 {
-	font-family: "Bitstream Vera Sans", sans-serif;
-    font-weight: normal;
-    letter-spacing: -2px;
+    margin-left: -12px;
+    /*width: 25em;
+    border-bottom: 1px solid black;*/
+    text-align: right;
 
-	margin-left: -20px;
-	/*color: #82CF29;*/
-    color: #859900;
+    color: #93d44f;
+    background-color: #222222;
 }
 
 h3 {
-	font-family: "Bitstream Vera Sans", sans-serif;
-	font-weight: normal;
-	border: 1px solid #494949;
+/*
+    width: 1000px;
+    border: 1px solid grey;
     border-style: dotted;
-    background-color: #eeeeee;
+
+    background-color: #eeeeee;*/
+    background-color: #222222;
 }
 
 h3 a {
-	text-decoration: none;
-	color: inherit;
+    color: #93d44f;
 }
 
 h4 {
-	font-family: "Bitstream Vera Sans", sans-serif;
-	font-weight: bold;
-	color: #111111;
-
-    margin-bottom: 2px;
 }
 
 h4 a {
-	text-decoration: none;
-	color: inherit;
 }
 
 .content {
-    margin-bottom: 8px;
+    width: 950px;
 }
 
-.entry {
-	margin-bottom: 2em;
-	color: #444444;
+.entrygroup {
 }
 
 *.entry .date {
-    font-family: "Bitstream Vera Sans", sans-serif;
-    color: grey;
 }
 
 .entry .date a {
-	text-decoration: none;
-	color: #9e9e9e;
+    color: #999999;
 }
 
 a,
 a:active {
-	color: grey;
-    text-decoration: underline;
+    text-decoration: none;
+    color: #444444;
 }
+
 a:visited {
-	color: #494949;
-    text-decoration: underline;
+    text-decoration: none;
+    color; #444444;
 }
+
 a:hover {
-    color: grey;
-	text-decoration: underline;
+    text-decoration: underline;
+    color: #444444;
 }
 
