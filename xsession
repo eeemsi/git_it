@@ -32,7 +32,5 @@ export LC_IDENTIFICATION=de_DE.UTF-8
 # Start urxvtd
 urxvtd -q -f -o -m &
 
-# Finally start i3 having coredumps enabled and some debugging for it ... if needed
-ulimit -c unlimited
-#exec /usr/bin/i3 -V -d all >~/i3log-$(date +'%F-%k-%M-%S') 2>&1
+# Fire up the windowmanager
 i3

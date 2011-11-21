@@ -11,7 +11,7 @@ $b XF86AudioLowerVolume $ensid amixer set Master 5%-
 $b XF86AudioRaiseVolume $ensid amixer set Master 5%+
 
 # fire up i3lock
-$b XF86Launch1 $ensid i3lock -d -c 859900
+$b XF86Launch1 $ensid i3lock -d
 
 # use 1pixel borders by default
 new_window 1pixel
@@ -124,7 +124,7 @@ bar {
     font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
     colors {
-        urgent_workspace  #000000 #859900
+        urgent_workspace  #000000 #00ff00
         focused_workspace #000000 #ff6622
     }
 }

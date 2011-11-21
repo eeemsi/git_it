@@ -92,9 +92,9 @@ else
 fi
 
 # Colors within completion
+zmodload zsh/complist
+export LS_COLORS='di=01;34:ln=01;36:pi=33:so=01;35:bd=01;33:cd=01;33:ex=01;32:do=01;35:su=37;41:sg=30;43:st=37;44:ow=34;42:tw=30;42:ca=30;41'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-eval `dircolors`
-export COLORTERM="yes"
 
 # If we want to pipe colors to less, we need this
 alias less='less -R'
