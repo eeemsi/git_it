@@ -131,7 +131,7 @@ function set_termtitle() {
     a=${(V)1//\%/\%\%}
 
     # Truncate command, and join lines.
-    a=$(print -rPn -- "$a" | tr -d "\n\r")
+    a=$(print -rn -- "$a" | tr -d "\n\r")
 
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
@@ -186,6 +186,12 @@ zle -N zle-line-init
 # Initialize completion
 autoload compinit
 compinit -C
+
+# Defining aliases
+alias s='sudo'
+alias g='git'
+alias agu='s apt-get update && s apt-get upgrade && s apt-get autoremove && s apt-get autoclean && s apt-get clean'
+
 
 # Define prompt colors
 fg_green=$'%{\e[1;32m%}'

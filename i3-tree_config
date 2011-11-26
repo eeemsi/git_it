@@ -20,7 +20,7 @@ new_window 1pixel
 client.focused #ff6622 #ff6622 #000000
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--10-70-100-100-c-60-iso10646-1
+font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
 # allways open new windows vertical instead of horizontal
 default_orientation vertical
@@ -121,8 +121,6 @@ $b Mod1+Shift+e exit
 # finds out, if available)
 bar {
     status_command i3status
-    font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
-
     colors {
         urgent_workspace  #000000 #00ff00
         focused_workspace #000000 #ff6622
