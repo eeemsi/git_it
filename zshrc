@@ -28,6 +28,9 @@ setopt COMPLETE_IN_WORD
 setopt SHARE_HISTORY
 setopt HIST_REDUCE_BLANKS
 
+# for the git stuff that's comming later
+setopt EXTENDED_GLOB
+
 # NO BEEPING!
 setopt NO_BEEP
 
@@ -45,6 +48,10 @@ export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 export VTYSH_PAGER='cat'
+
+# Set PATHs for node.js
+export NODE_PATH=/opt/node:/opt/node/lib/node_modules
+export PATH=$PATH:/opt/node/bin
 
 # Long date format in ls(1)
 export TIME_STYLE=long-iso
@@ -110,9 +117,17 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Show the git branch in prompt
 export __CURRENT_GIT_BRANCH=
+typeset -a __CURRENT_GIT_DIR
 parse_git_branch() {
-    [ -f .git/HEAD ] && sed 's/ref: refs\/heads\///g' .git/HEAD
+    [ -f ${__CURRENT_GIT_DIR}/HEAD ] && sed 's/ref: refs\/heads\///g' ${__CURRENT_GIT_DIR}/HEAD
 }
+
+git_branch_chdir() {
+    __CURRENT_GIT_DIR=((../)#.git)
+}
+
+git_branch_chdir
+chpwd_functions=(${chpwd_functions} git_branch_chdir)
 
 get_git_prompt_info() {
     fg_dark_blue=$'%{\e[0;36m%}'

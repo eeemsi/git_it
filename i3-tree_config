@@ -1,3 +1,6 @@
+# i3 config file v4
+#
+#
 # start application on a certain workspace
 assign [class="^Chromium$"] 2
 
