@@ -1,12 +1,12 @@
 # i3 config file v4
-#
-#
-# start application on a certain workspace
-assign [class="^Chromium$"] 2
 
 # setting up two variables for --no-startup-id and bindsym
-set $ensid  exec --no-startup-id
+set $a      assign
 set $b      bindsym
+set $ensid  exec --no-startup-id
+
+# start application on a certain workspace
+$a [class="^Chromium$"] 2
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
