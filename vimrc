@@ -55,6 +55,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" More flexible backspace
+set backspace=indent,eol,start
+
 " Handle long lines correctly and smart
 set wrap
 set autoindent smartindent
