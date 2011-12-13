@@ -13,12 +13,9 @@ export LC_TELEPHONE=de_DE.UTF-8
 export LC_MEASUREMENT=de_DE.UTF-8
 export LC_IDENTIFICATION=de_DE.UTF-8
 
-# Expand path to /usr/sbin and /sbin
-export PATH=~/.bin:$PATH:/usr/sbin:/sbin
-
 # Amount of saved lines for command history
-HISTSIZE=4000
-SAVEHIST=4000
+HISTSIZE=5000
+SAVEHIST=5000
 HISTFILE=~/.zsh_history
 
 # do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered, use that history also in other zsh sessions and remove blanks from each added command
@@ -27,9 +24,6 @@ setopt INC_APPEND_HISTORY
 setopt COMPLETE_IN_WORD
 setopt SHARE_HISTORY
 setopt HIST_REDUCE_BLANKS
-
-# for the git stuff that's comming later
-setopt EXTENDED_GLOB
 
 # NO BEEPING!
 setopt NO_BEEP
@@ -40,7 +34,8 @@ setopt NO_NOMATCH
 # Don't send HUP signal to background jobs when exiting zsh
 setopt NO_HUP correct_all
 
-# Enable substitution in prompt, necessary for $(get_git_prompt_info)
+# Essential for the git stuff
+setopt EXTENDED_GLOB
 setopt PROMPT_SUBST
 
 # Sets the editor and other stuff
@@ -48,6 +43,9 @@ export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 export VTYSH_PAGER='cat'
+
+# Expand path to /usr/sbin and /sbin
+export PATH=~/.bin:$PATH:/usr/sbin:/sbin
 
 # Set PATHs for node.js
 export NODE_PATH=/opt/node:/opt/node/lib/node_modules
@@ -64,10 +62,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # But we use emacs style for input keys by default
 bindkey -e
-bindkey '\e[1~' beginning-of-line       # home
-bindkey '\e[4~' end-of-line             # end
-bindkey '\e[A'  up-line-or-search       # cursor up
-bindkey '\e[B'  down-line-or-search     # cursor down
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
 
@@ -89,13 +83,13 @@ if ls --help 2>/dev/null | grep -- --color= >/dev/null && [[ "$TERM" != dumb ]] 
     alias la='ls -la --color=auto'
     alias ll='ls -l --color=auto'
     alias lh='ls -hAl --color=auto'
-    alias l='ls -lF --color=auto'
+    alias l='ls -hlF --color=auto'
 else
     alias ls='ls -b -CF'
     alias la='ls -la'
     alias ll='ls -l'
     alias lh='ls -hAl'
-    alias l='ls -lF'
+    alias l='ls -hlF'
 fi
 
 # Colors within completion
@@ -205,8 +199,10 @@ compinit -C
 # Defining aliases
 alias s='sudo'
 alias g='git'
-alias agu='s apt-get update && s apt-get upgrade && s apt-get autoremove && s apt-get autoclean && s apt-get clean'
+alias agu='s apt-get update && s apt-get upgrade && s apt-get autoremove && s apt-get autoclean'
 
+# Nicer output of grep
+alias grep='grep --color=auto --initial-tab'
 
 # Define prompt colors
 fg_green=$'%{\e[1;32m%}'
