@@ -62,6 +62,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # But we use emacs style for input keys by default
 bindkey -e
+bindkey '\e[A'  up-line-or-search       # cursor up
+bindkey '\e[B'  down-line-or-search     # cursor down
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
 
