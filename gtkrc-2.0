@@ -1,0 +1,6 @@
+style "font" {
+    font_name = "Bitstream Vera Sans 8"
+}
+
+widget_class "*" style "font"
+gtk-font-name = "Bitstream Vera Sans 8"
