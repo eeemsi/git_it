@@ -1,0 +1,32 @@
+xlogin*login.translations: #override \
+        CtrlR: abort-display()\n\
+        F1: set-session-argument(failsafe)\n\
+        Delete: delete-character()\n\
+        Left: move-backward-character()\n\
+        Right: move-forward-character()\n\
+        Home: move-to-begining()\n\
+        End: move-to-end()\n\
+        CtrlKP_Enter: set-session-argument(failsafe) finish-field()\n\
+        KP_Enter: set-session-argument() finish-field()\n\
+        CtrlReturn: set-session-argument(failsafe) finish-field()\n\
+        Return: set-session-argument() finish-field()
+
+
+! No greeting, no message on wrong password
+xlogin.Login.greeting:
+xlogin.Login.fail:
+xlogin.Login.font: -misc-fixed-*-*-normal-*-10-*-*-*-*-*-iso10646-1
+
+! Fullscreen prompt
+xlogin*geometry: 1024x600+0+0
+xlogin*geometry: 1366x768+0+0
+xlogin*geometry: 1440x900+0+0
+
+! Set colors, disable borders
+*Foreground: white
+*Background: black
+xlogin*borderWidth: 0
+xlogin*frameWidth: 0
+xlogin*innerFramesWidth: 0
+xlogin*shdColor: black
+xlogin*hiColor: black
