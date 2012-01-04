@@ -1,7 +1,7 @@
 body {
     margin-top: 0px;
-    font-size: 13px;
-    color: #3a3a3a;
+    font-size: 14px;
+    color: #333;
 }
 
 h1 {
@@ -16,12 +16,16 @@ h2 {
 }
 
 h3 {
-    background-color: #3a3a3a;
+    background-color: #333;
 }
 
 h3 a {
     text-decoration: none;
     color: white;
+}
+
+h3 a:hover {
+    text-decoration: none;
 }
 
 h4 {
