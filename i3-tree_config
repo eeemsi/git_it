@@ -8,8 +8,9 @@ set $ensid  exec --no-startup-id
 # start applications on a certain workspace
 $a [class="^Chromium$"] 2
 
-# start application in floating mode and other certain conditions
-for_window [class="^kvm$"] floating enable
+# start applications in floating mode and/or other certain conditions
+for_window [class="^kvm$"]      floating enable
+for_window [class="^MPlayer$"]  floating enable
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
