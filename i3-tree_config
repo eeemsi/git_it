@@ -1,12 +1,15 @@
-# i3 config file v4
+# i3 config file (v4)
 
 # setting up two variables for --no-startup-id and bindsym
 set $a      assign
 set $b      bindsym
 set $ensid  exec --no-startup-id
 
-# start application on a certain workspace
+# start applications on a certain workspace
 $a [class="^Chromium$"] 2
+
+# start application in floating mode and other certain conditions
+for_window [class="^kvm$"] floating enable
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
@@ -14,7 +17,7 @@ $b XF86AudioLowerVolume $ensid amixer set Master 5%-
 $b XF86AudioRaiseVolume $ensid amixer set Master 5%+
 
 # fire up i3lock
-$b XF86Launch1 $ensid i3lock -d
+$b XF86Launch1 $ensid i3lock -i ~/Downloads/nodejs-1440x900.png
 
 # use 1pixel borders by default
 new_window 1pixel
