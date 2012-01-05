@@ -18,11 +18,10 @@ HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.zsh_history
 
-# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered, use that history also in other zsh sessions and remove blanks from each added command
+# do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered and remove blanks from each added command
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 setopt COMPLETE_IN_WORD
-setopt SHARE_HISTORY
 setopt HIST_REDUCE_BLANKS
 
 # NO BEEPING!
