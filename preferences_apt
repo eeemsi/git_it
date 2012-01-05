@@ -17,6 +17,7 @@ Pin: release o=Debian
 Pin-Priority: -10
 
 # Prefers packages from build.i3wm.org
+# apt-get --allow-unauthenticated install i3-autobuild-keyring
 Package: *
 Pin: origin "build.i3wm.org"
 Pin-Priority: 1001
