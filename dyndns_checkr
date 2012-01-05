@@ -1,12 +1,12 @@
-#!/bin/sh                                                                                                              
-cip=`ifconfig eth0.1 | sed -n '/dr:/{;s/.*dr:\([0-9.]\+\) .*/\1/;p;}'`                                                 
-lip=`nslookup bl4.dyndns.org | tail -2 | grep Address | awk '{print $3}'`                                         
-                                                                                                                       
-if [ $cip == $lip ];                                                                                                   
-then                                                                                                                   
-echo "good"                                                                                                            
-else                                                                                                                   
-URL="http://username:passwd@members.dyndns.org/nic/update?hostname=bl4.dyndns.org&myip=$cip&wildcard=NOCHG"
-curl $URL > /dev/null                                                                                                  
-fi                                                                                                                     
+#!/bin/sh
+
+cip=`ifconfig eth0.1 | sed -n '/dr:/{;s/.*dr:\([0-9.]\+\) .*/\1/;p;}'`
+lip=`nslookup bl4.dyndns.org | tail -2 | grep Address | awk '{print $3}'`
+
+if [ $cip != $lip ];
+then
+    /bin/update_dyndns.sh
+else
+    echo "good"
+fi
 exit 0
