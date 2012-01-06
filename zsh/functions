@@ -1,0 +1,7 @@
+# Replacement for ps uax | grep $foo
+function psof
+{
+    PIDS=$(pidof ${1})
+    [ -z "${PIDS}" ] && { echo "No such process"; return }
+    ps -p "$PIDS" u
+}

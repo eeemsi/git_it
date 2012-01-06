@@ -1,0 +1,23 @@
+# Initialize completion
+autoload compinit
+compinit -C
+
+# Use the cache
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion:*' cache-path ${HOME}/.zsh/zsh-cache
+
+# Starts selection via menu when >selected elements appear
+zstyle ':completion:*' menu select=2
+
+# Match uppercase from lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Show all processes when completing kill/killall and enable menu mode
+zstyle ':completion:*:processes' command 'ps -ax'
+zstyle ':completion:*:processes-names' command 'ps -aeo comm='
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31' menu yes select
+zstyle ':completion:*:*:killall:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31' menu yes select
+
+# Sort separate matches into groups
+zstyle ':completion:*:matches'         group 'yes'
+zstyle ':completion:*'                 group-name ''

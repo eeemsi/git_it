@@ -1,0 +1,79 @@
+# Essential for the git stuff
+setopt EXTENDED_GLOB
+
+# Enable substitution in prompt, necessary for $(get_git_prompt_info)
+setopt PROMPT_SUBST
+
+# show the git branch in prompt
+export __CURRENT_GIT_BRANCH=
+typeset -a __CURRENT_GIT_DIR
+parse_git_branch() {
+    [ -f ${__CURRENT_GIT_DIR[1]}/HEAD ] && sed 's/ref: refs\/heads\///g' ${__CURRENT_GIT_DIR[1]}/HEAD
+}
+
+git_branch_chdir() {
+    __CURRENT_GIT_DIR=((../)#.git)
+}
+
+git_branch_chdir
+chpwd_functions=(${chpwd_functions} git_branch_chdir)
+
+get_git_prompt_info() {
+    fg_dark_blue=$'%{\e[0;36m%}'
+    fg_no_colour=$'%{\e[0m%}'
+
+    if [ ! -z "$__CURRENT_GIT_BRANCH" ]
+    then
+        echo "${fg_dark_blue}$__CURRENT_GIT_BRANCH${fg_no_colour} "
+    else
+        echo ""
+    fi
+}
+
+function set_termtitle() {
+    # escape '%' chars in $1, make nonprintables visible
+    a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -rn -- "$a" | tr -d "\n\r")
+
+    [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
+
+    case $TERM in
+    screen)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+
+        # screen title (in ^A")
+        print -n -- "\ek"
+        print -rn -- "$a"
+        print -n -- "\e\\"
+
+        # screen location
+        print -Pn -- "\e_$2: "
+        print -rn -- "$a"
+        print -n -- "\e\\"
+    ;;
+    xterm*|rxvt)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+    ;;
+    esac
+}
+
+function precmd() {
+    export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
+    set_termtitle "zsh" "%m"
+}
+
+function preexec() {
+    set_termtitle "$1" "%m"
+}
+
+function chpwd() {
+    export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
+}

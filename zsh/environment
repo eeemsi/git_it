@@ -1,0 +1,12 @@
+# Sets the editor and other stuff
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export VTYSH_PAGER='cat'
+
+# Expand path to /usr/sbin and /sbin
+export PATH=~/.bin:$PATH:/usr/sbin:/sbin
+
+# Set PATHs for node.js
+export NODE_PATH=/opt/node:/opt/node/lib/node_modules
+export PATH=$PATH:/opt/node/bin

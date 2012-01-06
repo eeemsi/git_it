@@ -1,0 +1,7 @@
+# Defining aliases
+alias s='sudo'
+alias g='git'
+alias agu='s apt-get update && s apt-get upgrade && s apt-get autoremove && s apt-get autoclean'
+
+# Nicer output of grep
+alias grep='grep --color=auto --initial-tab'
