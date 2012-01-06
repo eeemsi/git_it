@@ -5,3 +5,16 @@ function psof
     [ -z "${PIDS}" ] && { echo "No such process"; return }
     ps -p "$PIDS" u
 }
+
+# Create Directoy and cd to it
+mkcd() {
+    mkdir -p "$@" && cd "$@"
+}
+
+# Create temporary directory and cd to it
+cdt() {
+    local t
+    t=$(mktemp -d)
+    echo "$t"
+    builtin cd "$t"
+}
