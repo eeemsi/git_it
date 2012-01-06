@@ -1,7 +1,7 @@
 # Amount of saved lines for command history
 HISTSIZE=5000
 SAVEHIST=5000
-HISTFILE=~/.zsh_history
+HISTFILE=${HOME}/.zsh_history
 
 # do not save duplicates, add incrementally lines to $HISTFILE as soon as they're entered and remove blanks from each added command
 setopt HIST_IGNORE_DUPS
