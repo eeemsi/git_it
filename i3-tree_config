@@ -18,7 +18,6 @@ $b XF86AudioLowerVolume $ensid amixer set Master 5%-
 $b XF86AudioRaiseVolume $ensid amixer set Master 5%+
 
 # fire up i3lock
-# $b Mod4+l $ensid i3lock -i ~/Downloads/nodejs-1440x900.png
 $b XF86Launch1 $ensid i3lock -i ~/Downloads/nodejs-1440x900.png
 
 # use 1pixel borders by default
@@ -94,6 +93,12 @@ $b Mod1+a focus parent
 
 # focus the parent container
 $b Mod1+d focus child
+
+# Make the currently focused window a scratchpad
+$b Mod1+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+$b Mod1+minus scratchpad show
 
 # switch to workspace
 $b Mod1+1 workspace 1
