@@ -15,3 +15,4 @@ source "${HOME}/.zsh/git"
 source "${HOME}/.zsh/urgency_hint"
 source "${HOME}/.zsh/functions"
 
+source "${HOME}/.zsh/browser-anti-suck"
