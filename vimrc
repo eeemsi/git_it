@@ -18,7 +18,7 @@ set fileencoding=utf-8 encoding=utf-8
 " Always show the statusline
 set laststatus=2
 
-" Format the statusline
+" Format the statusline - GitBranchInfoString() requires github.com/taq/vim-git-branch-info to work
 set statusline=\ %F%m%r%h\ %w\ >\ \ %{GitBranchInfoString()}\ >\ Line:\ %l/%L:%c
 set showcmd
 
