@@ -18,15 +18,8 @@ set fileencoding=utf-8 encoding=utf-8
 " Always show the statusline
 set laststatus=2
 
-" Needs http://www.vim.org/scripts/script.php?script_id=2258 to work
-function! CurDir()
-   let curdir = substitute(getcwd(), '/home/msi/', "~/", "g")
-   return curdir
-endfunction
-
 " Format the statusline
-" set statusline=\ %F%m%r%h\ %w\ \ \ Line:\ %l/%L
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c\ %{GitBranchInfoString()}
+set statusline=\ %F%m%r%h\ %w\ >\ \ %{GitBranchInfoString()}\ >\ Line:\ %l/%L:%c
 set showcmd
 
 " Enhanced mode for command-line completion
@@ -42,12 +35,6 @@ set title
 set ignorecase
 set incsearch
 set hlsearch
-
-" Highlight todo and so on
-function! TODO()
-        :vimgrep /@todo\|FIXME/ **/*
-        :cwindow
-endfunction
 
 " Defines tab and shift width
 set tabstop=4
@@ -80,8 +67,9 @@ set nocompatible
 " For fast terminal connection
 set ttyfast
 
+" Disable folding completely
+set nofen
+
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-" Disable folding completely
-set nofen
