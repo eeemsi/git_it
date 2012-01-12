@@ -1,0 +1,4 @@
+# start a new instance of the browser instead of opening a new tab within the current instance
+alias firefox="./Downloads/firefox/firefox -private -new-tab  &"
+
+alias chromium="chromium -incognito -new-tab"
