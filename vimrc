@@ -28,6 +28,9 @@ set wildmenu
 " Enable listing possible completions when completing file names
 set wildmode=longest,list:longest,list:full
 
+" Skip certain endings while completing
+set wildignore=*.o,*.a,*.la,*.lo,*.swp,*.tab.c,*.tab.h,*.yy.c,.svn,.git
+
 " Set the titel for the terminal
 set title
 
