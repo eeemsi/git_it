@@ -1,0 +1,13 @@
+# start or reattach a tmux session when a ssh connection is established
+
+case $TERM in
+tmux*)
+;;
+*)
+
+if [ ! -z "$SSH_CONNECTION" ]; then
+    tmux attach -d
+    exit
+fi
+;;
+esac

@@ -16,3 +16,4 @@ source "${HOME}/.zsh/urgency_hint"
 source "${HOME}/.zsh/functions"
 
 source "${HOME}/.zsh/browser-anti-suck"
+source "${HOME}/.zsh/ssh_conn_tmux"
