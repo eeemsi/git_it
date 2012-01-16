@@ -5,8 +5,8 @@ tmux*)
 ;;
 *)
 
-if [ ! -z "$SSH_CONNECTION" ]; then
-    tmux attach -d
+if [ ! -z "$SSH_CONNECTION" ] && [ $TERM != "screen" ]; then
+    tmux attach-session -d
     exit
 fi
 ;;
