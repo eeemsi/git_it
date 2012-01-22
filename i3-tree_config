@@ -24,7 +24,7 @@ $b XF86Launch1 $ensid i3lock -i ~/Downloads/nodejs-1440x900.png
 new_window 1pixel
 
 # use orange borders for focused window
-client.focused #ff6622 #ff6622 #000000
+client.focused #ff6622 #ff6622 #000000 #222222
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
