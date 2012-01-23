@@ -6,22 +6,16 @@ Xft.hintstyle:          hintslight
 URxvt.termName:         xterm-color
 URxvt.scrollBar:        false
 URxvt.saveLines:        512
-URxvt.tintColor:        grey
-URxvt.internalBorder:   1
 URxvt.cursorBlink:      false
 URxvt.cursorColor:      #ff9900
 URxvt.cursorColor2:     #000000
+URxvt.colorUL:          #999999
 
 URxvt.perl-ext:         default,matcher
 URxvt.urlLauncher:      sensible-browser
-URxvt.keysym.C-Delete:  perl:matcher
 
-URxvt.underlineURLs:    true
-URxvt.colorUL:          #999999
-
-URxvt.borderless:       true
-
-URxvt*urgentOnBell:     true
+URxvt.visualBell:       false
+URxvt.urgentOnBell:     true
 
 *background:    #222222
 *foreground:    #ffffff
@@ -39,7 +33,6 @@ URxvt*urgentOnBell:     true
 *color10: 	#beed5f
 
 !yellow
-!*color3:   #fd971f
 *color3:    #efff40
 *color11:   #e6dB74
 
