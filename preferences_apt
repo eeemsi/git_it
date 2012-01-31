@@ -16,6 +16,14 @@ Package: i3-wm-dbg
 Pin: release o=Debian
 Pin-Priority: -10
 
+Package: i3status
+Pin: release o=Debian
+Pin-Priority: -10
+
+Package: i3lock
+Pin: release o=Debian
+Pin-Priority: -10
+
 # Hints to get the development releases of i3 from build.i3wm.org
 # 1) echo 'deb http://build.i3wm.org/debian/sid sid main' >> /etc/apt/sources.list
 # 2) apt-get --allow-unauthenticated install i3-autobuild-keyring
