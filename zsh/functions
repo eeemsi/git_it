@@ -6,7 +6,7 @@ function psof
     ps -p "$PIDS" u
 }
 
-# Create Directoy and cd to it
+# Create directoy and cd to it
 mkcd() {
     mkdir -p "$@" && cd "$@"
 }
@@ -17,4 +17,9 @@ cdt() {
     t=$(mktemp -d)
     echo "$t"
     builtin cd "$t"
+}
+
+# Create a directory, cd into it and create a git repository
+mkgit() {
+ mkdir -p "$@" && cd "$@" && git init
 }
