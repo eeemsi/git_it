@@ -10,3 +10,6 @@ bindkey '\eOd'  backward-word           # ctrl cursor left
 
 # Increasing the comfort for forward-word and backward-word
 export WORDCHARS='*?_[]~=&;!#$%^(){}<>'
+
+# Also do history expansion on space
+bindkey ' ' magic-space

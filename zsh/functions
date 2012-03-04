@@ -23,8 +23,3 @@ cdt() {
 mkgit() {
      mkdir -p "$@" && cd "$@" && git init
 }
-
-# Salt a given word
-spasswd() {
-    perl -e 'print crypt("$@", "salt"),"\n"'
-}

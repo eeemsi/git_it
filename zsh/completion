@@ -9,7 +9,7 @@ setopt COMPLETE_IN_WORD
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' cache-path ${HOME}/.zsh/zsh-cache
 
-# Starts selection via menu when >selected elements appear
+# Starts selection via menu when > selected elements appear
 zstyle ':completion:*' menu select=2
 
 # Match uppercase from lowercase

@@ -13,7 +13,7 @@ else
     alias l='ls -hlF'
 fi
 
-# Defining aliases
+# More comfortable aliases
 alias s='sudo'
 alias agu='s apt-get update && s apt-get upgrade && s apt-get autoremove && s apt-get autoclean'
 
