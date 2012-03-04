@@ -11,3 +11,4 @@ if [ ! -z "$SSH_CONNECTION" ] && [ $TERM != "screen" ]; then
 fi
 ;;
 esac
+

@@ -21,5 +21,10 @@ cdt() {
 
 # Create a directory, cd into it and create a git repository
 mkgit() {
- mkdir -p "$@" && cd "$@" && git init
+     mkdir -p "$@" && cd "$@" && git init
+}
+
+# Salt a given word
+spasswd() {
+    perl -e 'print crypt("$@", "salt"),"\n"'
 }

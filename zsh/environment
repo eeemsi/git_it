@@ -10,3 +10,18 @@ export PATH=~/.bin:$PATH:/usr/sbin:/sbin
 # Set PATHs for node.js
 export NODE_PATH=/opt/node:/opt/node/lib/node_modules
 export PATH=$PATH:/opt/node/bin
+
+# Long date format in ls
+export TIME_STYLE=long-iso
+
+# NO BEEPING!
+setopt NO_BEEP
+
+# Don't send HUP signal to background jobs when exiting zsh
+setopt NO_HUP CORRECT_ALL
+
+# Watch for everyone but me and root
+watch=(notme root)
+
+# Automatically remove duplicates from these arrays
+typeset -U path cdpath fpath manpath

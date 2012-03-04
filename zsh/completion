@@ -2,6 +2,9 @@
 autoload compinit
 compinit -C
 
+# Complete even within a word
+setopt COMPLETE_IN_WORD
+
 # Use the cache
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' cache-path ${HOME}/.zsh/zsh-cache
@@ -22,3 +25,6 @@ zstyle ':completion:*:*:killall:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
 zstyle ':completion:*:descriptions'    format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
+
+# Skip .o-files when completing for vi
+fignore=(.o)
