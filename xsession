@@ -1,8 +1,5 @@
 # Enable touchpad on eeepc
-xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
-
-# Turn off that none existing LVDS as the machine is not a laptop
-xrandr --output LVDS1 --off --output VGA1 --mode 1440x900
+#xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
 
 # Disable DPMS turning off the screen
 xset -dpms
@@ -13,6 +10,9 @@ xset -b
 
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
+
+# Define intensity of the backlight
+xbacklight -set 80
 
 # Enforce correct locales from the beginning
 unset LC_COLLATE
