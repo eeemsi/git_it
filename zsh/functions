@@ -1,18 +1,23 @@
 # Replacement for ps uax | grep $foo
-function psof
-{
+psof () {
     PIDS=$(pidof ${1})
     [ -z "${PIDS}" ] && { echo "No such process"; return }
     ps -p "$PIDS" u
 }
 
+# Force rehash of tab completion for NEW commands when completing something
+_force_rehash() {
+    (( CURRENT == 1 )) && rehash
+    return 1
+}
+
 # Create directoy and cd to it
-mkcd() {
+mkcd () {
     mkdir -p "$@" && cd "$@"
 }
 
 # Create temporary directory and cd to it
-cdt() {
+cdt () {
     local t
     t=$(mktemp -d)
     echo "$t"
@@ -20,6 +25,6 @@ cdt() {
 }
 
 # Create a directory, cd into it and create a git repository
-mkgit() {
+mkgit () {
      mkdir -p "$@" && cd "$@" && git init
 }

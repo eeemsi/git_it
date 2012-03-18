@@ -22,6 +22,9 @@ setopt NO_NOMATCH
 # Don't send HUP signal to background jobs when exiting zsh
 setopt NO_HUP CORRECT_ALL
 
+# List jobs in the long format
+setopt LONG_LIST_JOBS
+
 # Watch for everyone but me and root
 watch=(notme root)
 

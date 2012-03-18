@@ -9,8 +9,11 @@ setopt COMPLETE_IN_WORD
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' cache-path ${HOME}/.zsh/zsh-cache
 
-# Starts selection via menu when > selected elements appear
+# Offers menu when > selected elements appear
 zstyle ':completion:*' menu select=2
+
+# List of completers to use
+zstyle ':completion:*::::' completer _oldlist _expand _force_rehash _complete _ignored _approximate
 
 # Match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
