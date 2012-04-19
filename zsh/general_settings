@@ -1,23 +1,8 @@
-# Increasing the comfort for forward-word and backward-word
-export WORDCHARS='*?_[]~=&;!#$%^(){}<>'
-
-# Complete even within a word
-setopt COMPLETE_IN_WORD
-
-# Long date format in ls(1)
-export TIME_STYLE=long-iso
-
 # Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
 REPORTTIME=5
 
-# Skip .o-files when completing for vi
-fignore=(.o)
-
 # NO BEEPING!
 setopt NO_BEEP
-
-# Don't display an error if there are no matches, I know what I am doing
-setopt NO_NOMATCH
 
 # Don't send HUP signal to background jobs when exiting zsh
 setopt NO_HUP CORRECT_ALL

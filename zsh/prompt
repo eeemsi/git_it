@@ -10,8 +10,6 @@ PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_pro
 # Defining a prompt with hostname - for usage via ssh
 #PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)%(!.#.$) "
 
-# Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
-REPORTTIME=5
-
 # Don't display an error if there are no matches, I know what I am doing
 setopt NO_NOMATCH
+
