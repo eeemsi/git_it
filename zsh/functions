@@ -28,3 +28,15 @@ cdt () {
 mkgit () {
      mkdir -p "$@" && cd "$@" && git init
 }
+
+# from time to time some stats are interesting especially if new aliases are introduced
+zsh_stats() {
+    history | awk '{print $2}' | sort | uniq -c | sort -rn | head
+    echo '  ================'
+    sed -n 's/^\([a-z]*\) .*/\1/p' $HISTFILE |
+    sort |
+    uniq -c |
+    sort -n -k1 |
+    tail -25 |
+    tac
+}
