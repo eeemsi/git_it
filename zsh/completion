@@ -29,5 +29,5 @@ zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
 zstyle ':completion:*:descriptions'    format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
 
-# Skip .o-files when completing for vi
-fignore=(.o)
+# Skip the following files while completing
+fignore=(.o .pyc .pyo)
