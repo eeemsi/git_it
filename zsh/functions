@@ -29,6 +29,22 @@ mkgit () {
      mkdir -p "$@" && cd "$@" && git init
 }
 
+# update git repositories in subfolders and clean them up if wanted
+update_git () {
+    ARRAY=(`ls -d ./*/`)
+
+    for i in $ARRAY; do
+        if [ -d "$i" ]; then
+            echo "checking:" $i;
+            cd $i && git pull
+            case "$@" in
+                clean) make distclean && git clean -f && git gc;
+            esac
+            cd ..;
+        fi
+    done
+}
+
 # from time to time some stats are interesting especially if new aliases are introduced
 zsh_stats() {
     history | awk '{print $2}' | sort | uniq -c | sort -rn | head
