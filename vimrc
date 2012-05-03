@@ -30,7 +30,7 @@ set showcmd
 set wildmenu
 
 " Enable listing possible completions when completing file names
-set wildmode=longest,list:longest,list:full
+set wildmode=longest:full
 
 " Skip certain endings while completing
 set wildignore=*.o,*.a,*.la,*.lo,*.swp,.svn,.git,*.pyc,*.pyo
