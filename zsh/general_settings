@@ -5,7 +5,7 @@ REPORTTIME=5
 setopt NO_BEEP
 
 # Don't send HUP signal to background jobs when exiting zsh
-setopt NO_HUP CORRECT_ALL
+setopt NO_HUP
 
 # List jobs in the long format
 setopt LONG_LIST_JOBS
