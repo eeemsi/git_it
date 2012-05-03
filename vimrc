@@ -5,9 +5,13 @@ runtime! debian.vim
 syntax on
 set bg=dark
 
-" Display the cursorline and disable visual bell
+" Display the cursorline and columnline
 set cursorline
+set cursorcolumn
+
+" Disable visual bell and please stop whining
 set novisualbell
+set noerrorbells
 
 " Defines the colorscheme that should be used
 colorscheme elflord
@@ -29,7 +33,7 @@ set wildmenu
 set wildmode=longest,list:longest,list:full
 
 " Skip certain endings while completing
-set wildignore=*.o,*.a,*.la,*.lo,*.swp,*.tab.c,*.tab.h,*.yy.c,.svn,.git
+set wildignore=*.o,*.a,*.la,*.lo,*.swp,.svn,.git,*.pyc,*.pyo
 
 " Set the titel for the terminal
 set title
@@ -44,6 +48,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" Enable file type-specific indention rules
+filetype indent on
 
 " More flexible backspace
 set backspace=indent,eol,start
@@ -62,7 +69,7 @@ autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 set showmatch
 
 " Security
-set modelines=0
+set modeline
 
 " Don’t ensure compatibility with vi at all cost
 set nocompatible
@@ -72,6 +79,13 @@ set ttyfast
 
 " Disable folding completely
 set nofen
+
+" Do not create those annoying backup files
+set nobackup
+set nowritebackup
+
+" No spell check
+set nospell
 
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc

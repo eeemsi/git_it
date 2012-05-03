@@ -30,4 +30,4 @@ zstyle ':completion:*'                 group-name ''
 zstyle ':completion:*:descriptions'    format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
 
 # Skip the following files while completing
-fignore=(.o .pyc .pyo)
+fignore=(.o .a .la .lo .swp .pyc .pyo)
