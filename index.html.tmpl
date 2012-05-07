@@ -1,6 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
 <title><TMPL_VAR name></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -28,11 +27,7 @@
 </TMPL_UNLESS>
 
 <h3><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></h3>
-<TMPL_IF channel_face>
-<img class="face" src="images/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="">
 </TMPL_IF>
-</TMPL_IF>
-
 
 <div class="entrygroup" id="<TMPL_VAR id>"<TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"</TMPL_IF>>
 <TMPL_IF title>
@@ -55,5 +50,4 @@
 
 </div>
 </body>
-
 </html>
