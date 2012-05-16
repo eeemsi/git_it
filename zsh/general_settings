@@ -15,3 +15,6 @@ watch=(notme root)
 
 # Automatically remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
+
+# Don't display an error if there are no matches, I know what I am doing
+setopt NO_NOMATCH

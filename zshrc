@@ -7,7 +7,6 @@ source "${HOME}/.zsh/general_settings"
 source "${HOME}/.zsh/history"
 source "${HOME}/.zsh/keybindings"
 source "${HOME}/.zsh/locales"
-source "${HOME}/.zsh/prompt"
 
 source "${HOME}/.zsh/git"
 source "${HOME}/.zsh/ssh_conn_tmux"
