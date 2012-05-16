@@ -5,6 +5,12 @@ psof () {
     ps -p "$PIDS" u
 }
 
+# More comfortable ifup ifdown
+ifre () {
+    sudo ifdown $*
+    sudo ifup $*
+}
+
 # Force rehash of tab completion for NEW commands when completing something
 _force_rehash() {
     (( CURRENT == 1 )) && rehash
