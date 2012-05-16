@@ -10,6 +10,5 @@ source "${HOME}/.zsh/locales"
 source "${HOME}/.zsh/prompt"
 
 source "${HOME}/.zsh/git"
-source "${HOME}/.zsh/browser-anti-suck"
 source "${HOME}/.zsh/ssh_conn_tmux"
 source "${HOME}/.zsh/urgency_hint"

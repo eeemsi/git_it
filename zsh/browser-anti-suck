@@ -1,3 +1,0 @@
-# Open a new window of the browser instead of opening a new tab
-alias firefox="./Downloads/firefox/firefox -private -new-tab  &"
-alias chromium="chromium -incognito -new-tab"
