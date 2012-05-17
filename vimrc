@@ -5,6 +5,16 @@ runtime! debian.vim
 syntax on
 set bg=dark
 
+" Enable syntax highlighting for go
+autocmd BufNewFile,BufRead *.go setf go
+
+" Use system configurations
+set runtimepath+=/usr/share/vim/addons
+
+" Enable file type-specific indention rules
+filetype plugin on
+filetype indent on
+
 " Display the cursorline and columnline
 set cursorline
 set cursorcolumn
@@ -48,9 +58,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-" Enable file type-specific indention rules
-filetype indent on
 
 " More flexible backspace
 set backspace=indent,eol,start
