@@ -1,5 +1,4 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION and $TERM
-
 setup_prompt() {
     if [ -z "$SSH_CONNECTION"] && [ "$TERM" != "screen" ]; then
         PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)%(!.#.$) "
@@ -21,12 +20,6 @@ psof () {
 ifre () {
     sudo ifdown $*
     sudo ifup $*
-}
-
-# Force rehash of tab completion for NEW commands when completing something
-_force_rehash() {
-    (( CURRENT == 1 )) && rehash
-    return 1
 }
 
 # Create directoy and cd to it
