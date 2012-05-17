@@ -1,13 +1,57 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION and $TERM
 setup_prompt() {
     if [ -z "$SSH_CONNECTION"] && [ "$TERM" != "screen" ]; then
-        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)%(!.#.$) "
+        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
     else
-        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \$(get_git_prompt_info)%(!.#.$) "
+        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
     fi
 }
 
-setup_prompt
+# Set title, if supported by terminal
+function set_termtitle() {
+    # escape '%' chars in $1, make nonprintables visible
+    a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -rn -- "$a" | tr -d "\n\r")
+
+    [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
+
+    case $TERM in
+    screen)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+
+        # screen title (in ^A")
+        print -n -- "\ek"
+        print -rn -- "$a"
+        print -n -- "\e\\"
+
+        # screen location
+        print -Pn -- "\e_$2: "
+        print -rn -- "$a"
+        print -n -- "\e\\"
+    ;;
+    xterm*|rxvt)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+    ;;
+    esac
+}
+
+precmd() {
+    set_termtitle  "zsh" "%m"
+    setup_prompt
+    vcs_info
+}
+
+function preexec() {
+    set_termtitle "$1" "%m"
+}
 
 # Replacement for ps uax | grep $foo
 psof () {
