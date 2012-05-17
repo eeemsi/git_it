@@ -1,0 +1,5 @@
+setopt prompt_subst
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' formats "${fg_dark_blue}%b${fg_no_colour} "
