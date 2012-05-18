@@ -61,6 +61,18 @@ psof () {
     ps -p "$PIDS" u
 }
 
+# Set modes for xrandr
+presentation_mode () {
+    case "$@" in
+        on)
+            xrandr --output VGA1 --mode 1024x768 --left-of LVDS1
+        ;;
+        off)
+            xrandr --output VGA1 --off
+        ;;
+    esac
+}
+
 # More comfortable ifup ifdown
 ifre () {
     s ifdown $* && s ifup $*
