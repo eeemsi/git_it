@@ -1,3 +1,7 @@
+# Load colors for git_v2
+autoload -U colors
+colors
+
 # Define prompt colors
 fg_green=$'%{\e[1;32m%}'
 fg_white=$'%{\e[0;37m%}'
