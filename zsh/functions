@@ -7,6 +7,8 @@ setup_prompt() {
     fi
 }
 
+setup_prompt
+
 # Set title, if supported by terminal
 function set_termtitle() {
     # escape '%' chars in $1, make nonprintables visible
@@ -17,7 +19,7 @@ function set_termtitle() {
 
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
-    case $TERM in
+    case "$TERM" in
     screen)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
@@ -45,7 +47,6 @@ function set_termtitle() {
 
 precmd() {
     set_termtitle  "zsh" "%m"
-    setup_prompt
     vcs_info
 }
 
@@ -62,8 +63,7 @@ psof () {
 
 # More comfortable ifup ifdown
 ifre () {
-    sudo ifdown $*
-    sudo ifup $*
+    s ifdown $* && s ifup $*
 }
 
 # Create directoy and cd to it
@@ -90,12 +90,13 @@ update_git () {
 
     for i in $ARRAY; do
         if [ -d "$i" ]; then
-            echo "checking:" $i;
+            echo "checking:" $i
             cd $i && git pull
             case "$@" in
-                clean) make distclean && git clean -f && git gc;
+                clean) make distclean && git clean -f && git gc
+            ;;
             esac
-            cd ..;
+            cd ..
         fi
     done
 }
