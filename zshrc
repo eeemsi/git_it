@@ -8,6 +8,6 @@ source "${HOME}/.zsh/history"
 source "${HOME}/.zsh/keybindings"
 source "${HOME}/.zsh/locales"
 
-source "${HOME}/.zsh/git"
+source "${HOME}/.zsh/git_v2"
 source "${HOME}/.zsh/ssh_conn_tmux"
 source "${HOME}/.zsh/urgency_hint"
