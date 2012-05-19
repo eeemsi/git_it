@@ -7,4 +7,4 @@ zstyle ':vcs_info:*' unstagedstr "%{$fg_no_bold[red]%}"
 zstyle ':vcs_info:*' stagedstr "%{$fg_no_bold[yellow]%}"
 
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat "%{$fg_no_bold[red]%}:%{$fg_no_bold[yellow]%}"
-zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[%u%b${fg_no_colour}${fg_dark_blue}]%{$reset_color%} "
+zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[%c%u%b${fg_no_colour}${fg_dark_blue}]%{$reset_color%} "
