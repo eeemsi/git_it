@@ -1,16 +1,16 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION and $TERM
 setup_prompt() {
-    if [ -z "$SSH_CONNECTION"] && [ "$TERM" != "screen" ]; then
-        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
-    else
+    if [ ! -z "$SSH_CONNECTION" ] || [ "$TERM" = "screen" ]; then
         PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
+    else
+        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
     fi
 }
 
 setup_prompt
 
 # Set title, if supported by terminal
-function set_termtitle() {
+set_termtitle() {
     # escape '%' chars in $1, make nonprintables visible
     a=${(V)1//\%/\%\%}
 
@@ -50,9 +50,15 @@ precmd() {
     vcs_info
 }
 
-function preexec() {
+preexec() {
     set_termtitle "$1" "%m"
 }
+
+typeset -ga precmd_functions
+precmd_functions+=precmd
+
+typeset -ga preexec_functions
+preexec_functions+=preexec
 
 # Replacement for ps uax | grep $foo
 psof () {
