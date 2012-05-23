@@ -1,13 +1,6 @@
 #!/bin/bash
 #
-#   This file echoes a bunch of color codes to the 
-#   terminal to demonstrate what's available.  Each 
-#   line is the color code of one forground color,
-#   out of 17 (default + 16 escapes), followed by a 
-#   test use of that color on all nine background 
-#   colors (default + 8 escapes).
-#
-#   found this on: http://bbs.archlinux.org/viewtopic.php?id=51818
+#   found this on: https://bbs.archlinux.org/viewtopic.php?id=51818
 
 T='TEST'   # The test text
 
