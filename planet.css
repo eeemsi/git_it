@@ -1,71 +1,52 @@
 body {
-    margin-top: 0px;
+    font-family: arial,sans-serif;
     font-size: 14px;
     color: #333;
 }
 
-h1 {
-    font-family: Helvetica, Arial, Verdana, sans-serif;
-    text-align: right;
-    margin-left: -12px;
+.wrap {
+    padding-left: 10px;
+    width: 99%;
 }
 
-h2 {
+h1, h2 {
     text-align: right;
-    margin-left: -12px;
 }
 
 h3 {
     background-color: #333;
 }
 
-h3 a {
+h3 a, h3 a:active {
     text-decoration: none;
     color: white;
 }
 
-h3 a:active {
-    text-decoration: none;
-    color: white;
-}
-
-h3 a:hover {
-    text-decoration: none;
-}
-
-h4 {
-}
-
-h4 a {
+h3 a:hover, h4 a {
     text-decoration: none;
 }
 
 .content {
-    width: 950px;
     padding-left: 10px;
+    width: 80%;
 }
 
 .entrygroup {
 }
 
 *.entry .date {
+    padding-left: 10px;
 }
 
 .entry .date a {
     text-decoration: none;
-    padding-left: 10px;
     color: #999999;
 }
 
 a,
-a:active {
+a:active, a:visited {
     text-decoration: underline;
     color: #222222;
-}
-
-a:visited {
-    text-decoration: underline;
-    color; #222222;
 }
 
 a:hover {
