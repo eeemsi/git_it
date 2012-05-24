@@ -26,21 +26,14 @@ h3 a:hover, h4 a {
     text-decoration: none;
 }
 
-.content {
+.entry {
     padding-left: 10px;
     width: 80%;
 }
 
-.entrygroup {
-}
-
-*.entry .date {
-    padding-left: 10px;
-}
-
-.entry .date a {
-    text-decoration: none;
+.date a, .date a:hover {
     color: #999999;
+    text-decoration: none;
 }
 
 a,
