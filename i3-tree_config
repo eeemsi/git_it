@@ -10,8 +10,9 @@ set $Mod    Mod1
 $a [class="^Chromium$"] 2
 
 # start applications in certain conditions
-for_window [class="^kvm$"]      floating enable
-for_window [class="^MPlayer$"]  floating enable
+for_window [class="^kvm$"]          floating enable
+for_window [class="^MPlayer$"]      floating enable
+for_window [class="^bomberclone$"]  floating enable
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
@@ -19,7 +20,7 @@ $b XF86AudioLowerVolume $ensid amixer set Master 5%-
 $b XF86AudioRaiseVolume $ensid amixer set Master 5%+
 
 # fire up i3lock
-$b XF86Launch1 $ensid i3lock -i ~/Downloads/nodejs-1440x900.png
+$b XF86Launch1 $ensid i3lock -d
 
 # use 1pixel borders by default
 new_window 1pixel
@@ -35,6 +36,9 @@ font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
 # use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
+
+# retrieve a list of windows to focus on
+$b $Mod+g $ensid python3 -O ${HOME}/.i3/nextfind.py
 
 # start a terminal
 $b $Mod+Return $ensid urxvtc
@@ -135,7 +139,7 @@ $b $Mod+minus scratchpad show
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3status
+    status_command i3status -c $HOME/.i3status.conf
     colors {
         focused_workspace #ff6622 #ff6622 #000000
         urgent_workspace  #00ff00 #00ff00 #000000
