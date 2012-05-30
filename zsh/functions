@@ -1,9 +1,9 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION and $TERM
 setup_prompt() {
     if [ ! -z "$SSH_CONNECTION" ]; then
-        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
+        PS1="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
     else
-        PROMPT="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
+        PS1="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%(!.#.$) "
     fi
 }
 
