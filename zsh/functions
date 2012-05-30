@@ -9,6 +9,9 @@ setup_prompt() {
 
 setup_prompt
 
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # Set title, if supported by terminal
 set_termtitle() {
     # escape '%' chars in $1, make nonprintables visible
