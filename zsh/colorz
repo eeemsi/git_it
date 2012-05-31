@@ -3,6 +3,7 @@ autoload -U colors
 colors
 
 # Define prompt colors
+fg_purple=$'\e[0;35m'
 fg_green=$'%{\e[1;32m%}'
 fg_white=$'%{\e[0;37m%}'
 fg_red=$'%{\e[1;31m%}'
