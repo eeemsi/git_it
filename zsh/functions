@@ -50,7 +50,15 @@ set_termtitle() {
 
 precmd() {
     set_termtitle  "zsh" "%m"
+
+    if [ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]; then
+        zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_no_bold[green]}%c%u%b${fg_dark_blue}]%{$reset_color%} "
+    else
+        zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_purple}%b${fg_dark_blue}]%{$reset_color%} "
+    fi
+
     vcs_info
+
 }
 
 preexec() {
