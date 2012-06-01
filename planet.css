@@ -1,21 +1,33 @@
 body {
     font-family: verdana,helvetica,arial,sans-serif;
-    font-size: 14px;
+    font-size: 0.875em;
     color: #333;
 }
 
 .wrap {
-    padding-left: 10px;
+    padding-left: 0.625em;
     width: 99%;
 }
 
-h1, h2 {
+.page_title {
+    display: block;
     text-align: right;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0 1em 0;
+}
+
+.date_stamp {
+    display: block;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.5em 0 0.5em 0;
 }
 
 .source {
-    margin-bottom: 0.5em;
-    font-size: 16px;
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1em;
     font-weight: bold;
     clear: both;
     background-color: #333;
@@ -26,14 +38,17 @@ h1, h2 {
     color: white;
 }
 
+.news_title {
+    clear: both;
+}
+
 .source a:hover, .news_title a {
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .entry {
-    min-height: 88px;
-    padding-left: 10px;
+    padding-left: 0.625em;
     width: 80%;
 }
 

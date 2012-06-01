@@ -12,14 +12,18 @@
 
 <body>
   <div class="wrap">
-  <h1><TMPL_VAR name></h1>
+  <div class="page_title">
+  <TMPL_VAR name>
+  </div>
   <TMPL_VAR admin>
 
   <TMPL_LOOP Items>
     <TMPL_IF new_date>
     <TMPL_UNLESS __FIRST__>
     </TMPL_UNLESS>
-    <h2><TMPL_VAR new_date></h2>
+    <div class="date_stamp">
+    <TMPL_VAR new_date>
+    </div>
     </TMPL_IF>
 
     <TMPL_IF new_channel>
