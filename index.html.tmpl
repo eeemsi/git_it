@@ -26,17 +26,24 @@
     <TMPL_UNLESS new_date>
     </TMPL_UNLESS>
 
-    <h3><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></h3>
+    <div class="source">
+    <a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a>
+    </div>
     </TMPL_IF>
 
 
-    <div class="entrygroup" id="<TMPL_VAR id>"<TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"
-    </TMPL_IF>>
+    <div class="entrygroup" id="<TMPL_VAR id>">
+    <TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"
+    </TMPL_IF>
 
         <TMPL_IF title>
-        <h4<TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
+        <div class="news_title"
+        <TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>>
+        <a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a>
+        </div>
         </TMPL_IF>
-        <div class="entry"<TMPL_IF content_language> lang="<TMPL_VAR content_language>"</TMPL_IF>>
+        <div class="entry"
+        <TMPL_IF content_language> lang="<TMPL_VAR content_language>"</TMPL_IF>>
             <TMPL_VAR content>
 
             <p class="date">

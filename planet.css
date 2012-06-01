@@ -1,5 +1,5 @@
 body {
-    font-family: arial,sans-serif;
+    font-family: verdana,helvetica,arial,sans-serif;
     font-size: 14px;
     color: #333;
 }
@@ -13,20 +13,26 @@ h1, h2 {
     text-align: right;
 }
 
-h3 {
+.source {
+    margin-bottom: 0.5em;
+    font-size: 16px;
+    font-weight: bold;
+    clear: both;
     background-color: #333;
 }
 
-h3 a, h3 a:active {
+.source a, .source a:active {
     text-decoration: none;
     color: white;
 }
 
-h3 a:hover, h4 a {
+.source a:hover, .news_title a {
+    font-weight: bold;
     text-decoration: none;
 }
 
 .entry {
+    min-height: 88px;
     padding-left: 10px;
     width: 80%;
 }
