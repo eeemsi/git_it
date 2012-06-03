@@ -50,9 +50,9 @@ if [ "$TERM" = "xterm-color" ]; then
 fi
 
 ###########################
-##
-##   completion
-##
+#
+#   completion
+#
 ###########################
 
 # bind the completion on tab and make it case insensitive
@@ -62,3 +62,14 @@ bind 'set completion-ignore-case On'
 # deactivate the beep
 bind 'set bind bell-style none'
 
+###########################
+#
+#  prompt
+#
+###########################
+
+if [ ! -z $SSH_CONNECTION ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]@\h\[\033[00m\] \w\[\033[00m\] \$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[00m\]\w\[\033[00m\] \$ '
+fi
