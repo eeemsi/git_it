@@ -1,0 +1,64 @@
+###########################
+#
+#   aliases
+#
+###########################
+
+# ls aliases
+alias ls='ls -b -CF --color=auto'
+alias la='ls -la --color=auto'
+alias ll='ls -l --color=auto'
+alias lh='ls -hAl --color=auto'
+alias l='ls -hlF --color=auto'
+
+# git aliases
+alias g='git'
+alias gst='g status'
+alias glog='g log --graph --stat'
+alias ga='g add'
+alias gd='g diff'
+alias gc='g commit'
+
+# Nicer output of grep
+ alias grep='grep --color=auto --initial-tab'
+
+# required to pipe colors to less
+alias less='less -R'
+
+# sudo alias
+alias s='sudo '
+
+# make updates easier ;)
+alias agu='s sh -c "apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean"'
+
+# Open a new window of the browser instead of opening a new tab
+alias firefox="./Downloads/firefox/firefox -private -new-tab  &"
+alias chromium="chromium -incognito -new-tab"
+
+###########################
+#
+#   keybindings
+#
+###########################
+
+# match the case if the terminal is named xterm-color
+if [ "$TERM" = "xterm-color" ]; then
+   bind '"\e[7~"':beginning-of-line
+   bind '"\e[8~"':end-of-line
+   bind '"\eOc"':forward-word
+   bind '"\eOd"':backward-word
+fi
+
+###########################
+##
+##   completion
+##
+###########################
+
+# bind the completion on tab and make it case insensitive
+bind 'TAB':menu-complete
+bind 'set completion-ignore-case On'
+
+# deactivate the beep
+bind 'set bind bell-style none'
+
