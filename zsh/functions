@@ -54,12 +54,12 @@ precmd() {
     if [ -d .git ]; then
         if [ $(git ls-files --other --exclude-standard | wc -l 2> /dev/null) != 0 ]; then
             zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_purple}%b${fg_dark_blue}]%{$reset_color%} "
+        else
+            zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_no_bold[green]}%c%u%b${fg_dark_blue}]%{$reset_color%} "
         fi
-    else
-        zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_no_bold[green]}%c%u%b${fg_dark_blue}]%{$reset_color%} "
     fi
-    vcs_info
 
+    vcs_info
 }
 
 preexec() {
@@ -74,7 +74,7 @@ preexec_functions+=preexec
 
 # Replacement for ps uax | grep $foo
 psof () {
-    PIDS=$(pidof ${1})
+    PIDS=$(pidof "${1}")
     [ -z "${PIDS}" ] && { echo "No such process"; return }
     ps -p "$PIDS" u
 }
@@ -93,7 +93,7 @@ presentation_mode () {
 
 # More comfortable ifup ifdown
 ifre () {
-    s ifdown $* && s ifup $*
+    s ifdown "$*" && s ifup "$*"
 }
 
 # Create directoy and cd to it
@@ -118,10 +118,10 @@ mkgit () {
 update_git () {
     ARRAY=(`ls -d ./*/`)
 
-    for i in $ARRAY; do
+    for i in "$ARRAY"; do
         if [ -d "$i" ]; then
-            echo "checking:" $i
-            cd $i && git pull
+            echo "checking:" "$i"
+            cd "$i" && git pull
             case "$@" in
                 clean) make distclean && git clean -f && git gc
             ;;
