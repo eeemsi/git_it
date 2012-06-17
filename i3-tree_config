@@ -28,9 +28,6 @@ new_window 1pixel
 # use orange borders for focused window
 client.focused #ff6622 #ff6622 #000000 #ff6622
 
-# allways open new windows vertical instead of horizontal
-default_orientation vertical
-
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
