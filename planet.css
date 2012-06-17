@@ -57,6 +57,10 @@ body {
     text-decoration: none;
 }
 
+img {
+    margin-bottom: 1em;
+}
+
 a,
 a:active, a:visited {
     text-decoration: underline;
