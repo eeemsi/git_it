@@ -13,11 +13,14 @@ set runtimepath+=/usr/share/vim/addons
 
 " Enable file type-specific indention rules
 filetype plugin on
-filetype indent on
 
 " Display the cursorline and columnline
 set cursorline
 set cursorcolumn
+
+" Display a red columnline after 90 chars
+highlight ColorColumn ctermbg=red guibg=red
+set colorcolumn=80
 
 " Disable visual bell and please stop whining
 set novisualbell
