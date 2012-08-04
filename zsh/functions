@@ -1,77 +1,3 @@
-# Defines the prompt depending on the status of $SSH_CONNECTION
-setup_prompt() {
-    if [ ! -z "$SSH_CONNECTION" ]; then
-        PS1="%(!.${fg_red}.${fg_green})%n${fg_white}@${fg_white}%m${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}> "
-    else
-        PS1="%(!.${fg_red}.${fg_green})%n${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}> "
-    fi
-}
-
-setup_prompt
-
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
-# Set title, if supported by terminal
-set_termtitle() {
-    # escape '%' chars in $1, make nonprintables visible
-    a=${(V)1//\%/\%\%}
-
-    # Truncate command, and join lines.
-    a=$(print -rn -- "$a" | tr -d "\n\r")
-
-    [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
-
-    case "$TERM" in
-    screen)
-        # plain xterm title
-        print -Pn -- "\e]2;$2: "
-        print -rn -- "$a"
-        print -n -- "\a"
-
-        # screen title (in ^A")
-        print -n -- "\ek"
-        print -rn -- "$a"
-        print -n -- "\e\\"
-
-        # screen location
-        print -Pn -- "\e_$2: "
-        print -rn -- "$a"
-        print -n -- "\e\\"
-    ;;
-    xterm*|rxvt)
-        # plain xterm title
-        print -Pn -- "\e]2;$2: "
-        print -rn -- "$a"
-        print -n -- "\a"
-    ;;
-    esac
-}
-
-precmd() {
-    set_termtitle  "zsh" "%m"
-
-    if [ -d .git ]; then
-        if [ $(git ls-files --other --exclude-standard | wc -l 2> /dev/null) != 0 ]; then
-            zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_purple}%b${fg_dark_blue}]%{$reset_color%} "
-        else
-            zstyle ':vcs_info:*' formats "${fg_dark_blue}(%s)-[${fg_no_bold[green]}%c%u%b${fg_dark_blue}]%{$reset_color%} "
-        fi
-    fi
-
-    vcs_info
-}
-
-preexec() {
-    set_termtitle "$1" "%m"
-}
-
-typeset -ga precmd_functions
-precmd_functions+=precmd
-
-typeset -ga preexec_functions
-preexec_functions+=preexec
-
 # Replacement for ps uax | grep $foo
 psof () {
     PIDS=$(pidof "${1}")
@@ -131,3 +57,9 @@ update_git () {
     done
 }
 
+# Set title, if supported by terminal
+if [[ "$TERM" =~ rxvt ]]
+then
+    chpwd () { print -Pn "\e]0;%n@%m: %~\a" }
+    chpwd
+fi;

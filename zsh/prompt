@@ -1,0 +1,16 @@
+# Set up the prompt
+autoload -Uz promptinit
+promptinit
+
+# Defines the prompt depending on the status of $SSH_CONNECTION
+setup_prompt() {
+    if [ ! -z "$SSH_CONNECTION" ]; then
+        _user_="%n@%m"
+    else
+        _user_="%n"
+    fi
+
+    PS1="%(!.%K{red}.%K{green})%F{black}$_user_%f%k${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}> "
+}
+
+setup_prompt

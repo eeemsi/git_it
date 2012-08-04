@@ -1,19 +1,9 @@
-# Initialize completion
-autoload compinit
-compinit -C
-
-# Complete even within a word
-setopt COMPLETE_IN_WORD
-
-# Use the cache
-zstyle ':completion::complete:*' use-cache on
-zstyle ':completion:*' cache-path ${HOME}/.zsh/zsh-cache
+# Use modern completion system
+autoload -Uz compinit
+compinit
 
 # Offers menu when > selected elements appear
 zstyle ':completion:*' menu select=2
-
-# Match uppercase from lowercase
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # load colors
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -27,7 +17,4 @@ zstyle ':completion:*:*:killall:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;
 # Separate matches into groups and highlight them
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
-zstyle ':completion:*:descriptions'    format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
-
-# Skip the following files while completing
-fignore=(.o .a .la .lo .swp .pyc .pyo)
+zstyle ':completion:*:descriptions'    format $'%{\e[0;31m%}%B%d%b%{\e[0m%}'
