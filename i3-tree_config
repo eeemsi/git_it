@@ -79,10 +79,10 @@ $b $Mod+v split v
 # enter fullscreen mode for the focused container
 $b $Mod+f fullscreen
 
-# change container layout (stacked, tabbed, default)
+# change container layout (stacked, tabbed, toggle split)
 $b $Mod+s layout stacking
 $b $Mod+t layout tabbed
-$b $Mod+e layout default
+$b $Mod+e layout toggle split
 
 # toggle tiling / floating
 $b $Mod+Shift+space floating toggle
