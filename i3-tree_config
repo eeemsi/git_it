@@ -91,10 +91,10 @@ $b $Mod+Shift+space floating toggle
 $b $Mod+space focus mode_toggle
 
 # focus the parent container
-$b $Mod+a focus parent
+$b $Mod+a $ensid i3-msg focus parent
 
 # focus the child container
-$b $Mod+d focus child
+$b $Mod+d $ensid i3-msg focus child
 
 # switch to workspace
 $b $Mod+1 workspace 1
