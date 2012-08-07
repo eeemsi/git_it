@@ -1,0 +1,48 @@
+function set_termtitle() {
+    # escape '%' chars in $1, make nonprintables visible
+    a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -rn -- "$a" | tr -d "\n\r")
+
+    [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
+
+    case $TERM in
+    screen)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+
+        # screen title (in ^A")
+        print -n -- "\ek"
+        print -rn -- "$a"
+        print -n -- "\e\\"
+
+        # screen location
+        print -Pn -- "\e_$2: "
+        print -rn -- "$a"
+        print -n -- "\e\\"
+    ;;
+    xterm*|rxvt*)
+        # plain xterm title
+        print -Pn -- "\e]2;$2: "
+        print -rn -- "$a"
+        print -n -- "\a"
+    ;;
+    esac
+}
+
+function my_prompt_precmd() {
+    set_termtitle "zsh" "%m"
+}
+
+function my_prompt_preexec() {
+    set_termtitle "$1" "%m"
+}
+
+typeset -ga precmd_functions
+precmd_functions+=my_prompt_precmd
+
+typeset -ga preexec_functions
+preexec_functions+=my_prompt_preexec

@@ -56,10 +56,3 @@ update_git () {
         fi
     done
 }
-
-# Set title, if supported by terminal
-if [[ "$TERM" =~ rxvt ]]
-then
-    chpwd () { print -Pn "\e]0;%n@%m: %~\a" }
-    chpwd
-fi;
