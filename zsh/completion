@@ -2,6 +2,9 @@
 autoload -Uz compinit
 compinit
 
+# case-insensitive,partial-word and then substring completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 # Offers menu when > selected elements appear
 zstyle ':completion:*' menu select=2
 
