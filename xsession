@@ -14,6 +14,9 @@ setxkbmap -option terminate:ctrl_alt_bksp
 # Define intensity of the backlight
 xbacklight -set 80
 
+# Turn off repeating for un/mute
+xset -r 121
+
 # Enforce correct locales from the beginning
 unset LC_COLLATE
 export LC_CTYPE=de_DE.UTF-8
@@ -27,7 +30,6 @@ export LC_ADDRESS=de_DE.UTF-8
 export LC_TELEPHONE=de_DE.UTF-8
 export LC_MEASUREMENT=de_DE.UTF-8
 export LC_IDENTIFICATION=de_DE.UTF-8
-
 
 # Start urxvtd
 urxvtd -q -f -o -m &
