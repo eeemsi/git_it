@@ -33,7 +33,7 @@ body {
     background-color: #333;
 }
 
-.source a, .source a:active {
+.source a, .source a:active, .source a:visited {
     text-decoration: none;
     color: white;
 }
