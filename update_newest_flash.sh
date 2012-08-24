@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # There are two possible targets -> i386 OR amd64
 target="amd64"
