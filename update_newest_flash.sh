@@ -7,15 +7,19 @@ target="amd64"
 cdt () {
     local t
     t=$(mktemp -d)
-    echo "using the following directory to download: $t\n" && cd "$t"
+    cd "$t"
 }
 
 cdt &&
+folder=`pwd`
 wget https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_$target.deb &&
 ar vx google-chrome-stable_current_$target.deb &&
-tar xJf data.tar.lzma
+tar xJf data.tar.lzma &&
+cd $folder/opt/google/chrome/PepperFlash &&
+version=`strings libpepflashplayer.so | grep LNX | cut -d' ' -f2`
 
-echo "\n\n=====================\nsteps left up to you:\nplease cp -r <the given directory>opt/google/chrome/PepperFlash /usr/lib"
-echo "ready to chmod 644 /usr/lib/PepperFlash/libpepflashplayer.so"
-echo "\n\n=====================\nplease start chromium the following way:\n --ppapi-flash-path=/usr/lib/PepperFlash/libpepflashplayer.so --ppapi-flash-version=<version>"
+echo "\n\n=====================\nsteps left up to you:"
+echo "cp -r $folder/opt/google/chrome/PepperFlash /usr/lib && chmod 644 /usr/lib/PepperFlash/libpepflashplayer.so"
+echo "\n=======================\nplease start chromium the following way:"
+echo "--ppapi-flash-path=/usr/lib/PepperFlash/libpepflashplayer.so --ppapi-flash-version=$version"
 
