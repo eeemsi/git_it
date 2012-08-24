@@ -16,7 +16,7 @@ wget https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_"$targe
 ar vx google-chrome-stable_current_"$target".deb &&
 tar xJf data.tar.lzma &&
 cd "$folder"/opt/google/chrome/PepperFlash &&
-version=`strings libpepflashplayer.so | grep LNX | cut -d' ' -f2`
+version=`strings libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .`
 
 echo "\n\n=====================\nsteps left up to you:"
 echo "cp -r "$folder"/opt/google/chrome/PepperFlash /usr/lib && chmod 644 /usr/lib/PepperFlash/libpepflashplayer.so"
