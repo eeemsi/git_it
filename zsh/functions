@@ -44,15 +44,17 @@ mkgit () {
 update_git () {
     ARRAY=(`ls -d ./*/`)
 
-    for i in "$ARRAY"; do
-        if [ -d "$i" ]; then
-            echo "checking:" "$i"
-            cd "$i" && git pull
-            case "$@" in
-                clean) make distclean && git clean -f && git gc
-            ;;
-            esac
-            cd ..
-        fi
-    done
+    if [ ! -z "$ARRAY" ]; then
+        for i in $ARRAY; do
+            if [ -d "$i" ]; then
+                echo "checking: '"$i"'"
+                cd "$i" && git pull
+                case "$@" in
+                    clean) make distclean && git clean -f && git gc
+                ;;
+                esac
+                cd ..
+            fi
+        done
+    fi
 }
