@@ -58,3 +58,13 @@ update_git () {
         done
     fi
 }
+
+# rehash after installing a package
+agi () {
+    s apt-get install $* && rehash
+}
+
+# rehash after removing a package
+agr () {
+    s apt-get remove $* && rehash
+}
