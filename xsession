@@ -18,18 +18,10 @@ xbacklight -set 80
 xset -r 121
 
 # Enforce correct locales from the beginning
-unset LC_COLLATE
-export LC_CTYPE=de_DE.UTF-8
-export LC_TIME=de_DE.UTF-8
-export LC_NUMERIC=de_DE.UTF-8
-export LC_MONETARY=de_DE.UTF-8
+unset LC_ALL
+export LANG=de_DE.UTF-8
 export LC_MESSAGES=C
-export LC_PAPER=de_DE.UTF-8
-export LC_NAME=de_DE.UTF-8
-export LC_ADDRESS=de_DE.UTF-8
-export LC_TELEPHONE=de_DE.UTF-8
-export LC_MEASUREMENT=de_DE.UTF-8
-export LC_IDENTIFICATION=de_DE.UTF-8
+export LC_TIME=en_DK.UTF-8
 
 # Start urxvtd
 urxvtd -q -f -o -m &
