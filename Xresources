@@ -1,3 +1,6 @@
+URxvt.urlLauncher:      sensible-browser
+URxvt.perl-ext:         default,matcher
+
 Xft.dpi:                96
 Xft.antialias:          1
 Xft.hinting:            1
@@ -10,9 +13,6 @@ URxvt.cursorBlink:      false
 URxvt.cursorColor:      #ff9900
 URxvt.cursorColor2:     #000000
 URxvt.colorUL:          #999999
-
-URxvt.perl-ext:         default,matcher
-URxvt.urlLauncher:      sensible-browser
 
 URxvt.visualBell:       false
 URxvt.urgentOnBell:     true
@@ -53,6 +53,6 @@ xpdf*enableFreetype:    yes
 xpdf*antialias:         yes
 xpdf*foreground:        white
 xpdf*background:        black
-xpdf*urlCommand:        /usr/bin/chromium-browser --block-nonsandboxed-plugins --incognito --disable-java --safe-plugins --memory-model=low %s
+xpdf*urlCommand:        /usr/bin/chromium-browser --incognito %s
 xpdf*viKeys:            on
 
