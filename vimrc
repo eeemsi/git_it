@@ -25,6 +25,7 @@ set cursorline
 set cursorcolumn
 
 " Display a red columnline after 90 chars
+" This feature seems to be available since vim 7.3
 highlight ColorColumn ctermbg=red guibg=red
 set colorcolumn=80
 
