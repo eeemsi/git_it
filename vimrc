@@ -1,3 +1,9 @@
+" Don’t ensure compatibility with vi at all cost
+set nocompatible
+
+" Security
+set modeline
+
 " Should be given by the machine vim is installed on
 runtime! debian.vim
 
@@ -77,12 +83,6 @@ autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 
 " Show matching brackets
 set showmatch
-
-" Security
-set modeline
-
-" Don’t ensure compatibility with vi at all cost
-set nocompatible
 
 " For fast terminal connection
 set ttyfast
