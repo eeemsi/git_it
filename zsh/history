@@ -1,11 +1,19 @@
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Dont save duplicates, add incrementally lines to $HISTFILE as soon as they're entered and remove blanks from each added command
+# Remove an older duplicate from the history
 setopt HIST_IGNORE_ALL_DUPS
-setopt INC_APPEND_HISTORY
+
+# Remove superfluous blanks from each command line being added to the history list
 setopt HIST_REDUCE_BLANKS
-setopt HIST_EXPIRE_DUPS_FIRST
+
+# Save entered commands incrementally instead of waiting for shell to exit
+setopt INC_APPEND_HISTORY
+
+# Don't store commands prefixed with a space
 setopt HIST_IGNORE_SPACE
+
+# If the internal history needs to be trimmed get rid of duplicates of the current command first
+setopt HIST_EXPIRE_DUPS_FIRST
