@@ -16,8 +16,8 @@ for_window [class="^bomberclone$"]  floating enable
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
-$b XF86AudioLowerVolume $ensid amixer set Master 5%-
-$b XF86AudioRaiseVolume $ensid amixer set Master 5%+
+$b XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
+$b XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 
 # fire up i3lock
 $b XF86Launch1 $ensid i3lock -d
