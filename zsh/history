@@ -1,10 +1,7 @@
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history
-HISTSIZE=1000
+HISTSIZE=1500
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-
-# Remove an older duplicate from the history
-setopt HIST_IGNORE_ALL_DUPS
 
 # Remove superfluous blanks from each command line being added to the history list
 setopt HIST_REDUCE_BLANKS
