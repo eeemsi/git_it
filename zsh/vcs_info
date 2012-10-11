@@ -1,7 +1,11 @@
+# Enable vcs_info
 setopt prompt_subst
 autoload -Uz vcs_info
 
+# Specify the vcs
 zstyle ':vcs_info:*' enable git
+
+# Specify how it should be formatted
 zstyle ':vcs_info:*' formats "${fg_dark_blue}%b${fg_no_colour} "
 
 precmd() {

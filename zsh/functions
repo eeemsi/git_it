@@ -44,7 +44,7 @@ mkgit () {
      mkdir -p "$@" && cd "$@" && git init
 }
 
-# update git repositories in subfolders and clean them up if wanted
+# Update git repositories in subfolders and clean them up if wanted
 update_git () {
     ARRAY=(`ls -d ./*/`)
 
@@ -63,12 +63,12 @@ update_git () {
     fi
 }
 
-# rehash after installing a package
+# Rehash after installing a package
 agi () {
     s apt-get install $* && rehash
 }
 
-# rehash after removing a package
+# Rehash after removing a package
 agr () {
     s apt-get remove $* && rehash
 }

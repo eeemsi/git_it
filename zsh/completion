@@ -2,13 +2,17 @@
 autoload -Uz compinit
 compinit
 
-# case-insensitive,partial-word and then substring completion
+# Use a cache and specify the path to it
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# Case-insensitive,partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Offers menu when > selected elements appear
 zstyle ':completion:*' menu select=2
 
-# load colors
+# Load colors
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Show all processes when completing kill/killall and enable menu mode
