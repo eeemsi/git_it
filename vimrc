@@ -18,16 +18,17 @@ autocmd BufNewFile,BufRead *.go setf go
 set runtimepath+=/usr/share/vim/addons
 
 " Enable file type-specific indention rules
-filetype plugin on
+filetype plugin indent on
 
 " Display the cursorline and columnline
 set cursorline
 set cursorcolumn
 
-" Display a red columnline after 90 chars
+" Display the columnline as configured below
 " This feature seems to be available since vim 7.3
-highlight ColorColumn ctermbg=red guibg=red
-set colorcolumn=80
+if exists("+colorcolumn")
+    set cc=80
+endif
 
 " Disable visual bell and please stop whining
 set novisualbell
