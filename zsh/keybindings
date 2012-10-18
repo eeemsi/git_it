@@ -9,4 +9,4 @@ bindkey '\eOc'  forward-word            # ctrl cursor right
 bindkey '\eOd'  backward-word           # ctrl cursor left
 
 # Increasing the comfort for forward-word and backward-word
-export WORDCHARS='*?_[]~=&;!#$%^(){}<>'
+export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
