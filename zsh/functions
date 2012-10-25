@@ -10,7 +10,7 @@ presentation_mode () {
     case "$@" in
         on)
             xrandr --output VGA1 --mode 1024x768 --left-of LVDS1
-            urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=15"
+            urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=17"
         ;;
         off)
             xrandr --output VGA1 --off
