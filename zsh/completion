@@ -6,10 +6,6 @@ compinit
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-# Define maximal errors for completions
-zstyle ':completion:*' completer _approximate
-zstyle ':completion:*' max-errors 1
-
 # Case-insensitive,partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
