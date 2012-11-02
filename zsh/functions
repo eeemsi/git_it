@@ -72,3 +72,11 @@ agi () {
 agr () {
     s apt-get remove $* && rehash
 }
+
+# Start or reattach a tmux session when a ssh connection is established
+ssh_con_tmux () {
+    if [ "$TERM" != "screen" ]; then
+        tmux attach-session -d
+        exit
+    fi
+}
