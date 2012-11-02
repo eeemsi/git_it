@@ -17,6 +17,8 @@ URxvt.colorUL:          #999999
 URxvt.visualBell:       false
 URxvt.urgentOnBell:     true
 
+URxvt.fading:           10
+
 *background:    #222222
 *foreground:    #ffffff
 
