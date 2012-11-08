@@ -31,3 +31,6 @@ watch=(notme root)
 
 # Don't display an error if there are no matches, I know what I am doing
 setopt NO_NOMATCH
+
+# Disable Flow Control
+stty -ixon
