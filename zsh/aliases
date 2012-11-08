@@ -32,3 +32,18 @@ alias grep='grep --color=auto --initial-tab'
 
 # Open a new window of the browser instead of opening a new tab
 alias chromium="chromium --incognito --disk-cache-dir='/tmpfs'"
+
+# Simplify adding wifi connections to network-manager
+alias nmcli-add='s nmcli dev wifi connect'
+
+# Simplify activating a connection
+alias nmcli-con-up='s nmcli con up id'
+
+# Simplify deactivating a connection
+alias nmcli-con-down='s nmcli con down id'
+
+# Simplify activating an interface
+alias nmcli-int-down='s nmcli dev disconnect iface'
+
+# Simplify removing connections from network-manager
+alias nmcli-rm='s nmcli con delete id'
