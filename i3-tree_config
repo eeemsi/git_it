@@ -24,9 +24,10 @@ $b XF86Launch1 $ensid i3lock -d
 
 # use 1pixel borders by default
 new_window 1pixel
+hide_edge_borders both
 
 # use orange borders for focused window
-client.focused #ff6622 #ff6622 #000000 #ff6622
+client.focused #b5b5b5 #b5b5b5 #000000 #b5b5b5
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
@@ -44,7 +45,7 @@ $b $Mod+Return $ensid urxvtc
 $b $Mod+Shift+q kill
 
 # start dmenu (a program launcher)
-$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#ffffff' -sb '#ff6622' -sf '#000000'
+$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'
 
 # change focus
 $b $Mod+j focus left
@@ -138,7 +139,7 @@ $b $Mod+minus scratchpad show
 bar {
     status_command i3status -c $HOME/.i3status.conf
     colors {
-        focused_workspace #ff6622 #ff6622 #000000
+        focused_workspace #b5b5b5 #b5b5b5 #000000
         urgent_workspace  #00ff00 #00ff00 #000000
     }
 }
