@@ -23,8 +23,8 @@ URxvt.fading:           10
 *foreground:    #ffffff
 
 !black
-*color0:    #262729
-*color8:    #554444
+*color0:    #4d4d4d
+*color8:    #6F6F6F
 
 !red
 *color1:    #e41b17
