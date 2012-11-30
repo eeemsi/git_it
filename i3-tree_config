@@ -12,7 +12,6 @@ $a [class="^Chromium$"] 2
 # start applications in certain conditions
 for_window [class="^kvm$"]          floating enable
 for_window [class="^MPlayer$"]      floating enable
-for_window [class="^bomberclone$"]  floating enable
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
@@ -22,11 +21,11 @@ $b XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 # fire up i3lock
 $b XF86Launch1 $ensid i3lock -d
 
-# use 1pixel borders by default
+# define the style for the borders
 new_window 1pixel
 hide_edge_borders both
 
-# use orange borders for focused window
+# define the colors of the focused client
 client.focused #b5b5b5 #b5b5b5 #000000 #b5b5b5
 
 # font for window titles. ISO 10646 = Unicode
@@ -34,9 +33,6 @@ font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
 # use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
-
-# retrieve a list of windows to focus on
-$b $Mod+g $ensid python3 -O ${HOME}/.i3/nextfind.py
 
 # start a terminal
 $b $Mod+Return $ensid urxvtc
@@ -51,7 +47,7 @@ $b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#00
 $b $Mod+j focus left
 $b $Mod+k focus down
 $b $Mod+l focus up
-$b $Mod+semicolon focus right
+$b $Mod+odiaeresis focus right
 
 # alternatively, you can use the cursor keys:
 $b $Mod+Left focus left
@@ -133,6 +129,27 @@ $b $Mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 $b $Mod+minus scratchpad show
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j           resize shrink width 10 px or 10 ppt
+        bindsym k           resize grow height 10 px or 10 ppt
+        bindsym l           resize shrink height 10 px or 10 ppt
+        bindsym odiaeresis   resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod1+r mode "resize"
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
