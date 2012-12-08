@@ -1,4 +1,4 @@
-#
+# Load colors
 autoload -U colors && colors
 
 # Predefine some colors
