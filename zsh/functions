@@ -7,23 +7,16 @@ psof () {
 
 # Set modes for xrandr
 presentation_mode () {
-    case "$@" in
-        on)
-            xrandr --output VGA1 --mode 1024x768 --left-of LVDS1
-            urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=17"
-        ;;
-        off)
-            xrandr --output VGA1 --off
-        ;;
-        *)
-            echo "no mode specified"
-        ;;
-    esac
+    if [ ! -z "$@" ]; then
+        xrandr --output VGA1 --mode "$@" --above LVDS1
+    else
+        xrandr --output VGA1 --off
+    fi
 }
 
 # More comfortable ifup ifdown
 ifre () {
-    s ifdown "$*" && s ifup "$*"
+    s ifdown "$@" && s ifup "$@"
 }
 
 # Create directoy and cd to it
@@ -35,7 +28,6 @@ mkcd () {
 cdt () {
     local t
     t=$(mktemp -d)
-    echo "$t"
     builtin cd "$t"
 }
 
@@ -49,9 +41,8 @@ update_git () {
     ARRAY=(`ls -d ./*/`)
 
     if [ ! -z "$ARRAY" ]; then
-        for i in $ARRAY; do
+        for i in "$ARRAY"; do
             if [ -d "$i" ]; then
-                echo "checking: '"$i"'"
                 cd "$i" && git pull
                 case "$@" in
                     clean) make distclean && git clean -f && git gc
