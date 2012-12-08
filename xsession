@@ -19,12 +19,12 @@ xset -r 121
 
 # Enforce correct locales from the beginning
 unset LC_ALL
-export LANG=de_DE.UTF-8
+export LANG=en_US.UTF-8
 export LC_MESSAGES=C
 export LC_TIME=en_DK.UTF-8
 
 # Start urxvtd
-urxvtd -q -f -o -m &
+urxvtd -q -f -o &
 
 # Fire up the windowmanager
 i3
