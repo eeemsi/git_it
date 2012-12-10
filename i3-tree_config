@@ -20,6 +20,9 @@ $b XF86AudioMute        $ensid amixer set Master toggle
 $b XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
 $b XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 
+# define a terminal for presentations
+$b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=17"
+
 # fire up i3lock
 $b XF86Launch1 $ensid i3lock -d
 
