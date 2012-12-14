@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# There are two possible targets -> i386 OR amd64
-target="amd64"
+# There are two possible targets -> i386 OR amd64, mention this if no argument
+# is provided
+if [ ! -z "$@" ]; then
+    target = "$@"
+else
+    echo "no argument given - use i386 or amd64"
+fi
 
 # Create temporary directory and cd to it
 cdt () {
