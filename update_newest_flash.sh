@@ -3,9 +3,10 @@
 # There are two possible targets -> i386 OR amd64, mention this if no argument
 # is provided
 if [ ! -z "$@" ]; then
-    target = "$@"
+    target="$@"
 else
     echo "no argument given - use i386 or amd64"
+    exit
 fi
 
 # Create temporary directory and cd to it
