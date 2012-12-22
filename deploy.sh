@@ -8,7 +8,9 @@ if [ ! -z "$1" ]; then
             if [ ! -z ${HOME}/git_it/i3-tree-config ]; then
                 cp -r ${HOME}/git_it/i3-tree-config ${HOME}/.i3/config
             fi
+            ;;
 
+        i3status)
             if [ ! -z ${HOME}/git_it/i3status.conf ]; then
                 cp -r ${HOME}/git_it/i3status.conf ${HOME}/.i3status.conf
             fi
@@ -30,7 +32,9 @@ if [ ! -z "$1" ]; then
             if [ -d ${HOME}/git_it/zsh ]; then
                 cp -r ${HOME}/git_it/zsh ${HOME}/.zsh
             fi
+            ;;
 
+        zsh_rebuild)
             for i in `ls ${HOME}/.zsh`; do
                 echo "source \""'${HOME}'/.zsh/"${i}""\"" >> ${HOME}/.zshrc_new
             done
