@@ -7,6 +7,14 @@ Package: *
 Pin-release: a=experimental
 Pin-Priority: 1
 
+Package: linux-image-*-trunk-amd64
+Pin: origin "http.debian.net"
+Pin-Priority: 1001
+
+Package: linux-headers-*-trunk-amd64
+Pin: origin "http.debian.net"
+Pin-Priority: 1001
+
 # Good for building packages on your own ;)
 Package: i3
 Pin: release o=Debian
