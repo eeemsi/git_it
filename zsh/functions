@@ -33,25 +33,22 @@ cdt () {
 
 # Create a directory, cd into it and create a git repository
 mkgit () {
-     mkdir -p "$@" && cd "$@" && git init
+    mkdir -p "$@" && cd "$@" && git init
 }
 
 # Update git repositories in subfolders and clean them up if wanted
 update_git () {
-    ARRAY=(`ls -d ./*/`)
+    for i in `ls -d ./*/`; do
+        echo "->" "$i" && cd "$i" && git pull
 
-    if [ ! -z "$ARRAY" ]; then
-        for i in "$ARRAY"; do
-            if [ -d "$i" ]; then
-                cd "$i" && git pull
-                case "$@" in
-                    clean) make distclean && git clean -f && git gc
+        case "$@" in
+            clean)
+                make distclean && git clean -f && git gc
                 ;;
-                esac
-                cd ..
-            fi
-        done
-    fi
+        esac
+
+        cd ..
+    done
 }
 
 # Rehash after installing a package
