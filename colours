@@ -1,21 +1,17 @@
 #!/bin/bash
 #
-#   found this on: https://bbs.archlinux.org/viewtopic.php?id=51818
+#   found this on https://bbs.archlinux.org/viewtopic.php?id=140685&p=11
 
-T='TEST'   # The test text
+colors=($(xrdb -query | sed -n 's/.*color\([0-9]\)/\1/p' | sort -nu | cut -f2))
 
-echo -e "\n                 40m     41m     42m     43m\
-     44m     45m     46m     47m";
-
-for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' \
-           '1;32m' '  33m' '1;33m' '  34m' '1;34m' '  35m' '1;35m' \
-           '  36m' '1;36m' '  37m' '1;37m';
-  do FG=${FGs// /}
-  echo -en " $FGs \033[$FG  $T  "
-  for BG in 40m 41m 42m 43m 44m 45m 46m 47m;
-  do echo -en "$EINS \033[$FG\033[$BG  $T  \033[0m";
-  done
-  echo;
+echo -e "\e[1;37m
+ Black      Red        Green      Yellow     Blue       Magenta    Cyan       White
+───────────────────────────────────────────────────────────────────────────────────────\e[0m"
+for i in {0..7}; do
+    echo -en "\e[$((30+$i))m █ ${colors[i]} \e[0m";
 done
 echo
-
+for i in {8..15}; do
+    echo -en "\e[1;$((22+$i))m █ ${colors[i]} \e[0m";
+done
+echo -e "\n"
