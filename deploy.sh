@@ -5,8 +5,8 @@ cp=/bin/cp
 if [ ! -z "$1" ]; then
     case "$1" in
         i3)
-            if [ ! -z ${HOME}/git_it/i3-tree-config ]; then
-                cp -r ${HOME}/git_it/i3-tree-config ${HOME}/.i3/config
+            if [ ! -z ${HOME}/git_it/i3-tree_config ]; then
+                cp -r ${HOME}/git_it/i3-tree_config ${HOME}/.i3/config
             fi
             ;;
 
