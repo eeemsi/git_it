@@ -3,7 +3,7 @@ autoload -Uz compinit && compinit
 
 # Use a cache and specify the path to it
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' cache-path ~/.cache/zsh
 
 # Case-insensitive,partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
