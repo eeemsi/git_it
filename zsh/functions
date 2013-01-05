@@ -6,7 +6,7 @@ psof () {
 }
 
 # Set modes for xrandr
-presentation_mode () {
+monitor_mode () {
     if [ ! -z "$@" ]; then
         xrandr --output VGA1 --mode "$@" --above LVDS1
     else
