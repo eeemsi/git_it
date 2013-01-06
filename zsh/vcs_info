@@ -6,7 +6,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 
 # Specify how it should be formatted
-zstyle ':vcs_info:*' formats "${fg_dark_blue}%b${fg_no_colour} "
+zstyle ':vcs_info:*' formats "${fg_dark_blue}%b%{$reset_color%} "
 
 precmd() {
     vcs_info

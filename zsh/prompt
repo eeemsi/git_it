@@ -11,7 +11,7 @@ setup_prompt() {
         _user_="%n"
     fi
 
-    PS1="%K{green}%F{black}$_user_%f%k${fg_white} %~${fg_no_colour} \${vcs_info_msg_0_}%# "
+    PS1="%K{green}%F{black}$_user_%f%k${fg_white} %~ \${vcs_info_msg_0_}%# "
 }
 
 setup_prompt
