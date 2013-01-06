@@ -2,6 +2,9 @@
 autoload -Uz promptinit
 promptinit
 
+# Check for an interactive session
+[ -z "$PS1" ] && return
+
 # Defines the prompt depending on the status of $SSH_CONNECTION
 setup_prompt() {
     if [ ! -z "$SSH_CONNECTION" ]; then
