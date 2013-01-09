@@ -1,4 +1,4 @@
-# Use modern completion system
+# Load completion
 autoload -Uz compinit && compinit
 
 # Use a cache and specify the path to it

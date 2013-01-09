@@ -59,20 +59,6 @@ update_git () {
     done
 }
 
-# Rehash after installing a package
-agi () {
-    if [ ! -z "$@" ]; then
-        s apt-get install "$@" && rehash
-    fi
-}
-
-# Rehash after removing a package
-agr () {
-    if [ ! -z "$@" ]; then
-        s apt-get remove "$@" && rehash
-    fi
-}
-
 # Start or reattach a tmux session when a ssh connection is established
 ssh_con_tmux () {
     if [ "$TERM" != "screen" ]; then

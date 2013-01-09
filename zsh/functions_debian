@@ -1,0 +1,13 @@
+# Rehash after installing a package
+agi () {
+    if [ ! -z "$@" ]; then
+        s apt-get install "$@" && rehash
+    fi
+}
+
+# Rehash after removing a package
+agr () {
+    if [ ! -z "$@" ]; then
+        s apt-get remove "$@" && rehash
+    fi
+}
