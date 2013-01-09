@@ -1,8 +1,7 @@
 # Load colors
 autoload -U colors && colors
 
-# Predefine some colors
-fg_white=$'%{\e[0;37m%}'
+# Define a nicer blue
 fg_dark_blue=$'%{\e[0;36m%}'
 
 # Colors for ls
