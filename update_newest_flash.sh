@@ -24,8 +24,8 @@ tar xJf data.tar.lzma &&
 cd "$folder"/opt/google/chrome/PepperFlash &&
 version=`strings libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .`
 
-echo "\n\n=====================\nsteps left up to you:"
-echo "cp -r "$folder"/opt/google/chrome/PepperFlash /usr/lib && chmod 644 /usr/lib/PepperFlash/libpepflashplayer.so"
-echo "\n=======================\nplease start chromium the following way:"
-echo "--ppapi-flash-path=/usr/lib/PepperFlash/libpepflashplayer.so --ppapi-flash-version="$version""
+echo "executing:"
+echo "sudo sh -c \"cp -r "$folder"/opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so\""
+sudo sh -c "cp -r "$folder"/opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so"
+echo "\n\n -> chromium --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\n\n"
 
