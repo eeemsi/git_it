@@ -27,5 +27,6 @@ version=`strings libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .`
 echo "executing:"
 echo "sudo sh -c \"cp -r "$folder"/opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so\""
 sudo sh -c "cp -r "$folder"/opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so"
+rm -rf "$folder"
 echo "\n\n -> chromium --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\n\n"
 
