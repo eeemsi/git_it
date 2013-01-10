@@ -28,5 +28,10 @@ echo "executing:"
 echo "sudo sh -c \"cp -r "$folder"/opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so\""
 sudo sh -c "cp -r "$folder"/opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so"
 rm -rf "$folder"
-echo "\n\n -> chromium --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\n\n"
 
+if [ ! -f "${HOME}/.zsh/chromium" ]; then
+    touch "${HOME}"/.zsh/chromium
+    echo "source \""'${HOME}'"/.zsh/chromium\"" > "${HOME}"/.zshrc
+fi
+
+echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\" > "${HOME}/.zsh/chromium"
