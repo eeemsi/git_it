@@ -31,7 +31,7 @@ rm -rf "$folder"
 
 if [ ! -f "${HOME}/.zsh/chromium" ]; then
     touch "${HOME}"/.zsh/chromium
-    echo "source \""'${HOME}'"/.zsh/chromium\"" > "${HOME}"/.zshrc
+    echo "source \""'${HOME}'"/.zsh/chromium\"" >> "${HOME}"/.zshrc
 fi
 
 echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\" > "${HOME}/.zsh/chromium"
