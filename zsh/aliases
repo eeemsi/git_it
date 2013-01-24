@@ -26,5 +26,8 @@ alias ga='g add'
 alias gd='g diff'
 alias gc='g commit'
 
+alias 6='ip -6'
+alias 4='ip -4'
+
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
