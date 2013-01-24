@@ -9,19 +9,8 @@ iptables -P OUTPUT ACCEPT
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 
-#try to avoid loops
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A INPUT ! -i lo -d 127.0.0.0/8 -j REJECT
-
-#drop spoofed packets
-iptables -A INPUT ! --in-interface lo --source 127.0.0.0/8 -j DROP
-
 #limit ping requests
-iptables -A INPUT -p icmp -m limit --limit 1/second -j ACCEPT
-iptables -A INPUT -p 41 -j ACCEPT
-
-#allowed inputs
-iptables -A INPUT --in-interface lo -j ACCEPT
+# iptables -A INPUT -p icmp -m limit --limit 1/second -j ACCEPT
 
 #allow responses
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
@@ -32,3 +21,6 @@ iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 #Force Fragments packets check
 iptables -A INPUT -f -j DROP
 
+#allowed inputs
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -p 41 -j ACCEPT
