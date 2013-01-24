@@ -7,26 +7,26 @@ psof () {
 
 # Set modes for xrandr
 monitor_mode () {
-    if [ ! -z "$@" ]; then
-        if [ "$@" == "off" ]; then
+    if [ ! -z "${1}" ]; then
+        if [ "${1}" == "off" ]; then
             xrandr --output VGA1 --off
         else
-            xrandr --output VGA1 --mode "$@" --above LVDS1
+            xrandr --output VGA1 --mode "${1}" --above LVDS1
         fi
     fi
 }
 
 # More comfortable ifup ifdown
 ifre () {
-    if [ ! -z "$@" ]; then
-        s ifdown "$@" && s ifup "$@"
+    if [ ! -z "${1}" ]; then
+        s ifdown "${1}" && s ifup "${1}"
     fi
 }
 
 # Create directoy and cd to it
 mkcd () {
-    if [ ! -z "$@" ]; then
-        mkdir -p "$@" && cd "$@"
+    if [ ! -z "${1}" ]; then
+        mkdir -p "${1}" && cd "${1}"
     fi
 }
 
@@ -39,8 +39,8 @@ cdt () {
 
 # Create a directory, cd into it and create a git repository
 mkgit () {
-    if [ ! -z "$@" ]; then
-        mkdir -p "$@" && cd "$@" && git init
+    if [ ! -z "${1}" ]; then
+        mkdir -p "${1}" && cd "${1}" && git init
     fi
 }
 
@@ -49,7 +49,7 @@ update_git () {
     for i in `ls -d ./*/`; do
         echo "->" "$i" && cd "$i" && git pull
 
-        case "$@" in
+        case "${1}" in
             clean)
                 make distclean && git clean -f && git gc
                 ;;
