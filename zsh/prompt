@@ -6,13 +6,6 @@ autoload -Uz promptinit && promptinit
 
 # Defines the prompt depending on the status of $SSH_CONNECTION
 setup_prompt() {
-    # Check for nested zsh's
-    if [ "$TERM" != "linux" ] && [ "$SHLVL" -ge 3 ]; then
-        RPROMPT="%F{red}"['$SHLVL']"%f"
-    elif [ "$TERM" == "linux" ] && [ "$SHLVL" -ge 2 ]; then
-        RPROMPT="%F{red}"['$SHLVL']"%f"
-    fi
-
     if [ ! -z "$SSH_CONNECTION" ]; then
         _user_="%n@%m"
         ssh_con_tmux
