@@ -2,44 +2,51 @@
 
 cp=/bin/cp
 
-if [ ! -z "$1" ]; then
-    case "$1" in
+if [ ! -z "${1}" ]; then
+    case "${1}" in
         i3)
-            if [ ! -z ${HOME}/git_it/i3-tree_config ]; then
-                cp -r ${HOME}/git_it/i3-tree_config ${HOME}/.i3/config
+            if [ ! -d "${HOME}"/.i3 ]; then
+                mkdir "${HOME}"/.i3 && cp ./i3-tree_config "${HOME}"/.i3/config
+            else
+                cp ./i3-tree_config "${HOME}"/.i3/config
             fi
             ;;
 
         i3status)
-            if [ ! -z ${HOME}/git_it/i3status.conf ]; then
-                cp -r ${HOME}/git_it/i3status.conf ${HOME}/.i3status.conf
-            fi
+            cp ./i3status.conf "${HOME}"/.i3status.conf
             ;;
 
         vim)
-            cp ${HOME}/git_it/vimrc ${HOME}/.vimrc
+            cp ./vimrc "${HOME}"/.vimrc
 
-            if [ -d ${HOME}/git_it/vim ]; then
-                cp -r ${HOME}/git_it/vim ${HOME}/.vim
+            if [ ! -d "${HOME}"/.vim ]; then
+                cp -r ./vim "${HOME}"/.vim
             fi
             ;;
 
-        xdefaults)
-            cp ${HOME}/git_it/Xdefaults ${HOME}/.Xdefaults
+        xresources)
+            cp ./Xresources "${HOME}"/.Xresources
             ;;
 
         zsh)
-            if [ -d ${HOME}/git_it/zsh ]; then
-                cp -r ${HOME}/git_it/zsh ${HOME}/.zsh
+            if [ ! -d "${HOME}"/.zsh ]; then
+                cp -r ./zsh "${HOME}"/.zsh
+                file=".zshrc"
+            else
+                for file in ./zsh; do
+                    cp "$file" "${HOME}"/.zsh
+                done
+                file=".zshrc_new"
             fi
-            ;;
 
-        zsh_rebuild)
-            for i in `ls ${HOME}/.zsh`; do
-                echo "source \""'${HOME}'/.zsh/"${i}""\"" >> ${HOME}/.zshrc_new
+            for i in `ls "${HOME}"/.zsh`; do
+                echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/"$file"
             done
+            ;;
+        *)
+            echo "wrong argument"
             ;;
     esac
 else
-    echo "noting specified"
+    echo "nothing specified"
 fi
