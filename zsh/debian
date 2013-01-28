@@ -1,0 +1,22 @@
+#############################################################
+# Aliases
+##############################################################
+# Alias for a comfortable dist-upgrade
+alias agu='s sh -c "apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"'
+
+#############################################################
+# Functions
+#############################################################
+# Rehash after installing a package
+agi () {
+    if [ ! -z "$@" ]; then
+        s apt-get install "$@" && rehash
+    fi
+}
+
+# Rehash after removing a package
+agr () {
+    if [ ! -z "$@" ]; then
+        s apt-get remove "$@" && rehash
+    fi
+}
