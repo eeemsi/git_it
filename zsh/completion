@@ -23,4 +23,4 @@ zstyle ':completion:*:*:killall:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;
 # Separate matches into groups and highlight them
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
-zstyle ':completion:*:descriptions'    format $'%{\e[0;31m%}%B%d%b%{\e[0m%}'
+zstyle ':completion:*:descriptions'    format $'%F{red}%B%d%b%f'
