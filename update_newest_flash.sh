@@ -2,8 +2,21 @@
 
 # There are two possible targets -> i386 OR amd64, mention this if no argument
 # is provided
-if [ ! -z "$@" ]; then
-    target="$@"
+if [ ! -z "${1}" ]; then
+    case "${1}" in
+        "amd64")
+            target="${1}"
+            ;;
+
+        "i386")
+            target="${1}"
+            ;;
+
+        *)
+            echo "wrong target supplied"
+            exit
+            ;;
+    esac
 else
     echo "no argument given - use i386 or amd64"
     exit
