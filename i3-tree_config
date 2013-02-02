@@ -24,7 +24,7 @@ $b XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 $b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=17"
 
 # fire up i3lock
-$b XF86Launch1 $ensid i3lock -d
+$b XF86Launch1 $ensid xtrlock
 
 # define the style for the borders
 new_window 1pixel
