@@ -22,5 +22,6 @@ iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 iptables -A INPUT -f -j DROP
 
 #allowed inputs
+iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -p 41 -j ACCEPT
