@@ -19,9 +19,6 @@ noautosub=1
 # There is no remote controle atm
 nolirc="1"
 
-# Sometimes a buffer is needed
-cache=8192
-
 # define the language and subtitles
 alang=en
 
