@@ -1,6 +1,9 @@
 # Load completion
 autoload -Uz compinit && compinit
 
+# Enable completion according to given aliases
+setopt NO_COMPLETE_ALIASES
+
 # Use a cache and specify the path to it
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.cache/zsh
