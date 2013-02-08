@@ -20,3 +20,14 @@ agr () {
         s apt-get remove "$@" && rehash
     fi
 }
+
+_notyet() {
+    _deb_packages uninstalled
+}
+
+_yetnot() {
+    _deb_packages installed
+}
+
+compdef _notyet agi
+compdef _yetnot agr
