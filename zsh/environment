@@ -34,3 +34,9 @@ setopt NO_NOMATCH
 
 # Disable Flow Control
 stty -ixon
+
+# Make quoted expression containing a newline illegal
+setopt CSHJUNKIEQUOTES
+
+# Prevent from accidentally overwriting an existing file
+setopt NOCLOBBER
