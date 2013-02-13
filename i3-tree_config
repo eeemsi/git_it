@@ -13,7 +13,7 @@ $ensid nm-applet
 $a [class="^Chromium$"] 2
 
 # start applications in certain conditions
-for_window [class="^kvm$"]          floating enable
+for_window [class="^kvm$"] floating enable
 
 # controlling the audio
 $b XF86AudioMute        $ensid amixer set Master toggle
