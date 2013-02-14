@@ -102,5 +102,8 @@ set nospell
 " Dont beep on error
 set vb t_vb=
 
+" Try to get rid of weird delays
+set timeout timeoutlen=1000 ttimeoutlen=100
+
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
