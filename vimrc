@@ -33,6 +33,7 @@ endif
 " Disable visual bell and please stop whining
 set novisualbell
 set noerrorbells
+set vb t_vb=
 
 " Defines the colorscheme that should be used
 colorscheme elflord
@@ -89,7 +90,7 @@ set showmatch
 " For fast terminal connection
 set ttyfast
 
-"folding settings
+" Define some settings for folding
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
@@ -100,9 +101,6 @@ set nowritebackup
 
 " No spell check
 set nospell
-
-" Dont beep on error
-set vb t_vb=
 
 " Try to get rid of weird delays
 set timeout timeoutlen=1000 ttimeoutlen=100
