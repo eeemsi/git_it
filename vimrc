@@ -99,6 +99,8 @@ set nowritebackup
 " No spell check
 set nospell
 
+" Dont beep on error
+set vb t_vb=
+
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
-
