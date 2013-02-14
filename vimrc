@@ -89,8 +89,10 @@ set showmatch
 " For fast terminal connection
 set ttyfast
 
-" Disable folding completely
-set nofen
+"folding settings
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
 
 " Do not create those annoying backup files
 set nobackup
