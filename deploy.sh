@@ -43,6 +43,21 @@ if [ ! -z "${1}" ]; then
                 echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/"$file"
             done
             ;;
+
+        zsh-compile)
+            if [ ! -d "${HOME}"/.zsh ]; then
+                file=".zshrc"
+            else
+                file=".zshrc_new"
+            fi
+
+            for i in `ls ./zsh`; do
+                cat ./zsh/"${i}" >> "${HOME}"/"$file"
+            done
+
+            zcompile "${HOME}"/"$file"
+            ;;
+
         *)
             echo "wrong argument"
             ;;
