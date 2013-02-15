@@ -45,9 +45,13 @@ if [ ! -z "${1}" ]; then
             ;;
 
         zsh-compile)
-            if [ ! -d "${HOME}"/.zsh ]; then
+            if [ ! -f "${HOME}"/.zshrc ]; then
                 file=".zshrc"
             else
+                if [ -f "${HOME}"/.zshrc_new ]; then
+                    rm "${HOME}"/.zshrc_new
+                fi
+
                 file=".zshrc_new"
             fi
 
