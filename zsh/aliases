@@ -31,3 +31,6 @@ alias 4='ip -4'
 
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
+
+# Dirty work around for reenabling completion after zsh again
+alias zsh='zsh${ZSH_VERSION/.*}'
