@@ -140,32 +140,27 @@ $b $Mod+minus scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-    # These bindings trigger as soon as you enter the resize mode
-
-    # Pressing left will shrink the window’s width.
-    # Pressing right will grow the window’s width.
-    # Pressing up will shrink the window’s height.
-    # Pressing down will grow the window’s height.
-    bindsym j           resize shrink width 10 px or 10 ppt
-    bindsym k           resize grow height 10 px or 10 ppt
-    bindsym l           resize shrink height 10 px or 10 ppt
-    bindsym odiaeresis   resize grow width 10 px or 10 ppt
+    $b j          resize shrink width 10 px or 10 ppt
+    $b k          resize grow height 10 px or 10 ppt
+    $b l          resize shrink height 10 px or 10 ppt
+    $b odiaeresis resize grow width 10 px or 10 ppt
 
     # back to normal: Escape
-    bindsym Escape mode "default"
+    $b Escape mode "default"
 }
 
-bindsym $Mod+r mode "resize"
+$b $Mod+r mode "resize"
 
+# move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move workspace" {
-    bindsym up move workspace to output up
-    bindsym down move workspace to output down
+    $b up move workspace to output up
+    $b down move workspace to output down
 
     # back to normal: Escape
-    bindsym Escape mode "default"
+    $b Escape mode "default"
 }
 
-bindsym $Mod+o mode "move workspace"
+$b $Mod+o mode "move workspace"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
