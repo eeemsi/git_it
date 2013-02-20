@@ -29,6 +29,9 @@ alias gc='g commit'
 alias 6='ip -6'
 alias 4='ip -4'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
 
