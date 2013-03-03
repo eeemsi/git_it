@@ -62,6 +62,14 @@ if [ ! -z "${1}" ]; then
             zcompile "${HOME}"/"$file"
             ;;
 
+        flash)
+            sh ./update_newest_flash.sh
+            ;;
+
+        nodejs)
+            sh ./update_nodejs.sh
+            ;;
+
         *)
             echo "wrong argument"
             ;;
