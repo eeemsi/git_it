@@ -48,27 +48,20 @@ create_alias() {
     echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\" > "${HOME}/.zsh/chromium"
 }
 
-# There are two possible targets -> i386 OR amd64, mention this if no argument
-# is provided
-if [ ! -z "${1}" ]; then
-    case "${1}" in
-        "amd64")
-            target="${1}"
-            ;;
+# Automagically find out the architecture
+case "$(uname -m)" in
+    "x86_64")
+        target="amd64"
+        ;;
 
-        "i386")
-            target="${1}"
-            ;;
+    "i686")
+        target="i386"
+        ;;
 
-        *)
-            echo "wrong target supplied"
-            exit
-            ;;
-    esac
+    *)
+        echo ""$(uname -m)" - not support in this script"
+        exit
+        ;;
+esac
 
-    make_tmp_dir
-
-else
-    echo "no argument given - use i386 or amd64"
-    exit
-fi
+make_tmp_dir
