@@ -3,17 +3,17 @@
 version="${1}"
 
 make_tmp_dir() {
-    if [ ! -d /tmp/"$version"_nodejs ]; then
-        mkdir /tmp/"$version"_nodejs
+    if [ ! -d /tmp/nodejs_"$version" ]; then
+        mkdir /tmp/nodejs_"$version"
     fi
 
-    cd /tmp/"$version"_nodejs
+    cd /tmp/nodejs_"$version"
 
     get_nodejs_version
 }
 
 get_nodejs_version() {
-    if [ ! -f /tmp/"$version"_nodejs/node-v"$version".tar.gz ]; then
+    if [ ! -f node-v"$version".tar.gz ]; then
         wget -c http://nodejs.org/dist/v"$version"/node-v"$version".tar.gz
     fi
 
@@ -21,8 +21,13 @@ get_nodejs_version() {
 }
 
 extract_build_install() {
-    tar xf node-v"$version".tar.gz && cd node-v"$version"
-    ./configure --prefix=/opt/node --openssl-includes=/usr/include/openss
+    if [ ! -d node-v"$version" ]; then
+        tar xf node-v"$version".tar.gz
+    fi
+
+    cd node-v"$version"
+
+    ./configure --prefix=/opt/node --openssl-includes=/usr/include/openssl
 
     if [ -x "$(which clang)" ]; then
         CC=clang make
@@ -36,7 +41,7 @@ extract_build_install() {
 }
 
 remove_created_temp_dir() {
-    rm -rf /tmp/"$version"_nodejs
+    rm -rf /tmp/nodejs_"$version"
 }
 
 make_tmp_dir
