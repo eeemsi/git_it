@@ -27,15 +27,14 @@ extract_build_install() {
 
     cd node-v"$version"
 
-    ./configure --prefix=/opt/node --openssl-includes=/usr/include/openssl
-
     if [ -x "$(which clang)" ]; then
-        CC=clang make
-    else
-        make
+        export CC=clang
+        export CXX=clang++
     fi
 
-    sudo make install clean
+    ./configure --prefix=/opt/node --openssl-includes=/usr/include/openssl
+
+    make && sudo make install clean
 
     remove_created_temp_dir
 }
