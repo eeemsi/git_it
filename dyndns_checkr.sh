@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # hint: put this into crontab
 # */15 * * * * /bin/dyndns_checkr.sh > /dev/null

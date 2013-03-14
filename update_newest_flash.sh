@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 make_tmp_dir() {
     if [ ! -d /tmp/flash_"$target" ]; then
