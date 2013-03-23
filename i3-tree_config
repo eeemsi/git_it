@@ -16,15 +16,15 @@ $a [class="^Chromium$"] 2
 for_window [class="^kvm$"] floating enable
 
 # controlling the audio
-$b XF86AudioMute        $ensid amixer set Master mute
-$b XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
-$b XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
+$b --release XF86AudioMute        $ensid amixer set Master mute
+$b --release XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
+$b --release XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 
 # define a terminal for presentations
 $b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=17"
 
 # fire up a screenlocker
-$b XF86Launch1 $ensid xtrlock
+$b --release XF86Launch1 $ensid xtrlock
 
 # define the style for the borders
 new_window 1pixel
