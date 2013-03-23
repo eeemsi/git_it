@@ -16,7 +16,7 @@ $a [class="^Chromium$"] 2
 for_window [class="^kvm$"] floating enable
 
 # controlling the audio
-$b XF86AudioMute        $ensid amixer set Master toggle
+$b XF86AudioMute        $ensid amixer set Master mute
 $b XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
 $b XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 
