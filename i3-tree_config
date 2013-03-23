@@ -96,10 +96,10 @@ $b $Mod+Shift+space floating toggle
 $b $Mod+space focus mode_toggle
 
 # focus the parent container
-$b $Mod+a $ensid i3-msg focus parent
+$b $Mod+a focus parent
 
 # focus the child container
-$b $Mod+d $ensid i3-msg focus child
+$b $Mod+d focus child
 
 # switch to workspace
 $b $Mod+1 workspace 1
@@ -114,16 +114,16 @@ $b $Mod+9 workspace 9
 $b $Mod+0 workspace 10
 
 # move focused container to workspace
-$b $Mod+Shift+1 $ensid i3-msg move container workspace 1
-$b $Mod+Shift+2 $ensid i3-msg move container workspace 2
-$b $Mod+Shift+3 $ensid i3-msg move container workspace 3
-$b $Mod+Shift+4 $ensid i3-msg move container workspace 4
-$b $Mod+Shift+5 $ensid i3-msg move container workspace 5
-$b $Mod+Shift+6 $ensid i3-msg move container workspace 6
-$b $Mod+Shift+7 $ensid i3-msg move container workspace 7
-$b $Mod+Shift+8 $ensid i3-msg move container workspace 8
-$b $Mod+Shift+9 $ensid i3-msg move container workspace 9
-$b $Mod+Shift+0 $ensid i3-msg move container workspace 10
+$b $Mod+Shift+1 move container workspace 1
+$b $Mod+Shift+2 move container workspace 2
+$b $Mod+Shift+3 move container workspace 3
+$b $Mod+Shift+4 move container workspace 4
+$b $Mod+Shift+5 move container workspace 5
+$b $Mod+Shift+6 move container workspace 6
+$b $Mod+Shift+7 move container workspace 7
+$b $Mod+Shift+8 move container workspace 8
+$b $Mod+Shift+9 move container workspace 9
+$b $Mod+Shift+0 move container workspace 10
 
 # reload the configuration file
 $b $Mod+Shift+c reload
