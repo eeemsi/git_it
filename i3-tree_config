@@ -6,9 +6,6 @@ set $b      bindsym
 set $ensid  exec --no-startup-id
 set $Mod    Mod1
 
-# start nm-applet
-$ensid nm-applet
-
 # start applications on a certain workspace
 $a [class="^Chromium$"] 2
 

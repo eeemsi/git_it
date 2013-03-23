@@ -1,6 +1,9 @@
 # Enable touchpad on eeepc
 #xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
 
+# Start nm-applet
+nm-applet &
+
 # Disable DPMS turning off the screen
 xset -dpms
 xset s off
