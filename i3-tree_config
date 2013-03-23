@@ -21,7 +21,7 @@ $b --release XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
 $b --release XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
 
 # define a terminal for presentations
-$b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=17"
+$b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=18"
 
 # fire up a screenlocker
 $b --release XF86Launch1 $ensid xtrlock
