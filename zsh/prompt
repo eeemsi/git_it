@@ -5,7 +5,6 @@
 setup_prompt() {
     if [ ! -z "$SSH_CONNECTION" ]; then
         _user_="%n@%m"
-        ssh_con_tmux
     else
         _user_="%n"
     fi
