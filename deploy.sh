@@ -29,6 +29,12 @@ if [ ! -z "${1}" ]; then
             ;;
 
         zsh)
+            if [ ! -f "${HOME}"/.zprofile ]; then
+                cp ./zprofile "${HOME}"/.zprofile
+            else
+                cp ./zprofile "${HOME}"/.zprofile_new
+            fi
+
             if [ ! -d "${HOME}"/.zsh ]; then
                 cp -r ./zsh "${HOME}"/.zsh
                 file=".zshrc"
@@ -45,6 +51,12 @@ if [ ! -z "${1}" ]; then
             ;;
 
         zsh-compile)
+            if [ ! -f "${HOME}"/.zprofile ]; then
+                cp ./zprofile "${HOME}"/.zprofile
+            else
+                cp ./zprofile "${HOME}"/.zprofile_new
+            fi
+
             if [ ! -f "${HOME}"/.zshrc ]; then
                 file=".zshrc"
             else
