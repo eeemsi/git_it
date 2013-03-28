@@ -59,14 +59,6 @@ update_git () {
     done
 }
 
-# Start or reattach a tmux session when a ssh connection is established
-ssh_con_tmux () {
-    if [ -z "$TMUX" ] && [ "$TERM" != "screen" ]; then
-        tmux attach-session -d || tmux new
-        exit
-    fi
-}
-
 # Sometimes one needs some pseudo heave load
 create_heavy_load () {
     if [ ! -z "${1}" ]; then
