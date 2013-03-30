@@ -1,12 +1,3 @@
-# Sets the editor and other stuff
-export EDITOR='vim'
-export VISUAL='vim'
-export PAGER='less'
-export VTYSH_PAGER='cat'
-
-# Expand path to /usr/sbin and /sbin
-export PATH=~/.bin:$PATH:/usr/sbin:/sbin
-
 # Set PATHs for node.js
 export NODE_PATH=/opt/node:/opt/node/lib/node_modules
 export PATH=$PATH:/opt/node/bin
@@ -26,14 +17,14 @@ setopt NO_HUP
 # List jobs in the long format
 setopt LONG_LIST_JOBS
 
-# Watch for everyone but me and root
-watch=(notme root)
+# An array (colon-separated list) of login/logout events to report.
+watch=(notme, root)
 
 # Don't display an error if there are no matches, I know what I am doing
 setopt NO_NOMATCH
 
 # Disable Flow Control
-stty -ixon
+unsetopt FLOW_CONTROL
 
 # Make quoted expression containing a newline illegal
 setopt CSHJUNKIEQUOTES
