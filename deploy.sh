@@ -29,57 +29,34 @@ if [ ! -z "${1}" ]; then
             ;;
 
         zsh)
-            if [ ! -f "${HOME}"/.zprofile ]; then
-                cp ./zprofile "${HOME}"/.zprofile
-            else
-                cp ./zprofile "${HOME}"/.zprofile_new
+            cp ./zshenv "${HOME}"/.zshenv
+            cp ./zprofile "${HOME}"/.zprofile
+
+            if [ -d "${HOME}"/.zsh ]; then
+                rm -rf "${HOME}"/.zsh
+                rm "${HOME}"/.zshrc
             fi
 
-            if [ ! -d "${HOME}"/.zsh ]; then
-                cp -r ./zsh "${HOME}"/.zsh
-                file=".zshrc"
-            else
-                for file in ./zsh; do
-                    cp "$file" "${HOME}"/.zsh
-                done
-                file=".zshrc_new"
-            fi
+            cp -r ./zsh "${HOME}"/.zsh
 
             for i in `ls "${HOME}"/.zsh`; do
-                echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/"$file"
+                echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/.zshrc
             done
             ;;
 
         zsh-compile)
-            if [ ! -f "${HOME}"/.zprofile ]; then
-                cp ./zprofile "${HOME}"/.zprofile
-            else
-                cp ./zprofile "${HOME}"/.zprofile_new
-            fi
+            cp ./zshenv "${HOME}"/.zshenv
+            cp ./zprofile "${HOME}"/.zprofile
 
-            if [ ! -f "${HOME}"/.zshrc ]; then
-                file=".zshrc"
-            else
-                if [ -f "${HOME}"/.zshrc_new ]; then
-                    rm "${HOME}"/.zshrc_new
-                fi
-
-                file=".zshrc_new"
+            if [ -f "${HOME}"/.zshrc ]; then
+                rm "${HOME}"/.zshrc
             fi
 
             for i in `ls ./zsh`; do
-                cat ./zsh/"${i}" >> "${HOME}"/"$file"
+                cat ./zsh/"${i}" >> "${HOME}"/.zshrc
             done
 
-            zcompile "${HOME}"/"$file"
-            ;;
-
-        flash)
-            sh ./update_newest_flash.sh
-            ;;
-
-        nodejs)
-            sh ./update_nodejs.sh
+            zcompile "${HOME}"/.zshrc
             ;;
 
         *)
