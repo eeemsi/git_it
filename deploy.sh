@@ -38,7 +38,9 @@ if [ ! -z "${1}" ]; then
                 cp -r ./zsh "${HOME}"/.zsh
             fi
 
-            rm "${HOME}"/.zshrc
+            if [ -f "${HOME}"/.zshrc ]; then
+                rm "${HOME}"/.zshrc
+            fi
 
             for i in `ls "${HOME}"/.zsh`; do
                 echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/.zshrc
@@ -55,7 +57,9 @@ if [ ! -z "${1}" ]; then
                 cp -r ./zsh "${HOME}"/.zsh
             fi
 
-            rm "${HOME}"/.zshrc
+            if [ -f "${HOME}"/.zshrc ]; then
+                rm "${HOME}"/.zshrc
+            fi
 
             for i in `ls "${HOME}"/.zsh`; do
                 cat "${HOME}"/.zsh/"${i}" >> "${HOME}"/.zshrc
