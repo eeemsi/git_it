@@ -33,11 +33,12 @@ if [ ! -z "${1}" ]; then
             cp ./zprofile "${HOME}"/.zprofile
 
             if [ -d "${HOME}"/.zsh ]; then
-                rm -rf "${HOME}"/.zsh
-                rm "${HOME}"/.zshrc
+                cp ./zsh/* "${HOME}"/.zsh/
+            else
+                cp -r ./zsh "${HOME}"/.zsh
             fi
 
-            cp -r ./zsh "${HOME}"/.zsh
+            rm "${HOME}"/.zshrc
 
             for i in `ls "${HOME}"/.zsh`; do
                 echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/.zshrc
@@ -48,12 +49,16 @@ if [ ! -z "${1}" ]; then
             cp ./zshenv "${HOME}"/.zshenv
             cp ./zprofile "${HOME}"/.zprofile
 
-            if [ -f "${HOME}"/.zshrc ]; then
-                rm "${HOME}"/.zshrc
+             if [ -d "${HOME}"/.zsh ]; then
+                cp ./zsh/* "${HOME}"/.zsh/
+            else
+                cp -r ./zsh "${HOME}"/.zsh
             fi
 
-            for i in `ls ./zsh`; do
-                cat ./zsh/"${i}" >> "${HOME}"/.zshrc
+            rm "${HOME}"/.zshrc
+
+            for i in `ls "${HOME}"/.zsh`; do
+                cat "${HOME}"/.zsh/"${i}" >> "${HOME}"/.zshrc
             done
 
             zcompile "${HOME}"/.zshrc
