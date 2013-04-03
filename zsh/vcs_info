@@ -1,5 +1,5 @@
 # Enable vcs_info
-setopt prompt_subst
+setopt PROMPT_SUBST
 autoload -Uz vcs_info
 
 # Specify the vcs

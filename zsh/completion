@@ -2,7 +2,7 @@
 autoload -Uz compinit && compinit
 
 # Use different widths whilst displaying completion menu to reduce size
-setopt listpacked
+setopt LIST_PACKED
 
 # Enable completion according to given aliases
 setopt NO_COMPLETE_ALIASES
