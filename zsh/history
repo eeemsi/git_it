@@ -1,17 +1,16 @@
-# Behave like HIST_EXPIRE_DUPS_FIRST (HISTSIZE has to be bigger then SAVEHIST)
-HISTSIZE=1500
-SAVEHIST=1000
+# Define size for HISTFILE and SAVEHIST also define path for HISTFILE
+HISTSIZE=2000
+SAVEHIST=2000
 HISTFILE=~/.zsh_history
+
+# Append to $HISTFILE incrementally (does not wait for the shell to exit)
+setopt INC_APPEND_HISTORY
+
+# Remove duplicates from the history even if it is not the previous one
+setopt HIST_IGNORE_ALL_DUPS
 
 # Remove superfluous blanks from each command line being added to the history list
 setopt HIST_REDUCE_BLANKS
 
 # Don't store commands prefixed with a space
 setopt HIST_IGNORE_SPACE
-
-# Remove duplicates from the history even if it not the previous one
-setopt HIST_IGNORE_ALL_DUPS
-
-# Append the history list to the history file instead of replacing it. still
-# rewrites periodically
-setopt APPEND_HISTORY
