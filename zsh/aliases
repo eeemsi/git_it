@@ -13,9 +13,6 @@ else
     alias l='ls -hlF'
 fi
 
-# Required to pipe colors to less
-alias less='less -R'
-
 # More comfortable aliases
 alias s='sudo'
 
@@ -34,6 +31,13 @@ alias ...='cd ../..'
 
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
+
+# Required to pipe colors to less
+alias less='less -R'
+
+# Aliases for python2+3
+alias py='python'
+alias py3='python3'
 
 # Dirty work around for reenabling completion after zsh again
 alias zsh='zsh${ZSH_VERSION/.*}'
