@@ -39,6 +39,9 @@ font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 # use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
 
+# run i3-input
+$b $Mod+i exec i3-input
+
 # start a terminal
 $b $Mod+Return $ensid urxvtc
 
