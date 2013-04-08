@@ -21,7 +21,7 @@ agi () {
 # Rehash after removing a package
 agr () {
     if [ ! -z "$@" ]; then
-        s apt-get remove "$@" && rehash
+        s apt-get purge "$@" && rehash
         s apt-get autoremove
     fi
 }
