@@ -22,6 +22,7 @@ agi () {
 agr () {
     if [ ! -z "$@" ]; then
         s apt-get remove "$@" && rehash
+        s apt-get autoremove
     fi
 }
 
