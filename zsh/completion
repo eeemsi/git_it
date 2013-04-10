@@ -33,3 +33,6 @@ zstyle ':completion:*:*:killall:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
 zstyle ':completion:*:descriptions'    format $'%F{red}%B%d%b%f'
+
+# Enable menu selection via ctrl+space to go to subdirectories
+bindkey -M menuselect '^@' accept-and-infer-next-history
