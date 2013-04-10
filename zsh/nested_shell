@@ -1,6 +1,5 @@
 # Check for nested zsh's
-if [ "$TERM" != "linux" ] && [ "$SHLVL" -ge 3 ]; then
-    RPROMPT="%F{red}"['$SHLVL']"%f"
-elif [ "$TERM" == "linux" ] && [ "$SHLVL" -ge 2 ]; then
+if [ "$TERM" != "linux" ] && [ "$SHLVL" -ge 3 ] || \
+    [ "$TERM" == "linux" ] && [ "$SHLVL" -ge 2 ]; then
     RPROMPT="%F{red}"['$SHLVL']"%f"
 fi
