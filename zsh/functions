@@ -46,12 +46,14 @@ mkgit () {
 
 # Update git repositories in subfolders and clean them up if wanted
 update_git () {
-    for i in `ls -d ./*/`; do
+    for i in `ls -d ./*`; do
         echo "->" "$i" && cd "$i" && git pull
 
         case "${1}" in
             clean)
                 make distclean && git clean -f && git gc
+                ;;
+            *)
                 ;;
         esac
 
