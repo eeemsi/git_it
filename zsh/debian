@@ -14,17 +14,12 @@ alias acr='apt-cache rdepends'
 #############################################################
 # Rehash after installing a package
 agi () {
-    if [ ! -z "$@" ]; then
-        s apt-get install "$@" && rehash
-    fi
+    [[ ! -z "$@" ]] && s apt-get install "$@" && rehash
 }
 
 # Rehash after removing a package
 agr () {
-    if [ ! -z "$@" ]; then
-        s apt-get purge "$@" && rehash
-        s apt-get autoremove
-    fi
+    [[ ! -z "$@" ]] && s apt-get purge "$@" && rehash && s apt-get autoremove
 }
 
 _notyet() {
