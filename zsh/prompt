@@ -1,12 +1,4 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION
-setup_prompt() {
-    if [ ! -z "$SSH_CONNECTION" ]; then
-        _user_="%n@%m"
-    else
-        _user_="%n"
-    fi
+[[ ! -z "$SSH_CONNECTION" ]] && _user_="%n@%m" || _user_="%n"
 
-    PS1="%K{green}%F{black}$_user_%f%k %~ \${vcs_info_msg_0_}%# "
-}
-
-setup_prompt
+PS1="%K{green}%F{black}$_user_%f%k %~ \${vcs_info_msg_0_}%# "
