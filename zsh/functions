@@ -7,8 +7,8 @@ psof () {
 
 # Set modes for xrandr
 monitor_mode () {
-    [[ ! -z "${1}" ]] && [[ "${1}" == "off" ]] && xrandr --output VGA1 --off \
-    || xrandr --output VGA1 --mode "${1}" --above LVDS1
+    [[ ! -z "${1}" ]] && [[ "${1}" == "off" ]] && xrandr --output VGA1 --off ||  \
+    xrandr --output VGA1 --preferred --above LVDS1
 }
 
 # More comfortable ifup ifdown
