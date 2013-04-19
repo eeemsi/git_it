@@ -13,7 +13,7 @@ monitor_mode () {
         above ) xrandr --output VGA1 --preferred --above LVDS1 ;;
         right ) xrandr --output VGA1 --preferred --right-of LVDS1 ;;
         below ) xrandr --output VGA1 --preferred --below LVDS1 ;;
-        off ) xrandr --output VGA1 --off
+        off ) xrandr --output VGA1 --off ;;
     esac
 }
 
