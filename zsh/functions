@@ -7,8 +7,14 @@ psof () {
 
 # Set modes for xrandr
 monitor_mode () {
-    [[ ! -z "${1}" ]] && [[ "${1}" == "off" ]] && xrandr --output VGA1 --off ||  \
-    xrandr --output VGA1 --preferred --"${1}" LVDS1
+    [[ ! -z "${1}" ]] &&
+    case "${1}" in
+        left ) xrandr --output VGA1 --preferred --left-of LVDS1 ;;
+        above ) xrandr --output VGA1 --preferred --above LVDS1 ;;
+        right ) xrandr --output VGA1 --preferred --right-of LVDS1 ;;
+        below ) xrandr --output VGA1 --preferred --below LVDS1 ;;
+        off ) xrandr --output VGA1 --off
+    esac
 }
 
 # More comfortable ifup ifdown
