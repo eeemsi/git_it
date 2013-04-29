@@ -165,7 +165,7 @@ $b $Mod+o mode "move workspace"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3status -c "$HOME"/.i3status.conf
+    status_command i3status -c "$HOME"/.i3/i3status.conf
     colors {
         focused_workspace #b5b5b5 #b5b5b5 #000000
         urgent_workspace  #3dae3d #3dae3d #000000
