@@ -6,14 +6,14 @@ if [ ! -z "${1}" ]; then
     case "${1}" in
         i3)
             if [ ! -d "${HOME}"/.i3 ]; then
-                mkdir "${HOME}"/.i3 && cp ./i3-tree_config "${HOME}"/.i3/config
+                mkdir "${HOME}"/.i3 && cp ./i3/config "${HOME}"/.i3/config
             else
-                cp ./i3-tree_config "${HOME}"/.i3/config
+                cp ./i3/config "${HOME}"/.i3/config
             fi
             ;;
 
         i3status)
-            cp ./i3status.conf "${HOME}"/.i3status.conf
+            cp ./i3/i3status.conf "${HOME}"/.i3/i3status.conf
             ;;
 
         vim)
