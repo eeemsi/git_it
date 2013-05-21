@@ -2,9 +2,10 @@ URxvt.urlLauncher:      sensible-browser
 URxvt.perl-ext:         default,matcher
 
 Xft.dpi:                96
-Xft.antialias:          1
-Xft.hinting:            1
+Xft.antialias:          true
+Xft.hinting:            true
 Xft.hintstyle:          hintslight
+Xft.lcdfilter:          lcddefault
 
 URxvt.termName:         rxvt-unicode
 URxvt.scrollBar:        false
@@ -31,8 +32,8 @@ URxvt.fading:           12
 *color9:    #ff3300
 
 !green
-*color2:   	#93d44f
-*color10: 	#beed5f
+*color2:    #93d44f
+*color10:   #beed5f
 
 !yellow
 *color3:    #efff40
