@@ -45,7 +45,7 @@ create_alias() {
         echo "source \""'${HOME}'"/.zsh/chromium\"" >> "${HOME}"/.zshrc
     fi
 
-    echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version"\" > "${HOME}/.zsh/chromium"
+    echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version" --audio-buffer-size=2048\" > "${HOME}/.zsh/chromium"
     echo "\n--> extracted flash "$version"\n"
 }
 
