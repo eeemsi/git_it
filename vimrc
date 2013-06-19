@@ -25,10 +25,7 @@ set cursorline
 set cursorcolumn
 
 " Display the columnline as configured below
-" This feature seems to be available since vim 7.3
-if exists("+colorcolumn")
-    set cc=80
-endif
+set cc=80
 
 " Disable visual bell and please stop whining
 set novisualbell
