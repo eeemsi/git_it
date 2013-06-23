@@ -102,8 +102,9 @@ set nospell
 " Try to get rid of weird delays
 set timeout timeoutlen=1000 ttimeoutlen=100
 
-" Move .swp out of the way
+" Define the path for swap and backup files
 set directory=/tmp
+set backupdir=/tmp
 
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
