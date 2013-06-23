@@ -102,5 +102,8 @@ set nospell
 " Try to get rid of weird delays
 set timeout timeoutlen=1000 ttimeoutlen=100
 
+" Move .swp out of the way
+set directory=/tmp
+
 " When .vimrc is edited, automatically reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
