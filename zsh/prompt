@@ -1,4 +1,5 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION
 [[ ! -z "$SSH_CONNECTION" ]] && _user_="%n@%m" || _user_="%n"
 
-PS1="%K{green}%F{black}$_user_%f%k %~ \${vcs_info_msg_0_}%# "
+PS1="[%F{green}$_user_%f] "
+RPROMPT="\${vcs_info_msg_0_} [%F{green}%~%f]"
