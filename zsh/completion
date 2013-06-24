@@ -34,4 +34,5 @@ zstyle ':completion:*:*:killall:*' list-colors '=(#b) #([0-9]#)*=0=01;31' menu y
 # Separate matches into groups and highlight them
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
-zstyle ':completion:*:descriptions'    format $'%F{red}%B%d%b%f'
+zstyle ':completion:*:descriptions'    format "
+[%F{cyan}%B%d%b%f]"
