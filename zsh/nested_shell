@@ -1,4 +1,0 @@
-# Check for nested zsh's
-[[ "$TERM" != "linux" ]] && [[ "$SHLVL" -ge 3 ]] || \
-    [[ "$TERM" == "linux" ]] && [[ "$SHLVL" -ge 2 ]] && \
-    RPROMPT="%F{red}"['$SHLVL']"%f"
