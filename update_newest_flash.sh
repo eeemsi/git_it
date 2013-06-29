@@ -26,6 +26,8 @@ extract_and_copy_version() {
 
     version=`strings ./opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .`
 
+    echo "\n--> extracted flash "$version"\n"
+
     sudo sh -c "cp ./opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so"
 
     remove_created_temp_dir
@@ -46,7 +48,6 @@ create_alias() {
     fi
 
     echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$version" --audio-buffer-size=2048\" > "${HOME}/.zsh/chromium"
-    echo "\n--> extracted flash "$version"\n"
 }
 
 # Automagically find out the architecture
