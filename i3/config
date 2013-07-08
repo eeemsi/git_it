@@ -14,8 +14,8 @@ for_window [class="^kvm$"] floating enable
 
 # controlling the audio
 $b --release XF86AudioMute        $ensid amixer set Master mute
-$b --release XF86AudioLowerVolume $ensid amixer set Master 5%- unmute
-$b --release XF86AudioRaiseVolume $ensid amixer set Master 5%+ unmute
+$b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
+$b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 
 # define a terminal for presentations
 $b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=18"
@@ -165,6 +165,7 @@ $b $Mod+o mode "move workspace"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    tray_output LVDS1
     status_command i3status -c "${HOME}"/.i3/i3status.conf
     colors {
         focused_workspace #b5b5b5 #b5b5b5 #000000
