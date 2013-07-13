@@ -6,7 +6,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 
 # Specify how it should be formatted
-zstyle ':vcs_info:*' formats "[%F%{$fg[cyan]%}%b%f]"
+zstyle ':vcs_info:*' formats " [%F%{$fg[cyan]%}%b%f]"
 
 precmd() {
     vcs_info

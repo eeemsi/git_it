@@ -2,4 +2,4 @@
 [[ ! -z "$SSH_CONNECTION" ]] && _user_="%n@%m" || _user_="%n"
 
 PS1="[%F{green}$_user_%f] "
-RPROMPT="\${vcs_info_msg_0_} [%F{green}%~%f]"
+RPROMPT="%(?..[%F{red}%?%f])\${vcs_info_msg_0_} [%F{green}%~%f]"
