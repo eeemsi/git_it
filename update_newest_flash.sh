@@ -13,7 +13,7 @@ make_tmp_dir() {
 
 get_chrome_package() {
     if [ ! -f google-chrome-stable_current_"$target".deb ]; then
-        wget -c https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_"$target".deb
+        wget -c https://dl.google.com/linux/direct/google-chrome-beta_current_"$target".deb
     fi
 
     extract_and_copy_version
@@ -21,7 +21,7 @@ get_chrome_package() {
 
 extract_and_copy_version() {
     if [ ! -f data.tar.lzma ]; then
-         ar vx google-chrome-stable_current_"$target".deb && tar xJf data.tar.lzma
+         ar vx google-chrome-beta_current_"$target".deb && tar xJf data.tar.lzma
     fi
 
     version=`strings ./opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .`
