@@ -16,29 +16,45 @@ get_chrome_package() {
         wget -c https://dl.google.com/linux/direct/google-chrome-beta_current_"$target".deb
     fi
 
-    extract_and_copy_version
+    extract_version
 }
 
-extract_and_copy_version() {
+extract_version() {
     if [ ! -f data.tar.lzma ]; then
          ar vx google-chrome-beta_current_"$target".deb && tar xJf data.tar.lzma
     fi
 
-    version=`strings ./opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .`
+    downloaded_version=$(strings ./opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .)
 
-    echo "\n--> extracted flash "$version"\n"
+    echo "-> extracted flash version "$downloaded_version"\n"
 
-    sudo sh -c "cp ./opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so"
+    if [ -f /opt/libpepflashplayer.so ]; then
+        installed_version=$(strings /opt/libpepflashplayer.so | grep LNX | cut -d' ' -f2 | tr , .)
+
+        if [ "$downloaded_version" != "$installed_version" ]; then
+            echo "-> updating $installed_version to  $downloaded_version"
+            copy_version
+            create_alias
+        else
+            echo "-> installed version ($installed_version) seems to be up to date\n"
+        fi
+    else
+        echo "-> initially copied $downloaded_version\n"
+        copy_version
+        create_alias
+    fi
 
     remove_created_temp_dir
+}
+
+copy_version() {
+    sudo sh -c "cp ./opt/google/chrome/PepperFlash/libpepflashplayer.so /opt && chmod 644 /opt/libpepflashplayer.so"
 }
 
 remove_created_temp_dir() {
     if [ -d /tmp/flash_"$target" ]; then
         rm -rf /tmp/flash_"$target"
     fi
-
-    create_alias
 }
 
 create_alias() {
