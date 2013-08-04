@@ -63,7 +63,7 @@ create_alias() {
         echo "source \""'${HOME}'"/.zsh/chromium\"" >> "${HOME}"/.zshrc
     fi
 
-    echo alias chromium=\"chromium --disk-cache-dir='/tmpfs' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$downloaded_version" --audio-buffer-size=2048\" > "${HOME}/.zsh/chromium"
+    echo alias chromium=\"chromium --disk-cache-dir='/tmp' --incognito --ppapi-flash-path=/opt/libpepflashplayer.so --ppapi-flash-version="$downloaded_version" --audio-buffer-size=2048\" > "${HOME}/.zsh/chromium"
 }
 
 # Automagically find out the architecture
