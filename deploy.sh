@@ -42,32 +42,14 @@ if [ ! -z "${1}" ]; then
                 rm "${HOME}"/.zshrc
             fi
 
+            if [ -x "$(which golang)" ] && [ ! -f "${HOME}"/.zsh/golang" ]; then
+                echo "# Set gopath \nexport GOPATH=${HOME}/.zsh/golang" > "${HOME}"/.zsh/golang
+            fi
+
             for i in `ls "${HOME}"/.zsh`; do
                 echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/.zshrc
             done
             ;;
-
-        zsh-compile)
-            cp ./zshenv "${HOME}"/.zshenv
-            cp ./zprofile "${HOME}"/.zprofile
-
-             if [ -d "${HOME}"/.zsh ]; then
-                cp ./zsh/* "${HOME}"/.zsh/
-            else
-                cp -r ./zsh "${HOME}"/.zsh
-            fi
-
-            if [ -f "${HOME}"/.zshrc ]; then
-                rm "${HOME}"/.zshrc
-            fi
-
-            for i in `ls "${HOME}"/.zsh`; do
-                cat "${HOME}"/.zsh/"${i}" >> "${HOME}"/.zshrc
-            done
-
-            zcompile "${HOME}"/.zshrc
-            ;;
-
         *)
             echo "wrong argument"
             ;;

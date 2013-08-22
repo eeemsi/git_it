@@ -1,2 +1,0 @@
-# Set gopath
-export GOPATH=${HOME}/golang
