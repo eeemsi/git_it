@@ -42,8 +42,12 @@ if [ ! -z "${1}" ]; then
                 rm "${HOME}"/.zshrc
             fi
 
-            if [ -x "$(which golang)" ] && [ ! -f "${HOME}"/.zsh/golang ]; then
-                echo "# Set gopath \nexport GOPATH=${HOME}/.zsh/golang" > "${HOME}"/.zsh/golang
+            if [ -x "$(which go)" ] && [ ! -f "${HOME}"/.zsh/golang ]; then
+                if [ ! -d "${HOME}"/golang ]; then
+                    mkdir "${HOME}"/golang
+                fi
+
+                echo "# Set gopath \nexport GOPATH="${HOME}"/golang" > "${HOME}"/.zsh/golang
             fi
 
             for i in `ls "${HOME}"/.zsh`; do
