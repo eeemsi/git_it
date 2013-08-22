@@ -1,6 +1,5 @@
-# Set PATHs for node.js
-export NODE_PATH=/opt/node:/opt/node/lib/node_modules
-export PATH=$PATH:/opt/node/bin
+# Set gopath
+export GOPATH=${HOME}/golang
 
 # Long date format in ls(1)
 export TIME_STYLE=long-iso
