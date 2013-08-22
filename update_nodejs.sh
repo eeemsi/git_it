@@ -22,9 +22,7 @@ check_version() {
 }
 
 echo_path() {
-    echo "# Set PATHs for node.js
-    export NODE_PATH=/opt/node:/opt/node/lib/node_modules
-    export PATH=$PATH:/opt/node/bin" > ${HOME}/.zsh/nodejs
+    echo "# Set PATHs for node.js\nexport PATH="'$PATH'":/opt/node/bin" > ${HOME}/.zsh/nodejs
 }
 
 make_tmp_dir() {
