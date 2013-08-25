@@ -34,14 +34,12 @@ extract_version() {
         if [ "$downloaded_version" != "$installed_version" ]; then
             echo "-> updating $installed_version to  $downloaded_version"
             copy_version
-            create_alias
         else
             echo "-> installed version ($installed_version) seems to be up to date\n"
         fi
     else
         echo "-> initially copied $downloaded_version\n"
         copy_version
-        create_alias
     fi
 
     remove_created_temp_dir
@@ -83,3 +81,4 @@ case "$(uname -m)" in
 esac
 
 make_tmp_dir
+create_alias
