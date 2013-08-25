@@ -65,8 +65,7 @@ set hlsearch
 " Defines tab and shift width
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set expandtab
+set noexpandtab
 
 " More flexible backspace
 set backspace=indent,eol,start
