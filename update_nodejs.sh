@@ -47,9 +47,11 @@ extract_build_install() {
 		export CXX=clang++
 	fi
 
+	num_cpu=$((`nproc`+1))
+
 	./configure --prefix=/opt/node --openssl-includes=/usr/include/openssl
 
-	make && sudo make install clean
+	make -j"$num_cpu" && sudo make install clean
 
 	remove_created_temp_dir
 }
