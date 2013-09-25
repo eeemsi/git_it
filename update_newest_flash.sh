@@ -57,7 +57,6 @@ remove_created_temp_dir() {
 
 create_alias() {
 	if [ ! -f "${HOME}/.zsh/chromium" ]; then
-		touch "${HOME}"/.zsh/chromium
 		echo "source \""'${HOME}'"/.zsh/chromium\"" >> "${HOME}"/.zshrc
 	fi
 
