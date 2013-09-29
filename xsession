@@ -1,15 +1,8 @@
 # Enable touchpad on eeepc
 #xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
 
-# Start nm-applet
-nm-applet &
-
-# Disable DPMS turning off the screen
-xset -dpms
-xset s off
-
-# Turn off the bell
-xset -b
+# X settings: disable DPMS, disable audible bell
+xset dpms force on s off -b
 
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
@@ -28,6 +21,9 @@ export LC_TIME=en_DK.UTF-8
 
 # Start urxvtd
 urxvtd -q -f -o &
+
+# Change default Input Method
+export GTK_IM_MODULE=xim
 
 # Fire up the windowmanager
 i3

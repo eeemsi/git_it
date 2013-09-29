@@ -1,10 +1,10 @@
 # i3 config file (v4)
 
 # setting up some variables for better readability and easier changes
-set $a      assign
-set $b      bindsym
-set $ensid  exec --no-startup-id
-set $Mod    Mod1
+set $a		assign
+set $b		bindsym
+set $ensid	exec --no-startup-id
+set $Mod	Mod1
 
 # start applications on a certain workspace
 $a [class="^Chromium$"] 2
@@ -37,9 +37,6 @@ font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
 # use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
-
-# run i3-input
-$b $Mod+i $ensid i3-input
 
 # start a terminal
 $b $Mod+Return $ensid urxvtc
@@ -139,24 +136,24 @@ $b $Mod+minus scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-    $b j          resize shrink width 10 px or 10 ppt
-    $b k          resize grow height 10 px or 10 ppt
-    $b l          resize shrink height 10 px or 10 ppt
-    $b odiaeresis resize grow width 10 px or 10 ppt
+	$b j		  resize shrink width 10 px or 10 ppt
+	$b k		  resize grow height 10 px or 10 ppt
+	$b l		  resize shrink height 10 px or 10 ppt
+	$b odiaeresis resize grow width 10 px or 10 ppt
 
-    # back to normal: Escape
-    $b Escape mode "default"
+	# back to normal: Escape
+	$b Escape mode "default"
 }
 
 $b $Mod+r mode "resize"
 
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move workspace" {
-    $b Up move workspace to output VGA1
-    $b Down move workspace to output LVDS1
+	$b Up move workspace to output VGA1
+	$b Down move workspace to output LVDS1
 
-    # back to normal: Escape
-    $b Escape mode "default"
+	# back to normal: Escape
+	$b Escape mode "default"
 }
 
 $b $Mod+o mode "move workspace"
@@ -164,10 +161,11 @@ $b $Mod+o mode "move workspace"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    tray_output LVDS1
-    status_command i3status -c "${HOME}"/.i3/i3status.conf
-    colors {
-        focused_workspace #b5b5b5 #b5b5b5 #000000
-        urgent_workspace  #3dae3d #3dae3d #000000
-    }
+	tray_output LVDS1
+	status_command i3status -c "${HOME}"/.i3/i3status.conf
+
+	colors {
+		focused_workspace #b5b5b5 #b5b5b5 #000000
+		urgent_workspace  #3dae3d #3dae3d #000000
+	}
 }
