@@ -1,10 +1,10 @@
 # i3 config file (v4)
 
 # setting up some variables for better readability and easier changes
-set $a		assign
-set $b		bindsym
-set $ensid	exec --no-startup-id
-set $Mod	Mod1
+set $a assign
+set $b bindsym
+set $ensid exec --no-startup-id
+set $Mod Mod1
 
 # start applications on a certain workspace
 $a [class="^Chromium$"] 2
@@ -44,8 +44,9 @@ $b $Mod+Return $ensid urxvtc
 # kill focused window
 $b $Mod+Shift+q kill
 
-# start dmenu (a program launcher)
-$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'
+# start a program launcher
+#$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'
+$b $Mod+p $ensid shellex
 
 # change focus
 $b $Mod+j focus left

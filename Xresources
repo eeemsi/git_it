@@ -20,6 +20,8 @@ URxvt.urgentOnBell:     true
 
 URxvt.fading:           12
 
+URxvt.shellex.edge: bottom
+
 *background:    #222222
 *foreground:    #ffffff
 
