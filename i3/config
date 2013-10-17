@@ -4,7 +4,7 @@
 set $a assign
 set $b bindsym
 set $ensid exec --no-startup-id
-set $Mod Mod1
+set $Mod Mod4
 
 # start applications on a certain workspace
 $a [class="^Chromium$"] 2
@@ -13,6 +13,7 @@ $a [class="^Chromium$"] 2
 for_window [class="^kvm$"] floating enable
 
 # controlling the audio
+#$b --release XF86AudioLowerVolume $ensid amixer set Master toggle
 $b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
 $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 
