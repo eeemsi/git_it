@@ -35,6 +35,9 @@ set vb t_vb=
 " Defines the colorscheme that should be used
 colorscheme elflord
 
+" Define another color for CursorColumn
+hi CursorColumn ctermbg=grey ctermfg=black
+
 " Set encoding to utf-8
 set fileencoding=utf-8 encoding=utf-8
 
