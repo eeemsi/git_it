@@ -94,6 +94,9 @@ if [ ! -z ${1} ]; then
 			exit 1
 			;;
 	esac
+else
+	echo "no version given"
+	exit 1
 fi
 
 make_tmp_dir
