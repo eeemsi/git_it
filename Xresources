@@ -52,12 +52,3 @@ URxvt.shellex.edge: bottom
 !cyan
 *color6:    #89b6e2
 *color14:   #46a4ff
-
-! -- XPDF -- !
-xpdf*enableFreetype:    yes
-xpdf*antialias:         yes
-xpdf*foreground:        white
-xpdf*background:        black
-xpdf*urlCommand:        /usr/bin/chromium-browser --incognito %s
-xpdf*viKeys:            on
-
