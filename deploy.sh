@@ -47,6 +47,19 @@ if [ ! -z "${1}" ]; then
 			done
 			;;
 
+		zsh-browsers)
+			browsers=("chromium" "firefox")
+
+			if [ ! -f ${HOME}"/.zsh/browsers" ]; then
+				for i in "$browser"; do
+					if [ -x "$(which "$i")" ] && [ ! -f "${HOME}"/.zsh/"$i" ]; then
+						cp ./zsh_browsers/"$i" "${HOME}"/.zsh/"$i"
+						echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/.zshrc
+					fi
+				done
+			fi
+			;;
+
 		zsh-debian)
 			if [ ! -f "${HOME}"/.zsh/debian ]; then
 				cp zsh_debian/debian "${HOME}"/.zsh/debian
