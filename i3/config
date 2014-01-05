@@ -7,6 +7,7 @@ set $ensid exec --no-startup-id
 set $Mod Mod4
 
 # start applications on a certain workspace
+$a [class="^Pidgin$"] 1
 $a [class="^Chromium$"] 2
 
 # start applications in certain conditions
