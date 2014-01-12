@@ -1,6 +1,6 @@
 # Define size for HISTFILE and SAVEHIST also define path for HISTFILE
-HISTSIZE=2500
-SAVEHIST=2500
+HISTSIZE=4096
+SAVEHIST=4096
 HISTFILE=~/.zsh_history
 
 # Append to $HISTFILE incrementally (does not wait for the shell to exit)
