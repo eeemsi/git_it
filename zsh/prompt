@@ -1,5 +1,5 @@
 # Defines the prompt depending on the status of $SSH_CONNECTION
-[[ ! -z "$SSH_CONNECTION" ]] && PS1="[%F{green}%n%f@%F{yellow}%m%f] " || PS1="[%F{green}%n%f] "
+[[ ! -z "$SSH_CONNECTION" ]] && PS1="[%(!.%F{red}.%F{green})%n%f@%F{yellow}%m%f] " || PS1="[%(!.%F{red}.%F{green})%n%f] "
 
 # Display the return status of the last command, path and if existing the corresponding vcs information
 RPROMPT="%(?..[%F{red}%?%f])\${vcs_info_msg_0_} [%F{green}%~%f]"
