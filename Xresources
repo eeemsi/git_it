@@ -9,7 +9,7 @@ Xft.lcdfilter:          lcddefault
 
 URxvt.termName:         rxvt-unicode
 URxvt.scrollBar:        false
-URxvt.saveLines:        512
+URxvt.saveLines:        4096
 URxvt.cursorBlink:      false
 URxvt.cursorColor:      #ff9900
 URxvt.cursorColor2:     #000000
