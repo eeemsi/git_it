@@ -50,14 +50,12 @@ if [ ! -z "${1}" ]; then
 		zsh-browsers)
 			browsers=("chromium" "firefox")
 
-			if [ ! -f ${HOME}"/.zsh/browsers" ]; then
-				for i in "$browser"; do
-					if [ -x "$(which "$i")" ] && [ ! -f "${HOME}"/.zsh/"$i" ]; then
-						cp ./zsh_browsers/"$i" "${HOME}"/.zsh/"$i"
-						echo "source \""'${HOME}'/.zsh/"${i}""\"" >> "${HOME}"/.zshrc
-					fi
-				done
-			fi
+			for ((i=1; i<=${#browsers}; i++)); do
+				if [ -x "$(which "${browsers[i]}")" ] && [ ! -f "${HOME}"/.zsh/"${browsers[i]}" ]; then
+					cp ./zsh_browsers/"${browsers[i]}" "${HOME}"/.zsh/"${browsers[i]}"
+					echo "source \""'${HOME}'/.zsh/"${browsers[i]}""\"" >> "${HOME}"/.zshrc
+				fi
+			done
 			;;
 
 		zsh-debian)
@@ -66,6 +64,14 @@ if [ ! -z "${1}" ]; then
 			fi
 
 			echo "source \""'${HOME}'/.zsh/debian"\"" >> "${HOME}"/.zshrc
+			;;
+
+		zsh-candy)
+			if [ ! -f "${HOME}"/.zsh/candy ]; then
+				cp zsh_debian/candy "${HOME}"/.zsh/candy
+			fi
+
+			echo "source \""'${HOME}'/.zsh/candy"\"" >> "${HOME}"/.zshrc
 			;;
 
 		zsh-golang)
