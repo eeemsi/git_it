@@ -68,7 +68,7 @@ if [ ! -z "${1}" ]; then
 
 		zsh-candy)
 			if [ ! -f "${HOME}"/.zsh/candy ]; then
-				cp zsh_debian/candy "${HOME}"/.zsh/candy
+				cp zsh_candy/candy "${HOME}"/.zsh/candy
 			fi
 
 			echo "source \""'${HOME}'/.zsh/candy"\"" >> "${HOME}"/.zshrc
