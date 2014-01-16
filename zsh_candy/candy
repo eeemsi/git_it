@@ -2,10 +2,10 @@
 monitor_mode () {
     [[ ! -z "${1}" && ! -z "${2}" ]] &&
     case "${2}" in
-        left ) xrandr --output "${1}" --preferred --left-of LVDS1 ;;
-        above ) xrandr --output "${1}" --preferred --above LVDS1 ;;
-        right ) xrandr --output "${1}" --preferred --right-of LVDS1 ;;
-        below ) xrandr --output "${1}" --preferred --below LVDS1 ;;
+        left ) xrandr --output "${1}" --preferred --left-of "${2}" ;;
+        above ) xrandr --output "${1}" --preferred --above "${2}" ;;
+        right ) xrandr --output "${1}" --preferred --right-of "${2}" ;;
+        below ) xrandr --output "${1}" --preferred --below "${2}" ;;
         off ) xrandr --output "${1}" --off ;;
     esac
 }
