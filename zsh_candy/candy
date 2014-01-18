@@ -1,15 +1,3 @@
-# Set modes for xrandr
-monitor_mode () {
-    [[ ! -z "${1}" && ! -z "${2}" ]] &&
-    case "${2}" in
-        left ) xrandr --output "${1}" --preferred --left-of "${2}" ;;
-        above ) xrandr --output "${1}" --preferred --above "${2}" ;;
-        right ) xrandr --output "${1}" --preferred --right-of "${2}" ;;
-        below ) xrandr --output "${1}" --preferred --below "${2}" ;;
-        off ) xrandr --output "${1}" --off ;;
-    esac
-}
-
 # Sometimes one needs some pseudo heave load
 create_heavy_load () {
     [[ ! -z "${1}" ]] && perl -e 'while (--$ARGV[0] and fork) {}; while () {}' "${1}"
