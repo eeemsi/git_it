@@ -4,6 +4,9 @@
 # X settings: disable DPMS, disable audible bell
 xset dpms force on s off -b
 
+# Define one output to be the primary one
+xrandr --output LVDS1 --primary
+
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
 
