@@ -80,6 +80,10 @@ set autoindent smartindent
 " Fast paste mode toggling
 set pastetoggle=<F12>
 
+" Faster switching for tabs
+map <F7> :tabp<ENTER>
+map <F8> :tabn<ENTER>
+
 " Automatically remove trailing whitespace
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 
