@@ -7,7 +7,6 @@ Xft.hinting:            true
 Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
 
-URxvt.termName:         rxvt-unicode
 URxvt.scrollBar:        false
 URxvt.saveLines:        4096
 URxvt.cursorBlink:      false
