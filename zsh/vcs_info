@@ -3,10 +3,10 @@ setopt PROMPT_SUBST
 autoload -Uz vcs_info
 
 # Specify the vcs
-zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' enable git svn
 
 # Specify how it should be formatted
-zstyle ':vcs_info:*' formats " [%F{cyan}%b%f]"
+zstyle ':vcs_info:*' formats " %F{cyan}%b%f"
 
 precmd() {
     vcs_info
