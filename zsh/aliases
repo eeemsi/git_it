@@ -35,10 +35,6 @@ alias grep='grep --color=auto --initial-tab'
 # Required to pipe colors to less
 alias less='less -R'
 
-# Aliases for python2+3
-alias py='python'
-alias py3='python3'
-
 # Alias cp to rsync
 alias cp='rsync -ahP'
 alias cpz='rsync -ahPz'
