@@ -31,6 +31,7 @@ if [ ! -z "${1}" ]; then
 		zsh)
 			cp ./zshenv "${HOME}"/.zshenv
 			cp ./zprofile "${HOME}"/.zprofile
+			cp ./zlogout "${HOME}"/.zlogout
 
 			if [ -d "${HOME}"/.zsh ]; then
 				cp ./zsh/* "${HOME}"/.zsh/
