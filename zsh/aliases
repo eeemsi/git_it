@@ -14,8 +14,6 @@ else
 fi
 
 # More comfortable aliases
-alias s='sudo'
-
 alias g='git'
 alias gst='g status'
 alias glog='g log --graph --stat --oneline'

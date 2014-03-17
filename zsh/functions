@@ -7,7 +7,7 @@ psof () {
 
 # More comfortable ifup ifdown
 ifre () {
-    [[ ! -z "${1}" ]] && s ifdown "${1}" && s ifup "${1}"
+    [[ ! -z "${1}" ]] && sudo ifdown "${1}" && sudo ifup "${1}"
 }
 
 # Create directoy and cd to it
