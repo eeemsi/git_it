@@ -9,12 +9,3 @@ bindkey '\e[8~' end-of-line             # end
 
 bindkey '\eOc'  forward-word            # ctrl cursor right
 bindkey '\eOd'  backward-word           # ctrl cursor left
-
-# Increasing the comfort for forward-word and backward-word
-export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
-
-# When crusing in a given menu use plus to select and stay in menu
-bindkey -M menuselect "+" accept-and-menu-complete
-
-# Enable menu selection via ctrl+space to go to subdirectories
-bindkey -M menuselect '^@' accept-and-infer-next-history

@@ -1,9 +1,6 @@
 # Long date format in ls(1)
 export TIME_STYLE=long-iso
 
-# Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
-REPORTTIME=5
-
 # NO BEEPING!
 setopt NO_BEEP
 
@@ -27,3 +24,6 @@ setopt CSHJUNKIEQUOTES
 
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
+
+# Increasing the comfort for forward-word and backward-word
+export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
