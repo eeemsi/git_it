@@ -1,2 +1,2 @@
 # Defines the prompt
-PS1="[%F{yellow}%m%f][%F{green}%~%f\${vcs_info_msg_0_}] %# "
+PS1="[%B%F{yellow}%m%f%b][%B%F{green}%~%f\${vcs_info_msg_0_}%b] %# "
