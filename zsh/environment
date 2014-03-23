@@ -27,3 +27,7 @@ setopt NOCLOBBER
 
 # Increasing the comfort for forward-word and backward-word
 export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
+
+# Just don't nag me when system messages appear
+unset MAILCHECK
+unsetop MAIL_WARNING
