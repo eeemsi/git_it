@@ -24,5 +24,5 @@ setopt PUSHD_IGNORE_DUPS
 # Do not print the directory stack after pushd or popd
 setopt PUSHD_SILENT
 
-# Exchanges  the  meanings  of  `+'  and `-' when used with a number to specify a directory in the stack
+# Exchanges the meanings of "+" and "-" when used with a number to specify a directory in the stack
 setopt PUSHD_MINUS
