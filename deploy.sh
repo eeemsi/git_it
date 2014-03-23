@@ -67,14 +67,6 @@ if [ ! -z "${1}" ]; then
 			echo "source \""'${HOME}'/.zsh/debian"\"" >> "${HOME}"/.zshrc
 			;;
 
-		zsh-candy)
-			if [ ! -f "${HOME}"/.zsh/candy ]; then
-				cp zsh_candy/candy "${HOME}"/.zsh/candy
-			fi
-
-			echo "source \""'${HOME}'/.zsh/candy"\"" >> "${HOME}"/.zshrc
-			;;
-
 		zsh-golang)
 			if [ -x "$(which go)" ] && [ ! -f "${HOME}"/.zsh/golang ]; then
 				if [ ! -d "${HOME}"/golang ]; then
