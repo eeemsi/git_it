@@ -47,7 +47,7 @@ $b $Mod+Return $ensid urxvtc
 $b $Mod+Shift+q kill
 
 # quickswitch-i3
-$b $Mod+Shift+i $ensid quickswitch.py -d "dmenu -l 10 -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'"
+$b $Mod+w $ensid quickswitch.py -d "dmenu -l 10 -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'"
 
 # start a program launcher
 #$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'
