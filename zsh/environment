@@ -19,9 +19,6 @@ setopt NO_NOMATCH
 # Disable Flow Control
 unsetopt FLOW_CONTROL
 
-# Make quoted expression containing a newline illegal
-setopt CSHJUNKIEQUOTES
-
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
 
