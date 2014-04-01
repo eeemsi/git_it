@@ -50,7 +50,7 @@ set laststatus=2
 " Format the statusline - GitBranchInfoString() requires github.com/taq/vim-git-branch-info to work
 set statusline=
 set statusline+=\[%F]
-set statusline+=\[%{GitBranchInfoString()}]
+set statusline+=\[%{GitBranchInfoTokens()[0]}]
 set statusline+=\%r%m
 set statusline+=\%=
 set statusline+=\[%3p%%]
