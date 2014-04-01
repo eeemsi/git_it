@@ -47,6 +47,9 @@ set fileencoding=utf-8 encoding=utf-8
 " Always show the statusline
 set laststatus=2
 
+" Ignore remote remote branches
+let g:git_branch_status_ignore_remotes=1
+
 " Format the statusline - GitBranchInfoString() requires github.com/taq/vim-git-branch-info to work
 set statusline=
 set statusline+=\[%F]
