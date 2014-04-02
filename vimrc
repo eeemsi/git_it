@@ -53,8 +53,8 @@ let g:git_branch_status_ignore_remotes=1
 " Format the statusline - GitBranchInfoString() requires github.com/taq/vim-git-branch-info to work
 set statusline=
 set statusline+=\[%F]
-set statusline+=\[%{GitBranchInfoTokens()[0]}]
 set statusline+=\%r%m
+set statusline+=\[%{GitBranchInfoTokens()[0]}]
 set statusline+=\%=
 set statusline+=\[%3p%%]
 set statusline+=\[%3l:%3c]
