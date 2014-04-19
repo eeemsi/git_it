@@ -28,6 +28,10 @@ URxvt.shellex.edge: bottom
 *color0:    #4d4d4d
 *color8:    #6F6F6F
 
+!white
+*color7:	#E3E3E3
+*color15:	#F1F1F1
+
 !red
 *color1:    #e41b17
 *color9:    #ff3300
