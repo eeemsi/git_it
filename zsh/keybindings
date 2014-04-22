@@ -7,5 +7,5 @@ bindkey '\e[3~' delete-char             # delete characterwise
 bindkey '\e[7~' beginning-of-line       # home
 bindkey '\e[8~' end-of-line             # end
 
-bindkey '^[[C'  forward-word            # ctrl cursor right
-bindkey '^[[D'  backward-word           # ctrl cursor left
+bindkey '\eOc'  forward-word            # ctrl cursor right
+bindkey '\eOd'  backward-word           # ctrl cursor left
