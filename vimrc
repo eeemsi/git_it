@@ -90,6 +90,10 @@ set backspace=indent,eol,start
 set wrap
 set autoindent smartindent
 
+" beautifully display tabs and trailing spaces
+set listchars=tab:\|\ ,trail:·
+set list
+
 " Fast paste mode toggling
 set pastetoggle=<F12>
 
