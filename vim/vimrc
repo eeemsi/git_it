@@ -27,7 +27,7 @@ set cursorcolumn
 " Display the columnline as configured below
 " This feature seems to be available since vim 7.3
 if exists("+colorcolumn")
-	set cc=80
+    set cc=80
 endif
 
 " Disable visual bell and please stop whining
@@ -121,9 +121,6 @@ set nowritebackup
 
 " No spell check
 set nospell
-
-" Try to get rid of weird delays
-set timeout timeoutlen=1000 ttimeoutlen=100
 
 " Define the path for swap and backup files
 set directory=/tmp
