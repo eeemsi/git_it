@@ -24,7 +24,7 @@ $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 $b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=18"
 
 # fire up a screenlocker
-$b --release XF86Launch1 $ensid xset +dpms && scrot /tmp/screen.png && convert /tmp/screen.png -blur 0x3 /tmp/screen_blur.png && i3lock -i /tmp/screen_blur.png
+$b --release XF86Launch1 $ensid xset -dpms && scrot /tmp/screen.png && convert /tmp/screen.png -blur 0x3 /tmp/screen_blur.png && i3lock -i /tmp/screen_blur.png
 
 # define the style for the borders
 new_window 1pixel
