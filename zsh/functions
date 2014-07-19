@@ -30,9 +30,11 @@ mkgit () {
 # Update git repositories in subfolders and clean them up if wanted
 update_git () {
     for i in `ls -d ./*`; do
-        echo "\e[0;36m -> $i \e[0m" && cd "$i" && git pull
+		if [ -d "$i" ] && [ -d "$i"/.git ]; then
+			echo "\e[0;36m -> $i \e[0m" && cd "$i" && git pull
 
-        [[ "${1}" == "clean" ]] && make distclean && git clean -f && git gc
-        cd ..
+        	[[ "${1}" == "clean" ]] && make distclean && git clean -f && git gc
+        	cd ..
+		fi
     done
 }
