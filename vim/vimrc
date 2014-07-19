@@ -7,45 +7,49 @@ set modeline
 " Should be given by the machine vim is installed on
 runtime! debian.vim
 
-" Enable colors for syntax and use dark background
+" Set the titel for the terminal
+set title
+
+" Enable syntax
 syntax on
+
+" Enable line numbers
+set nu
+
+" Set background to dark
 set bg=dark
 
 " Defines the colorscheme that should be used
 colorscheme elflord
 
-" Enable syntax highlighting for go
-autocmd BufNewFile,BufRead *.go setf go
+" Better highlight of the line number that has focus
+highlight LineNr ctermfg=grey
 
-" Enable file type-specific indention rules
-filetype plugin indent on
+" For searching
+set ignorecase
+set incsearch
+set hlsearch
 
 " Display the cursorline and columnline
 set cursorline
 set cursorcolumn
 
-" Display the columnline as configured below
-" This feature seems to be available since vim 7.3
-if exists("+colorcolumn")
-    set cc=80
-endif
-
-" Define another color for CursorColumn
-hi CursorColumn ctermbg=grey ctermfg=black
-
-" Disable visual bell and please stop whining
-set novisualbell
-set noerrorbells
-set vb t_vb=
-
 " Set encoding to utf-8
 set fileencoding=utf-8 encoding=utf-8
 
+" Defines tab and shift width
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+" Show matching brackets
+set showmatch
+
+" Automatically remove trailing whitespace
+autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
+
 " Always show the statusline
 set laststatus=2
-
-" Ignore remote remote branches
-let g:git_branch_status_ignore_remotes=1
 
 " Format the statusline - GitBranchInfoString() requires github.com/taq/vim-git-branch-info to work
 set statusline=
@@ -56,7 +60,9 @@ set statusline+=\%=
 set statusline+=\[%3p%%]
 set statusline+=\[%3l:%3c]
 
-set showcmd
+" Do not create those annoying backup files
+set nobackup
+set nowritebackup
 
 " Enhanced mode for command-line completion
 set wildmenu
@@ -66,57 +72,3 @@ set wildmode=longest:full
 
 " Skip certain endings while completing
 set wildignore=*.o,*.a,*.la,*.lo,*.swp,.svn,.git,*.pyc,*.pyo
-
-" Set the titel for the terminal
-set title
-
-" For searching
-set ignorecase
-set incsearch
-set hlsearch
-
-" Defines tab and shift width
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
-
-" More flexible backspace
-set backspace=indent,eol,start
-
-" Handle long lines correctly and smart
-set wrap
-set autoindent smartindent
-
-" beautifully display tabs and trailing spaces
-set list
-set listchars=tab:\|\ ,trail:·
-
-" Fast paste mode toggling
-set pastetoggle=<F12>
-
-" Faster switching for tabs
-map <F7> :tabp<ENTER>
-map <F8> :tabn<ENTER>
-
-" Automatically remove trailing whitespace
-autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
-
-" Show matching brackets
-set showmatch
-
-" For fast terminal connection
-set ttyfast
-
-" Do not create those annoying backup files
-set nobackup
-set nowritebackup
-
-" No spell check
-set nospell
-
-" Define the path for swap and backup files
-set directory=/tmp
-set backupdir=/tmp
-
-" When .vimrc is edited, automatically reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc
