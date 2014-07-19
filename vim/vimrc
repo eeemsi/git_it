@@ -17,9 +17,6 @@ colorscheme elflord
 " Enable syntax highlighting for go
 autocmd BufNewFile,BufRead *.go setf go
 
-" Use system configurations
-set runtimepath+=/usr/share/vim/addons
-
 " Enable file type-specific indention rules
 filetype plugin indent on
 
