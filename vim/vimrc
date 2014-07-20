@@ -7,14 +7,14 @@ set modeline
 " Should be given by the machine vim is installed on
 runtime! debian.vim
 
-" Set the titel for the terminal
+" Set the title for the terminal
 set title
 
 " Enable syntax
 syntax on
 
 " Enable line numbers
-set nu
+set number
 
 " Set background to dark
 set bg=dark
@@ -60,9 +60,10 @@ set statusline+=\%=
 set statusline+=\[%3p%%]
 set statusline+=\[%3l:%3c]
 
-" Do not create those annoying backup files
+" Do not create those annoying backup swap files
 set nobackup
 set nowritebackup
+set noswapfile
 
 " Enhanced mode for command-line completion
 set wildmenu
@@ -72,3 +73,6 @@ set wildmode=longest:full
 
 " Skip certain endings while completing
 set wildignore=*.o,*.a,*.la,*.lo,*.swp,.svn,.git,*.pyc,*.pyo
+
+" When .vimrc is edited, automatically reload it
+autocmd! bufwritepost .vimrc source ~/.vimrc
