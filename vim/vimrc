@@ -57,8 +57,8 @@ set statusline+=\[%F]
 set statusline+=\%r%m
 set statusline+=\[%{GitBranchInfoTokens()[0]}]
 set statusline+=\%=
-set statusline+=\[%3p%%]
-set statusline+=\[%3l:%3c]
+set statusline+=\[%3c:%3l]
+set statusline+=\ %3P
 
 " Do not create those annoying backup swap files
 set nobackup
