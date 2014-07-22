@@ -1,5 +1,5 @@
 # Load colors
-autoload -U colors && colors
+autoload -Uz colors && colors
 
 # Colors for ls
 zmodload zsh/complist
