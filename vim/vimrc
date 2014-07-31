@@ -22,7 +22,7 @@ set bg=dark
 " Defines the colorscheme that should be used
 colorscheme elflord
 
-" Better highlight of the line number that has focus
+" display line number in a not that strong disturbing color
 highlight LineNr ctermfg=grey
 
 " For searching
@@ -30,9 +30,9 @@ set ignorecase
 set incsearch
 set hlsearch
 
-" Display the cursorline and columnline
-set cursorline
-set cursorcolumn
+" beautifully display tabs and trailing spaces
+set listchars=tab:¬\ ,trail:·
+set list
 
 " Set encoding to utf-8
 set fileencoding=utf-8 encoding=utf-8
