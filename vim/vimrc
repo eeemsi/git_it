@@ -51,15 +51,6 @@ autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 " Always show the statusline
 set laststatus=2
 
-" Format the statusline - GitBranchInfoString() requires github.com/taq/vim-git-branch-info to work
-set statusline=
-set statusline+=\[%F]
-set statusline+=\%r%m
-set statusline+=\[%{GitBranchInfoTokens()[0]}]
-set statusline+=\%=
-set statusline+=\[%3c:%3l]
-set statusline+=\ %3P
-
 " Do not create those annoying backup swap files
 set nobackup
 set nowritebackup
