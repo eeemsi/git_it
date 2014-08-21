@@ -10,31 +10,9 @@ ifre () {
     [[ ! -z "${1}" ]] && sudo ifdown "${1}" && sudo ifup "${1}"
 }
 
-# Create directoy and cd to it
-mkcd () {
-    [[ ! -z "${1}" ]] && mkdir -p "${1}" && cd "${1}"
-}
-
 # Create temporary directory and cd to it
 cdt () {
     local t
     t=$(mktemp -d)
     builtin cd "$t"
-}
-
-# Create a directory, cd into it and create a git repository
-mkgit () {
-   [[ ! -z "${1}" ]] && mkdir -p "${1}" && cd "${1}" && git init
-}
-
-# Update git repositories in subfolders and clean them up if wanted
-update_git () {
-    for i in `ls -d ./*`; do
-		if [ -d "$i" ] && [ -d "$i"/.git ]; then
-			echo "\e[0;36m -> $i \e[0m" && cd "$i" && git pull
-
-        	[[ "${1}" == "clean" ]] && make distclean && git clean -f && git gc
-        	cd ..
-		fi
-    done
 }
