@@ -25,12 +25,6 @@ eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 
-# Show all processes when completing kill/killall and enable menu mode
-zstyle ':completion:*:processes' command 'ps f -N --ppid=$(pidof kthreadd) --pid=$(pidof kthreadd)'
-zstyle ':completion:*:processes-names' command 'ps -aeo comm='
-zstyle ':completion:*:*:kill:*' list-colors '=(#b) #([0-9]#)*=0=01;31' menu yes select
-zstyle ':completion:*:*:killall:*' list-colors '=(#b) #([0-9]#)*=0=01;31' menu yes select
-
 # Separate matches into groups and highlight them
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
