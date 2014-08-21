@@ -64,6 +64,3 @@ set wildmode=longest:full
 
 " Skip certain endings while completing
 set wildignore=*.o,*.a,*.la,*.lo,*.swp,.svn,.git,*.pyc,*.pyo
-
-" When .vimrc is edited, automatically reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc
