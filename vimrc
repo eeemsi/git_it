@@ -23,7 +23,7 @@ set bg=dark
 colorscheme elflord
 
 " display line number in a not that strong disturbing color
-highlight LineNr ctermfg=grey
+highlight LineNr ctermfg=grey ctermbg=none
 
 " For searching
 set ignorecase
