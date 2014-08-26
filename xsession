@@ -11,7 +11,7 @@ xrandr --output LVDS1 --primary
 setxkbmap -option terminate:ctrl_alt_bksp
 
 # Define intensity of the backlight
-xbacklight -set 80
+#xbacklight -set 80
 
 # Turn off repeating for un/mute
 xset -r 121
