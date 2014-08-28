@@ -54,3 +54,6 @@ set nobackup nowritebackup noswapfile
 
 " Enhanced mode for command-line completion and enable listing possible completions when completing file names
 set wildmenu wildmode=longest:full
+
+" Disable folding
+set nofoldenable
