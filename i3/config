@@ -11,9 +11,9 @@ $a [class="^Pidgin$"] 1
 $a [class="^Chromium$"] 2
 
 # start applications in certain conditions
-for_window [class="^qemu-system-x86_64$"] floating enable
-for_window [class="^XTerm$"] floating enable
-for_window [class="^Cssh$"] floating enable
+for_window [class="^qemu-system-x86_64$"]   floating enable
+for_window [class="^XTerm$"]                floating enable
+for_window [class="^Cssh$"]                 floating enable
 
 # controlling the audio
 #$b --release XF86AudioMute $ensid amixer set Master toggle
@@ -56,24 +56,12 @@ $b $Mod+w $ensid quickswitch.py -d "dmenu -l 10 -b -nb '#000000' -nf '#b5b5b5' -
 $b $Mod+p $ensid shellex
 
 # change focus
-$b $Mod+j focus left
-$b $Mod+k focus down
-$b $Mod+l focus up
-$b $Mod+odiaeresis focus right
-
-# alternatively, you can use the cursor keys:
 $b $Mod+Left focus left
 $b $Mod+Down focus down
 $b $Mod+Up focus up
 $b $Mod+Right focus right
 
 # move focused window
-$b $Mod+Shift+j move left
-$b $Mod+Shift+k move down
-$b $Mod+Shift+l move up
-$b $Mod+Shift+odiaeresis move right
-
-# alternatively, you can use the cursor keys:
 $b $Mod+Shift+Left move left
 $b $Mod+Shift+Down move down
 $b $Mod+Shift+Up move up
@@ -144,26 +132,26 @@ $b $Mod+minus scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-	$b j		  resize shrink width 10 px or 10 ppt
-	$b k		  resize grow height 10 px or 10 ppt
-	$b l		  resize shrink height 10 px or 10 ppt
-	$b odiaeresis resize grow width 10 px or 10 ppt
+    $b Left    resize shrink width 10 px or 10 ppt
+    $b Down    resize grow height 10 px or 10 ppt
+    $b Up      resize shrink height 10 px or 10 ppt
+    $b Right   resize grow width 10 px or 10 ppt
 
-	# back to normal: Escape
-	$b Escape mode "default"
+    # back to normal: Escape
+    $b Escape mode "default"
 }
 
 $b $Mod+r mode "resize"
 
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move_workspace" {
-	$b Up move workspace to output up
-	$b Down move workspace to output down
-	$b Left move workspace to output left
-	$b Right move workspace to output right
+    $b Left    move workspace to output left
+    $b Down    move workspace to output down
+    $b Up      move workspace to output up
+    $b Right   move workspace to output right
 
-	# back to normal: Escape
-	$b Escape mode "default"
+    # back to normal: Escape
+    $b Escape mode "default"
 }
 
 $b $Mod+o mode "move_workspace"
@@ -171,12 +159,12 @@ $b $Mod+o mode "move_workspace"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	tray_output primary
+    tray_output primary
 
-	status_command i3status -c "${HOME}"/.i3/i3status.conf
+    status_command i3status -c "${HOME}"/.i3/i3status.conf
 
-	colors {
-		focused_workspace #b5b5b5 #b5b5b5 #000000
-		urgent_workspace  #3dae3d #3dae3d #000000
-	}
+    colors {
+        focused_workspace #b5b5b5 #b5b5b5 #000000
+        urgent_workspace  #3dae3d #3dae3d #000000
+    }
 }
