@@ -14,6 +14,7 @@ set title
 syntax on
 
 " Enable line numbers
+set relativenumber
 set number
 
 " Set background to dark
