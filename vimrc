@@ -45,8 +45,9 @@ set showmatch
 " Automatically remove trailing whitespace
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 
-" Always show the statusline
+" Always show statusline and tabline
 set laststatus=2
+set showtabline=2
 
 " Do not create those annoying backup swap files
 set nobackup nowritebackup noswapfile
