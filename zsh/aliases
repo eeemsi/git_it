@@ -9,6 +9,12 @@ alias glog='g log --graph --stat --oneline'
 alias gd='g diff'
 alias gc='g commit'
 
+alias f="fossil"
+alias ft="f timeline"
+alias fd="f diff"
+alias fc="f commit"
+alias fts="f ticket set"
+
 alias 6='ip -6'
 alias 4='ip -4'
 
