@@ -35,7 +35,7 @@ URxvt.shellex.pos:  focus
 
 !red
 *color1:    #e41b17
-*color9:    #ff3300
+*color9:    #ef2929
 
 !green
 *color2:    #93d44f
