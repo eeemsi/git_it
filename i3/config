@@ -12,8 +12,6 @@ $a [class="^Chromium$"] 2
 
 # start applications in certain conditions
 for_window [class="^qemu-system-x86_64$"]   floating enable
-for_window [class="^XTerm$"]                floating enable
-for_window [class="^Cssh$"]                 floating enable
 
 # controlling the audio
 #$b --release XF86AudioMute $ensid amixer set Master toggle
