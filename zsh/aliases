@@ -15,8 +15,6 @@ alias 4='ip -4'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias pd='perldoc'
-
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
 
