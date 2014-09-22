@@ -31,9 +31,6 @@ hide_edge_borders both
 # define the colors of the focused client
 client.focused #b5b5b5 #b5b5b5 #000000 #b5b5b5
 
-# define the color for the window that raised the urgency hint
-client.urgent  #3dae3d #3dae3d #000000 #3dae3d
-
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
 
@@ -150,6 +147,5 @@ bar {
 
     colors {
         focused_workspace #b5b5b5 #b5b5b5 #000000
-        urgent_workspace  #3dae3d #3dae3d #000000
     }
 }
