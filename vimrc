@@ -17,6 +17,9 @@ syntax on
 set relativenumber
 set number
 
+" Display a column line after 80 chars
+set colorcolumn=80
+
 " Set background to dark
 set bg=dark
 
