@@ -1,5 +1,5 @@
 # Alias for a comfortable dist-upgrade
-alias agu='sudo sh -c "apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"'
+alias agu='sudo sh -c "apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"'
 alias agc='apt-get changelog'
 
 alias acs='apt-cache show'
