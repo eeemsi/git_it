@@ -22,37 +22,37 @@ URxvt.fading:           12
 URxvt.shellex.edge: bottom
 URxvt.shellex.pos:  focus
 
-*background:    #222222
-*foreground:    #ffffff
+URxvt*background:    #222222
+URxvt*foreground:    #ffffff
 
 !black
-*color0:    #4d4d4d
-*color8:    #6F6F6F
+URxvt*color0:    #4d4d4d
+URxvt*color8:    #6F6F6F
 
 !white
-*color7:    #E3E3E3
-*color15:   #F1F1F1
+URxvt*color7:    #E3E3E3
+URxvt*color15:   #F1F1F1
 
 !red
-*color1:    #e41b17
-*color9:    #ef2929
+URxvt*color1:    #e41b17
+URxvt*color9:    #ef2929
 
 !green
-*color2:    #93d44f
-*color10:   #beed5f
+URxvt*color2:    #93d44f
+URxvt*color10:   #beed5f
 
 !yellow
-*color3:    #efff40
-*color11:   #fce94f
+URxvt*color3:    #efff40
+URxvt*color11:   #fce94f
 
 !blue
-*color4:    #3465A4
-*color12:   #6495ed
+URxvt*color4:    #3465A4
+URxvt*color12:   #6495ed
 
 !magenta
-*color5:    #ce5c00
-*color13:   #f57900
+URxvt*color5:    #ce5c00
+URxvt*color13:   #f57900
 
 !cyan
-*color6:    #aadde3
-*color14:   #aadde3
+URxvt*color6:    #aadde3
+URxvt*color14:   #aadde3
