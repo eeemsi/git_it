@@ -1,5 +1,18 @@
+# Export language
+unset LC_ALL
+export LANG=en_US.UTF-8
+export LC_MESSAGES=C
+
 # Long date format in ls(1)
 export TIME_STYLE=long-iso
+
+# Sets the editor and other stuff
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+
+# Expand path to /usr/sbin and /sbin
+export PATH=~/.bin:$PATH:/usr/sbin:/sbin
 
 # NO BEEPING!
 setopt NO_BEEP
@@ -28,3 +41,4 @@ export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
 # Just don't nag me when system messages appear
 unset MAILCHECK
 unsetopt MAIL_WARNING
+
