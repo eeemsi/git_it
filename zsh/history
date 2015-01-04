@@ -3,17 +3,17 @@ HISTSIZE=4096
 SAVEHIST=4096
 HISTFILE=~/.zsh_history
 
-# Append to $HISTFILE incrementally (does not wait for the shell to exit)
-setopt INC_APPEND_HISTORY
-
-# Remove duplicates from the history even if it is not the previous one
-setopt HIST_IGNORE_ALL_DUPS
+# Do not enter command lines into the history list if they are duplicates of the previous event
+setopt HIST_IGNORE_DUPS
 
 # Remove superfluous blanks from each command line being added to the history list
 setopt HIST_REDUCE_BLANKS
 
 # Don't store commands prefixed with a space
 setopt HIST_IGNORE_SPACE
+
+# Append to $HISTFILE incrementally (does not wait for the shell to exit)
+setopt INC_APPEND_HISTORY
 
 # Make cd push the old directory onto the directory stack
 setopt AUTO_PUSHD
