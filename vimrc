@@ -13,10 +13,6 @@ set title
 " Enable syntax
 syntax on
 
-" Enable line numbers
-set relativenumber
-set number
-
 " Display a column line after 80 chars
 set colorcolumn=80
 
@@ -60,3 +56,20 @@ set wildmenu wildmode=longest:full
 
 " Disable folding
 set nofoldenable
+
+" Function for toggling through line number modes
+function! ToggleLineNumbers()
+    if (&number == 0 && &relativenumber == 0)
+        set number
+    elseif (&number == 1 && &relativenumber == 0)
+        set nonumber
+        set relativenumber
+    elseif (&number == 0 && &relativenumber == 1)
+        set number
+    else
+        set nonumber
+        set norelativenumber
+    endif
+endfunc
+
+nnoremap <C-n> :call ToggleLineNumbers()<cr>
