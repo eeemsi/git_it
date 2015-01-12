@@ -64,7 +64,7 @@ function! ToggleLineNumbers()
     elseif (&number == 1 && &relativenumber == 0)
         set nonumber
         set relativenumber
-    elseif (&number == 0 && &relativenumber == 1)
+    elseif (&number == 0 && &relativenumber == 1) && v:version >= 704
         set number
     else
         set nonumber
