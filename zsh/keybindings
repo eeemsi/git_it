@@ -1,4 +1,5 @@
 # Use emacs style for input keys by default
 bindkey -e
 
-bindkey ' '     magic-space             # ctrl cursor left
+bindkey '^[[A'  up-line-or-search       # cursor up
+bindkey '^[[B'  down-line-or-search     # cursor down
