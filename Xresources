@@ -1,58 +1,58 @@
-URxvt.urlLauncher:      sensible-browser
-URxvt.perl-ext:         default,matcher
+URxvt.urlLauncher:  sensible-browser
+URxvt.perl-ext:     default,matcher
 
-Xft.dpi:                96
-Xft.antialias:          true
-Xft.hinting:            true
-Xft.hintstyle:          hintslight
-Xft.lcdfilter:          lcddefault
+Xft.dpi:            96
+Xft.antialias:      true
+Xft.hinting:        true
+Xft.hintstyle:      hintslight
+Xft.lcdfilter:      lcddefault
 
-URxvt.scrollBar:        false
-URxvt.saveLines:        4096
-URxvt.cursorBlink:      false
-URxvt.cursorColor:      #ff9900
-URxvt.cursorColor2:     #000000
-URxvt.colorUL:          #999999
+URxvt.scrollBar:    false
+URxvt.saveLines:    4096
+URxvt.cursorBlink:  false
+URxvt.cursorColor:  #ff9900
+URxvt.cursorColor2: #000000
+URxvt.colorUL:      #999999
 
-URxvt.visualBell:       false
-URxvt.urgentOnBell:     true
+URxvt.visualBell:   false
+URxvt.urgentOnBell: true
 
-URxvt.fading:           12
+URxvt.fading:       12
 
 URxvt.shellex.edge: bottom
 URxvt.shellex.pos:  focus
 
-URxvt*background:    #222222
-URxvt*foreground:    #ffffff
+URxvt*background:   #222222
+URxvt*foreground:   #ffffff
 
 !black
-URxvt*color0:    #4d4d4d
-URxvt*color8:    #6F6F6F
+URxvt*color0:   #4d4d4d
+URxvt*color8:   #6F6F6F
 
 !white
-URxvt*color7:    #E3E3E3
-URxvt*color15:   #F1F1F1
+URxvt*color7:   #E3E3E3
+URxvt*color15:  #F1F1F1
 
 !red
-URxvt*color1:    #e41b17
-URxvt*color9:    #ef2929
+URxvt*color1:   #e41b17
+URxvt*color9:   #ef2929
 
 !green
-URxvt*color2:    #93d44f
-URxvt*color10:   #beed5f
+URxvt*color2:   #93d44f
+URxvt*color10:  #beed5f
 
 !yellow
-URxvt*color3:    #efff40
-URxvt*color11:   #fce94f
+URxvt*color3:   #efff40
+URxvt*color11:  #fce94f
 
 !blue
-URxvt*color4:    #3465A4
-URxvt*color12:   #6495ed
+URxvt*color4:   #3465A4
+URxvt*color12:  #6495ed
 
 !magenta
-URxvt*color5:    #ce5c00
-URxvt*color13:   #f57900
+URxvt*color5:   #ce5c00
+URxvt*color13:  #f57900
 
 !cyan
-URxvt*color6:    #aadde3
-URxvt*color14:   #aadde3
+URxvt*color6:   #aadde3
+URxvt*color14:  #aadde3
