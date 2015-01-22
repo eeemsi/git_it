@@ -1,12 +1,6 @@
 URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 
-Xft.dpi:            96
-Xft.antialias:      true
-Xft.hinting:        true
-Xft.hintstyle:      hintslight
-Xft.lcdfilter:      lcddefault
-
 URxvt.scrollBar:    false
 URxvt.saveLines:    4096
 URxvt.cursorBlink:  false
