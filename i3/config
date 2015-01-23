@@ -18,9 +18,6 @@ for_window [class="^qemu-system-x86_64$"]   floating enable
 $b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
 $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 
-# define a terminal for presentations
-$b $Mod+Shift+p $ensid urxvtc -fn "xft:Bitstream Vera Sans Mono:pixelsize=18"
-
 # fire up a screenlocker
 $b --release XF86Launch1 $ensid i3lock -e -c 000000
 
