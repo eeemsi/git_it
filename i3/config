@@ -7,11 +7,7 @@ set $ensid exec --no-startup-id
 set $Mod Mod4
 
 # start applications on a certain workspace
-$a [class="^Pidgin$"] 1
 $a [class="^Chromium$"] 2
-
-# start applications in certain conditions
-for_window [class="^qemu-system-x86_64$"]   floating enable
 
 # controlling the audio
 #$b --release XF86AudioMute $ensid amixer set Master toggle
