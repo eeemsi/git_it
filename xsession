@@ -1,8 +1,8 @@
 # Enable touchpad on eeepc
 #xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
 
-# X settings: disable DPMS, disable audible bell
-xset dpms force on s off -b
+# X settings: disable audio bell, screensaver and dpms
+xset b off s off -dpms
 
 # Define one output to be the primary one
 xrandr --output LVDS1 --primary
