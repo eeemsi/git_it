@@ -22,8 +22,9 @@ set bg=dark
 " Defines the colorscheme that should be used
 colorscheme elflord
 
-" display line number in a not that strong disturbing color
+" display line number and column indicator in a not that strong disturbing color
 highlight LineNr ctermfg=grey ctermbg=none
+highlight ColorColumn ctermfg=white ctermbg=darkgrey
 
 " For searching
 set ignorecase incsearch hlsearch
