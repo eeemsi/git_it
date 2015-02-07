@@ -1,6 +1,3 @@
-" Should be given by the machine vim is installed on
-runtime! debian.vim
-
 " Don’t ensure compatibility with vi at all cost
 set nocompatible
 
