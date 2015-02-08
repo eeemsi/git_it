@@ -5,7 +5,7 @@ alias l='ls -hlF --color=auto'
 # More comfortable aliases
 alias g='git'
 alias gst='g status'
-alias glog='g log --graph --stat --oneline'
+alias glog='g log --graph --stat'
 alias gd='g diff'
 alias gc='g commit'
 
