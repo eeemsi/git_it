@@ -2,6 +2,9 @@
     name = me
     email = me@anywhere.net
 
+[log]
+    date = iso
+
 [color]
     diff = auto
     status = auto
