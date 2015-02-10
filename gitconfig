@@ -23,10 +23,5 @@
     old = red bold
     new = green bold
 
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
-
 [push]
     default = simple
