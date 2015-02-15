@@ -130,10 +130,10 @@ $b $Mod+r mode "resize"
 
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move_workspace" {
-    $b Left    move workspace to output left
-    $b Down    move workspace to output down
-    $b Up      move workspace to output up
-    $b Right   move workspace to output right
+    $b Left     move workspace to output left
+    $b Down     move workspace to output down
+    $b Up       move workspace to output up
+    $b Right    move workspace to output right
 
     # back to normal: Escape
     $b Escape mode "default"
