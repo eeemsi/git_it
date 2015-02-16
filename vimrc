@@ -10,6 +10,9 @@ set title
 " Enable syntax
 syntax on
 
+" Define number of colors
+set t_Co=16
+
 " Display a column line after 80 chars
 set colorcolumn=80
 
