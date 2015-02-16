@@ -7,6 +7,9 @@ set modeline
 " Set the title for the terminal
 set title
 
+" show the cursor position all the time
+set ruler
+
 " Enable syntax
 syntax on
 
