@@ -42,6 +42,9 @@ set fileencoding=utf-8 encoding=utf-8
 set expandtab
 set tabstop=4 shiftwidth=4
 
+" More powerful backspacing
+set backspace=indent,eol,start
+
 " Show matching brackets
 set showmatch
 
