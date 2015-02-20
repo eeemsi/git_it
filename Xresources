@@ -23,8 +23,8 @@ URxvt*color0:   #4d4d4d
 URxvt*color8:   #6F6F6F
 
 !white
-URxvt*color7:   #E3E3E3
-URxvt*color15:  #F1F1F1
+URxvt*color7:   #e3e3e3
+URxvt*color15:  #f1f1f1
 
 !red
 URxvt*color1:   #e41b17
