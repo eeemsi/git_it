@@ -1,6 +1,3 @@
-# Enable touchpad on eeepc
-#xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 0 0 0 0 1 2 3
-
 # X settings: disable audio bell, screensaver and dpms
 xset b off s off -dpms
 
