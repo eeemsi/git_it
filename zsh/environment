@@ -12,7 +12,7 @@ export TIME_STYLE=long-iso
 # Sets the editor and other stuff
 export EDITOR='vim'
 export VISUAL='vim'
-export PAGER='less'
+export PAGER='less -FXR'
 
 # Expand path to /usr/sbin and /sbin
 export PATH=~/.bin:$PATH:/usr/sbin:/sbin

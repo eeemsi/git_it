@@ -19,7 +19,7 @@ alias ...='cd ../..'
 alias grep='grep --color=always --initial-tab'
 
 # Required to pipe colors to less
-alias less='less -R'
+alias less='less -FXR'
 
 # Alias cp to rsync
 alias cp='rsync -ahP'
