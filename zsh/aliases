@@ -9,9 +9,6 @@ alias glog='g log --graph --stat'
 alias gd='g diff'
 alias gc='g commit'
 
-alias 6='ip -6'
-alias 4='ip -4'
-
 alias ..='cd ..'
 alias ...='cd ../..'
 
