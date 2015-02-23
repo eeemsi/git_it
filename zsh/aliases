@@ -1,6 +1,6 @@
 # essential use of ls
-alias la='ls -hla --color=auto'
-alias l='ls -hlF --color=auto'
+alias la='ls -hla --color'
+alias l='ls -hlF --color'
 
 # More comfortable aliases
 alias g='git'
