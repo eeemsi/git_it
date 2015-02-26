@@ -26,9 +26,6 @@ REPORTTIME=5
 # Don't send HUP signal to background jobs when exiting zsh
 setopt NO_HUP
 
-# List jobs in the long format
-setopt LONG_LIST_JOBS
-
 # An array (colon-separated list) of login/logout events to report.
 watch=(notme, root)
 
