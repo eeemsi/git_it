@@ -29,6 +29,12 @@ colorscheme elflord
 highlight LineNr ctermfg=grey ctermbg=none
 highlight ColorColumn ctermfg=white ctermbg=darkgrey
 
+" hybrid line numbers
+if (v:version >= 704)
+    set number
+    set relativenumber
+endif
+
 " For searching
 set ignorecase incsearch hlsearch
 
@@ -59,20 +65,3 @@ set nobackup nowritebackup noswapfile
 
 " Enhanced mode for command-line completion and enable listing possible completions when completing file names
 set wildmenu wildmode=longest:full
-
-" Function for toggling through line number modes
-function! ToggleLineNumbers()
-    if (&number == 0 && &relativenumber == 0)
-        set number
-    elseif (&number == 1 && &relativenumber == 0)
-        set nonumber
-        set relativenumber
-    elseif (&number == 0 && &relativenumber == 1) && v:version >= 704
-        set number
-    else
-        set nonumber
-        set norelativenumber
-    endif
-endfunc
-
-nnoremap <C-n> :call ToggleLineNumbers()<cr>
