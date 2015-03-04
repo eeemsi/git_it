@@ -23,11 +23,11 @@ set bg=dark
 colorscheme elflord
 
 " display line number and column indicator in a not that strong disturbing color
-highlight LineNr ctermfg=grey ctermbg=none
 highlight ColorColumn ctermfg=white ctermbg=darkgrey
 
 " hybrid line numbers
 if (v:version >= 704)
+    highlight LineNr ctermfg=grey ctermbg=none
     set number
     set relativenumber
 endif
