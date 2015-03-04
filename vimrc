@@ -22,9 +22,6 @@ set bg=dark
 " Defines the colorscheme that should be used
 colorscheme elflord
 
-" display line number and column indicator in a not that strong disturbing color
-highlight ColorColumn ctermfg=white ctermbg=darkgrey
-
 " hybrid line numbers
 if (v:version >= 704)
     highlight LineNr ctermfg=grey ctermbg=none
