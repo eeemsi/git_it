@@ -7,8 +7,8 @@ set modeline
 " Set the title for the terminal
 set title
 
-" show the cursor position all the time
-set ruler
+" Always show statusline, tabline and the cursor position
+set laststatus=2 showtabline=2 ruler
 
 " Enable syntax
 syntax on
@@ -51,8 +51,6 @@ set showmatch
 " Automatically remove trailing whitespace
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
 
-" Always show statusline and tabline
-set laststatus=2 showtabline=2
 
 " Do not create those annoying backup swap files
 set nobackup nowritebackup noswapfile
