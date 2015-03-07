@@ -24,7 +24,7 @@ colorscheme elflord
 
 " hybrid line numbers
 if (v:version >= 704)
-    highlight LineNr ctermfg=grey ctermbg=none
+    highlight LineNr ctermfg=darkgrey ctermbg=none
     set number
     set relativenumber
 endif
