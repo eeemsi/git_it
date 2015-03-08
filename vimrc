@@ -25,8 +25,7 @@ colorscheme elflord
 " hybrid line numbers
 if (v:version >= 704)
     highlight LineNr ctermfg=darkgrey ctermbg=none
-    set number
-    set relativenumber
+    set number relativenumber
 endif
 
 " For searching
@@ -50,7 +49,6 @@ set showmatch
 
 " Automatically remove trailing whitespace
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
-
 
 " Do not create those annoying backup swap files
 set nobackup nowritebackup noswapfile
