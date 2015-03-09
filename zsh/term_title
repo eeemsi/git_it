@@ -7,28 +7,18 @@ function set_termtitle() {
 
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
-    case $TERM in
-    screen)
+    case "$TERM" in
+    rxvt*)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
         print -rn -- "$a"
         print -n -- "\a"
-
+    ;;
+    screen)
         # screen title (in ^A")
         print -n -- "\ek"
         print -rn -- "$a"
         print -n -- "\e\\"
-
-        # screen location
-        print -Pn -- "\e_$2: "
-        print -rn -- "$a"
-        print -n -- "\e\\"
-    ;;
-    xterm*|rxvt*)
-        # plain xterm title
-        print -Pn -- "\e]2;$2: "
-        print -rn -- "$a"
-        print -n -- "\a"
     ;;
     esac
 }
