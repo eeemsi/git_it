@@ -37,8 +37,7 @@ $b $Mod+Return $ensid urxvtc
 $b $Mod+Shift+q kill
 
 # start a program launcher
-#$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'
-$b $Mod+p $ensid shellex
+$b $Mod+p $ensid dmenu_run -b -nb '#000000' -nf '#b5b5b5' -sb '#b5b5b5' -sf '#000000'
 
 # change focus
 $b $Mod+Left focus left
