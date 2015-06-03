@@ -10,5 +10,4 @@ bindkey '^[[8~' end-of-line             # end
 bindkey '^[Oc'  forward-word            # ctrl cursor right
 bindkey '^[Od'  backward-word           # ctrl cursor left
 
-bindkey '^[[A'  up-line-or-search       # cursor up
-bindkey '^[[B'  down-line-or-search     # cursor down
+bindkey ' '     magic-space             # ctrl cursor left
