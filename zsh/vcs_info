@@ -8,4 +8,6 @@ zstyle ':vcs_info:*' enable git svn
 # Specify how it should be formatted
 zstyle ':vcs_info:*' formats " %F{cyan}%s:%b%f"
 
-precmd() { vcs_info }
+precmd() {
+    vcs_info
+}
