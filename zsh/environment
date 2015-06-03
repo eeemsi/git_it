@@ -20,7 +20,7 @@ export PATH=~/.bin:$PATH:/usr/sbin:/sbin
 setopt NO_BEEP
 
 # Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
-REPORTTIME=5
+REPORTTIME=10
 
 # Don't send HUP signal to background jobs when exiting zsh
 setopt NO_HUP
