@@ -1,6 +1,6 @@
 # found this on https://wiki.archlinux.org/index.php/SSD#Using_udev_for_one_device_or_HDD.2FSSD_mixed_environment
-# set noop scheduler for non-rotating disks
-ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="noop"
+# set deadline scheduler for non-rotating disks
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="deadline"
 
 # set cfq scheduler for rotating disks
 ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="cfq"
