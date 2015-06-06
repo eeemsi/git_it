@@ -1,4 +1,0 @@
-# found this on https://wiki.archlinux.org/index.php/SSD#Using_udev_for_one_device_or_HDD.2FSSD_mixed_environment
-# set io scheduler to deadline scheduler
-ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="deadline"
-ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="deadline"
