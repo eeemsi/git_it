@@ -1,3 +1,4 @@
+! /etc/X11/xdm/Xresources
 xlogin*login.translations: #override \
         CtrlR: abort-display()\n\
         F1: set-session-argument(failsafe)\n\
