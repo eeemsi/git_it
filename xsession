@@ -24,8 +24,5 @@ export LC_TIME=en_DK.UTF-8
 # Start urxvtd
 urxvtd -q -f -o &
 
-# Change default Input Method
-export GTK_IM_MODULE=xim
-
 # Fire up the windowmanager
 i3
