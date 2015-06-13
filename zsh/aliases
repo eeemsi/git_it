@@ -1,5 +1,5 @@
 # essential use of ls
-alias la='ls -hla --color'
+alias la='ls -hlFa --color'
 alias l='ls -hlF --color'
 
 # More comfortable aliases
