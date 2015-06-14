@@ -9,6 +9,10 @@ set $Mod Mod4
 # start applications on a certain workspace
 $a [class="^Chromium$"] 2
 
+# controling brightness
+$b --release XF86MonBrightnessUp    $ensid xbacklight -inc 5
+$b --release XF86MonBrightnessDown  $ensid xbacklight -dec 5
+
 # controlling the audio
 #$b --release XF86AudioMute $ensid amixer set Master toggle
 $b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
