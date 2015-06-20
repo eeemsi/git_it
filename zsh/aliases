@@ -10,7 +10,6 @@ alias gd='g diff'
 alias gc='g commit'
 
 alias ..='cd ..'
-alias ...='cd ../..'
 
 # Nicer output of grep
 alias grep='grep --color=always --initial-tab'
