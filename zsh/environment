@@ -22,9 +22,6 @@ setopt NO_BEEP
 # Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
 REPORTTIME=10
 
-# Don't send HUP signal to background jobs when exiting zsh
-setopt NO_HUP
-
 # An array (colon-separated list) of login/logout events to report.
 watch=(notme, root)
 
