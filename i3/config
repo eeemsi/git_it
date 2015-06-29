@@ -22,8 +22,7 @@ $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 $b --release XF86Launch1 $ensid i3lock -e -c 000000
 
 # define the style for the borders
-new_window 1pixel
-hide_edge_borders both
+new_window none
 
 # define the colors of the focused client
 client.focused #b5b5b5 #b5b5b5 #000000 #b5b5b5
