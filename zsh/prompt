@@ -1,2 +1,18 @@
 # Defines the prompt
-PS1="[%B%F{yellow}%m%f%b][%B%F{green}%~%f\${vcs_info_msg_0_}%b] %# "
+color () {
+    echo "%B%(!.%F{red}.%F{blue})$*%f"
+}
+
+PS1=$(color '┌─[')
+PS1+='%m'
+PS1+=$(color ']-[')
+PS1+='%~'
+PS1+=$(color ']-[')
+PS1+='${vcs_info_msg_0_}'
+PS1+=$(color ']-[')
+PS1+=$'%(0?.$.%F{red}%?%F)'
+PS1+=$(color ']')
+PS1+=$(color '\n└─[')
+PS1+=$'%#'
+PS1+=$(color ']')
+PS1+=$(color '%b ')
