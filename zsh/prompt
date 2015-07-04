@@ -7,6 +7,6 @@ PS1=$(color '┌─ ')
 PS1+='%m'
 PS1+=$(color ' - ')
 PS1+='%~'
-PS1+='${vcs_info_msg_0_}'
+PS1+=$(color '${vcs_info_msg_0_}')
 PS1+=$(color '\n└─ ')
 PS1+='%b'
