@@ -16,15 +16,12 @@ syntax on
 " Define number of colors
 set t_Co=16
 
-" Set background to dark
-set bg=dark
-
 " Defines the colorscheme that should be used
-colorscheme elflord
+colorscheme stingray_reduced
 
 " hybrid line numbers
 if (v:version >= 704)
-    highlight LineNr ctermfg=darkgrey ctermbg=none
+    highlight LineNr ctermfg=Darkgrey ctermbg=None
     set number relativenumber
 endif
 
