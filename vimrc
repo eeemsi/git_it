@@ -13,9 +13,6 @@ set laststatus=2 showtabline=2 ruler
 " Enable syntax
 syntax on
 
-" Define number of colors
-set t_Co=16
-
 " Defines the colorscheme that should be used
 colorscheme stingray_reduced
 
