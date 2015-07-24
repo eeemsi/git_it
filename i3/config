@@ -10,8 +10,8 @@ set $Mod Mod4
 $a [class="^Chromium$"] 2
 
 # controling brightness
-$b --release XF86MonBrightnessUp    $ensid xbacklight -inc 5
-$b --release XF86MonBrightnessDown  $ensid xbacklight -dec 5
+$b --release XF86MonBrightnessUp    $ensid xbacklight -inc 2
+$b --release XF86MonBrightnessDown  $ensid xbacklight -dec 2
 
 # controlling the audio
 #$b --release XF86AudioMute $ensid amixer set Master toggle
