@@ -1,12 +1,6 @@
 # Defines the prompt
-color () {
-    echo "%B%(!.%F{red}.%F{blue})$*%f"
-}
-
-PS1=$(color '┌─ ')
-PS1+='%m'
-PS1+=$(color ' - ')
-PS1+='%~'
-PS1+=$(color '${vcs_info_msg_0_}')
-PS1+=$(color '\n└─ ')
-PS1+='%b'
+if [ "$UID" -ne 1 ]; then
+    PS1=$'%B%F{blue}┌─%f %m %F{blue}-%f %~%F{blue} ${vcs_info_msg_0_}%f\n%F{blue}└─ %f%b'
+else
+    PS1=$'%B%F{red}┌─%f %m %F{red}-%f %~%F{red} ${vcs_info_msg_0_}%f\n%F{red}└─ %f%b'
+fi
