@@ -1,3 +1,6 @@
-for f in $( find ~/.zsh/ -type f -o -type l | sort ); do
+autoload -Uz compinit && compinit
+autoload -Uz vcs_info
+
+for f in $( find ~/.zsh/ -type f -o -type l ); do
   source "$f"
 done

@@ -1,6 +1,3 @@
-# Load completion
-autoload -Uz compinit && compinit
-
 # Use a cache and specify the path to it
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path /tmp/zsh

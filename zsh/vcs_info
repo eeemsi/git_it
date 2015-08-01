@@ -1,6 +1,5 @@
 # Enable vcs_info
 setopt PROMPT_SUBST
-autoload -Uz vcs_info
 
 # Specify the vcs
 zstyle ':vcs_info:*' enable git
