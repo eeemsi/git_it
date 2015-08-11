@@ -19,7 +19,7 @@ $b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
 $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 
 # fire up a screenlocker
-$b --release XF86Launch1 $ensid i3lock -e -c 000000
+$b --release XF86Launch1 $ensid i3lock -e -f -c 000000
 
 # define the style for the borders
 new_window none
