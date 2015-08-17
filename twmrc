@@ -75,8 +75,10 @@ Button2 = : iconmgr : f.iconify
 menu "main"
 {
 		"Main Menu"	f.title
-        "Iceweasel" f.exec  "iceweasel --private&"
-        "urxvtc"    f.exec  "urxvtc"
+        "Iceweasel" f.exec "iceweasel --private&"
+        "urxvtc"    f.exec "urxvtc"
+        "xload"     f.exec "xload -update 1&"
+        "xclock"    f.exec "xclock&"
 		""			f.nop
 		"Exit"		f.menu "Quit-Verify"
 }
