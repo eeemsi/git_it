@@ -65,6 +65,10 @@ Button2 = : icon : f.iconify
 Button1 = : iconmgr : f.iconify
 Button2 = : iconmgr : f.iconify
 
+"XF86AudioLowerVolume" = : all : f.exec "amixer set Master 2%- unmute"
+"XF86AudioRaiseVolume" = : all : f.exec "amixer set Master 2%+ unmute"
+"XF86AudioMute"        = : all : f.exec "amixer set Master mute"
+
 #
 # And a menus with the usual things
 #
