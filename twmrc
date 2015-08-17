@@ -1,0 +1,300 @@
+#
+# Default twm configuration file; needs to be kept small to conserve string
+# space in systems whose compilers don't handle medium-sized strings.
+#
+# Sites should tailor this file, providing any extra title buttons, menus, etc.
+# that may be appropriate for their environment.  For example, if most of the
+# users were accustomed to uwm, the defaults could be set up not to decorate
+# any windows and to use meta-keys.
+#
+
+NoGrabServer
+RestartPreviousState
+DecorateTransients
+TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+#ClientBorderWidth
+
+Color
+{
+    BorderColor "slategrey"
+    DefaultBackground "rgb:2/a/9"
+    DefaultForeground "gray85"
+    TitleBackground "rgb:2/a/9"
+    TitleForeground "gray85"
+    MenuBackground "rgb:2/a/9"
+    MenuForeground "gray85"
+    MenuBorderColor "slategrey"
+    MenuTitleBackground "gray70"
+    MenuTitleForeground "rgb:2/a/9"
+    IconBackground "rgb:2/a/9"
+    IconForeground "gray85"
+    IconBorderColor "gray85"
+    IconManagerBackground "rgb:2/a/9"
+    IconManagerForeground "gray85"
+}
+
+#
+# Define some useful functions for motion-based actions.
+#
+MoveDelta 3
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
+#
+Button1 = : root : f.menu "main"
+Button2 = : root : f.menu "windowops"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.iconify
+Button3 = m : window|icon : f.function "move-or-raise"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+
+Button1 = : icon : f.function "move-or-iconify"
+Button2 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.iconify
+
+#
+# And a menus with the usual things
+#
+menu "main"
+{
+		"Main Menu"		f.title
+		"Debian"		f.menu "/Debian"
+		""			f.nop
+		"Show Icon Manager"	f.showiconmgr
+		"Hide Icon Manager"	f.hideiconmgr
+		""			f.nop
+		"Exit"			f.menu "Quit-Verify"
+}
+
+menu "Quit-Verify"
+{
+		"Really quit twm?"	f.title
+		"No, restart twm"	f.restart
+		"Yes, really quit"	f.quit
+}
+
+menu "windowops"
+{
+		"Window Ops"		f.title
+		""			f.nop
+		"Iconify"		f.iconify
+		"Resize"		f.resize
+		"Move"			f.move
+		"Raise"			f.raise
+		"Lower"			f.lower
+		""			f.nop
+		"Focus"			f.focus
+		"Unfocus"		f.unfocus
+		""			f.nop
+		"Delete"		f.delete
+		"Destroy"		f.destroy
+}
+
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+menu "/Debian/Applications/Accessibility"
+{
+  "Xmag"    f.exec  "xmag &"
+}
+menu "/Debian/Applications/Data Management"
+{
+  "LibreOffice Base"    f.exec  "/usr/bin/libreoffice --base &"
+}
+menu "/Debian/Applications/Editors"
+{
+  "Nano"    f.exec  "x-terminal-emulator  -T \"Nano\" -e sh -c \"/bin/nano\" &"
+  "prerex"    f.exec  "x-terminal-emulator  -T \"prerex\" -e sh -c \"/usr/bin/prerex\" &"
+  "texmaker"    f.exec  "/usr/bin/texmaker &"
+  "Xedit"    f.exec  "xedit &"
+}
+menu "/Debian/Applications/File Management"
+{
+  "mc"    f.exec  "x-terminal-emulator  -T \"mc\" -e sh -c \"/usr/bin/mc\" &"
+}
+menu "/Debian/Applications/Graphics"
+{
+  "Inkscape"    f.exec  "/usr/bin/inkscape &"
+  "LibreOffice Draw"    f.exec  "/usr/bin/libreoffice --draw &"
+  "The GIMP"    f.exec  "/usr/bin/gimp &"
+  "X Window Snapshot"    f.exec  "xwd | xwud &"
+}
+menu "/Debian/Applications/Network/Communication"
+{
+  "Gajim"    f.exec  "/usr/bin/gajim &"
+  "Mutt"    f.exec  "x-terminal-emulator  -T \"Mutt\" -e sh -c \"/usr/bin/mutt\" &"
+  "Telnet"    f.exec  "x-terminal-emulator  -T \"Telnet\" -e sh -c \"/usr/bin/telnet.netkit\" &"
+  "Xbiff"    f.exec  "xbiff &"
+}
+menu "/Debian/Applications/Network/Monitoring"
+{
+  "Mtr"    f.exec  "mtr &"
+  "Wireshark"    f.exec  "/usr/bin/wireshark &"
+}
+menu "/Debian/Applications/Network/Web Browsing"
+{
+  "Chromium"    f.exec  "chromium &"
+  "Iceweasel"    f.exec  "iceweasel &"
+  "Links 2"    f.exec  "/usr/bin/links2 -g &"
+  "Links 2 (text)"    f.exec  "x-terminal-emulator  -T \"Links 2 (text)\" -e sh -c \"/usr/bin/links2\" &"
+  "w3m"    f.exec  "x-terminal-emulator  -T \"w3m\" -e sh -c \"/usr/bin/w3m /usr/share/doc/w3m/MANUAL.html\" &"
+}
+menu "/Debian/Applications/Network"
+{
+  "Communication" f.menu "/Debian/Applications/Network/Communication"
+  "Monitoring" f.menu "/Debian/Applications/Network/Monitoring"
+  "Web Browsing" f.menu "/Debian/Applications/Network/Web Browsing"
+}
+menu "/Debian/Applications/Office"
+{
+  "LibreOffice Calc"    f.exec  "/usr/bin/libreoffice --calc &"
+  "LibreOffice Impress"    f.exec  "/usr/bin/libreoffice --impress &"
+  "LibreOffice Writer"    f.exec  "/usr/bin/libreoffice --writer &"
+  "zathura"    f.exec  "/usr/bin/zathura &"
+}
+menu "/Debian/Applications/Programming"
+{
+  "GDB"    f.exec  "x-terminal-emulator  -T \"GDB\" -e sh -c \"/usr/bin/gdb\" &"
+  "Python (v2.7)"    f.exec  "x-terminal-emulator  -T \"Python (v2.7)\" -e sh -c \"/usr/bin/python2.7\" &"
+  "Python (v3.4)"    f.exec  "x-terminal-emulator  -T \"Python (v3.4)\" -e sh -c \"/usr/bin/python3.4\" &"
+}
+menu "/Debian/Applications/Science/Mathematics"
+{
+  "Bc"    f.exec  "x-terminal-emulator  -T \"Bc\" -e sh -c \"/usr/bin/bc\" &"
+  "Dc"    f.exec  "x-terminal-emulator  -T \"Dc\" -e sh -c \"/usr/bin/dc\" &"
+  "LibreOffice Math"    f.exec  "/usr/bin/libreoffice --math &"
+  "Xcalc"    f.exec  "xcalc &"
+}
+menu "/Debian/Applications/Science"
+{
+  "Mathematics" f.menu "/Debian/Applications/Science/Mathematics"
+}
+menu "/Debian/Applications/Shells"
+{
+  "Bash"    f.exec  "x-terminal-emulator  -T \"Bash\" -e sh -c \"/bin/bash --login\" &"
+  "Dash"    f.exec  "x-terminal-emulator  -T \"Dash\" -e sh -c \"/bin/dash -i\" &"
+  "Sh"    f.exec  "x-terminal-emulator  -T \"Sh\" -e sh -c \"/bin/sh --login\" &"
+  "Zsh"    f.exec  "x-terminal-emulator  -T \"Zsh\" -e sh -c \"/bin/zsh5\" &"
+}
+menu "/Debian/Applications/Sound"
+{
+  "ncmpcpp"    f.exec  "x-terminal-emulator  -T \"ncmpcpp\" -e sh -c \"/usr/bin/ncmpcpp\" &"
+  "pavucontrol"    f.exec  "/usr/bin/pavucontrol &"
+}
+menu "/Debian/Applications/System/Administration"
+{
+  "Debian Task selector"    f.exec  "x-terminal-emulator  -T \"Debian Task selector\" -e sh -c \"su-to-root -c tasksel\" &"
+  "Editres"    f.exec  "editres &"
+  "Reportbug"    f.exec  "x-terminal-emulator  -T \"Reportbug\" -e sh -c \"/usr/bin/reportbug --exit-prompt\" &"
+  "Reportbug (GTK+)"    f.exec  "/usr/bin/reportbug --exit-prompt --ui gtk2 &"
+  "TeXconfig"    f.exec  "x-terminal-emulator  -T \"TeXconfig\" -e sh -c \"/usr/bin/texconfig\" &"
+  "Xclipboard"    f.exec  "xclipboard &"
+  "Xfontsel"    f.exec  "xfontsel &"
+  "Xkill"    f.exec  "xkill &"
+  "Xrefresh"    f.exec  "xrefresh &"
+}
+menu "/Debian/Applications/System/Hardware"
+{
+  "Xvidtune"    f.exec  "xvidtune &"
+}
+menu "/Debian/Applications/System/Monitoring"
+{
+  "htop"    f.exec  "x-terminal-emulator  -T \"htop\" -e sh -c \"/usr/bin/htop\" &"
+  "Pstree"    f.exec  "x-terminal-emulator  -T \"Pstree\" -e sh -c \"/usr/bin/pstree.x11\" &"
+  "Top"    f.exec  "x-terminal-emulator  -T \"Top\" -e sh -c \"/usr/bin/top\" &"
+  "Xconsole"    f.exec  "xconsole -file /dev/xconsole &"
+  "Xev"    f.exec  "x-terminal-emulator -e xev &"
+  "Xload"    f.exec  "xload &"
+  "Xosview"    f.exec  "/usr/bin/xosview &"
+}
+menu "/Debian/Applications/System/Package Management"
+{
+  "Aptitude Package Manager (text)"    f.exec  "x-terminal-emulator  -T \"Aptitude Package Manager (text)\" -e sh -c \"/usr/bin/aptitude-curses\" &"
+}
+menu "/Debian/Applications/System"
+{
+  "Administration" f.menu "/Debian/Applications/System/Administration"
+  "Hardware" f.menu "/Debian/Applications/System/Hardware"
+  "Monitoring" f.menu "/Debian/Applications/System/Monitoring"
+  "Package Management" f.menu "/Debian/Applications/System/Package Management"
+}
+menu "/Debian/Applications/Terminal Emulators"
+{
+  "Rxvt-Unicode"    f.exec  "rxvt-unicode &"
+  "XTerm"    f.exec  "xterm &"
+  "XTerm (Unicode)"    f.exec  "uxterm &"
+}
+menu "/Debian/Applications/Viewers"
+{
+  "Xditview"    f.exec  "xditview &"
+  "XDvi"    f.exec  "/usr/bin/xdvi &"
+}
+menu "/Debian/Applications"
+{
+  "Accessibility" f.menu "/Debian/Applications/Accessibility"
+  "Data Management" f.menu "/Debian/Applications/Data Management"
+  "Editors" f.menu "/Debian/Applications/Editors"
+  "File Management" f.menu "/Debian/Applications/File Management"
+  "Graphics" f.menu "/Debian/Applications/Graphics"
+  "Network" f.menu "/Debian/Applications/Network"
+  "Office" f.menu "/Debian/Applications/Office"
+  "Programming" f.menu "/Debian/Applications/Programming"
+  "Science" f.menu "/Debian/Applications/Science"
+  "Shells" f.menu "/Debian/Applications/Shells"
+  "Sound" f.menu "/Debian/Applications/Sound"
+  "System" f.menu "/Debian/Applications/System"
+  "Terminal Emulators" f.menu "/Debian/Applications/Terminal Emulators"
+  "Viewers" f.menu "/Debian/Applications/Viewers"
+}
+menu "/Debian/Games/Strategy"
+{
+  "Battle for Wesnoth (1.13)"    f.exec  "/usr/games/wesnoth-1.13-nolog &"
+}
+menu "/Debian/Games/Tools"
+{
+  "Battle for Wesnoth Editor (1.13)"    f.exec  "/usr/games/wesnoth-1.13-nolog -e &"
+}
+menu "/Debian/Games/Toys"
+{
+  "Oclock"    f.exec  "oclock &"
+  "sm"    f.exec  "/usr/games/sm &"
+  "Xclock (analog)"    f.exec  "xclock -analog &"
+  "Xclock (digital)"    f.exec  "xclock -digital -update 1 &"
+  "Xeyes"    f.exec  "xeyes &"
+  "Xlogo"    f.exec  "xlogo &"
+}
+menu "/Debian/Games"
+{
+  "Strategy" f.menu "/Debian/Games/Strategy"
+  "Tools" f.menu "/Debian/Games/Tools"
+  "Toys" f.menu "/Debian/Games/Toys"
+}
+menu "/Debian/Help"
+{
+  "Info"    f.exec  "x-terminal-emulator  -T \"Info\" -e sh -c \"info\" &"
+  "TeXdoctk"    f.exec  "/usr/bin/texdoctk &"
+  "Xman"    f.exec  "xman &"
+}
+menu "/Debian/Window Managers"
+{
+ "i3" f.startwm "/usr/bin/i3"
+ "Twm" f.startwm "twm"
+}
+menu "/Debian"
+{
+  "Applications" f.menu "/Debian/Applications"
+  "Games" f.menu "/Debian/Games"
+  "Help" f.menu "/Debian/Help"
+  "Window Managers" f.menu "/Debian/Window Managers"
+}
