@@ -14,7 +14,7 @@ $b --release XF86MonBrightnessUp    $ensid xbacklight -inc 2
 $b --release XF86MonBrightnessDown  $ensid xbacklight -dec 2
 
 # controlling the audio
-#$b --release XF86AudioMute $ensid amixer set Master toggle
+$b --release XF86AudioMute $ensid amixer set Master mute
 $b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
 $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 
