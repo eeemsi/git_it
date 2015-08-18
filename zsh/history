@@ -11,15 +11,3 @@ setopt HIST_REDUCE_BLANKS
 
 # Append to $HISTFILE incrementally (does not wait for the shell to exit)
 setopt INC_APPEND_HISTORY
-
-# Make cd push the old directory onto the directory stack
-setopt AUTO_PUSHD
-
-# Do not push copies of the directory onto the directory stack
-setopt PUSHD_IGNORE_DUPS
-
-# Do not print the directory stack after pushd or popd
-setopt PUSHD_SILENT
-
-# Exchanges the meanings of "+" and "-" when used with a number to specify a directory in the stack
-setopt PUSHD_MINUS
