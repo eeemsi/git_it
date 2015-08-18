@@ -3,8 +3,8 @@ HISTSIZE=8192
 SAVEHIST=8192
 HISTFILE=~/.zsh_history
 
-# Do not enter command lines into the history list if they are duplicates of the previous event
-setopt HIST_IGNORE_DUPS
+# Do not enter command lines into the history list even if they are not duplicates of the previous event
+setopt HIST_IGNORE_ALL_DUPS
 
 # Remove superfluous blanks from each command line being added to the history list
 setopt HIST_REDUCE_BLANKS
