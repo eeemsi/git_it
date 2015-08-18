@@ -1,6 +1,2 @@
 # Defines the prompt
-if [ "$UID" -ne 1 ]; then
-    PS1=$'%B%F{blue}┌─%f %m %F{blue}-%f %~%F{blue} ${vcs_info_msg_0_}%f\n%F{blue}└─ %f%b'
-else
-    PS1=$'%B%F{red}┌─%f %m %F{red}-%f %~%F{red} ${vcs_info_msg_0_}%f\n%F{red}└─ %f%b'
-fi
+PS1=$'%B%F{blue}┌─%f %m %F{blue}-%f %~%F{blue} ${vcs_info_msg_0_}%f\n%F{blue}└─ %f%b'
