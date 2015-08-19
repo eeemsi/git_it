@@ -94,16 +94,6 @@ menu "Quit-Verify"
 menu "windowops"
 {
 		"Window Ops"	f.title
-		""			f.nop
-		"Iconify"		f.iconify
-		"Resize"		f.resize
-		"Move"			f.move
-		"Raise"			f.raise
-		"Lower"			f.lower
-		""			f.nop
-		"Focus"			f.focus
-		"Unfocus"		f.unfocus
-		""			f.nop
 		"Delete"		f.delete
 		"Destroy"		f.destroy
 }
