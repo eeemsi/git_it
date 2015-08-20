@@ -38,6 +38,18 @@ Color
     IconManagerForeground "gray85"
 }
 
+IconManagerDontShow
+{
+    "TWM Icon Manager"
+    "xclock"
+    "xload"
+}
+
+NoTitle
+{
+    "TWM Icon Manager"
+}
+
 #
 # Define some useful functions for motion-based actions.
 #
