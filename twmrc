@@ -17,7 +17,6 @@ MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
 IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
 IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
 ShowIconManager
-#ClientBorderWidth
 
 Color
 {
