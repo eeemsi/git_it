@@ -73,7 +73,7 @@ Button2 = : title : f.raiselower
 Button1 = : icon : f.function "move-or-iconify"
 Button2 = : icon : f.iconify
 
-Button1 = : iconmgr : f.iconify
+Button1 = : iconmgr : f.raise
 Button2 = : iconmgr : f.iconify
 
 "XF86AudioLowerVolume" = : all : f.exec "amixer set Master 2%- unmute"
