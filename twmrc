@@ -85,27 +85,27 @@ Button2 = : iconmgr : f.iconify
 #
 menu "main"
 {
-		"Main Menu"	f.title
+        "Main Menu" f.title
         "Iceweasel" f.exec "iceweasel --private&"
         "urxvtc"    f.exec "urxvtc&"
-		""			f.nop
+        ""          f.nop
         "xload"     f.exec "xload -update 1&"
         "xclock"    f.exec "xclock&"
-		""			f.nop
-		"Exit"		f.menu "Quit-Verify"
+        ""          f.nop
+        "Exit"      f.menu "Quit-Verify"
 }
 
 menu "Quit-Verify"
 {
-		"Really quit twm?"	f.title
+        "Really quit twm?"  f.title
         "Just lock"         f.exec "i3lock -e -f -c 000000 &"
-		"No, restart twm"	f.restart
-		"Yes, really quit"	f.quit
+        "No, restart twm"   f.restart
+        "Yes, really quit"  f.quit
 }
 
 menu "windowops"
 {
-		"Window Ops"	f.title
-		"Delete"		f.delete
-		"Destroy"		f.destroy
+        "Window Ops"    f.title
+        "Delete"        f.delete
+        "Destroy"       f.destroy
 }
