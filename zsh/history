@@ -1,6 +1,6 @@
 # Define size for HISTFILE and SAVEHIST also define path for HISTFILE
-HISTSIZE=8192
-SAVEHIST=8192
+HISTSIZE=4096
+SAVEHIST=4096
 HISTFILE=~/.zsh_history
 
 # Do not enter command lines into the history list if they are duplicates of the previous event
