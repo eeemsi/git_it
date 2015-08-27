@@ -41,7 +41,6 @@ IconManagerDontShow
 {
     "TWM Icon Manager"
     "xclock"
-    "xload"
 }
 
 NoTitle
@@ -89,7 +88,6 @@ menu "main"
         "Iceweasel" f.exec "iceweasel --private&"
         "urxvtc"    f.exec "urxvtc&"
         ""          f.nop
-        "xload"     f.exec "xload -update 1&"
         "xclock"    f.exec "xclock&"
         ""          f.nop
         "Exit"      f.menu "Quit-Verify"
