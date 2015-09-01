@@ -15,15 +15,3 @@ agi () {
 agr () {
     [[ ! -z "$@" ]] && sudo apt-get purge "$@" && sudo apt-get autoremove && rehash
 }
-
-# Define "lists" for completions
-_notyet() {
-    _deb_packages uninstalled
-}
-
-_yetnot() {
-    _deb_packages installed
-}
-
-compdef _notyet agi
-compdef _yetnot agr

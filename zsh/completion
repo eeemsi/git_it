@@ -1,7 +1,3 @@
-# Use a cache and specify the path to it
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path /tmp/zsh
-
 # Case-insensitive,partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
