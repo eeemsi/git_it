@@ -1,7 +1,5 @@
-# .zsh/completion .zsh/debian
-autoload -Uz compinit && compinit
-# .zsh/vcs_info
-autoload -Uz vcs_info
+autoload -Uz compinit vcs_info
+compinit
 
 for f in $( find ~/.zsh/ -type f -o -type l ); do
   source "$f"
