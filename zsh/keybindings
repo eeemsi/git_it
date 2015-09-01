@@ -10,4 +10,7 @@ bindkey '^[[8~' end-of-line             # end
 bindkey '^[Oc'  forward-word            # ctrl cursor right
 bindkey '^[Od'  backward-word           # ctrl cursor left
 
+bindkey '^[[1;5C'  forward-word         # ctrl cursor right
+bindkey '^[[1;5D'  backward-word        # ctrl cursor left
+
 bindkey ' '     magic-space             # better history expansion
