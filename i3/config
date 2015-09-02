@@ -28,8 +28,8 @@ client.focused          #00bfd5 #222222 #00bfd5
 client.focused_inactive #5f676a #222222 #ffffff
 client.urgent           #cc3333 #222222 #cc3333
 
-# font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
+# font for window titles
+font pango:monospace 7.5
 
 # use Mouse+$Mod to drag floating windows to their wanted position
 floating_modifier $Mod
