@@ -18,7 +18,6 @@ colorscheme stingray_reduced
 
 " hybrid line numbers
 if (v:version >= 704)
-    highlight LineNr ctermfg=Darkgrey ctermbg=None
     set number relativenumber
 endif
 
