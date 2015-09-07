@@ -28,9 +28,6 @@ watch=(notme, root)
 # Don't display an error if there are no matches, I know what I am doing
 setopt NO_NOMATCH
 
-# Disable Flow Control
-unsetopt FLOW_CONTROL
-
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
 
