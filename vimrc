@@ -1,6 +1,9 @@
 " Don’t ensure compatibility with vi at all cost
 set nocompatible
 
+" 'indicates' a fast terminal connection
+set ttyfast
+
 " Security
 set modeline
 
