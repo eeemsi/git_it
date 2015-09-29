@@ -1,8 +1,3 @@
-# More comfortable ifup ifdown
-ifre () {
-    [[ ! -z "${1}" ]] && sudo ifdown "${1}" && sudo ifup "${1}"
-}
-
 # Create temporary directory and cd to it
 cdt () {
     local t
