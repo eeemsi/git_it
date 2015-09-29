@@ -12,8 +12,5 @@
     interactive = auto
     ui = true
 
-[color "diff"]
-    meta = white
-
 [push]
     default = simple
