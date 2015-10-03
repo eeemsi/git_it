@@ -12,9 +12,6 @@ URxvt.urgentOnBell: true
 
 URxvt.fading:       32
 
-URxvt.shellex.edge: bottom
-URxvt.shellex.pos:  focus
-
 URxvt*background:   #222222
 URxvt*foreground:   #ffffff
 
