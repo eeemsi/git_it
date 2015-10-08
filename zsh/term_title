@@ -8,12 +8,12 @@ function set_termtitle() {
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
     case "$TERM" in
-    rxvt*)
+    rxvt-unicode)
         # plain xterm title
         print -Pn -- "\e]2;$2: "
         print -rn -- "$a"
         print -n -- "\a"
-    ;;
+        ;;
     esac
 }
 
