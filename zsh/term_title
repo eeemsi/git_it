@@ -7,14 +7,10 @@ function set_termtitle() {
 
     [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
 
-    case "$TERM" in
-    rxvt-unicode)
-        # plain xterm title
-        print -Pn -- "\e]2;$2: "
-        print -rn -- "$a"
-        print -n -- "\a"
-        ;;
-    esac
+    # plain xterm title
+    print -Pn -- "\e]2;$2: "
+    print -rn -- "$a"
+    print -n -- "\a"
 }
 
 function my_prompt_precmd() {
@@ -25,8 +21,10 @@ function my_prompt_preexec() {
     set_termtitle "$1" "%m"
 }
 
-typeset -ga precmd_functions
-precmd_functions+=my_prompt_precmd
+if [ $TERM == "rxvt-unicode" ]; then
+    typeset -ga precmd_functions
+    precmd_functions+=my_prompt_precmd
 
-typeset -ga preexec_functions
-preexec_functions+=my_prompt_preexec
+    typeset -ga preexec_functions
+    preexec_functions+=my_prompt_preexec
+fi
