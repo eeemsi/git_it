@@ -14,12 +14,6 @@ function set_termtitle() {
         print -rn -- "$a"
         print -n -- "\a"
     ;;
-    screen)
-        # screen title (in ^A")
-        print -n -- "\ek"
-        print -rn -- "$a"
-        print -n -- "\e\\"
-    ;;
     esac
 }
 
