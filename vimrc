@@ -4,6 +4,9 @@ set nocompatible
 " 'indicates' a fast terminal connection
 set ttyfast
 
+" Do not redraw all the time (macros, registers, etc)
+set lazyredraw
+
 " Security
 set modeline
 
