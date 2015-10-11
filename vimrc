@@ -38,7 +38,7 @@ set fileencoding=utf-8 encoding=utf-8
 
 " Defines tab and shift width
 set expandtab
-set tabstop=4 shiftwidth=4
+set tabstop=4 softtabstop=4 shiftwidth=4
 
 " More powerful backspacing
 set backspace=indent,eol,start
