@@ -1,20 +1,14 @@
 " Don’t ensure compatibility with vi at all cost
 set nocompatible
 
-" 'indicates' a fast terminal connection
-set ttyfast
-
-" Do not redraw all the time (macros, registers, etc)
-set lazyredraw
-
 " Security
 set modeline
 
 " Set the title for the terminal
 set title
 
-" Always show statusline, tabline and the cursor position
-set laststatus=2 showtabline=2 ruler
+" Always show laststatus
+set laststatus=2
 
 " Enable syntax
 syntax on
