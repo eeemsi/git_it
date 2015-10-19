@@ -49,9 +49,6 @@ $b $Mod+Down focus down
 $b $Mod+Up focus up
 $b $Mod+Right focus right
 
-# change focus to latest urgent window
-$b $Mod+x [urgent=latest] focus
-
 # move focused window
 $b $Mod+Shift+Left move left
 $b $Mod+Shift+Down move down
