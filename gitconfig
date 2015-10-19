@@ -4,6 +4,7 @@
 
 [log]
     date = iso
+    decorate = full
 
 [push]
     default = simple
