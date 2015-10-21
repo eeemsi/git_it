@@ -40,11 +40,11 @@ set backspace=indent,eol,start
 " Show matching brackets
 set showmatch
 
-" Automatically remove trailing whitespace
-autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
-
 " Do not create those annoying backup swap files
 set nobackup nowritebackup noswapfile
 
 " Enhanced mode for command-line completion and enable listing possible completions when completing file names
 set wildmenu wildmode=longest:full
+
+" Automatically remove trailing whitespace
+autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
