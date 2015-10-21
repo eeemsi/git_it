@@ -124,19 +124,6 @@ $b $Mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 $b $Mod+minus scratchpad show
 
-# Resize window (you can also use the mouse for that)
-mode "resize" {
-    $b Left     resize shrink width 10 px or 10 ppt
-    $b Down     resize shrink height 10 px or 10 ppt
-    $b Up       resize grow height 10 px or 10 ppt
-    $b Right    resize grow width 10 px or 10 ppt
-
-    # back to normal: Escape
-    $b Escape mode "default"
-}
-
-$b $Mod+r mode "resize"
-
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move_workspace" {
     $b Left     move workspace to output left
