@@ -41,7 +41,7 @@ $b $Mod+Return $ensid urxvtc
 $b $Mod+Shift+q kill
 
 # start a program launcher
-$b $Mod+p $ensid dmenu_run -b -nb \#000 -sb \#000 -sf \#00bfd5
+$b $Mod+p $ensid dmenu_run -b -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=8'
 
 # change focus
 $b $Mod+Left focus left
