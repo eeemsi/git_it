@@ -93,6 +93,9 @@ $b $Mod+8 workspace 8
 $b $Mod+9 workspace 9
 $b $Mod+0 workspace 10
 
+$b $Mod+Ctrl+Left  workspace prev_on_output
+$b $Mod+Ctrl+Right workspace next_on_output
+
 # move focused container to workspace
 $b $Mod+Shift+1 move container workspace 1
 $b $Mod+Shift+2 move container workspace 2
