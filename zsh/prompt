@@ -1,2 +1,2 @@
 # Defines the prompt
-PS1=$'%B%F{blue}┌╼%f %m %F{blue}-%f %~%F{blue} ${vcs_info_msg_0_}%f\n%F{blue}└╼ %f%b'
+PS1=$'%B%F{blue}┌╼%f %m %F{blue}-%f %~%F{blue} ${vcs_info_msg_0_}%f%(?..%F{blue} - %f%F{red}!%f)\n%F{blue}└╼ %f%b'
