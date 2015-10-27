@@ -1,5 +1,5 @@
 # Alias for a comfortable dist-upgrade
-alias agu='sudo sh -c "apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"'
+alias agu='sudo sh -c "apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove --purge && apt-get autoclean"'
 alias agc='apt-get changelog'
 alias acs='apt-cache show'
 
@@ -10,5 +10,5 @@ agi () {
 
 # Rehash after removing a package
 agr () {
-    [[ ! -z "$@" ]] && sudo apt-get purge "$@" && sudo apt-get autoremove && rehash
+    [[ ! -z "$@" ]] && sudo apt-get purge "$@" && sudo apt-get autoremove --purge && rehash
 }
