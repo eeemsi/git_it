@@ -2,13 +2,16 @@
 set nocompatible
 
 " Security
-set modeline
+set nomodeline
 
 " Set the title for the terminal
 set title
 
 " Always show laststatus
 set laststatus=2
+
+" Always show the position of cursor
+set ruler
 
 " Enable syntax
 syntax on
