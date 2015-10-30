@@ -23,11 +23,12 @@ $b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
 $b --release XF86Launch1 $ensid i3lock -e -f -c 000000
 
 # define the style for the borders
-new_window none
+# class                 border  backgr  text    indicator
+client.focused          #00bfd5 #222222 #00bfd5 #000000
+client.urgent           #cc3333 #222222 #cc3333 #000000
+client.focused_inactive #5f676a #222222 #ffffff #000000
 
-client.focused          #00bfd5 #222222 #00bfd5
-client.focused_inactive #5f676a #222222 #ffffff
-client.urgent           #cc3333 #222222 #cc3333
+new_window none
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--10-100-*-*-*-60-iso10646-1
