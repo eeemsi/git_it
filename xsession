@@ -25,4 +25,5 @@ export LC_TIME=en_DK.UTF-8
 urxvtd -q -f -o &
 
 # Start the windowmanager
+xbattbar -c -t 2 &
 i3
