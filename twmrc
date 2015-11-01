@@ -80,7 +80,6 @@ menu "main"
 
 menu "Quit-Verify"
 {
-        "Really quit twm?"  f.title
         "Just lock"         f.exec "i3lock -e -f -c 000000 &"
         "No, restart twm"   f.restart
         "Yes, really quit"  f.quit
@@ -88,7 +87,6 @@ menu "Quit-Verify"
 
 menu "windowops"
 {
-        "Window Ops"    f.title
         "Delete"        f.delete
         "Destroy"       f.destroy
 }
