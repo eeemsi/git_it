@@ -72,7 +72,6 @@ Button2 = : iconmgr : f.iconify
 #
 menu "main"
 {
-        "Main Menu" f.title
         "Iceweasel" f.exec "iceweasel --private&"
         "urxvtc"    f.exec "urxvtc&"
         ""          f.nop
