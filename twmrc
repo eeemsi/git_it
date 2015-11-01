@@ -16,7 +16,6 @@ ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
 MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
 IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
 IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
-ShowIconManager
 
 Color
 {
@@ -35,17 +34,6 @@ Color
     IconBorderColor "gray85"
     IconManagerBackground "rgb:2/a/9"
     IconManagerForeground "gray85"
-}
-
-IconManagerDontShow
-{
-    "TWM Icon Manager"
-    "xclock"
-}
-
-NoTitle
-{
-    "TWM Icon Manager"
 }
 
 #
@@ -87,8 +75,6 @@ menu "main"
         "Main Menu" f.title
         "Iceweasel" f.exec "iceweasel --private&"
         "urxvtc"    f.exec "urxvtc&"
-        ""          f.nop
-        "xclock"    f.exec "xclock&"
         ""          f.nop
         "Exit"      f.menu "Quit-Verify"
 }
