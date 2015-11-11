@@ -7,7 +7,7 @@ set $ensid exec --no-startup-id
 set $Mod Mod4
 
 # start applications on a certain workspace
-$a [class="^Chromium$"] 2
+$a [class="^chromium-browser$"] 2
 $a [class="^Iceweasel$"] 2
 
 # controling brightness
