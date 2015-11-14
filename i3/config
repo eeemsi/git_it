@@ -141,12 +141,12 @@ $b $Mod+o mode "move_workspace"
 # finds out, if available)
 bar {
     position top
-    colors {
-        focused_workspace #00bfd5 #222222 #00bfd5
-        urgent_workspace  #cc3333 #222222 #cc3333
-    }
-
     tray_output primary
-
     status_command i3status -c "${HOME}"/.i3/i3status.conf
+
+    colors {
+        #<colorclass>       <border> <background> <text>
+        focused_workspace   #00bfd5  #222222      #00bfd5
+        urgent_workspace    #cc3333  #222222      #cc3333
+    }
 }
