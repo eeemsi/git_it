@@ -1,24 +1,22 @@
-function set_termtitle() {
+set_termtitle() {
     # escape '%' chars in $1, make nonprintables visible
-    a=${(V)1//\%/\%\%}
+    local a=${(V)1//\%/\%\%}
 
     # Truncate command, and join lines.
-    a=$(print -rn -- "$a" | tr -d "\n\r")
+    a=${a//[$'\r'$'\n']/}
 
-    [ "$a" = "zsh" ] && { a=$(print -Pn "%~") }
+    [ "$a" = "zsh" ] && { a=${(%)${:-%~}} }
 
     # plain xterm title
-    print -Pn -- "\e]2;$2: "
-    print -rn -- "$a"
-    print -n -- "\a"
+    print -rn -- $'\e'"]2;${(%)${:-%m}}: $a"$'\a'
 }
 
-function my_prompt_precmd() {
-    set_termtitle "zsh" "%m"
+my_prompt_precmd() {
+    set_termtitle "zsh"
 }
 
-function my_prompt_preexec() {
-    set_termtitle "$1" "%m"
+my_prompt_preexec() {
+    set_termtitle "$1"
 }
 
 if [[ "$TERM" == "rxvt-unicode" ]]; then
