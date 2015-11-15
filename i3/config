@@ -3,7 +3,6 @@
 # setting up some variables for better readability and easier changes
 set $a assign
 set $b bindsym
-set $ensid exec --no-startup-id
 set $Mod Mod4
 
 # start applications on a certain workspace
@@ -11,16 +10,16 @@ $a [class="^chromium-browser$"] 2
 $a [class="^Iceweasel$"] 2
 
 # controling brightness
-$b --release XF86MonBrightnessUp    $ensid xbacklight -inc 2
-$b --release XF86MonBrightnessDown  $ensid xbacklight -dec 2
+$b --release XF86MonBrightnessUp    exec xbacklight -inc 2
+$b --release XF86MonBrightnessDown  exec xbacklight -dec 2
 
 # controlling the audio
-$b --release XF86AudioMute $ensid amixer set Master mute
-$b --release XF86AudioLowerVolume $ensid amixer set Master 2%- unmute
-$b --release XF86AudioRaiseVolume $ensid amixer set Master 2%+ unmute
+$b --release XF86AudioRaiseVolume   exec amixer set Master 2%+ unmute
+$b --release XF86AudioLowerVolume   exec amixer set Master 2%- unmute
+$b --release XF86AudioMute          exec amixer set Master mute
 
 # fire up a screenlocker
-$b --release XF86Launch1 $ensid i3lock -e -f -c 000000
+$b --release XF86Launch1 exec i3lock -e -f -c 000000
 
 # define the style for the borders
 # class                 border  backgr  text    indicator
@@ -38,13 +37,13 @@ font pango:monospace 7.5
 floating_modifier $Mod
 
 # start a terminal
-$b $Mod+Return $ensid urxvtc
+$b $Mod+Return exec urxvtc
 
 # kill focused window
 $b $Mod+Shift+q kill
 
 # start a program launcher
-$b $Mod+p $ensid dmenu_run -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=7.5'
+$b $Mod+p exec dmenu_run -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=7.5'
 
 # change focus
 $b $Mod+Left focus left
