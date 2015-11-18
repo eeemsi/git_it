@@ -28,7 +28,7 @@ endif
 set ignorecase incsearch hlsearch
 
 " beautifully display tabs and trailing spaces
-set listchars=tab:¬\ ,trail:· list
+set list listchars=tab:·\ ,trail:·
 
 " Set encoding to utf-8
 set fileencoding=utf-8 encoding=utf-8
