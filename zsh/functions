@@ -1,6 +1,4 @@
 # Create temporary directory and cd to it
 cdt () {
-    local t
-    t=$(mktemp -d)
-    builtin cd "$t"
+    builtin cd "$(mktemp -d)"
 }
