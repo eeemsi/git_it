@@ -19,3 +19,4 @@ alias less='less -FXR'
 
 # Alias cp to rsync
 alias cp='rsync -ahP'
+

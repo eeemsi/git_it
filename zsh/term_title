@@ -26,3 +26,4 @@ if [[ "$TERM" == "rxvt-unicode" ]]; then
     typeset -ga preexec_functions
     preexec_functions+=my_prompt_preexec
 fi
+

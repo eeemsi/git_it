@@ -15,3 +15,4 @@ bindkey '^[[1;5D'   backward-word       # ctrl cursor left
 
 bindkey ' '         magic-space         # perform history expansion
                                         # and insert a space into the buffer
+

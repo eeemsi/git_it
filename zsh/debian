@@ -12,3 +12,4 @@ agi () {
 agr () {
     [[ ! -z "$@" ]] && sudo apt-get purge "$@" && sudo apt-get autoremove --purge && rehash
 }
+

@@ -23,3 +23,4 @@ setopt PUSHD_SILENT
 
 # Exchanges the meanings of "+" and "-" when used with a number to specify a directory in the stack
 setopt PUSHD_MINUS
+

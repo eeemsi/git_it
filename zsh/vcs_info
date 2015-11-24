@@ -10,3 +10,4 @@ zstyle ':vcs_info:*' formats "- %F{cyan}%s:%b%f"
 precmd() {
     vcs_info
 }
+
