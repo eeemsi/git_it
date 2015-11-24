@@ -25,9 +25,6 @@ watch=(notme, root)
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
 
-# Increasing the comfort for forward-word and backward-word
-export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
-
 # Just don't nag me when system messages appear
 unset MAILCHECK
 unsetopt MAIL_WARNING
