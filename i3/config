@@ -125,10 +125,10 @@ $b $Mod+minus scratchpad show
 
 # Resize window (you can also use the mouse for that)
 mode "resize" {
-    $b Left     resize shrink width 10 px or 10 ppt
-    $b Down     resize shrink height 10 px or 10 ppt
-    $b Up       resize grow height 10 px or 10 ppt
-    $b Right    resize grow width 10 px or 10 ppt
+    $b Down     resize shrink height 5 px or 5 ppt
+    $b Up       resize grow   height 5 px or 5 ppt
+    $b Left     resize shrink width  5 px or 5 ppt
+    $b Right    resize grow   width  5 px or 5 ppt
 
     # back to normal: Escape
     $b Escape mode "default"
