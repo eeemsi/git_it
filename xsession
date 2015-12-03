@@ -24,5 +24,9 @@ export LC_TIME=en_DK.UTF-8
 # Start urxvtd
 urxvtd -q -f -o &
 
+# Enable core dumps in case something goes wrong
+ulimit -c unlimited
+
 # Start the windowmanager
-i3
+i3 -V -d all >> ~/.i3/logfile
+
