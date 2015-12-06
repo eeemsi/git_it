@@ -1,25 +1,20 @@
 # i3 config file (v4)
 
-# setting up some variables for better readability and easier changes
-set $a assign
-set $b bindsym
-set $Mod Mod4
-
 # start applications on a certain workspace
-$a [class="^chromium-browser$"] 2
-$a [class="^Iceweasel$"] 2
+assign [class="^chromium-browser$"] 2
+assign [class="^Iceweasel$"] 2
 
 # controling brightness
-$b --release XF86MonBrightnessUp    exec xbacklight -inc 2
-$b --release XF86MonBrightnessDown  exec xbacklight -dec 2
+bindsym --release XF86MonBrightnessUp    exec xbacklight -inc 2
+bindsym --release XF86MonBrightnessDown  exec xbacklight -dec 2
 
 # controlling the audio
-$b --release XF86AudioRaiseVolume   exec amixer set Master 2%+ unmute
-$b --release XF86AudioLowerVolume   exec amixer set Master 2%- unmute
-$b --release XF86AudioMute          exec amixer set Master mute
+bindsym --release XF86AudioRaiseVolume   exec amixer set Master 2%+ unmute
+bindsym --release XF86AudioLowerVolume   exec amixer set Master 2%- unmute
+bindsym --release XF86AudioMute          exec amixer set Master mute
 
 # fire up a screenlocker
-$b --release XF86Launch1 exec i3lock -e -f -c 000000
+bindsym --release XF86Launch1 exec i3lock -e -f -c 000000
 
 # define the style for the borders
 # class                 border  backgr  text    indicator
@@ -33,121 +28,121 @@ new_window none
 # is used in the bar {} block below.
 font pango:monospace 7.5
 
-# use Mouse+$Mod to drag floating windows to their wanted position
-floating_modifier $Mod
+# use Mouse+Mod4 to drag floating windows to their wanted position
+floating_modifier Mod4
 
 # start a terminal
-$b $Mod+Return exec urxvtc
+bindsym Mod4+Return exec urxvtc
 
 # kill focused window
-$b $Mod+Shift+q kill
+bindsym Mod4+Shift+q kill
 
 # start a program launcher
-$b $Mod+p exec dmenu_run -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=7.5'
+bindsym Mod4+p exec dmenu_run -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=7.5'
 
 # change focus
-$b $Mod+Left focus left
-$b $Mod+Down focus down
-$b $Mod+Up focus up
-$b $Mod+Right focus right
+bindsym Mod4+Left   focus left
+bindsym Mod4+Down   focus down
+bindsym Mod4+Up     focus up
+bindsym Mod4+Right  focus right
 
 # move focused window
-$b $Mod+Shift+Left move left
-$b $Mod+Shift+Down move down
-$b $Mod+Shift+Up move up
-$b $Mod+Shift+Right move right
+bindsym Mod4+Shift+Left  move left
+bindsym Mod4+Shift+Down  move down
+bindsym Mod4+Shift+Up    move up
+bindsym Mod4+Shift+Right move right
 
 # split in horizontal orientation
-$b $Mod+h split h
+bindsym Mod4+h split h
 
 # split in vertical orientation
-$b $Mod+v split v
+bindsym Mod4+v split v
 
 # enter fullscreen mode for the focused container
-$b $Mod+f fullscreen
+bindsym Mod4+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-$b $Mod+s layout stacking
-$b $Mod+t layout tabbed
-$b $Mod+e layout toggle split
+bindsym Mod4+s layout stacking
+bindsym Mod4+t layout tabbed
+bindsym Mod4+e layout toggle split
 
 # toggle tiling / floating
-$b $Mod+Shift+space floating toggle
+bindsym Mod4+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-$b $Mod+space focus mode_toggle
+bindsym Mod4+space focus mode_toggle
 
 # focus the parent container
-$b $Mod+a focus parent
+bindsym Mod4+a focus parent
 
 # focus the child container
-$b $Mod+d focus child
+bindsym Mod4+d focus child
 
 # switch to workspace
-$b $Mod+1 workspace 1
-$b $Mod+2 workspace 2
-$b $Mod+3 workspace 3
-$b $Mod+4 workspace 4
-$b $Mod+5 workspace 5
-$b $Mod+6 workspace 6
-$b $Mod+7 workspace 7
-$b $Mod+8 workspace 8
-$b $Mod+9 workspace 9
-$b $Mod+0 workspace 10
+bindsym Mod4+1 workspace 1
+bindsym Mod4+2 workspace 2
+bindsym Mod4+3 workspace 3
+bindsym Mod4+4 workspace 4
+bindsym Mod4+5 workspace 5
+bindsym Mod4+6 workspace 6
+bindsym Mod4+7 workspace 7
+bindsym Mod4+8 workspace 8
+bindsym Mod4+9 workspace 9
+bindsym Mod4+0 workspace 10
 
-$b $Mod+Ctrl+Left  workspace prev
-$b $Mod+Ctrl+Right workspace next
+bindsym Mod4+Ctrl+Left  workspace prev
+bindsym Mod4+Ctrl+Right workspace next
 
 # move focused container to workspace
-$b $Mod+Shift+1 move container workspace 1
-$b $Mod+Shift+2 move container workspace 2
-$b $Mod+Shift+3 move container workspace 3
-$b $Mod+Shift+4 move container workspace 4
-$b $Mod+Shift+5 move container workspace 5
-$b $Mod+Shift+6 move container workspace 6
-$b $Mod+Shift+7 move container workspace 7
-$b $Mod+Shift+8 move container workspace 8
-$b $Mod+Shift+9 move container workspace 9
-$b $Mod+Shift+0 move container workspace 10
+bindsym Mod4+Shift+1 move container workspace 1
+bindsym Mod4+Shift+2 move container workspace 2
+bindsym Mod4+Shift+3 move container workspace 3
+bindsym Mod4+Shift+4 move container workspace 4
+bindsym Mod4+Shift+5 move container workspace 5
+bindsym Mod4+Shift+6 move container workspace 6
+bindsym Mod4+Shift+7 move container workspace 7
+bindsym Mod4+Shift+8 move container workspace 8
+bindsym Mod4+Shift+9 move container workspace 9
+bindsym Mod4+Shift+0 move container workspace 10
 
 # reload the configuration file
-$b $Mod+Shift+c reload
+bindsym Mod4+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-$b $Mod+Shift+r restart
+bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
-$b $Mod+Shift+e exit
+bindsym Mod4+Shift+e exit
 
 # Make the currently focused window a scratchpad
-$b $Mod+Shift+minus move scratchpad
+bindsym Mod4+Shift+minus move scratchpad
 
 # Show the first scratchpad window
-$b $Mod+minus scratchpad show
+bindsym Mod4+minus scratchpad show
 
 # Resize window (you can also use the mouse for that)
 mode "resize" {
-    $b Down     resize shrink height 5 px or 5 ppt
-    $b Up       resize grow   height 5 px or 5 ppt
-    $b Left     resize shrink width  5 px or 5 ppt
-    $b Right    resize grow   width  5 px or 5 ppt
+    bindsym Down     resize shrink height 5 px or 5 ppt
+    bindsym Up       resize grow   height 5 px or 5 ppt
+    bindsym Left     resize shrink width  5 px or 5 ppt
+    bindsym Right    resize grow   width  5 px or 5 ppt
 
     # back to normal: Escape
-    $b Escape mode "default"
+    bindsym Escape mode "default"
 }
 
-$b $Mod+r mode "resize"
+bindsym Mod4+r mode "resize"
 
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move_workspace" {
-    $b Left     move workspace to output left
-    $b Down     move workspace to output down
-    $b Up       move workspace to output up
-    $b Right    move workspace to output right
+    bindsym Left     move workspace to output left
+    bindsym Down     move workspace to output down
+    bindsym Up       move workspace to output up
+    bindsym Right    move workspace to output right
 
     # back to normal: Escape
-    $b Escape mode "default"
+    bindsym Escape mode "default"
 }
 
-$b $Mod+o mode "move_workspace"
+bindsym Mod4+o mode "move_workspace"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
