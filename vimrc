@@ -36,9 +36,8 @@ set list listchars=tab:.\ ,trail:.
 " Set encoding to utf-8
 set fileencoding=utf-8 encoding=utf-8
 
-" Defines tab and shift width
-set expandtab
-set tabstop=4 softtabstop=4 shiftwidth=4
+" Tabs are spaces
+set tabstop=4 shiftwidth=4 expandtab
 
 " More powerful backspacing
 set backspace=indent,eol,start
