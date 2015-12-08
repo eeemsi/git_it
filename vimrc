@@ -7,6 +7,9 @@ set nomodeline
 " Set the title for the terminal
 set title
 
+" No beep
+set noerrorbells visualbell t_vb=
+
 " Always show laststatus
 set laststatus=2
 
