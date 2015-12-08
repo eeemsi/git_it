@@ -8,7 +8,7 @@ set nomodeline
 set title
 
 " No beep
-set noerrorbells visualbell t_vb=
+set noerrorbells novisualbell t_vb=
 
 " Always show laststatus
 set laststatus=2
