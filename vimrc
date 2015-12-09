@@ -23,9 +23,7 @@ syntax on
 colorscheme stingray_reduced
 
 " hybrid line numbers
-if (v:version >= 704)
-    set number relativenumber
-endif
+set number relativenumber
 
 " For searching
 set ignorecase incsearch hlsearch
