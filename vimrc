@@ -10,11 +10,8 @@ set title
 " No beep
 set noerrorbells novisualbell t_vb=
 
-" Always show laststatus
-set laststatus=2
-
-" Always show the position of cursor
-set ruler
+" Always show laststatus and the position of cursor
+set laststatus=2 ruler
 
 " Enable syntax
 syntax on
