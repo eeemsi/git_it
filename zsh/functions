@@ -1,5 +1,0 @@
-# Create temporary directory and cd to it
-cdt () {
-    builtin cd "$(mktemp -d)"
-}
-

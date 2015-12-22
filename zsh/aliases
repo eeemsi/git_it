@@ -1,6 +1,9 @@
-# essential use of ls
+# Essential use of ls
 alias la='ls -hlFa --color'
 alias l='ls -hlF --color'
+
+# Create temporary directory and cd to it
+alias cdt='builtin cd "$(mktemp -d)"'
 
 # More comfortable aliases
 alias g='git'
