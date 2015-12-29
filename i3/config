@@ -5,16 +5,16 @@ assign [class="^chromium-browser$"] 2
 assign [class="^Iceweasel$"] 2
 
 # controling brightness
-bindsym --release XF86MonBrightnessUp    exec xbacklight -inc 2
-bindsym --release XF86MonBrightnessDown  exec xbacklight -dec 2
+bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
+bindsym --release XF86MonBrightnessDown  exec "xbacklight -dec 2"
 
 # controlling the audio
-bindsym --release XF86AudioRaiseVolume   exec amixer set Master 2%+ unmute
-bindsym --release XF86AudioLowerVolume   exec amixer set Master 2%- unmute
-bindsym --release XF86AudioMute          exec amixer set Master mute
+bindsym --release XF86AudioRaiseVolume   exec "amixer set Master 2%+ unmute"
+bindsym --release XF86AudioLowerVolume   exec "amixer set Master 2%- unmute"
+bindsym --release XF86AudioMute          exec "amixer set Master mute"
 
 # fire up a screenlocker
-bindsym --release XF86Launch1 exec i3lock -e -f -c 000000
+bindsym --release XF86Launch1 exec "i3lock -e -f -c 000000"
 
 # define the style for the borders
 # class                 border  backgr  text    indicator
@@ -32,13 +32,13 @@ font pango:monospace 7.5
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec urxvtc
+bindsym Mod4+Return exec "urxvtc"
 
 # kill focused window
 bindsym Mod4+Shift+q kill
 
 # start a program launcher
-bindsym Mod4+p exec dmenu_run -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=7.5'
+bindsym Mod4+p exec "dmenu_run -nb \#000 -sb \#000 -sf \#00bfd5 -fn 'monospace:size=7.5'"
 
 # change focus
 bindsym Mod4+Left   focus left
