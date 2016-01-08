@@ -7,8 +7,22 @@ set_termtitle() {
 
     [ "$a" = "zsh" ] && { a=${(%)${:-%~}} }
 
-    # plain xterm title
-    print -rn -- $'\e'"]2;${(%)${:-%m}}: $a"$'\a'
+    case $TERM in
+    screen)
+        # plain xterm title
+        print -rn -- $'\e'"]2;${(%)${:-%m}}: $a"$'\a'
+
+        # screen title (in ^A")
+        print -rn -- $'\e'"k$a"$'\e'$'\\'
+
+        # screen location
+        print -rn -- $'\e'"_${(%)${:-%m}}: $a"$'\e'$'\\'
+    ;;
+    xterm*|rxvt)
+        # plain xterm title
+        print -rn -- $'\e'"]2;${(%)${:-%m}}: $a"$'\a'
+    ;;
+    esac
 }
 
 my_prompt_precmd() {
@@ -19,11 +33,9 @@ my_prompt_preexec() {
     set_termtitle "$1"
 }
 
-if [[ "$TERM" == "rxvt-unicode" ]]; then
-    typeset -ga precmd_functions
-    precmd_functions+=my_prompt_precmd
+typeset -ga precmd_functions
+precmd_functions+=my_prompt_precmd
 
-    typeset -ga preexec_functions
-    preexec_functions+=my_prompt_preexec
-fi
+typeset -ga preexec_functions
+preexec_functions+=my_prompt_preexec
 
