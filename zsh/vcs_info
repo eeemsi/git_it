@@ -1,8 +1,8 @@
 # Enable vcs_info
 setopt PROMPT_SUBST
 
-# Specify the vcs
-zstyle ':vcs_info:*' enable git
+# Specify the vcs (:vcs_info:vcs-string:user-context:repo-root-name)
+zstyle ':vcs_info:git:' enable
 
 # Specify how it should be formatted
 zstyle ':vcs_info:*' formats "- %F{cyan}%s:%b%f"
