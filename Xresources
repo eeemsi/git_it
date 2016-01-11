@@ -13,6 +13,8 @@ URxvt.urgentOnBell: true
 
 URxvt.fading:       32
 
+Xcursor.size:       16
+
 *background:   #222222
 *foreground:   #ffffff
 
