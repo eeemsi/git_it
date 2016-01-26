@@ -4,11 +4,14 @@ set nocompatible
 " Security
 set nomodeline
 
+" Disable mouse input
+set mouse=
+
 " Set the title for the terminal
 set title
 
 " No beep
-set noerrorbells novisualbell t_vb=
+set noerrorbells visualbell t_vb=
 
 " Always show laststatus and the position of cursor
 set laststatus=2 ruler
