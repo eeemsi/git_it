@@ -12,9 +12,6 @@ hi LineNr       ctermfg=DarkGrey
 hi Normal       ctermfg=White
 hi NonText      ctermfg=DarkGrey
 
-hi ErrorMsg     ctermfg=Red
-hi WarningMsg   ctermfg=Yellow
-
 hi Statement    ctermfg=Cyan
 hi Comment      ctermfg=DarkGrey
 hi Constant     ctermfg=DarkCyan

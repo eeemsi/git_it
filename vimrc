@@ -1,4 +1,4 @@
-" Don’t ensure compatibility with vi at all cost
+" Do not ensure compatibility with vi at all cost
 set nocompatible
 
 " Security
