@@ -14,7 +14,7 @@ set title
 set noerrorbells visualbell t_vb=
 
 " Always show laststatus and the position of cursor
-set laststatus=2 ruler
+set laststatus=2
 
 " Enable syntax
 syntax on
