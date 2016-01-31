@@ -8,9 +8,9 @@ endif
 
 let g:colors_name="stingray"
 
-hi LineNr       ctermfg=Darkgrey
+hi LineNr       ctermfg=DarkGrey
 hi Normal       ctermfg=White
-hi NonText      ctermfg=DarkGray
+hi NonText      ctermfg=DarkGrey
 
 hi ErrorMsg     ctermfg=Red
 hi WarningMsg   ctermfg=Yellow
