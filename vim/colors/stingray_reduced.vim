@@ -8,22 +8,22 @@ endif
 
 let g:colors_name="stingray"
 
-hi LineNr       ctermfg=Darkgrey    ctermbg=None
-hi Normal       ctermfg=White       ctermbg=None
-hi NonText      ctermfg=DarkGray    ctermbg=None
+hi LineNr       ctermfg=Darkgrey
+hi Normal       ctermfg=White
+hi NonText      ctermfg=DarkGray
 
-hi ErrorMsg     ctermfg=Red         ctermbg=None
-hi WarningMsg   ctermfg=Yellow      ctermbg=None
+hi ErrorMsg     ctermfg=Red
+hi WarningMsg   ctermfg=Yellow
 
-hi Statement    ctermfg=Cyan        ctermbg=None
-hi Comment      ctermfg=DarkGrey    ctermbg=None
-hi Constant     ctermfg=DarkCyan    ctermbg=None
-hi Identifier   ctermfg=White       ctermbg=None
-hi Type         ctermfg=DarkCyan    ctermbg=None
-hi String       ctermfg=Cyan        ctermbg=None
-hi Boolean      ctermfg=Cyan        ctermbg=None
-hi Number       ctermfg=Cyan        ctermbg=None
-hi Folded       ctermfg=DarkCyan    ctermbg=None    cterm=underline term=none
-hi Special      ctermfg=Grey        ctermbg=None
-hi PreProc      ctermfg=Grey        ctermbg=None
-hi VertSplit    ctermfg=White       ctermbg=None
+hi Statement    ctermfg=Cyan
+hi Comment      ctermfg=DarkGrey
+hi Constant     ctermfg=DarkCyan
+hi Identifier   ctermfg=White
+hi Type         ctermfg=DarkCyan
+hi String       ctermfg=Cyan
+hi Boolean      ctermfg=Cyan
+hi Number       ctermfg=Cyan
+hi Folded       ctermfg=DarkCyan    cterm=underline
+hi Special      ctermfg=Grey
+hi PreProc      ctermfg=Grey
+hi VertSplit    ctermfg=White
