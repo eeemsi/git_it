@@ -21,6 +21,9 @@ export LC_MESSAGES=C
 # Set the short date to YYYY-MM-DD
 export LC_TIME=en_DK.UTF-8
 
+# Simple black background
+xsetroot -solid black
+
 # Start urxvtd
 urxvtd -q -f -o &
 
