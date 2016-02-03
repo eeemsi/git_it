@@ -1,6 +1,6 @@
 # Essential use of ls
-alias la='ls -hlFa --color'
-alias l='ls -hlF --color'
+alias la='ls -hlFNa --color'
+alias l='ls -hlFN --color'
 
 # Create temporary directory and cd to it
 alias cdt='builtin cd "$(mktemp -d)"'
