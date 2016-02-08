@@ -18,34 +18,35 @@ Xcursor.size:       16
 *background:   #222222
 *foreground:   #ffffff
 
-!black
+!black darkgrey
 *color0:   #4d4d4d
 *color8:   #6F6F6F
 
-!white
-*color7:   #e3e3e3
-*color15:  #f1f1f1
-
-!red
+!darkred red
 *color1:   #e41b17
 *color9:   #ef2929
 
-!green
+!darkgreen green
 *color2:   #93d44f
 *color10:  #beed5f
 
-!yellow
+!darkyellow yellow
 *color3:   #efff40
 *color11:  #fce94f
 
-!blue
+!darkblue blue
 *color4:   #3465A4
 *color12:  #6495ed
 
-!magenta
+!darkmagenta magenta
 *color5:   #ff6600
 *color13:  #f57900
 
-!cyan
+!darkcyan cyan
 *color6:   #aadde3
 *color14:  #aadde3
+
+!lightgrey white
+*color7:   #e3e3e3
+*color15:  #f1f1f1
+
