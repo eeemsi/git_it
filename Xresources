@@ -1,19 +1,19 @@
 URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 
-URxvt.scrollBar:    false
-URxvt.jumpScroll:   true
-URxvt.saveLines:    2048
 URxvt.cursorBlink:  false
 URxvt.cursorColor:  #ff9900
 URxvt.colorUL:      #999999
 
 URxvt.visualBell:   false
 URxvt.urgentOnBell: true
-
 URxvt.fading:       32
 
 Xcursor.size:       16
+
+*scrollBar:    false
+*saveLines:    2048
+*jumpScroll:   true
 
 *background:   #222222
 *foreground:   #ffffff
