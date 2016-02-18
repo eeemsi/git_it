@@ -33,4 +33,5 @@ ulimit -c unlimited
 # Start the windowmanager
 echo "---" >> ~/.i3/logfile
 i3 -V -d all >> ~/.i3/logfile
+#i3 --shmlog-size=0
 
