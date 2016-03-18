@@ -13,8 +13,8 @@ set title
 " No beep
 set noerrorbells visualbell t_vb=
 
-" Always show laststatus and the position of cursor
-set laststatus=2
+" Always show tabline
+set showtabline=2
 
 " Enable syntax
 syntax on
