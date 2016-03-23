@@ -1,7 +1,7 @@
 # i3 config file (v4)
 
 # start applications on a certain workspace
-assign [class="^chromium-browser$"] 2
+assign [class="^chromium$"] 2
 assign [class="^Iceweasel$"] 2
 
 # controling brightness
