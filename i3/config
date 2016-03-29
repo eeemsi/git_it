@@ -2,7 +2,7 @@
 
 # start applications on a certain workspace
 assign [class="^chromium$"] 2
-assign [class="^Iceweasel$"] 2
+assign [class="^Firefox$"] 2
 
 # controling brightness
 bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
