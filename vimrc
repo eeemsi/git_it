@@ -22,6 +22,10 @@ syntax on
 " Defines the colorscheme that should be used
 colorscheme stingray_reduced
 
+" 80 characters visible indicator
+highlight ColorColumn ctermbg=none ctermfg=red
+set colorcolumn=80
+
 " hybrid line numbers
 set number relativenumber
 
@@ -46,7 +50,7 @@ set showmatch
 " Do not create those annoying backup swap files
 set nobackup nowritebackup noswapfile
 
-" Enhanced mode for command-line completion and enable listing possible completions when completing file names
+" Enhanced command-line completion
 set wildmenu wildmode=longest:full
 
 " Automatically remove trailing whitespace
