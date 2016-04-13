@@ -13,4 +13,4 @@
     default = simple
 
 [commit]
-    template = .gittemplate
+    template = ~/.gittemplate
