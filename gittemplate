@@ -12,7 +12,7 @@
 # * refactor (refactoring production code)
 # * test (adding missing tests, refactoring tests; no production code change)
 # * chore (updating grunt tasks etc; no production code change)
-# Scope is just the scope of the change. Something like (admin) or (teacher).
+# Scope can be anything from file to component or empty (much changes)
 # Subject should use impertivite tone and say what you did.
 # The body should go into detail about changes made.
 # The footer should contain any JIRA (or other tool) issue references or actions.
