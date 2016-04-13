@@ -16,7 +16,7 @@
 # Subject should use impertivite tone and say what you did.
 # The body should go into detail about changes made.
 # The footer should contain any JIRA (or other tool) issue references or actions.
-# Keyword should be one of the follwing:
+# Keyword should be one of the following:
 # * refs (refers to the given issue - does not fix or close it)
 # * fixes (the given issue is fixed)
 # * closes (the given issue is cloesd - might be new component, feature, ...)
