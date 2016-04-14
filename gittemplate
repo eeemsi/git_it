@@ -5,6 +5,7 @@
 # <footer> (Keyword #issue)
 
 # Type should be one of the following:
+# * new (new component, file, ...)
 # * feat (new feature)
 # * fix (bug fix)
 # * docs (changes to documentation)
