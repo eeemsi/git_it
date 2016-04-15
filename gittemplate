@@ -1,4 +1,4 @@
-# Type(<scope>): <subject>
+# Type (<scope>): <subject>
 
 # <body>
 
@@ -6,6 +6,7 @@
 
 # Type should be one of the following:
 # * new (new component, file, ...)
+# * del (delete component, file, ...)
 # * feat (new feature)
 # * fix (bug fix)
 # * docs (changes to documentation)
