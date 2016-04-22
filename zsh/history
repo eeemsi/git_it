@@ -15,6 +15,9 @@ setopt SHARE_HISTORY
 # Make cd push the old directory onto the directory stack
 setopt AUTO_PUSHD
 
+# The maximum size of the directory stack (no limit by default)
+DIRSTACKSIZE=8
+
 # Do not push copies of the directory onto the directory stack
 setopt PUSHD_IGNORE_DUPS
 
