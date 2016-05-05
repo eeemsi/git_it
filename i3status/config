@@ -32,7 +32,7 @@ ethernet eth0 {
 }
 
 battery 0 {
-    format                   = "%status %percentage %remaining"
+    format                   = "⚡ %status %percentage %remaining"
     integer_battery_capacity = true
 }
 
