@@ -18,9 +18,7 @@ set showtabline=2
 
 " Enable syntax
 syntax on
-
-" Defines the colorscheme that should be used
-colorscheme stingray_reduced
+set background=dark
 
 " 80 characters visible indicator
 highlight ColorColumn ctermbg=none ctermfg=red
@@ -28,6 +26,7 @@ set colorcolumn=80
 
 " hybrid line numbers
 set number relativenumber
+hi LineNr ctermfg=DarkGrey
 
 " For searching
 set ignorecase incsearch hlsearch
