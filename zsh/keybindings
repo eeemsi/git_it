@@ -3,19 +3,12 @@ export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
 
 # Use emacs style for input keys by default
 bindkey -e
-bindkey '^[[A'      up-line-or-search   # cursor up
-bindkey '^[[B'      down-line-or-search # cursor down
+bindkey '^[[A'  up-line-or-search   # cursor up
+bindkey '^[[B'  down-line-or-search # cursor down
 
-bindkey '^[[3~'     delete-char         # delete characterwise
-bindkey '^[[7~'     beginning-of-line   # home
-bindkey '^[[8~'     end-of-line         # end
+bindkey '^F'    forward-word        # ctrl cursor right
+bindkey '^B'    backward-word       # ctrl cursor left
 
-bindkey '^[Oc'      forward-word        # ctrl cursor right
-bindkey '^[Od'      backward-word       # ctrl cursor left
-
-bindkey '^[[1;5C'   forward-word        # ctrl cursor right
-bindkey '^[[1;5D'   backward-word       # ctrl cursor left
-
-bindkey ' '         magic-space         # perform history expansion
-                                        # and insert a space into the buffer
+bindkey ' '     magic-space         # perform history expansion
+                                    # and insert a space into the buffer
 
