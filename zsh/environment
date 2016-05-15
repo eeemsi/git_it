@@ -14,7 +14,7 @@ export EDITOR='vim'
 export PAGER='less -FXR'
 
 # Expand path to /usr/sbin and /sbin
-export PATH=~/.bin:$PATH:/usr/sbin:/sbin
+export PATH=$PATH:/usr/sbin:/sbin
 
 # Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
 REPORTTIME=10
