@@ -3,8 +3,8 @@ export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
 
 # Use emacs style for input keys by default
 bindkey -e
-bindkey '^[[A'  up-line-or-search   # cursor up
-bindkey '^[[B'  down-line-or-search # cursor down
+bindkey '^P'  up-line-or-search   # cursor up
+bindkey '^N'  down-line-or-search # cursor down
 
 bindkey '^F'    forward-word        # ctrl cursor right
 bindkey '^B'    backward-word       # ctrl cursor left
