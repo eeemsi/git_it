@@ -16,7 +16,7 @@ alias ..='cd ..'
 
 # Nicer output of grep
 alias grep='grep --color=always --initial-tab'
-alias rgrep='grep --color=always --initial-tab'
+alias rgrep='rgrep --color=always --initial-tab'
 
 # Required to pipe colors to less
 alias less='less -FXR'
