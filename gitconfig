@@ -6,9 +6,6 @@
     date = iso
     decorate = full
 
-[format]
-    outputDirectory = /tmp
-
 [push]
     default = simple
 
