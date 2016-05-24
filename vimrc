@@ -13,9 +13,6 @@ set title
 " No beep
 set noerrorbells visualbell t_vb=
 
-" Always show tabline
-set showtabline=2
-
 " Enable syntax
 syntax on
 set background=dark
