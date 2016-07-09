@@ -1,11 +1,7 @@
-# Essential use of ls
-alias la='ls -hlFNa --color'
-alias l='ls -hlFN --color'
-
 # Create temporary directory and cd to it
 alias cdt='builtin cd "$(mktemp -d)"'
 
-# More comfortable aliases
+# Comfortable aliases
 alias g='git'
 alias gst='g status'
 alias glog='g log --graph --stat --decorate'
@@ -14,13 +10,15 @@ alias gc='g commit'
 
 alias ..='cd ..'
 
+alias la='ls -hFNa'
+alias l='ls -hFN'
+
+alias cp='rsync -ahP'
+
 # Nicer output of grep
 alias grep='grep --color=always --initial-tab'
 alias rgrep='rgrep --color=always --initial-tab'
 
 # Required to pipe colors to less
 alias less='less -FXR'
-
-# Alias cp to rsync
-alias cp='rsync -ahP'
 
