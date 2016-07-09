@@ -5,7 +5,7 @@ setopt PROMPT_SUBST
 zstyle ':vcs_info:git:' enable
 
 # Specify how it should be formatted
-zstyle ':vcs_info:*' formats "- %F{cyan}%s:%b%f"
+zstyle ':vcs_info:*' formats "%b"
 
 precmd() {
     vcs_info
