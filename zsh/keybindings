@@ -1,6 +1,3 @@
-# Increasing the comfort for forward-word and backward-word
-export WORDCHARS='.,*?_-[]~=&;!#$%^(){}<>'
-
 # Use emacs style for input keys by default
 bindkey -e
 bindkey '^P' up-line-or-search
