@@ -1,5 +1,3 @@
-# i3 config file (v4)
-
 # start applications on a certain workspace
 assign [class="^chromium$"] 2
 assign [class="^Firefox$"] 2
