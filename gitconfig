@@ -2,11 +2,5 @@
     name = me
     email = me@anywhere.net
 
-[log]
-    date = iso
-
-[push]
-    default = simple
-
 [commit]
     template = ~/.gittemplate
