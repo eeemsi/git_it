@@ -1,3 +1,3 @@
 # Defines the prompt
-PS1=$'%B%m%f%b %~ %F{green}${vcs_info_msg_0_}%f \n> %F{green}%#%f '
+PS1=$'%B%m%f%b %~ %F{green}${vcs_info_msg_0_}%f \n> %F{green}%%%f '
 
