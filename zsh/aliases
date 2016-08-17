@@ -16,8 +16,8 @@ alias l='ls -hFN'
 alias cp='rsync -ahP'
 
 # Nicer output of grep
-alias grep='grep --color=always --initial-tab'
-alias rgrep='rgrep --color=always --initial-tab'
+alias grep='grep --color=auto --initial-tab'
+alias rgrep='rgrep --color=auto --initial-tab'
 
 # Required to pipe colors to less
 alias less='less -FXR'
