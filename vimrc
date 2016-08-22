@@ -14,7 +14,7 @@ set title
 set noerrorbells visualbell t_vb=
 
 " Enable syntax
-syntax on
+syntax enable
 set background=dark
 
 " 80 characters visible indicator
