@@ -1,7 +1,7 @@
 " Do not ensure compatibility with vi at all cost
 set nocompatible
 
-" Security
+" Ignore modelines completely
 set nomodeline
 
 " Disable mouse input
