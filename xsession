@@ -4,9 +4,6 @@ xset b off s off -dpms
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
 
-# Define intensity of the backlight
-#xbacklight -set 15
-
 # Disable autorepeat for un/mute
 xset -r 121
 
