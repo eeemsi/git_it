@@ -1,9 +1,6 @@
 # Disable audio bell, screensaver and dpms
 xset b off s off -dpms
 
-# Define primary output
-xrandr --output LVDS1 --primary
-
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
 
