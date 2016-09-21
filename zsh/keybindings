@@ -1,10 +1,7 @@
 # Use emacs style for input keys by default
 bindkey -e
-bindkey '^P' up-line-or-search
-bindkey '^N' down-line-or-search
-
-bindkey '^F' forward-word
-bindkey '^B' backward-word
+bindkey "${key[Up]}" up-line-or-search
+bindkey "${key[Down]}" down-line-or-search
 
 # perform history expansion and insert a space into the buffer
 bindkey ' ' magic-space
