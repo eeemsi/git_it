@@ -24,11 +24,11 @@ xsetroot -solid black
 # Start urxvtd
 urxvtd -q -f -o &
 
-# Enable core dumps in case something goes wrong
-ulimit -c unlimited
+i3 --shmlog-size=0
 
-# Start the windowmanager
-echo "---" >> ~/.i3/logfile
-i3 -V -d all >> ~/.i3/logfile
-#i3 --shmlog-size=0
+# DEBUG
+# echo "---" >> ~/.i3/logfile
+# i3 -V -d all >> ~/.i3/logfile
+# Enable core dumps in case something goes wrong
+# ulimit -c unlimited
 
