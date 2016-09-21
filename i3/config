@@ -22,9 +22,6 @@ client.focused_inactive #5f676a #222222 #ffffff #000000
 
 new_window none
 
-# invert colors (brighter environments)
-bindsym Mod4+i exec "xcalib -a -i"
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 7.5
