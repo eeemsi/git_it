@@ -11,7 +11,7 @@ set mouse=
 set title
 
 " No beep
-set noerrorbells visualbell t_vb=
+set belloff=all
 
 " Enable syntax
 syntax enable
