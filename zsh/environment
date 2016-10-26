@@ -28,3 +28,5 @@ watch=(notme, root)
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
 
+# Disable flow-control with ^S and ^Q
+setopt noflowcontrol
