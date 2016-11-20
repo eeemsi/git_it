@@ -1,6 +1,5 @@
-autoload -Uz compinit vcs_info
-compinit
+autoload -Uz compinit vcs_info; compinit
 
-for f in $( find ~/.zsh/ -type f ); do
+for f in $HOME/.zsh/*; do
   source "$f"
 done
