@@ -21,8 +21,13 @@ xsetroot -solid black
 # Start urxvtd
 urxvtd -q -f -o &
 
-i3 --shmlog-size=0
+xbattbar -c -t 1 -i green &
+redshift -c ${HOME}/.config/redshift/config &
 
+herbstluftwm
+
+#i3 --shmlog-size=0
+#
 # DEBUG
 # echo "---" >> ~/.i3/logfile
 # i3 -V -d all >> ~/.i3/logfile
