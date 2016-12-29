@@ -91,7 +91,7 @@ hc keybind $Mod-Shift-Tab cycle_all -1
 hc keybind $Mod-c         cycle
 
 # theme
-hc set frame_gap  4
+hc set frame_gap  2
 hc set window_gap 0
 
 hc set frame_border_width  0
