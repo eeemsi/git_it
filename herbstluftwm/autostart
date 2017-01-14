@@ -20,7 +20,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 
 hc keybind $Mod-Return spawn ${TERMINAL:-urxvtc}
-hc keybind $Mod-d spawn dmenu_run  -nb black -sb black -sf red -fn 'monospace:size=7.5'
+hc keybind $Mod-d spawn shellex
 
 # screen lock
 hc keybind XF86Launch1 spawn i3lock -e -f -c 000000
