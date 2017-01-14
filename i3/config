@@ -88,8 +88,8 @@ bindsym Mod4+8 workspace 8
 bindsym Mod4+9 workspace 9
 bindsym Mod4+0 workspace 10
 
-bindsym Mod4+Ctrl+Left  workspace prev
-bindsym Mod4+Ctrl+Right workspace next
+bindsym Mod4+period workspace prev
+bindsym Mod4+comma  workspace next
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container workspace 1
