@@ -1,6 +1,18 @@
+# name workspaces
+set $ws1  1:一
+set $ws2  2:二
+set $ws3  3:三
+set $ws4  4:四
+set $ws5  5:五
+set $ws6  6:六
+set $ws7  7:七
+set $ws8  8:八
+set $ws9  9:九
+set $ws10 10:十
+
 # start applications on a certain workspace
-assign [class="^chromium$"] 2
-assign [class="^Firefox$"] 2
+assign [class="^chromium$"] $ws2
+assign [class="^Firefox$"] $ws2
 
 # controling brightness
 bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
@@ -77,31 +89,31 @@ bindsym Mod4+a focus parent
 bindsym Mod4+d focus child
 
 # switch to workspace
-bindsym Mod4+1 workspace 1
-bindsym Mod4+2 workspace 2
-bindsym Mod4+3 workspace 3
-bindsym Mod4+4 workspace 4
-bindsym Mod4+5 workspace 5
-bindsym Mod4+6 workspace 6
-bindsym Mod4+7 workspace 7
-bindsym Mod4+8 workspace 8
-bindsym Mod4+9 workspace 9
-bindsym Mod4+0 workspace 10
+bindsym Mod4+1 workspace $ws1
+bindsym Mod4+2 workspace $ws2
+bindsym Mod4+3 workspace $ws3
+bindsym Mod4+4 workspace $ws4
+bindsym Mod4+5 workspace $ws5
+bindsym Mod4+6 workspace $ws6
+bindsym Mod4+7 workspace $ws7
+bindsym Mod4+8 workspace $ws8
+bindsym Mod4+9 workspace $ws9
+bindsym Mod4+0 workspace $ws10
 
 bindsym Mod4+period workspace prev
 bindsym Mod4+comma  workspace next
 
 # move focused container to workspace
-bindsym Mod4+Shift+1 move container workspace 1
-bindsym Mod4+Shift+2 move container workspace 2
-bindsym Mod4+Shift+3 move container workspace 3
-bindsym Mod4+Shift+4 move container workspace 4
-bindsym Mod4+Shift+5 move container workspace 5
-bindsym Mod4+Shift+6 move container workspace 6
-bindsym Mod4+Shift+7 move container workspace 7
-bindsym Mod4+Shift+8 move container workspace 8
-bindsym Mod4+Shift+9 move container workspace 9
-bindsym Mod4+Shift+0 move container workspace 10
+bindsym Mod4+Shift+1 move container workspace $ws1
+bindsym Mod4+Shift+2 move container workspace $ws2
+bindsym Mod4+Shift+3 move container workspace $ws3
+bindsym Mod4+Shift+4 move container workspace $ws4
+bindsym Mod4+Shift+5 move container workspace $ws5
+bindsym Mod4+Shift+6 move container workspace $ws6
+bindsym Mod4+Shift+7 move container workspace $ws7
+bindsym Mod4+Shift+8 move container workspace $ws8
+bindsym Mod4+Shift+9 move container workspace $ws9
+bindsym Mod4+Shift+0 move container workspace $ws10
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -145,9 +157,10 @@ bindsym Mod4+o mode "move_workspace"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    tray_output     none
-    position        top
-    status_command  i3status
+    strip_workspace_numbers yes
+    tray_output             none
+    position                top
+    status_command          i3status
 
     colors {
         #colorclass         border  backgr  text
