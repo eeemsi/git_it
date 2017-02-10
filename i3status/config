@@ -8,38 +8,39 @@ general {
 
 order += "ipv6"
 order += "disk /home"
-order += "wireless wlan0"
-order += "ethernet eth0"
-order += "battery 0"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
 order += "volume master"
 order += "cpu_temperature 0"
 order += "load"
-order += "time"
+order += "tztime utc"
 
 ipv6 {
     format_up   = "%ip"
     format_down = "IPv6"
 }
 
-wireless wlan0 {
+wireless _first_ {
     format_up   = "W: (%quality at %essid) %ip"
     format_down = "W:"
 }
 
-ethernet eth0 {
+ethernet _first_ {
     format_up   = "E: %ip"
     format_down = "E:"
 }
 
-battery 0 {
+battery all {
     format                   = "⚡ %status %percentage %remaining"
     integer_battery_capacity = true
 }
 
 volume master {}
 
-time {
+tztime utc {
     format      = "%V %a %Y-%m-%d %H:%M"
+    timezone    = "utc"
 }
 
 load {
