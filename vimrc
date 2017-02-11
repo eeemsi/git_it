@@ -22,7 +22,7 @@ highlight ColorColumn ctermbg=none ctermfg=red
 set colorcolumn=80
 
 " Define color for 'visual block'
-highlight Visual term=reverse ctermbg=darkgrey
+highlight Visual term=reverse ctermbg=black
 
 " For searching
 set ignorecase incsearch hlsearch
