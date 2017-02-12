@@ -13,9 +13,10 @@ set title laststatus=2
 " No beep
 set belloff=all
 
-" Enable syntax
+" Enable syntax highlighting
 syntax enable
 set background=dark
+colorscheme elflord
 
 " 80 characters visible indicator
 highlight ColorColumn ctermbg=none ctermfg=red
