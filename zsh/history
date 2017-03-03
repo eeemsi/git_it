@@ -9,6 +9,9 @@ setopt HIST_REDUCE_BLANKS
 # If a new command duplicates an older one in the history list remove the older one
 setopt HIST_IGNORE_ALL_DUPS
 
+# When writing out the history file, older commands that duplicate newer ones are omitted
+setopt HIST_SAVE_NO_DUPS
+
 # Allow sharing and appending to one hist file
 setopt SHARE_HISTORY
 
