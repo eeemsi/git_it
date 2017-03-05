@@ -11,8 +11,8 @@ set $ws9  9:九
 set $ws10 10:十
 
 # start applications on a certain workspace
-assign [class="^chromium$"] $ws2
-assign [class="^Firefox$"] $ws2
+assign [class="^chromium$"] → $ws2
+assign [class="^Firefox$"]  → $ws2
 
 # controling brightness
 bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
@@ -31,6 +31,7 @@ bindsym --release XF86Launch1 exec "i3lock -e -f -c 000000"
 client.focused          #00bfd5 #222222 #00bfd5 #00bfd5 #00bfd5
 client.urgent           #cc3333 #222222 #cc3333 #000000 #cc3333
 client.focused_inactive #5f676a #222222 #ffffff #5f676a #5f676a
+
 new_window none
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -162,7 +163,7 @@ bar {
     status_command          i3status
 
     colors {
-        #colorclass         border  backgr  text
+        # <colorclass> <border> <background> <text>
         focused_workspace   #00bfd5 #222222 #00bfd5
         urgent_workspace    #cc3333 #222222 #cc3333
     }
