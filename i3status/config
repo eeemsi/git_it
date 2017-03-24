@@ -1,6 +1,6 @@
 general {
     output_format   = "i3bar"
-    interval        = 2
+    interval        = 5
     colors          = true
     color_good      = "#00bfd5"
     color_bad       = "#cc3333"
@@ -17,8 +17,7 @@ order += "load"
 order += "tztime utc"
 
 ipv6 {
-    format_up   = "%ip"
-    format_down = "IPv6"
+    format_down = ""
 }
 
 wireless _first_ {
@@ -32,7 +31,7 @@ ethernet _first_ {
 }
 
 battery all {
-    format                   = "⚡ %status %percentage %remaining"
+    format                   = "%status %percentage %remaining"
     format_down              = ""
     integer_battery_capacity = true
 }
@@ -40,12 +39,12 @@ battery all {
 volume master {}
 
 tztime utc {
-    format      = "%V %a %Y-%m-%d %H:%M"
+    format      = "%Y-%m-%d %H:%M"
     timezone    = "utc"
 }
 
 load {
-    format          = "%1min %5min %15min"
+    format          = "%1min"
     max_threshold   = "2"
 }
 
