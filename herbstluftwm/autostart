@@ -105,6 +105,9 @@ hc set window_border_urgent_color '#cc3333'
 # rules
 hc unrule -F
 
+hc rule class="Firefox-esr" --tag=2 --focus=off
+hc rule class="Chromium"    --tag=2 --focus=off
+
 # focus new clients
 hc rule focus=on
 
