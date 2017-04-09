@@ -130,17 +130,10 @@ bindsym Mod4+Shift+minus move scratchpad
 bindsym Mod4+minus scratchpad show
 
 # Resize window (you can also use the mouse for that)
-mode "resize" {
-    bindsym Down     resize shrink height 5 px or 5 ppt
-    bindsym Up       resize grow   height 5 px or 5 ppt
-    bindsym Left     resize shrink width  5 px or 5 ppt
-    bindsym Right    resize grow   width  5 px or 5 ppt
-
-    # back to normal: Escape
-    bindsym Escape mode "default"
-}
-
-bindsym Mod4+r mode "resize"
+bindsym Mod4+Ctrl+Down     resize shrink height 5 px or 5 ppt
+bindsym Mod4+Ctrl+Up       resize grow   height 5 px or 5 ppt
+bindsym Mod4+Ctrl+Left     resize shrink width  5 px or 5 ppt
+bindsym Mod4+Ctrl+Right    resize grow   width  5 px or 5 ppt
 
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move_workspace" {
