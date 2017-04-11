@@ -22,12 +22,12 @@ ipv6 {
 
 wireless _first_ {
     format_up   = "W: (%quality at %essid) %ip"
-    format_down = "W:"
+    format_down = ""
 }
 
 ethernet _first_ {
     format_up   = "E: %ip"
-    format_down = "E:"
+    format_down = ""
 }
 
 battery all {
