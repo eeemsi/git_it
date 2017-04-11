@@ -1,5 +1,5 @@
 # Create temporary directory and cd to it
-alias cdt='builtin cd "$(mktemp -d)"'
+alias cdt='builtin cd $(mktemp -d)'
 
 # Comfortable aliases
 alias g='git'
