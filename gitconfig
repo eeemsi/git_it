@@ -4,3 +4,7 @@
 
 [commit]
     template = ~/.gittemplate
+
+[status]
+    short = true
+    branch = true
