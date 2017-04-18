@@ -1,2 +1,2 @@
-Dpkg::Progress-Fancy "0;
+Dpkg::Progress-Fancy "0";
 APT::Color "0";
