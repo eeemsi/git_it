@@ -7,6 +7,9 @@ Xft.autohint:   false
 Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
 
+URxvt.font: xft:Bitstream Vera Sans Mono:size=8
+URxvt.letterSpace: -1
+
 !rxvt-unicode specific
 URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
