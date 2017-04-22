@@ -4,7 +4,7 @@ alias cdt='builtin cd $(mktemp -d)'
 # Comfortable aliases
 alias g='git'
 alias gst='g status'
-alias glog='g log --oneline --decorate --graph'
+alias glog='g log --pretty=format:"%C(auto)%h %C(auto)%d %s, %C(black)%ar%Creset" --graph'
 alias gd='g diff'
 alias gc='g commit'
 
