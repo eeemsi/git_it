@@ -1,3 +1,6 @@
+# compctl may disappear in the future
+zstyle ':completion:*' use-compctl false
+
 # List of non-alphanumeric characters considered part of a word
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
