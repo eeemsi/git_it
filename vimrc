@@ -7,8 +7,8 @@ set nomodeline
 " Disable mouse input
 set mouse=
 
-" Set the title for the terminal, always display status line
-set title laststatus=2
+" Set the title for the terminal
+set title
 
 " No beep
 set belloff=all
