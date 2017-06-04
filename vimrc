@@ -4,7 +4,7 @@ set nocompatible
 " Ignore modelines completely
 set nomodeline
 
-" Disable mouse input
+" Disable mouse usage in all modes
 set mouse=
 
 " Set the title for the terminal
