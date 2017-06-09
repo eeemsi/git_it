@@ -1,6 +1,3 @@
 [user]
     name = me
     email = me@anywhere.net
-
-[commit]
-    template = ~/.gittemplate
