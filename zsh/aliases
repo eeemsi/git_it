@@ -20,5 +20,5 @@ alias grep='grep --color=auto --initial-tab'
 alias rgrep='rgrep --color=auto --initial-tab'
 
 # Required to pipe colors to less
-alias less='less -FXR'
+alias less='less -XR'
 
