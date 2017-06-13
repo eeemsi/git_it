@@ -1,3 +1,6 @@
+# export TZ
+export TZ=:/etc/localtime
+
 # Export language
 unset LC_ALL
 export LANG=en_US.UTF-8
