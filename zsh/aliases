@@ -13,7 +13,7 @@ alias ..='cd ..'
 alias la='ls -hFNa'
 alias l='ls -hFN'
 
-alias cp='rsync -ahP'
+alias cp='cp -v'
 
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
