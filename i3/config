@@ -130,10 +130,11 @@ bindsym Mod4+Shift+minus move scratchpad
 bindsym Mod4+minus scratchpad show
 
 # Resize window (you can also use the mouse for that)
-bindsym Mod4+Ctrl+Down     resize shrink height 5 px or 5 ppt
-bindsym Mod4+Ctrl+Up       resize grow   height 5 px or 5 ppt
-bindsym Mod4+Ctrl+Left     resize shrink width  5 px or 5 ppt
-bindsym Mod4+Ctrl+Right    resize grow   width  5 px or 5 ppt
+bindsym Mod4+Ctrl+Left  resize shrink width  5 px or 5 ppt
+bindsym Mod4+Ctrl+Down  resize grow   height 5 px or 5 ppt
+bindsym Mod4+Ctrl+Up    resize shrink height 5 px or 5 ppt
+bindsym Mod4+Ctrl+Right resize grow   width  5 px or 5 ppt
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
