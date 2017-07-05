@@ -1,1 +1,1 @@
-PROMPT="> %F{green}%%%f "
+PROMPT="%F{green}▪%f "
