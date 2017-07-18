@@ -31,7 +31,7 @@ urxvtd -q -f -o &
 redshift -c ${HOME}/.config/redshift/config &
 
 # Start window manager
-i3 --shmlog-size=0
+i3
 
 #
 # DEBUG
