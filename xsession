@@ -32,11 +32,3 @@ redshift -c ${HOME}/.config/redshift/config &
 
 # Start window manager
 i3
-
-#
-# DEBUG
-# echo "---" >> ~/.i3/logfile
-# i3 -V -d all >> ~/.i3/logfile
-# Enable core dumps in case something goes wrong
-# ulimit -c unlimited
-
