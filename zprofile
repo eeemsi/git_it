@@ -6,5 +6,5 @@ fi
 
 # Execute startx when the session is on tty1 and there is a display
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx
+    exec startx ${HOME}/.xsession
 fi
