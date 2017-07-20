@@ -14,7 +14,6 @@ URxvt.letterSpace: -1
 URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 URxvt.urgentOnBell: true
-URxvt.fading:       32
 
 !general setting
 *cursorBlink:  false

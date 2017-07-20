@@ -22,10 +22,17 @@ export LC_TIME=en_DK.UTF-8
 xrdb -load ${HOME}/.Xresources
 
 # Simple black background
-xsetroot -solid black
+hsetroot -solid '#000000'
 
 # Start urxvtd
 urxvtd -q -f -o &
+
+# start compton
+compton --backend glx \
+    --glx-use-copysubbuffermesa \
+    --use-ewmh-active-win \
+    --inactive-dim 0.25 \
+    --daemon
 
 # Start redshift
 redshift -c ${HOME}/.config/redshift/config &
