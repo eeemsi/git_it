@@ -10,8 +10,8 @@ alias gc='g commit'
 
 alias ..='cd ..'
 
-alias la='ls -hFNa'
-alias l='ls -hFN'
+alias la='ls -hFa'
+alias l='ls -hF'
 
 alias cp='cp -v'
 
