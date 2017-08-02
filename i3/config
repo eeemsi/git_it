@@ -152,7 +152,7 @@ bar {
 
         # class            border  backgr. text
         focused_workspace  #00bfd5 #222222 #00bfd5
-        active_workspace   #333333 #5f676a #ffffff
+        active_workspace   #333333 #222222 #ffffff
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #cc3333 #222222 #cc3333
         binding_mode       #2f343a #cc3333 #ffffff
