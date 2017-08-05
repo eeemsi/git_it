@@ -4,7 +4,7 @@ if [ ! -z "$SSH_CONNECTION" ] && [ "$TERM" != "screen" ]; then
     exit
 fi
 
-# Execute startx when the session is on tty1 and there is a display
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+# Execute startx if the session is on the first tty and startx is available
+if [ "$TTY" = "/dev/tty1" ] || [ "$TTY" = "/dev/ttyv0" ] && which startx; then
     exec startx ${HOME}/.xsession
 fi
