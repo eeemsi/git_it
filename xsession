@@ -1,6 +1,3 @@
-# export TZ
-export TZ=:/etc/localtime
-
 # Disable audio bell, screensaver and dpms
 xset b off s off -dpms
 
