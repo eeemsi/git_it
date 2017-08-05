@@ -34,7 +34,9 @@ client.urgent           #cc3333 #222222 #cc3333 #cc3333   #cc3333
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
+# define style of borders
 new_window  pixel 1
+new_float   pixel 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
