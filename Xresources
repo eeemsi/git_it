@@ -1,62 +1,21 @@
-!Font configuration
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.hinting:    true
-Xft.rgba:       rgb
-Xft.autohint:   false
-Xft.hintstyle:  hintslight
-Xft.lcdfilter:  lcddefault
-
-URxvt.font: xft:Bitstream Vera Sans Mono:size=8
-URxvt.letterSpace: -1
-
 !rxvt-unicode specific
 URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 URxvt.urgentOnBell: true
 
 !general setting
-*cursorBlink:  false
-*scrollBar:    false
-*jumpScroll:   true
-*visualBell:   false
-*saveLines:    2048
+*cursorBlink: false
+*scrollBar: false
+*jumpScroll: true
+*visualBell: false
+*saveLines: 2048
 
-*cursorColor:  #ff9900
-*colorUL:      #999999
-
-*background:   #222222
-*foreground:   #ffffff
-
-!black darkgrey
-*color0:   #4d4d4d
-*color8:   #6F6F6F
-
-!darkred red
-*color1:   #e41b17
-*color9:   #ef2929
-
-!darkgreen green
-*color2:   #93d44f
-*color10:  #beed5f
-
-!darkyellow yellow
-*color3:   #efff40
-*color11:  #fce94f
+!colors
+*background: #000000
+*foreground: #ffffff
+*colorUL: #999999
 
 !darkblue blue
 *color4:   #3465A4
 *color12:  #6495ed
-
-!darkmagenta magenta
-*color5:   #ff6600
-*color13:  #f57900
-
-!darkcyan cyan
-*color6:   #aadde3
-*color14:  #aadde3
-
-!lightgrey white
-*color7:   #e3e3e3
-*color15:  #f1f1f1
 
