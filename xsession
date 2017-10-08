@@ -1,5 +1,11 @@
-# Disable audio bell, screensaver and dpms
-xset b off s off -dpms
+# Disable audio bell
+xset b off
+
+# Disable the screen saver
+xset s off
+
+# Define values for the modes standby, suspend and off
+xset dpms 0 0 0
 
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
