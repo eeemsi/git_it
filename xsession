@@ -4,9 +4,6 @@ xset b off s off -dpms
 # Enable old style zapping
 setxkbmap -option terminate:ctrl_alt_bksp
 
-# Disable autorepeat for un/mute
-xset -r 121
-
 # Enforce correct locales from the beginning
 unset LC_ALL
 export LANG=en_US.UTF-8
