@@ -3,6 +3,9 @@ URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 URxvt.urgentOnBell: true
 
+!Xcursor
+Xcursor.size: 16
+
 !general setting
 *cursorBlink: false
 *scrollBar: false
