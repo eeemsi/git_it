@@ -11,8 +11,8 @@ set $ws9  9:九
 set $ws10 10:十
 
 # start applications on a certain workspace
-assign [class="^Chromium$"]     → $ws2
-assign [class="^Firefox-esr$"]  → $ws2
+assign [class="^Chromium$"]     $ws2
+assign [class="^Firefox-esr$"]  $ws2
 
 # controling brightness
 bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
