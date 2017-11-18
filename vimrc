@@ -44,4 +44,4 @@ set nobackup nowritebackup noswapfile
 set wildmenu wildmode=longest:full
 
 " Automatically remove trailing whitespace
-autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
+autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm '
