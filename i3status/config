@@ -46,6 +46,7 @@ battery all {
 
 tztime utc {
     format = "%Y-%m-%d %H:%M"
+    timezone = "UTC"
 }
 
 volume master {}
