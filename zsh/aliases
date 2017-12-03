@@ -19,6 +19,7 @@ alias cp='cp -v'
 alias grep='grep --color=auto --initial-tab'
 alias rgrep='rgrep --color=auto --initial-tab'
 
-# Required to pipe colors to less
-alias less='less -XR'
+# Suppresses  line  numbers, disables sending the termcap initialization and
+# deinitialization strings to the terminal
+alias less='less -nX'
 
