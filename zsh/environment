@@ -30,3 +30,7 @@ setopt NOCLOBBER
 
 # Disable flow-control with ^S and ^Q
 setopt noflowcontrol
+
+# Disable checks regarding new mails
+unset MAILCHECK
+unsetopt MAIL_WARNING
