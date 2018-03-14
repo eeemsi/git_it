@@ -34,3 +34,7 @@ setopt noflowcontrol
 # Disable checks regarding new mails
 unset MAILCHECK
 unsetopt MAIL_WARNING
+
+# Disable pc speaker beep
+unsetopt beep
+
