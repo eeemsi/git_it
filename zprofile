@@ -5,6 +5,6 @@ if [ ! -z "$SSH_CONNECTION" ] && [ "$TERM" != "screen" ]; then
 fi
 
 # Execute startx if the session is on the first tty and startx is available
-if [ "$TTY" = "/dev/tty1" ] && which startx; then
+if [ "$XDG_VTNR" -eq 1 ] && which startx; then
     exec startx
 fi
