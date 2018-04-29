@@ -1,6 +1,5 @@
-autoload -Uz compinit vcs_info; compinit
-
 source "${HOME}"/.zsh/aliases
+source "${HOME}"/.zsh/autoload
 source "${HOME}"/.zsh/completion
 source "${HOME}"/.zsh/environment
 source "${HOME}"/.zsh/history
