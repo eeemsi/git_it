@@ -2,7 +2,6 @@
 URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 URxvt.urgentOnBell: true
-URxvt.visualBell:   false
 
 !Xcursor
 Xcursor.size: 16
