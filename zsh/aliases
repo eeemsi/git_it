@@ -20,6 +20,6 @@ alias grep='grep --color=auto --initial-tab'
 alias rgrep='rgrep --color=auto --initial-tab'
 
 # Suppresses  line  numbers, disables sending the termcap initialization and
-# deinitialization strings to the terminal, silence less
-alias less='less -nXQ'
+# deinitialization strings to the terminal
+alias less='less -nX'
 
