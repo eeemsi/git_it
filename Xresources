@@ -11,7 +11,7 @@ Xcursor.size: 16
 *scrollBar: false
 *jumpScroll: true
 *visualBell: false
-*saveLines: 2048
+*saveLines: 8192
 
 !colors
 *background: #000000
