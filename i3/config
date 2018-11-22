@@ -34,9 +34,9 @@ bindsym --release XF86AudioMute          exec "amixer set Master mute"
 # fire up a screenlocker
 bindsym --release Mod4+l exec "i3lock -e -f -c 000000"
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #00bfd5 #222222 #00bfd5 #00bfd5   #00bfd5
-client.urgent           #cc3333 #222222 #cc3333 #cc3333   #cc3333
+# class         border  backgr. text    indicator child_border
+client.focused  #00bfd5 #222222 #00bfd5 #00bfd5   #00bfd5
+client.urgent   #cc3333 #222222 #cc3333 #cc3333   #cc3333
 
 # define style of borders
 new_window  pixel 1
@@ -146,9 +146,9 @@ bindsym Mod4+Ctrl+$right resize grow   width  5 px or 5 ppt
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    tray_output             none
-    position                top
-    status_command          i3status
+    tray_output     none
+    position        top
+    status_command  i3status
 
     colors {
         # class            border  backgr. text
