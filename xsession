@@ -15,9 +15,6 @@ unset LC_ALL
 export LANG=en_US.UTF-8
 export LC_MESSAGES=C
 
-# Set the short date to YYYY-MM-DD
-export LC_TIME=en_DK.UTF-8
-
 # Load e.g. settings for colors for terminals
 xrdb -load ${HOME}/.Xresources
 
