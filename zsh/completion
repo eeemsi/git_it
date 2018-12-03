@@ -1,6 +1,3 @@
-# compctl may disappear in the future
-zstyle ':completion:*' use-compctl false
-
 # activate the completion caching layer for any completions which use it (via
 # the _store_cache, _retrieve_cache, and _cache_invalid functions)
 zstyle ':completion::complete:*' use-cache on
