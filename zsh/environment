@@ -26,13 +26,13 @@ watch=(notme, root)
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
 
-# Disable flow-control with ^S and ^Q
-setopt noflowcontrol
+# Disable output flow control via start/stop characters (^S/^Q)
+unsetopt FLOW_CONTROL
 
 # Disable checks regarding new mails
 unset MAILCHECK
 unsetopt MAIL_WARNING
 
 # Disable pc speaker beep
-unsetopt beep
+unsetopt BEEP
 
