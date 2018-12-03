@@ -35,7 +35,7 @@ bindsym --release XF86AudioMute          exec "amixer set Master mute"
 bindsym --release Mod4+l exec "i3lock -e -f -c 000000"
 
 # class         border  backgr. text    indicator child_border
-client.focused  #285577 #222222 #285577 #285577   #285577
+client.focused  #3ec2ff #222222 #00bfd5 #285577   #3ec2ff
 client.urgent   #900000 #222222 #900000 #900000   #900000
 
 # define style of borders
@@ -56,7 +56,7 @@ bindsym Mod4+Return exec "urxvtc"
 bindsym Mod4+Shift+q kill
 
 # start a program launcher
-bindsym Mod4+p exec "dmenu_run -nb black -sb black -sf '#285577' -fn 'monospace:size=8'"
+bindsym Mod4+p exec "dmenu_run -nb black -sb black -sf '#3ec2ff' -fn 'monospace:size=8'"
 
 # change focus
 bindsym Mod4+$left   focus left
@@ -153,7 +153,7 @@ bar {
 
     colors {
         # class            border  backgr. text
-        focused_workspace  #285577 #222222 #285577
+        focused_workspace  #3ec2ff #222222 #3ec2ff
         urgent_workspace   #cc3333 #222222 #cc3333
     }
 }
