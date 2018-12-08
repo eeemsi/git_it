@@ -1,4 +1,4 @@
-# Check if the shell is is not interactive and return if true
+# Check if the shell is not interactive and return if true
 [[ $- != *i* ]] && return
 
 source "${HOME}"/.zsh/aliases
