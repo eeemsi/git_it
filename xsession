@@ -7,9 +7,6 @@ xset s off
 # Define values for the modes standby, suspend and off
 xset dpms 0 0 0
 
-# Enable old style zapping
-setxkbmap -option terminate:ctrl_alt_bksp
-
 # Enforce correct locales from the beginning
 unset LC_ALL
 export LANG=en_US.UTF-8
