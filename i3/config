@@ -27,8 +27,8 @@ bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
 bindsym --release XF86MonBrightnessDown  exec "xbacklight -dec 2"
 
 # controlling the audio
-bindsym --release XF86AudioRaiseVolume   exec "amixer -D pulse set Master 2%+ unmute"
-bindsym --release XF86AudioLowerVolume   exec "amixer -D pulse set Master 2%- unmute"
+bindsym           XF86AudioRaiseVolume   exec "amixer -D pulse set Master 2%+ unmute"
+bindsym           XF86AudioLowerVolume   exec "amixer -D pulse set Master 2%- unmute"
 bindsym --release XF86AudioMute          exec "amixer -D pulse set Master toggle"
 
 # fire up a screenlocker
