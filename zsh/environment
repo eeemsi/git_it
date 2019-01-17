@@ -21,7 +21,7 @@ REPORTTIME=10
 KEYTIMEOUT=1
 
 # An array (colon-separated list) of login/logout events to report.
-watch=(notme, root)
+watch=(notme:root)
 
 # Prevent from accidentally overwriting an existing file
 setopt NOCLOBBER
