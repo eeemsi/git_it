@@ -13,7 +13,7 @@ export LANG=en_US.UTF-8
 export LC_MESSAGES=C
 
 # Load e.g. settings for colors for terminals
-xrdb -load ${HOME}/.Xresources
+xrdb ${HOME}/.Xresources
 
 # Simple black background
 xsetroot -solid black
