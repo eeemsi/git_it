@@ -12,6 +12,9 @@ setopt HIST_IGNORE_ALL_DUPS
 # When writing out the history file, older commands that duplicate newer ones are omitted
 setopt HIST_SAVE_NO_DUPS
 
+# Remove command lines from the history list when the first character on the line is a space
+setopt HIST_IGNORE_SPACE
+
 # Allow sharing and appending to one hist file
 setopt SHARE_HISTORY
 
