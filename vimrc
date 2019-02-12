@@ -18,6 +18,9 @@ syntax enable
 set background=dark
 colorscheme elflord
 
+" Define number of colors
+set t_Co=256
+
 " 80 characters visible indicator
 highlight ColorColumn ctermbg=none ctermfg=red
 set colorcolumn=80
