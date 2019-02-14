@@ -51,3 +51,6 @@ set wildmenu wildmode=longest:full
 
 " Automatically remove trailing whitespace
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm '
+
+" Suppress the banner in netrw
+let g:netrw_banner=0
