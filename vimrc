@@ -25,6 +25,9 @@ set t_Co=256
 highlight ColorColumn ctermbg=none ctermfg=red
 set colorcolumn=80
 
+" Enable screen line that the cursor is in
+set cursorline
+
 " For searching
 set ignorecase incsearch hlsearch
 
