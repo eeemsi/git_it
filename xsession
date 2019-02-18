@@ -21,6 +21,9 @@ xsetroot -solid black
 # Start urxvtd
 urxvtd -q -f -o &
 
+# Start redshift
+redshift -c ${HOME}/.config/redshift/config &
+
 # Automatically lock the screen on certain hooks
 xss-lock -- i3lock -e -f -c '#000000' &
 
