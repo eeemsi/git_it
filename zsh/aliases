@@ -14,6 +14,7 @@ alias la='ls -hFa'
 alias l='ls -hF'
 
 alias cp='cp -v'
+alias mv='mv -v'
 
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
