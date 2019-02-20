@@ -1,6 +1,3 @@
 # Use emacs style for input keys by default
 bindkey -e
 
-# perform history expansion and insert a space into the buffer
-bindkey ' ' magic-space
-
