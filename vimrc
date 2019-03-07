@@ -54,3 +54,6 @@ autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm '
 
 " Suppress the banner in netrw
 let g:netrw_banner=0
+
+" Tree style listing in netrw
+let g:netrw_liststyle = 3
