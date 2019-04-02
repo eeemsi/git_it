@@ -14,6 +14,10 @@ set ignorecase
 highlight ColorColumn ctermbg=none ctermfg=red
 set colorcolumn=80
 
+" Enable list mode. Useful to see the difference between tabs and spaces and
+" for trailing blanks
+set list
+
 " Number of spaces that a tab in the file counts for
 set tabstop=4 shiftwidth=4
 
