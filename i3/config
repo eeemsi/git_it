@@ -56,7 +56,7 @@ bindsym Mod4+Return exec "urxvtc"
 bindsym Mod4+Shift+q kill
 
 # start a program launcher
-bindsym Mod4+p exec "dmenu_run -nb black -sb black -sf '#3ec2ff' -fn 'monospace:size=8'"
+bindsym Mod4+p exec "shellex"
 
 # change focus
 bindsym Mod4+$left   focus left
