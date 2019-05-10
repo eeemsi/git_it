@@ -1,12 +1,12 @@
 # Check if the shell is not interactive and return if true
 [[ $- != *i* ]] && return
 
-source "${HOME}"/.zsh/aliases
-source "${HOME}"/.zsh/autoload
-source "${HOME}"/.zsh/completion
-source "${HOME}"/.zsh/environment
-source "${HOME}"/.zsh/history
-source "${HOME}"/.zsh/keybindings
-source "${HOME}"/.zsh/prompt
-source "${HOME}"/.zsh/term_title
-source "${HOME}"/.zsh/vcs_info
+. "${HOME}"/.zsh/aliases
+. "${HOME}"/.zsh/autoload
+. "${HOME}"/.zsh/completion
+. "${HOME}"/.zsh/environment
+. "${HOME}"/.zsh/history
+. "${HOME}"/.zsh/keybindings
+. "${HOME}"/.zsh/prompt
+. "${HOME}"/.zsh/term_title
+. "${HOME}"/.zsh/vcs_info
