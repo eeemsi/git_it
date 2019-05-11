@@ -1,6 +1,3 @@
-# Check if the shell is not interactive and return if true
-[[ $- != *i* ]] && return
-
 . "${HOME}"/.zsh/aliases
 . "${HOME}"/.zsh/autoload
 . "${HOME}"/.zsh/completion
