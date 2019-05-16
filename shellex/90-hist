@@ -11,7 +11,7 @@ SAVEHIST=0
 # Push current history to stack (make e.g. sourcing of configuration
 # inaccessible to user). The stack won't be poped. Set HISTFILE to ~/.shellex
 # and read history from there.
-fc -p ~/.shellex_history
+fc -p "${HOME}"/.shellex_history
 
 # Avoid saving history to HISTFILE
 unset HISTFILE

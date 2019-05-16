@@ -8,7 +8,7 @@ xset s off
 xset dpms 0 0 0
 
 # Load e.g. settings for colors for terminals
-xrdb "$HOME"/.Xresources
+xrdb "${HOME}"/.Xresources
 
 # Simple black background
 xsetroot -solid black
