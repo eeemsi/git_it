@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # Enable vcs_info
 setopt PROMPT_SUBST
 

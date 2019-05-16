@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # Use emacs style for input keys by default
 bindkey -e
 

@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # Define size for HISTFILE and SAVEHIST also define path for HISTFILE
 HISTSIZE=8192
 SAVEHIST=8192

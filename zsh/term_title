@@ -1,3 +1,4 @@
+# vim:ft=zsh
 set_termtitle() {
   # escape '%' chars in "${1}", make nonprintables visible
   local a="${(V)1//\%/\%\%}"

@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # Defines the prompt
 PS1='%K{cyan}%F{black}%m%f%k %F{green}%~%f %F{cyan}${vcs_info_msg_0_}%f %% '
 
