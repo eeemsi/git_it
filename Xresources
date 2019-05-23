@@ -3,6 +3,9 @@ URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 URxvt.urgentOnBell: true
 
+!shellex
+shellex.pos: pointer
+
 !Xcursor
 Xcursor.size: 16
 
