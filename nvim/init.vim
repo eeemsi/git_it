@@ -1,3 +1,6 @@
+" disable modeline for security
+set nomodeline
+
 " Set the title of the window to the value of 'titlestring'
 set title
 
