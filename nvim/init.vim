@@ -21,9 +21,6 @@ set colorcolumn=80
 " for trailing blanks
 set list
 
-" Number of spaces that a tab in the file counts for
-set tabstop=4 shiftwidth=4
-
 " Suppress the banner in netrw
 let g:netrw_banner=0
 
