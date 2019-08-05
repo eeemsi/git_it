@@ -1,2 +1,1 @@
-# vim:ft=zsh
 autoload -Uz compinit vcs_info; compinit
