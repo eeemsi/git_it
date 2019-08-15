@@ -13,6 +13,9 @@ set cursorline
 " Ignore case in search patterns
 set ignorecase
 
+" Adjust the default color groups for a dark or light background, respectively.
+set background=dark
+
 " 80 characters visible indicator
 highlight ColorColumn ctermbg=none ctermfg=red
 set colorcolumn=80
