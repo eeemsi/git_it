@@ -36,3 +36,5 @@ unsetopt MAIL_WARNING
 # Disable pc speaker beep
 unsetopt BEEP
 
+# Avoid having the shell terminate the running jobs
+setopt nohup
