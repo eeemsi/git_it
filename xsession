@@ -20,7 +20,7 @@ urxvtd -q -f -o &
 redshift &
 
 # Automatically lock the screen on certain hooks
-xss-lock -- i3lock -e -f -c '#000000' &
+xss-lock --transfer-sleep-lock -- i3lock -e -f -c '#000000' --nofork &
 
 # Start window manager
 i3
