@@ -1,5 +1,5 @@
-# Disable audio bell
-xset b off
+# Disable audio bell in volume, pitch and duration
+xset b 0 0 0
 
 # Disable the screen saver
 xset s off
