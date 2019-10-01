@@ -32,7 +32,7 @@ bindsym           XF86AudioLowerVolume   exec "amixer -D pulse set Master 2%- un
 bindsym --release XF86AudioMute          exec "amixer -D pulse set Master toggle"
 
 # fire up a screenlocker
-bindsym --release Mod4+l exec "i3lock -e -f -c 000000"
+bindsym --release Mod4+l exec "loginctl lock-session"
 
 # class         border  backgr. text    indicator child_border
 client.focused  #00ff00 #222222 #00ff00 #00ff00   #00ff00
