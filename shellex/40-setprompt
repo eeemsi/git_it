@@ -1,3 +1,0 @@
-# vim:ft=zsh
-# Set the prompt
-PROMPT="%F{green}>%f "
