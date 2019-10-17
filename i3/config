@@ -23,16 +23,16 @@ assign [class="^Chromium$"]     $ws2
 assign [class="^Firefox-esr$"]  $ws2
 
 # controling brightness
-bindsym --release XF86MonBrightnessUp    exec "xbacklight -inc 2"
-bindsym --release XF86MonBrightnessDown  exec "xbacklight -dec 2"
+bindsym --release XF86MonBrightnessUp    exec --no-startup-id "xbacklight -inc 2"
+bindsym --release XF86MonBrightnessDown  exec --no-startup-id "xbacklight -dec 2"
 
 # controlling the audio
-bindsym           XF86AudioRaiseVolume   exec "amixer -D pulse set Master 2%+ unmute"
-bindsym           XF86AudioLowerVolume   exec "amixer -D pulse set Master 2%- unmute"
-bindsym --release XF86AudioMute          exec "amixer -D pulse set Master toggle"
+bindsym           XF86AudioRaiseVolume   exec --no-startup-id "amixer -D pulse set Master 2%+ unmute"
+bindsym           XF86AudioLowerVolume   exec --no-startup-id "amixer -D pulse set Master 2%- unmute"
+bindsym --release XF86AudioMute          exec --no-startup-id "amixer -D pulse set Master toggle"
 
 # fire up a screenlocker
-bindsym --release Mod4+l exec "loginctl lock-session"
+bindsym --release Mod4+l exec --no-startup-id "loginctl lock-session"
 
 # class         border  backgr. text    indicator child_border
 client.focused  #00ff00 #222222 #00ff00 #00ff00   #00ff00
