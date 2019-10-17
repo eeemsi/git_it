@@ -27,9 +27,10 @@ bindsym --release XF86MonBrightnessUp    exec --no-startup-id "xbacklight -inc 2
 bindsym --release XF86MonBrightnessDown  exec --no-startup-id "xbacklight -dec 2"
 
 # controlling the audio
-bindsym           XF86AudioRaiseVolume   exec --no-startup-id "amixer -D pulse set Master 2%+ unmute"
-bindsym           XF86AudioLowerVolume   exec --no-startup-id "amixer -D pulse set Master 2%- unmute"
-bindsym --release XF86AudioMute          exec --no-startup-id "amixer -D pulse set Master toggle"
+bindsym XF86AudioRaiseVolume   exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+bindsym XF86AudioLowerVolume   exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+bindsym XF86AudioMute          exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioMicMute       exec --no-startup-id "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 
 # fire up a screenlocker
 bindsym --release Mod4+l exec --no-startup-id "loginctl lock-session"
