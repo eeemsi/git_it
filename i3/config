@@ -23,8 +23,8 @@ assign [class="^Chromium$"]     $ws2
 assign [class="^Firefox-esr$"]  $ws2
 
 # controling brightness
-bindsym --release XF86MonBrightnessUp    exec --no-startup-id "xbacklight -inc 2"
-bindsym --release XF86MonBrightnessDown  exec --no-startup-id "xbacklight -dec 2"
+bindsym --release XF86MonBrightnessUp    exec --no-startup-id "brightnessctl set 10%+"
+bindsym --release XF86MonBrightnessDown  exec --no-startup-id "brightnessctl set 10%-"
 
 # controlling the audio
 bindsym XF86AudioRaiseVolume   exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2%"
