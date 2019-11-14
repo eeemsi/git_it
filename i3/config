@@ -19,8 +19,8 @@ set $left Left
 set $right Right
 
 # start applications on a certain workspace
-assign [class="^Chromium$"]     $ws2
-assign [class="^Firefox-esr$"]  $ws2
+assign [class="^Chromium"] $ws2
+assign [class="^Firefox"]  $ws2
 
 # controling brightness
 bindsym --release XF86MonBrightnessUp    exec --no-startup-id "brightnessctl set 10%+"
