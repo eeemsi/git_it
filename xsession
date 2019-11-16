@@ -16,9 +16,6 @@ xsetroot -solid black
 # Start urxvtd
 urxvtd -q -f -o &
 
-# Start redshift
-redshift &
-
 # Automatically lock the screen on certain hooks
 xss-lock --transfer-sleep-lock -- i3lock -e -f -c '#000000' --nofork &
 
