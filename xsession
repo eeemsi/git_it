@@ -13,9 +13,6 @@ xrdb "${HOME}"/.Xresources
 # Simple black background
 xsetroot -solid black
 
-# Start urxvtd
-urxvtd -q -f -o &
-
 # Automatically lock the screen on certain hooks
 xss-lock --transfer-sleep-lock -- i3lock -e -f -c '#000000' --nofork &
 
