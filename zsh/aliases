@@ -2,18 +2,16 @@
 alias cdt='builtin cd "$(mktemp -d)"'
 
 # Comfortable aliases
-alias g='git'
-alias gst='g status --short --branch'
-alias glog='g log --graph --oneline'
-alias gd='g diff'
-alias gc='g commit'
-
 alias ..='cd ..'
-
-alias la='ls -hFa'
-alias l='ls -hF'
-
 alias cp='cp -v'
+alias g='git'
+alias gc='g commit'
+alias gd='g diff'
+alias glog='g log --graph --oneline'
+alias gst='g status --short --branch'
+alias history='history -i'
+alias l='ls -hF'
+alias la='ls -hFa'
 alias mv='mv -v'
 
 # Nicer output of grep
@@ -22,4 +20,3 @@ alias rgrep='rgrep --color=auto --initial-tab'
 
 # Suppresses line numbers in less
 alias less='less -n'
-
