@@ -13,6 +13,7 @@ alias history='history -i'
 alias l='ls -hF'
 alias la='ls -hFa'
 alias mv='mv -v'
+alias view='nvim -R'
 
 # Nicer output of grep
 alias grep='grep --color=auto --initial-tab'
