@@ -1,0 +1,29 @@
+table inet my_table {
+  chain my_input {
+    type filter hook input priority 0
+
+    policy drop
+
+    iif lo accept comment "Accept any localhost traffic"
+    ct state invalid drop comment "Drop invalid connections"
+    ct state established,related accept comment "Accept traffic originated from us"
+
+    ip6 nexthdr icmpv6 icmpv6 type { destination-unreachable, packet-too-big, time-exceeded, parameter-problem, mld-listener-query, mld-listener-report, mld-listener-reduction, nd-router-solicit, nd-router-advert, nd-neighbor-solicit, nd-neighbor-advert, ind-neighbor-solicit, ind-neighbor-advert, mld2-listener-report } accept comment "Accept ICMPv6"
+    ip protocol icmp icmp type { destination-unreachable, router-solicitation, router-advertisement, time-exceeded, parameter-problem } accept comment "Accept ICMP"
+    ip protocol igmp accept comment "Accept IGMP"
+
+    counter comment "Count any other traffic"
+  }
+
+  chain my_forward {
+    type filter hook forward priority 0
+    # Drop everything forwarded to us. We do not forward. That is routers job.
+    policy drop
+  }
+
+  chain my_output {
+    type filter hook output priority 0
+    # Accept every outbound connection
+    policy accept
+  }
+}
