@@ -1,5 +1,7 @@
-table inet my_table {
-  chain my_input {
+flush ruleset
+
+table inet filter {
+  chain input {
     type filter hook input priority 0
 
     policy drop
@@ -15,13 +17,13 @@ table inet my_table {
     counter comment "Count any other traffic"
   }
 
-  chain my_forward {
+  chain forward {
     type filter hook forward priority 0
     # Drop everything forwarded to us. We do not forward. That is routers job.
     policy drop
   }
 
-  chain my_output {
+  chain output {
     type filter hook output priority 0
     # Accept every outbound connection
     policy accept
