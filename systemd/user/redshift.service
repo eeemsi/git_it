@@ -2,7 +2,7 @@
 Description=Redshift display colour temperature adjustment
 
 [Service]
-ExecStart=/usr/bin/redshift
+ExecStart=/usr/bin/redshift -l __:__
 Restart=always
 
 [Install]
