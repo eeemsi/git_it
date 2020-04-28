@@ -164,6 +164,7 @@ bindsym Mod4+o mode "move_workspace
 bar {
     strip_workspace_numbers yes
     status_command          i3status
+    separator_symbol " | "
 
     colors {
         # class            border  backgr. text
