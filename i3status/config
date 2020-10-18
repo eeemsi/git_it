@@ -44,7 +44,7 @@ cpu_temperature 0 {
 }
 
 tztime utc {
-    format = "%Y-%m-%d %H:%M"
+    format = "%H:%M  %A %d %b "
     timezone = "UTC"
 }
 
