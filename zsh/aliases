@@ -10,8 +10,9 @@ alias gd='g diff'
 alias glog='g log --graph --oneline'
 alias gst='g status --short --branch'
 alias history='history -i'
-alias l='ls -hF'
-alias la='ls -hFa'
+alias ip='ip -color'
+alias l='ls --human-readable --classify'
+alias la='ls --human-readable --classify --all'
 alias mv='mv -v'
 alias view='nvim -R'
 
@@ -20,4 +21,4 @@ alias grep='grep --color=auto --initial-tab'
 alias rgrep='rgrep --color=auto --initial-tab'
 
 # Suppresses line numbers in less
-alias less='less -n'
+alias less='less --line-numbers'
