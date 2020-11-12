@@ -1,4 +1,5 @@
 configuration {
+  modi: "drun,window";
   location: 0;
   disable-history: true;
   kb-row-select: "Tab";
