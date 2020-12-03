@@ -1,3 +1,6 @@
 [user]
     name = me
     email = me@anywhere.net
+
+[init]
+    defaultBranch = main
