@@ -1,4 +1,4 @@
-# Define size for HISTFILE and SAVEHIST also define path for HISTFILE
+# Define size for HISTSIZE and SAVEHIST also define path for HISTFILE
 HISTSIZE=8192
 SAVEHIST=8192
 HISTFILE="${HOME}"/.zsh_history
