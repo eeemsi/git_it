@@ -32,3 +32,6 @@ let g:netrw_liststyle = 3
 
 " Automatically remove trailing whitespace
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm '
+
+" map <Esc> to exit terminal-mode
+tnoremap <Esc> <C-\><C-n>
