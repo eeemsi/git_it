@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Rxvt Color Unicode Terminal [presentation]
 Comment=Use the command line
-TryExec=urxvt
-Exec=urxvt -fn "xft:Bitstream Vera Sans Mono:size=16"
+TryExec=urxvtc
+Exec=urxvtc -fn "xft:Bitstream Vera Sans Mono:size=16"
 Icon=urxvt_48x48.xpm
 Type=Application
 Categories=Utility;TerminalEmulator;
