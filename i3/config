@@ -37,7 +37,7 @@ bindsym --release Mod4+l exec --no-startup-id "loginctl lock-session"
 
 # class         border  backgr. text    indicator child_border
 client.focused  #00ff00 #222222 #00ff00 #00ff00   #00ff00
-client.urgent   #900000 #222222 #900000 #900000   #900000
+client.urgent   #ff0000 #222222 #ff0000 #ff0000   #ff0000
 
 # define style of borders
 default_border pixel 1
@@ -172,6 +172,6 @@ bar {
     colors {
         # class            border  backgr. text
         focused_workspace  #00ff00 #222222 #00ff00
-        urgent_workspace   #cc3333 #222222 #cc3333
+        urgent_workspace   #ff0000 #222222 #ff0000
     }
 }
