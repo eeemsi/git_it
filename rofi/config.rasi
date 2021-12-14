@@ -4,9 +4,91 @@ configuration {
   disable-history: true;
   kb-row-select: "Tab";
   kb-row-tab: "";
-  hide-scrollbar: true;
-  color-window: "#000000, #00ff00, #00ff00";
-  color-normal: "#000000, #ffffff, #000000, #00ff00, #000000";
-  color-active: "#000000, #ffffff, #000000, #888888, #000000";
-  color-urgent: "#000000, #f00000, #000000, #f00000, #000000";
+}
+
+window {
+  background-color: #000000;
+  border-color: #00ff00;
+}
+
+inputbar {
+  background-color: #000000;
+  text-color: #00ff00;
+}
+
+entry {
+  background-color: #000000;
+  text-color: #00ff00;
+}
+
+prompt {
+  background-color: #000000;
+  text-color: #00ff00;
+}
+
+listview {
+  border-color: #000000;
+  scrollbar: false;
+}
+
+element.selected.active {
+  background-color: #00ff00;
+  text-color: #000000;
+}
+
+element.normal.urgent {
+  background-color: #ff0000;
+  text-color: #000000;
+}
+
+element.alternate.urgent {
+  background-color: #ff0000;
+  text-color: #000000;
+}
+
+element.selected.urgent {
+  background-color: #00ff00;
+  text-color: #000000;
+}
+
+element.normal.normal {
+  background-color: #000000;
+}
+
+element.alternate.normal {
+  background-color: #000000;
+}
+
+element-text {
+  background-color: #000000;
+  text-color: #ffffff;
+}
+
+element-text.selected.normal {
+  background-color: #00ff00;
+  text-color: #000000;
+}
+
+element-text.normal.normal {
+  background-color: #000000;
+  text-color: #ffffff;
+}
+
+element-text.alternate.normal {
+  background-color: #000000;
+  text-color: #ffffff;
+}
+
+element-text.selected.urgent {
+  background-color: #00ff00;
+  text-color: #000000;
+}
+
+element-text.alternate.urgent {
+  background-color: #ff0000;
+  text-color: #000000;
+}
+
+textbox {
+  text-color: #00ff00;
 }
