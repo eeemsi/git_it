@@ -57,10 +57,7 @@ bindsym Mod4+Return exec "urxvtc"
 bindsym Mod4+Shift+q kill
 
 # start a program launcher
-bindsym --release Mod4+p exec --no-startup-id "rofi -show drun"
-
-# start a window selector
-bindsym --release Mod4+Tab exec --no-startup-id "rofi -show window"
+bindsym --release Mod4+p exec --no-startup-id "dmenu_run -b -nb black -sb black -sf green -fn 'monospace:size=8'"
 
 # change focus
 bindsym Mod4+$left   focus left
