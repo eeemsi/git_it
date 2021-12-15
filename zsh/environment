@@ -13,9 +13,6 @@ export PAGER='less -n'
 # Expand path to /usr/sbin and /sbin
 export PATH=$PATH:/usr/sbin:/sbin
 
-# Report about cpu-/system-/user-time of command if running >REPORTTIME seconds
-REPORTTIME=10
-
 # Timeout, in hundredths of seconds, when reading bound multi-character
 # sequences (default is 0.4 sec.)
 KEYTIMEOUT=1
