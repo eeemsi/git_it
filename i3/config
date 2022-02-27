@@ -51,13 +51,13 @@ font pango:monospace 8
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec "urxvtc"
+bindsym Mod4+Return exec "urxvtc -fn 'xft:Bitstream Vera Sans Mono:size=9'"
 
 # kill focused window
 bindsym Mod4+Shift+q kill
 
 # start a program launcher
-bindsym --release Mod4+p exec --no-startup-id "dmenu_run -b -nb black -sb black -sf green -fn 'monospace:size=8'"
+bindsym --release Mod4+p exec --no-startup-id "dmenu_run -b -nb black -sb black -sf green -fn 'monospace:size=9'"
 
 # change focus
 bindsym Mod4+$left   focus left
