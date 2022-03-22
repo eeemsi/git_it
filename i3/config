@@ -11,21 +11,21 @@ assign [class="^Chromium"] $ws2
 assign [class="^Firefox"]  $ws2
 
 # controling brightness
-bindsym XF86MonBrightnessUp    exec --no-startup-id awk '{print $1+50 > "/sys/class/backlight/intel_backlight/brightness"}' /sys/class/backlight/intel_backlight/brightness
-bindsym XF86MonBrightnessDown  exec --no-startup-id awk '{print $1-50 > "/sys/class/backlight/intel_backlight/brightness"}' /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessUp   exec --no-startup-id awk '{print $1+50 > "/sys/class/backlight/intel_backlight/brightness"}' /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id awk '{print $1-50 > "/sys/class/backlight/intel_backlight/brightness"}' /sys/class/backlight/intel_backlight/brightness
 
 # controlling the audio
-bindsym XF86AudioRaiseVolume   exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2%"
-bindsym XF86AudioLowerVolume   exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2%"
-bindsym XF86AudioMute          exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym XF86AudioMicMute       exec --no-startup-id "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+bindsym XF86AudioMute        exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioMicMute     exec --no-startup-id "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 
 # fire up a screenlocker
 bindsym --release Mod4+l exec --no-startup-id "loginctl lock-session"
 
-# class         border  backgr. text    indicator child_border
-client.focused  #00ff00 #222222 #00ff00 #00ff00   #00ff00
-client.urgent   #ff0000 #222222 #ff0000 #ff0000   #ff0000
+# class        border  backgr. text    indicator child_border
+client.focused #00ff00 #222222 #00ff00 #00ff00   #00ff00
+client.urgent  #ff0000 #222222 #ff0000 #ff0000   #ff0000
 
 # define style of borders
 default_border pixel 1
@@ -48,10 +48,10 @@ bindsym Mod4+Shift+q kill
 bindsym --release Mod4+p exec --no-startup-id "dmenu_run -b -nb black -sb black -sf green -fn 'monospace:size=9'"
 
 # change focus
-bindsym Mod4+$left   focus left
-bindsym Mod4+$down   focus down
-bindsym Mod4+$up     focus up
-bindsym Mod4+$right  focus right
+bindsym Mod4+$left  focus left
+bindsym Mod4+$down  focus down
+bindsym Mod4+$up    focus up
+bindsym Mod4+$right focus right
 
 # move focused window
 bindsym Mod4+Shift+$left  move left
@@ -162,13 +162,13 @@ bindsym Mod4+o mode "move_workspace
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    status_command i3status
     strip_workspace_numbers yes
-    status_command          i3status
     separator_symbol "  |  "
 
     colors {
-        # class            border  backgr. text
-        focused_workspace  #00ff00 #222222 #00ff00
-        urgent_workspace   #ff0000 #222222 #ff0000
+        # class           border  backgr. text
+        focused_workspace #00ff00 #222222 #00ff00
+        urgent_workspace  #ff0000 #222222 #ff0000
     }
 }
