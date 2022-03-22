@@ -148,10 +148,10 @@ bindsym Mod4+Ctrl+$right resize grow   width  5 px or 5 ppt
 
 # move a workspace to a different output (e.g. from LVDS1 to VGA1)
 mode "move_workspace" {
-    bindsym Left     move workspace to output left
-    bindsym Down     move workspace to output down
-    bindsym Up       move workspace to output up
-    bindsym Right    move workspace to output right
+    bindsym $left  move workspace to output left
+    bindsym $down  move workspace to output down
+    bindsym $up    move workspace to output up
+    bindsym $right move workspace to output right
 
     # back to normal: Escape
     bindsym Escape mode "default"
