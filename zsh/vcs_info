@@ -6,8 +6,3 @@ zstyle ':vcs_info:*' enable git
 
 # Specify how it should be formatted
 zstyle ':vcs_info:*' formats '%b'
-
-precmd() {
-    vcs_info
-}
-

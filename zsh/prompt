@@ -1,3 +1,12 @@
 # Defines the prompt
-PS1='%B%F{green}%~%f %F{cyan}${vcs_info_msg_0_}%f %%%b '
+precmd() {
+  vcs_info
+
+  # check if vcs_info_msg_0_ is empty to avoid an anoying space in the prompt
+  if [[ -z ${vcs_info_msg_0_} ]]; then
+    PS1='%B%F{green}%~%f %%%b '
+  else
+    PS1='%B%F{green}%~%f %F{cyan}${vcs_info_msg_0_}%f %%%b '
+  fi
+}
 
