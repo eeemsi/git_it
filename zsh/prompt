@@ -4,9 +4,9 @@ precmd() {
 
   # check if vcs_info_msg_0_ is empty to avoid an anoying space in the prompt
   if [[ -z ${vcs_info_msg_0_} ]]; then
-    PS1='%B%F{green}%~%f %%%b '
+    PS1='%B%F{green}%(2~|…/%2~|%~)%f %%%b '
   else
-    PS1='%B%F{green}%~%f %F{cyan}${vcs_info_msg_0_}%f %%%b '
+    PS1='%B%F{green}%(2~|…/%2~|%~)%f %F{cyan}${vcs_info_msg_0_}%f %%%b '
   fi
 }
 
