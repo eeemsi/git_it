@@ -2,9 +2,6 @@
 # the _store_cache, _retrieve_cache, and _cache_invalid functions)
 zstyle ':completion::complete:*' use-cache on
 
-# List of non-alphanumeric characters considered part of a word
-export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
-
 # Case-insensitive,partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
