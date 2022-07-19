@@ -4,5 +4,3 @@ autoload -U compinit; compinit
 # retrieve information from version control systems
 autoload -Uz vcs_info
 
-# word characters are alphanumeric characters only
-autoload -U select-word-style; select-word-style bash
