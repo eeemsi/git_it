@@ -33,7 +33,8 @@ ethernet _first_ {
 }
 
 battery all {
-    format = "%status %percentage %remaining"
+    format = "%status %percentage"
+    status_chr = "^ BAT"
     integer_battery_capacity = true
     hide_seconds = true
     format_down = ""
@@ -48,7 +49,10 @@ tztime utc {
     timezone = "UTC"
 }
 
-volume master {}
+volume master {
+    format = "Vol: %volume"
+    format_muted = "Vol: muted"
+}
 
 load {
     format = "%1min"
