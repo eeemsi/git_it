@@ -39,7 +39,7 @@ font pango:monospace 8
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec "urxvtc -fn 'xft:Bitstream Vera Sans Mono:size=9'"
+bindsym Mod4+Return exec "urxvtc"
 
 # kill focused window
 bindsym Mod4+Shift+q kill

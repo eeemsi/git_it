@@ -3,7 +3,8 @@ URxvt.urlLauncher:  sensible-browser
 URxvt.perl-ext:     default,matcher
 URxvt.urgentOnBell: true
 URxvt.fading:       32
-
+URxvt.font:         xft:Bitstream Vera Sans Mono:size=9
+URxvt.letterSpace:  -1
 !Xcursor
 Xcursor.size: 16
 
