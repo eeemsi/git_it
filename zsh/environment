@@ -13,6 +13,12 @@ export PAGER='less -n'
 # Expand path to /usr/sbin and /sbin
 export PATH=$PATH:/usr/sbin:/sbin
 
+# Do not create a history file for less
+export LESSHISTFILE=/dev/null
+
+# Disable features like shell or pipe commands and more in less
+export LESSSECURE=1
+
 # Timeout, in hundredths of seconds, when reading bound multi-character
 # sequences (default is 0.4 sec.)
 KEYTIMEOUT=1
